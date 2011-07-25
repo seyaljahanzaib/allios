@@ -77,7 +77,6 @@ public class SetPageAction extends ActionSupport{
 		return "SUCCESS";
 	}
 	
-	
 	private String pageNumber;
 
 	public String getPageNumber() {return pageNumber;}

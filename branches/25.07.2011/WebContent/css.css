@@ -1,0 +1,223 @@
+/* ----------------------------------------      BASE   ------------------------------------------- */
+
+#base_layout{
+	margin:0px auto;
+	padding:0px;
+	text-align:left;
+	width:1000px
+}
+
+
+
+/* ----------------------------------------     NAGLOWEK    -------------------------------------- */
+
+#menu {
+    height: 79px;
+    background: url(img/menu_c.png);
+}
+
+#menu ul {
+    margin: 0;
+    margin-left: 50;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul li {
+	float: left;
+	padding: 0 7px;
+	background: url(img/menu_over.png) no-repeat right center;
+	position: relative;
+	z-index: 1;
+}
+
+#menu ul li.last {
+	background: none;
+}
+
+#menu ul li a {
+    display: block;
+    float: left;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 79px;
+    padding: 0 25px;
+    font: bold 13px/34px Arial, sans-serif;
+    text-decoration: none;
+    color: White;
+    border-right: none;
+}
+
+#menu ul li a:hover {
+    color: #002B75;
+}
+
+
+#Logo {
+	background: url('img/logo.png') no-repeat;
+	min-height: 94;
+	min-width: 311;
+}
+
+
+/* ---------------------------------------------      MENU      ------------------------------------------- */
+
+
+#searcher {
+	position: relative;
+	height: 110px;
+	width: 230px;
+}
+
+#search_left {
+ 	position: absolute; 
+	background: url(img/srbutton_l.png) no-repeat left center;
+	left: 0px;
+	width: 10px;
+	height: 110px;
+}
+#search_text_left{
+ 	position: absolute; 
+	background: url(img/srw_l.png);
+	left: 10px;
+	width: 8px;
+	height: 110px;
+}
+#search_text_middle{ 
+ 	position: absolute; 
+	background: url(img/srw_c.png) repeat-x;
+	left: 18px;
+	width: 194px;
+	height: 110px;
+}
+
+#search_text_right{ 
+ 	position: absolute; 
+	background: url(img/srw_r.png); 
+	left: 212px;
+	width: 8px;
+	height: 110px;
+}
+#search_right {
+ 	position: absolute; 
+	background: url(img/srbutton_r.png) no-repeat left center;
+	left: 220px;
+	width: 10px;
+	height: 110px;
+}
+#search_textfield {
+ 	position: absolute;
+	top: 22px;
+	left: 14px;
+	width: 202px;
+	background: none;
+	border: none;
+}
+#addvanced_search{
+	position: absolute;
+	text-decoration: none;
+    font: bold 13px Arial, sans-serif;
+	color: white;
+	top : 83px;
+	left : 0px;
+}
+/* ------------------------------------------------   PRZYCIKS WYSZUKIWARKI   -------------------------------- */
+#search_button{
+	position: relative;
+	top: 50px;
+	left: 123px;
+	height: 22px;
+	width: 97px;
+	
+}
+#search_button_l{
+	float: left;
+	background: url(img/srbuttons_l.png);
+	height: 22px;
+	width: 6px;
+	text-align: center;
+}
+#search_button_m_1{
+	position: relative;
+	float: left;
+	text-align: center;
+	background: url(img/srbuttons_c.png) repeat-x;
+	height: 22px;
+	width: 62px;
+    font: bold 13px/22px Arial, sans-serif;
+	color: white;
+}
+#search_button_m_2{
+	float: left;
+	background: url(img/srbuttons_c.png) repeat-x;
+	height: 22px;
+	width: 3px;
+}
+#search_button_m_3{
+	float: left;
+	background: url(img/srlupa.png);
+	height: 22px;
+	width: 17px;
+}
+#search_button_s{
+	float: left;
+	background: url(img/srbuttons_p.png);
+	height: 22px;
+	width: 2px;
+}
+#search_button_r{
+	float: left;
+	background: url(img/srbuttons_r.png);
+	height: 22px;
+	width: 6px;
+}
+#search_button_decs{
+	position: absolute;
+	text-decoration: none;
+    font: bold 13px/34px Arial, sans-serif;
+	color: white;
+	left : 10px;
+}
+/* ---------------------------------------------------   KATALOG PRODUKTOW -------------------------------------------------- */
+
+#products {
+	height: 29px; width: 230px;
+}
+#products #header {
+	position: relative;
+}
+#products #header #left{
+	height: 29px; width: 13px; background: url(img/mlbutton_l.png); position: absolute; left: 0px;
+}
+#products #header #middle{
+	height: 29px; width: 204px; background: url(img/mlbutton_c.png) repeat-x; position: absolute; left: 13px; text-align: center;
+	font: bold 13px/29px Arial, sans-serif; color: white;
+}
+#products #header #right{
+	height: 29px; width: 13px; background: url(img/mlbutton_r.png); position: absolute; left: 217px;
+}
+
+#categories #category  {
+	height: 20px; width: 20px; background-color: #fcf6b3; position: relative; cursor: pointer;
+}
+#categories #category #center {
+	height: 20px; width: 210px; background-color: #fefdec; position: absolute; left: 20px;
+}
+#categories #line {
+	height: 1px; width: 230px; background-color: #fcf6b3; border-top-style: dashed; border-color: orange; border-top-width: 1px;
+}
+#categories #category #center #picture{
+	height: 5px; width: 6px; background: url(img/mlpoint_1.png); position: absolute; left: 7px; top: 7px;
+}
+#categories #category #center #picture_expand{
+	height: 5px; width: 6px; background: url(img/k_p2.png); position: absolute; left: 7px; top: 7px;
+}
+#categories #category #center #name{
+	position: absolute; left: 20px; font: 12px/20px Arial, sans-serif; text-decoration: none; color: orange;
+}
+#categories #category:hover {
+	height: 20px; width: 20px; background-color: #fdab0c;
+}
+#categories #bottom {
+	height: 20px; width: 20px; background-color: #fdab0c;
+}

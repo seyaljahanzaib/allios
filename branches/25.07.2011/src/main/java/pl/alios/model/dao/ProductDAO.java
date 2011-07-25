@@ -20,7 +20,7 @@ public class ProductDAO extends AbstarctDAO{
 		query.setParameter("category", "%"+category+"%");
 		  try{
 			  products = (ArrayList<Product>) query.getResultList();
-			  logger.info("Pobrano produktów :"+ products.size());
+			  logger.info("Pobrano produktÃ³w :"+ products.size());
 		  } catch (NoResultException e) { 
 			  logger.error(e);
 			  return null;

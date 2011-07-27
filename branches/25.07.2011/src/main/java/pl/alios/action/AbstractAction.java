@@ -1,6 +1,5 @@
 package pl.alios.action;
 
-import pl.alios.model.dao.adapter.DBAdapter;
 import pl.alios.utils.fop.FopPrinter;
 
 import com.opensymphony.xwork2.ActionSupport;

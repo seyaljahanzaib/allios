@@ -1,14 +1,19 @@
 package pl.alios.action;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.apache.struts2.ServletActionContext;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import pl.alios.model.Customer;
 import pl.alios.model.Order;
 import pl.alios.model.dao.adapter.DBAdapter;
+import pl.alios.utils.fop.FopPrinter;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -23,6 +28,8 @@ public class OrderReviewAction extends ActionSupport {
 		Customer customer  = (Customer) sessionAttr.get("customer");
 
 		if(view) return view(customer);
+		
+		if(inovice) return inovice(customer);
 		
 		if(delete) delete(customer);
 		
@@ -51,7 +58,21 @@ public class OrderReviewAction extends ActionSupport {
 		return "SUCCESS";
 	}
 	
+	private String inovice(Customer customer) {
+		logger.info("Przygotuj fakture dla klienta : " + customer.getLogin());
+		
+		WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(
+                						ServletActionContext.getServletContext());
+
+		FopPrinter fop = (FopPrinter)context.getBean("fop");
+		fop.getInovice(xmlInovice)
+		
+		
+		return null;
+	}
+	
 	public String view(Customer customer){
+		logger.info("Podglad zamowienia o order_id : " + orderId + " przez klienta : " + customer.getLogin());
 		for(Order order : customer.getOrders()){
 			if(order.getOrderId().equals(orderId)){
 				setOrder(order);
@@ -63,6 +84,7 @@ public class OrderReviewAction extends ActionSupport {
 	
 	
 	public String delete(Customer customer){
+		logger.info("Anulowanie zamowienia o order_id : " + orderId + " przez klienta : " + customer.getLogin());
 		for(Order order : customer.getOrders()){
 			if(order.getOrderId().equals(orderId)){
 				order.setState("Anulowane");
@@ -84,6 +106,8 @@ public class OrderReviewAction extends ActionSupport {
 	private Long orderId;
 	private Order order;
 	
+	private InputStream inputStream;
+	
 	public boolean isHistory() {return history;}
 	public void setHistory(boolean history) {this.history = true;}
 	public boolean isCurrent() {return current;}
@@ -102,6 +126,11 @@ public class OrderReviewAction extends ActionSupport {
 
 	public Order getOrder() {return order;}
 	public void setOrder(Order order) {this.order = order;}
+
+	public boolean isInovice() {return inovice;}
+	public void setInovice(boolean inovice) {this.inovice = true;}
 	
+	public InputStream getInputStream() {return inputStream;}
+	public void setInputStream(InputStream inputStream) {this.inputStream = inputStream;} 
 	
 }

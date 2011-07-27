@@ -1,0 +1,94 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="LoginAction" class="pl.alios.action.LoginAction">
+			<result name="SUCCESS" type="tiles">baseLayout</result>
+			<result name="FAILURE" type="tiles">baseLayout</result>
+			<result name="SUCCESS_CART" type="tiles">choose_customer_data</result>
+			<result name="FAILURE_CART" type="tiles">have_to_log</result>
+			<result name="SUCCESS_ACCOUNT" type="tiles">welcome</result>
+			<result name="FAILURE_ACCOUNT" type="tiles">have_to_log</result>
+		</action>
+		
+		<action name="LogOutAction"  class="pl.alios.action.LogOutAction">
+			<result name="SUCCESS" type="tiles">baseLayout</result>
+		</action>
+		
+		<action name="AddToCartAction"  class="pl.alios.action.AddToCartAction">
+			<result name="SUCCESS" type="tiles">add_to_cart</result>
+		</action>
+		
+		<action name="ConfirmOrderAction"  class="pl.alios.action.ConfirmOrderAction">
+			<result name="NEXT" type="tiles">choose_customer_data</result>
+			<result name="COUNT_SUCCESS" type="tiles">cart</result>
+			<result name="ERROR" type="tiles">baseLayout</result>
+			<result name="DELETE_SUCCESS" type="tiles">cart</result>
+			<result name="HAVE_TO_LOG" type="tiles">have_to_log</result>
+		</action>
+		
+		<action name="ConfirmDetailsAction"  class="pl.alios.action.ConfirmDetailsAction">
+			<result name="BACK" type="tiles">cart</result>
+			<result name="SUCCESS" type="tiles">confirm_order</result>
+			<result name="ERROR" type="tiles">baseLayout</result>
+		</action>
+		
+		<action name="ConfirmAllAction"  class="pl.alios.action.ConfirmAllAction">
+			<result name="BACK" type="tiles">confirm_order</result>
+			<result name="SUCCESS" type="tiles">summary</result>
+			<result name="ERROR" type="tiles">baseLayout</result>
+		</action>
+		
+		<action name="ChangePassAction"  class="pl.alios.action.ChangePassAction">
+			<result name="input" type="tiles">changePass</result>
+			<result name="SUCCESS" type="tiles">welcome</result>
+		</action>
+		
+		<action name="ChangeDataAction"  class="pl.alios.action.ChangeDataAction">
+			<result name="input" type="tiles">changeData</result>
+			<result name="SUCCESS" type="tiles">welcome</result>
+			<result name="SHOW" type="tiles">changeData</result>
+		</action>
+		
+		<action name="RegisterAction"  class="pl.alios.action.RegisterAction">
+		    <result name="input" type="tiles">registration</result>
+			<result name="SUCCESS" type="tiles">baseLayout</result>
+		</action>
+						
+		<action name="ShowProductsAction"  class="pl.alios.action.ShowProductsAction">
+			<result name="SUCCESS" type="tiles">products</result>
+		</action>
+		
+		<action name="OrderReviewAction"  class="pl.alios.action.OrderReviewAction">
+			<result name="SUCCESS" type="tiles">order_review</result>
+			<result name="VIEW" type="tiles">viewOrder</result>
+			<result name="INOVICE" type="stream">
+				<param name="contentType">application/pdf</param>
+				<param name="inputName">inputStream</param>
+				<param name="bufferSize">1024</param>
+			</result> 
+		</action>
+		
+		<action name="SetPageAction"  class="pl.alios.action.SetPageAction">
+			<result name="SUCCESS" type="tiles">products</result>
+		</action>
+						
+		<action name="*Link" method="{1}" class="pl.alios.main.LinkAction">
+			<result name="welcome" type="tiles">welcome</result>
+			<result name="register" type="tiles">registration</result>
+			<result name="office" type="tiles">office</result>
+			<result name="cart" type="tiles">cart</result>
+			<result name="order_review" type="tiles">order_review</result>
+			<result name="have_to_log_account" type="tiles">have_to_log_account</result>
+			<result name="changeData" type="tiles">changeData</result>
+			<result name="changePass" type="tiles">changePass</result>
+		</action>
+		
+	</package>
+</struts>

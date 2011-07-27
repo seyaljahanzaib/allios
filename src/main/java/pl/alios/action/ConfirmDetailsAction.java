@@ -1,7 +1,6 @@
 package pl.alios.action;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Map;
 
 import org.apache.log4j.Logger;

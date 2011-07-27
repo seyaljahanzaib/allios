@@ -4,8 +4,9 @@
 <beans default-autowire="no" default-dependency-check="objects" default-lazy-init="true">
 
 	<bean id="fop" class="pl.alios.utils.fop.FopPrinter">
-		<constructor-arg index="0" value="webapps/Alios/config/fopUserConfig.xml"/>
-		<constructor-arg index="1" value="webapps/Alios/inovice.xsl"/>
+		<constructor-arg index="0" value="webapps/Allios/config/fopUserConfig.xml"/>
+		<constructor-arg index="1" value="webapps/Allios/config/inovice.xsl"/>
+		<constructor-arg index="2" value="webapps/Allios/config/fonts"/>
 	</bean>
 
 </beans>

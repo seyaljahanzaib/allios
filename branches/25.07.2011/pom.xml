@@ -46,13 +46,13 @@
 						<phase>compile</phase>
 						<configuration>
 							<target>
+								<copy todir="${katalog.tomcat.allios}" overwrite="true">
+									<fileset dir="${basedir}/WebContent/"/>
+								</copy>							
 								<copy file="${basedir}/src/main/resources/persistence.xml"
 						            tofile="${katalog.tomcat.allios}/WEB-INF/classes/META-INF/persistence.xml"/>
-								<copy todir="${katalog.tomcat.allios}/WEB-INF/lib" overwrite="false">
-									<fileset dir="${basedir}/WebContent/WEB-INF/lib/"  includes="*.jar" />
-								</copy>
-								<copy todir="${katalog.tomcat.allios}/WEB-INF/jsp" overwrite="true">
-									<fileset dir="${basedir}/WebContent/WEB-INF/jsp/"  includes="*.jsp" />
+								<copy todir="${katalog.tomcat.allios}/WEB-INF/lib/" overwrite="false">
+									<fileset dir="${basedir}/library/"  includes="*.jar" />
 								</copy>
 							</target>
 						</configuration>

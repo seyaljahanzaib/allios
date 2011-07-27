@@ -261,7 +261,7 @@
 		<s:else>
 				<div style="float: left;"><s:checkbox cssStyle="float: left;" name="acceptance"/></div>
 				</s:else>
-		<div id="statute"> żąęńść WyraÅ¼am zgodÄ na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb rekrutacji, zgodnie z ustawÄ z dnia 29.08.1997 r.  o ochronie danych osobowych. (Dz. U. z 2002 r. nr 101, poz.926 ze zm.)</div>
+		<div id="statute">WyraÅ¼am zgodÄ na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb rekrutacji, zgodnie z ustawÄ z dnia 29.08.1997 r.  o ochronie danych osobowych. (Dz. U. z 2002 r. nr 101, poz.926 ze zm.)</div>
 	</div>
 	
 	<s:submit id="register_button" value=""/>

@@ -29,6 +29,13 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
   
+  
+ <servlet>
+  <servlet-name>context</servlet-name>
+  <servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>
+  <load-on-startup>1</load-on-startup>
+ </servlet>
+  
   <servlet>
     <servlet-name>log4j-init</servlet-name>
     <servlet-class>pl.alios.utils.Log4JServlet</servlet-class>

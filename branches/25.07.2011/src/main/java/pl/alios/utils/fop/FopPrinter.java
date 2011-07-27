@@ -12,18 +12,29 @@ import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.FopFactory;
 import org.apache.log4j.Logger;
 
-import pl.alios.action.AddToCartAction;
-
 public class FopPrinter{
 	
 	private Logger logger = Logger.getLogger(FopPrinter.class);
 	
-	public FopPrinter(String userConfigFile, String transformateFile) {
-		logger.info("FOP init()");
-		initFop(userConfigFile, transformateFile);
+	public getInovice(String xmlInovice){
+		
+		
+		
 	}
 	
-	private void initFop(String userConfigFile, String transformateFile){
+	
+	
+	
+	
+	
+	
+	
+	public FopPrinter(String userConfigFile, String transformateFile, String fontsPath) {
+		logger.info("FOP init()");
+		initFop(userConfigFile, transformateFile, fontsPath);
+	}
+	
+	private void initFop(String userConfigFile, String transformateFile, String fontsPath){
 		try{
 			File xsltfile = new File(transformateFile);
 			System.out.println("patch 1 : " + xsltfile.getAbsolutePath());
@@ -32,11 +43,17 @@ public class FopPrinter{
 			FopFactory fopFactory = FopFactory.newInstance();
 			fopFactory.setBase14KerningEnabled(true);
 			fopFactory.setUserConfig(new File(userConfigFile));
-	//		fopFactory.setFontBaseURL(rootPth + "/");
+			fopFactory.setFontBaseURL(fontsPath + "/");
+			fopFactory.setFontBaseURL(fontsPath + "/");
+			fopFactory.setSourceResolution(100);
 			
 			FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
+			
+			
+			
+			
 		}catch(Exception e){
-			System.out.println(e);
+			logger.error("Problem z inicjalozacja FOP-a : " + e);
 		}
 		
 //		Transformer xslfoTransformer;

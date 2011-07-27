@@ -31,6 +31,8 @@ public class ConfirmAllAction extends ActionSupport {
 		Order order = (Order) sessionAttr.get("order");
 		Customer customer = (Customer) sessionAttr.get("customer");
 		
+		logger.info("ConfirmAllActions dla klienta : " + customer.getLogin());
+		
 		customer.addOrder(order);
 		order.setCustomer(customer);
 		order.setOrderDate(new java.sql.Date(new Date().getTime()));

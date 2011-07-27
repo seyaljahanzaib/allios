@@ -3,6 +3,7 @@
     <wb-module deploy-name="Allios">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="context-root" value="Allios"/>
         <property name="java-output-path" value="/Allios/build/classes"/>
     </wb-module>

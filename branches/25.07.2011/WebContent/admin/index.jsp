@@ -10,7 +10,7 @@
 }
 	
 	#adminbar #panelgraf {
-		background: url(img/pa_menubc.png); width: 1150px; height: 56px; float: left;
+		background: url(../img/pa_menubc.png); width: 1150px; height: 56px; float: left;
 	}
 
 </style>

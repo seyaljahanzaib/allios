@@ -65,7 +65,8 @@ public class OrderReviewAction extends ActionSupport {
                 						ServletActionContext.getServletContext());
 
 		FopPrinter fop = (FopPrinter)context.getBean("fop");
-		fop.getInovice(xmlInovice)
+		//TODO
+//		fop.getInovice(xmlInovice)
 		
 		
 		return null;

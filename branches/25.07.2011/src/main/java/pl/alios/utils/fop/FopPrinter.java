@@ -1,6 +1,7 @@
 package pl.alios.utils.fop;
 
 import java.io.File;
+import java.io.InputStream;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -16,10 +17,10 @@ public class FopPrinter{
 	
 	private Logger logger = Logger.getLogger(FopPrinter.class);
 	
-	public getInovice(String xmlInovice){
+	public InputStream getInovice(String xmlInovice){
 		
 		
-		
+		return null;
 	}
 	
 	

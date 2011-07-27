@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<katalog.tomcat.allios>C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/Allios_2</katalog.tomcat.allios>
+		<katalog.tomcat.allios>C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/Allios</katalog.tomcat.allios>
 	</properties>
 
 	<build>

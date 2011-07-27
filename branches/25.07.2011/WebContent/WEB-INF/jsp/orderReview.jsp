@@ -251,7 +251,11 @@
 		
 			<td width="76">
 				<div id="poz_tab1">
-				<div id="binvoice"></div>
+				
+				<s:if test="state == 'Oczekuje'">
+					<s:submit id="binvoice" name="invoice" value="" />
+				</s:if>
+<!-- 				<div id="binvoice"></div> -->
 				</div>
 			</td>
 		</s:form>

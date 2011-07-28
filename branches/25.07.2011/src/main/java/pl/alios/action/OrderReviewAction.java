@@ -13,6 +13,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import pl.alios.model.Customer;
 import pl.alios.model.Order;
 import pl.alios.model.dao.adapter.DBAdapter;
+import pl.alios.utils.Helper;
 import pl.alios.utils.fop.FopPrinter;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -21,9 +22,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class OrderReviewAction extends ActionSupport {
 
 	private static final long serialVersionUID = 132121321L;
-	private Logger logger  = Logger.getLogger(ConfirmAllAction.class);
+	private Logger logger  = Logger.getLogger(OrderReviewAction.class);
 
 	public String execute(){
+		System.out.println("AKSZYN");
+		System.out.println("inovice : "+inovice);
 		Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
 		Customer customer  = (Customer) sessionAttr.get("customer");
 
@@ -60,16 +63,25 @@ public class OrderReviewAction extends ActionSupport {
 	
 	private String inovice(Customer customer) {
 		logger.info("Przygotuj fakture dla klienta : " + customer.getLogin());
+		System.out.println("Przygotuj fakture dla klienta : " + customer.getLogin());
 		
 		WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(
                 						ServletActionContext.getServletContext());
-
+		
+		Order order = null;
+		for(Order o : customer.getOrders()){
+			if(o.getOrderId().equals(orderId)){
+				order = o;
+				break;
+			}
+		}
+		
 		FopPrinter fop = (FopPrinter)context.getBean("fop");
-		//TODO
-//		fop.getInovice(xmlInovice)
+		setInputStream( fop.getInovice( Helper.prepareInoviceXML(order) ) );
 		
 		
-		return null;
+		
+		return "INOVICE";
 	}
 	
 	public String view(Customer customer){
@@ -95,6 +107,9 @@ public class OrderReviewAction extends ActionSupport {
 		}
 		return "SUCCESS";
 	}
+	
+	
+	
 	
 	private List<Order> orderList;
 	private boolean history;

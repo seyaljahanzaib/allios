@@ -224,7 +224,8 @@
 			</fo:table-body>
 </fo:table>
 
-
+<xsl:template name="ZUZTowary" match="Faktura/Produkty/Produkt/*">
+<xsl:for-each select="//Produkt">
 <fo:table table-layout="fixed" width="100%">
 
 		<fo:table-column column-width="0.53cm" />
@@ -248,7 +249,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="left" padding-top="5px" font-size="7pt">Strzykawka Admira 4g w butelce 10l</fo:block>
+					<fo:block text-align="left" padding-top="5px" font-size="7pt"><xsl:value-of select="Nazwa"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
@@ -290,74 +291,8 @@
 				</fo:table-row>
 			</fo:table-body>
 </fo:table>	
-
-<fo:table table-layout="fixed" width="100%">
-
-		<fo:table-column column-width="0.53cm" />
-		<fo:table-column column-width="6.70cm" />
-		<fo:table-column column-width="1.22cm" />
-		<fo:table-column column-width="0.97cm" />
-		<fo:table-column column-width="0.73cm" />
-		<fo:table-column column-width="1.60cm" />
-		<fo:table-column column-width="1.07cm" />
-		<fo:table-column column-width="1.70cm" />
-		<fo:table-column column-width="0.78cm" />
-		<fo:table-column column-width="1.85cm" />
-		<fo:table-column column-width="1.85cm" />
-		
-			<fo:table-body>
-				<fo:table-row>
-				
-					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">1.</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="left" padding-top="5px" font-size="7pt">Strzykawka Admira 4g w butelce 10l</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt"></fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">100</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">szt.</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">11 035,06</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">5</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">123 234,04</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">22</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">11 230,06</fo:block>
-					</fo:table-cell>
-					
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">123 435,99</fo:block>
-					</fo:table-cell>	
-					
-				</fo:table-row>
-			</fo:table-body>
-</fo:table>	
-	
-	
-	
+</xsl:for-each>
+</xsl:template>
 
 <fo:table table-layout="fixed" width="100%">
 

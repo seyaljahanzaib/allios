@@ -37,7 +37,7 @@
 	font: 11px/30px Tahoma; color: #ffffff; margin-left: 710px; float: left;
  	}
  	#menubar2 #tekst2 {
-	font: bold 11px/30px Tahoma; color: #ffffff; margin-left: 20px; float: left; cursor: pointer; border: none; background-color: transparent;
+	font: bold 11px Tahoma; color: #ffffff; margin-left: 20px; float: left; cursor: pointer; border: none; background-color: transparent; margin-top: 7px;
  	}
  	
 </style>
@@ -63,12 +63,9 @@
 		<div id="menubar2">
 			<div id="tlo1">
 				<div id="tekst1">Witaj, zalogowałeś się do sklepu allios.pl</div>
-					<s:form action="LogOutAction" theme="simple">
-						<s:submit id="tekst2" value="Wyloguj"/>
-					</s:form>
-				
-				
-<!-- 				<div id="tekst2">Wyloguj</div> -->
+				<s:form action="LogOutAction" theme="simple">
+					<s:submit id="tekst2" value="Wyloguj"/>
+				</s:form>
 			</div>
 			</div>
 	</s:form>

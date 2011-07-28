@@ -5,7 +5,6 @@
 <fo:layout-master-set>
 <fo:simple-page-master master-name="ZUZ" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="0.5cm" margin-left="1cm" margin-right="10mm">
 <fo:region-body/>
-<fo:region-after extent="2cm"/>
 </fo:simple-page-master>
 </fo:layout-master-set>
 <fo:page-sequence master-reference="ZUZ" initial-page-number="1">
@@ -411,12 +410,6 @@
 <fo:block text-align="left" font-size="11pt">Słownie: sześćdziesiąt jeden złotych trzydzieści dwa grosze</fo:block>
 
 </fo:flow>
-</fo:page-sequence>
-
-<fo:page-sequence>
-  <fo:flow flow-name="xsl-region-after">
-      <fo:block text-align="left" font-size="11pt" space-before="10pt" font-family="TahomalBD">Do zapłaty: 1 320,95 zł</fo:block>
-  </fo:flow>
 </fo:page-sequence>
 
 </fo:root>

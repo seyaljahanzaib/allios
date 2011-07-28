@@ -100,6 +100,3 @@
 		</div>
 	<div id="sekright"></div>
 </div>
-	
-	
-	

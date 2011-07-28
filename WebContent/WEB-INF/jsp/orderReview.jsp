@@ -253,7 +253,7 @@
 				<div id="poz_tab1">
 				
 				<s:if test="state == 'Oczekuje'">
-					<s:submit id="binvoice" name="invoice" value="" />
+					<s:submit id="binvoice" name="inovice" value="" />
 				</s:if>
 <!-- 				<div id="binvoice"></div> -->
 				</div>

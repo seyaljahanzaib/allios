@@ -26,6 +26,20 @@
  	#menubar1 #tekst3 {
 	font: 11px/30px Tahoma; color: #ffffff; margin-left: 12px; float: left; cursor: pointer;
  	}
+ 	
+ #menubar2 {
+	height: 30px; width: 1000px; 
+	} 
+	#menubar2 #tlo1 {
+	background: url(img/menubar1.png); height: 30px; width: 1000px; float: left;
+	}
+	#menubar2 #tekst1 {
+	font: 11px/30px Tahoma; color: #ffffff; margin-left: 710px; float: left;
+ 	}
+ 	#menubar2 #tekst2 {
+	font: bold 11px/30px Tahoma; color: #ffffff; margin-left: 20px; float: left; cursor: pointer; border: none; background-color: transparent;
+ 	}
+ 	
 </style>
 
 <s:if test="%{#session.customer == null}">
@@ -46,15 +60,17 @@
 </s:if>
 <s:else>
 	<s:form action="LogOutAction" theme="simple">
-		<div id="menubar1">
-			<div id="tlo1"></div>
-			<div id="logarea"></div>
-			<div id="tlo2"></div>
-			<div id="logarea"></div>
-			<div id="tlo3">
-				<s:submit id="tekst2" value="Wyloguj"/>
+		<div id="menubar2">
+			<div id="tlo1">
+				<div id="tekst1">Witaj, zalogowałeś się do sklepu allios.pl</div>
+					<s:form action="LogOutAction" theme="simple">
+						<s:submit id="tekst2" value="Wyloguj"/>
+					</s:form>
+				
+				
+<!-- 				<div id="tekst2">Wyloguj</div> -->
 			</div>
-		</div>
+			</div>
 	</s:form>
 </s:else>
 

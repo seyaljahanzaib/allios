@@ -4,55 +4,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 
-#logadmin {
-	margin-top: 200px; margin-left: 30%;
-	}	
-	#logadmin #sekleft {
-		background: url(../img/pa_logonl.png); width: 12px; height: 252px; float: left;
+#pdmenubar {
+	width: 1150px; margin-top: 10px; float: left;
+}
+	
+	#pdmenubar #sekleft {
+		background: url(../img/pa_menugl.png); width: 7px; height: 26px; float: left;
 		}
-	#logadmin #sekright {
-		background: url(../img/pa_logonr.png); width: 12px; height: 252px; float: left;
+	#pdmenubar #sekcenter {
+		background: url(../img/pa_menugc.png); width: 1136px; height: 26px; float: left;
 		}
-	#logadmin #sekcenter {
-		background: url(../img/pa_logonc.png); width: 478px; height: 252px; float: left;
+	#pdmenubar #sekright {
+		background: url(../img/pa_menugr.png); width: 7px; height: 26px; float: left;
 		}
-	#logadmin #tekstlog {
-		text-align: left; font: bold 13px/40px Tahoma; color: #ffffff; letter-spacing: 1pt;
-		}
-	#logadmin #tekst_u {
-		width: 90px; height: 28px; text-align: right; font: bold 12px/28px Tahoma; color: #292084; margin-top: 40px; margin-left: 60px; float: left;
-		}
-	#logadmin #tekst_h {
-		width: 90px; height: 28px; text-align: right; font: bold 12px/28px Tahoma; color: #292084; margin-top: 20px; margin-left: 60px; float: left;
-		}
-	#logadmin #log_areal {
-		background: url(../img/pa_areal.png); width: 6px; height: 28px; float: left;  margin-top: 40px; margin-left: 10px;
-		}
-	#logadmin #log_areac {
-		background: url(../img/pa_areac.png); width: 220px; height: 28px; float: left;  margin-top: 40px;
-		}
-	#logadmin #log_arear {
-		background: url(../img/pa_arear.png); width: 6px; height: 28px; float: left;  margin-top: 40px;
-		}
-	#logadmin #log1_areal {
-		background: url(../img/pa_areal.png); width: 6px; height: 28px; float: left;  margin-top: 20px; margin-left: 10px;
-		}
-	#logadmin #log1_areac {
-		background: url(../img/pa_areac.png); width: 220px; height: 28px; float: left;  margin-top: 20px;
-		}
-	#logadmin #log1_arear {
-		background: url(../img/pa_arear.png); width: 6px; height: 28px; float: left;  margin-top: 20px;
-		}
-	#logadmin #b_zaloguj {
-		background: url(../img/pa_buttonlog.png); width: 102px; height: 30px; float: left;  margin-top: 15px; margin-left: 290px; cursor: pointer;
-		}
-	#logadmin #b_zaloguj:HOVER {
-		background: url(../img/pa_buttonlog1.png); 
+	#pdmenubar #menutitle {
+		font: bold 14px/26px Tahoma; color: #ffffff; letter-spacing: 1px; float: left;
 		}
 	
-	#logadmin #podpis {
-		text-align: left; font: bold 12px Tahoma; color: #292084; margin-top: 26px; margin-left: 2px; float: left;
+	
+#pduklad {
+		margin-top: 10px; margin-right: 10px; float: left;
 		}
+#pduklad #ukladleft {
+		background: url(../img/pa_menugl.png); width: 7px; height: 26px; float: left;
+		}
+#pduklad #ukladcenter {
+		background: url(../img/pa_menugc.png); width: 179px; height: 26px; float: left; font: bold 12px/26px Tahoma; color: #ffffff; letter-spacing: 1px; text-align: center; float: left;
+		}
+#pduklad #ukladright {
+		background: url(../img/pa_menugr.png); width: 7px; height: 26px; float: left;
+		}
+	
+
 		
 #stopka {
 	clear: both;
@@ -60,26 +43,23 @@
 
 </style>
 
-<div id="logadmin">
+<div id="pdmenubar">
 	<div id="sekleft"></div>
 	<div id="sekcenter">
-		<div id="tekstlog">Logowanie</div>
-		<div id="tekst_u">Użytkownik:</div>
-		<div id="log_areal"></div>
-		<div id="log_areac"></div>
-		<div id="log_arear"></div>
-		
-		<div id="stopka"></div>
-		<div id="tekst_h">Hasło:</div>
-		<div id="log1_areal"></div>
-		<div id="log1_areac"></div>
-		<div id="log1_arear"></div>
-		
-		<div id="stopka"></div>
-		<div id="b_zaloguj"></div>
-		<div id="stopka"></div>
-		
-		<div id="podpis">www.allios.pl</div>
-		</div>
+		<div id="menutitle">Menu administracyjne</div>
+	</div>
 	<div id="sekright"></div>
 	</div>
+
+
+<div id="pduklad">
+	<div id="ukladleft"></div>
+	<div id="ukladcenter">Asortyment</div>
+
+	<div id="ukladright"></div>
+	</div>
+	
+	
+	
+	
+	

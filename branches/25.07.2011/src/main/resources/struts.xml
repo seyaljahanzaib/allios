@@ -71,6 +71,7 @@
 			<result name="INOVICE" type="stream">
 				<param name="contentType">application/pdf</param>
 				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="document.pdf"</param>
 				<param name="bufferSize">1024</param>
 			</result> 
 		</action>

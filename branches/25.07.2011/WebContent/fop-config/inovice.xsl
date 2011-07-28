@@ -409,6 +409,53 @@
 <fo:block text-align="left" font-size="11pt" space-before="10pt" font-family="TahomalBD">Do zapłaty: 1 320,95 zł</fo:block>
 <fo:block text-align="left" font-size="11pt">Słownie: sześćdziesiąt jeden złotych trzydzieści dwa grosze</fo:block>
 
+<fo:table table-layout="fixed" width="100%">
+
+		<fo:table-column column-width="12cm" />
+		<fo:table-column column-width="5cm" />
+		<fo:table-column column-width="5cm" />
+
+		
+			<fo:table-body>
+				<fo:table-row>
+				
+					<fo:table-cell >
+					<fo:block text-align="center" padding-top="40px" font-size="9pt" font-family="TahomalBD"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell border-bottom-style="solid" border-width="1px" >
+					<fo:block text-align="center" padding-top="40px" font-size="9pt" font-family="TahomalBD">Wystawił:</fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell >
+					<fo:block text-align="center" padding-top="40px" font-size="9pt" font-family="TahomalBD"></fo:block>
+					</fo:table-cell>
+
+					
+				</fo:table-row>
+				
+				
+				<fo:table-row>
+				
+					<fo:table-cell >
+					<fo:block text-align="center" padding-top="6px" font-size="9pt" font-family="TahomalBD"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell >
+					<fo:block text-align="center" padding-top="6px" font-size="9pt">Jolanta Matacz</fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell >
+					<fo:block text-align="center" padding-top="6px" font-size="9pt" font-family="TahomalBD"></fo:block>
+					</fo:table-cell>
+
+					
+				</fo:table-row>
+				
+			</fo:table-body>
+
+</fo:table>	
+
 </fo:flow>
 </fo:page-sequence>
 

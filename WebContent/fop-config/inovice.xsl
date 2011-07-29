@@ -14,7 +14,7 @@
            <fo:external-graphic src="invioce_logo.png"/>
 	</fo:block>
 	<fo:block text-align="right" margin-right="45mm" letter-spacing="4" font-size="12pt" font-family="TahomalBD">FAKTURA VAT</fo:block>
-	<fo:block text-align="right" margin-right="45mm" letter-spacing="2" font-size="11pt">Nr. <xsl:value-of select="root/name"/></fo:block>
+	<fo:block text-align="right" margin-right="45mm" letter-spacing="2" font-size="11pt">Nr. <xsl:value-of select="Faktura/Numer"/></fo:block>
 	<fo:block text-align="right" margin-right="45mm" letter-spacing="2" font-size="10pt" font-family="TahomalBD">ORYGINAŁ</fo:block>
 
 
@@ -29,7 +29,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" font-size="9pt">29-10-2011</fo:block>
+					<fo:block text-align="right" font-size="9pt"><xsl:value-of select="Faktura/DataWystawienia"/></fo:block>
 					</fo:table-cell>
 					
 				</fo:table-row>
@@ -41,7 +41,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" font-size="9pt">29-10-2011</fo:block>
+					<fo:block text-align="right" font-size="9pt"><xsl:value-of select="Faktura/DataSprzedazy"/></fo:block>
 					</fo:table-cell>
 					
 				</fo:table-row>
@@ -70,7 +70,7 @@
 				<fo:block margin-left="5mm" text-align="left" font-size="10pt" font-family="TahomalBD">ALLIOS Jolanta Matacz</fo:block>
 			</fo:table-cell>
 			<fo:table-cell>
-				<fo:block margin-left="10mm" text-align="left" font-size="10pt" font-family="TahomalBD">COMHAR Paweł Kłosiński</fo:block>
+				<fo:block margin-left="10mm" text-align="left" font-size="10pt" font-family="TahomalBD"><xsl:value-of select="Faktura/Nabywca/Nazwa"/></fo:block>
 			</fo:table-cell>
 		</fo:table-row>
 		
@@ -80,7 +80,7 @@
 				<fo:block margin-left="5mm" text-align="left" font-size="10pt">09-409 Płock, ul. Szpacza 12</fo:block>
 			</fo:table-cell>
 			<fo:table-cell>
-				<fo:block margin-left="10mm" text-align="left" font-size="10pt">09-410 Płock, ul. Powstańców Styczniowych 17/10</fo:block>
+				<fo:block margin-left="10mm" text-align="left" font-size="10pt"><xsl:value-of select="Faktura/Nabywca/Adres"/></fo:block>
 			</fo:table-cell>
 		</fo:table-row>
 		
@@ -90,7 +90,7 @@
 				<fo:block margin-left="5mm" text-align="left" font-size="10pt">NIP: 774-236-23-23</fo:block>
 			</fo:table-cell>
 			<fo:table-cell>
-				<fo:block margin-left="10mm" text-align="left" font-size="10pt">NIP: 774-236-23-23</fo:block>
+				<fo:block margin-left="10mm" text-align="left" font-size="10pt">NIP: <xsl:value-of select="Faktura/Nabywca/NIP"/></fo:block>
 			</fo:table-cell>
 		</fo:table-row>
 		</fo:table-body>
@@ -108,7 +108,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="left" font-size="9pt">29-10-2011</fo:block>
+					<fo:block text-align="left" font-size="9pt"><xsl:value-of select="Faktura/TerminPlatnosci"/></fo:block>
 					</fo:table-cell>
 					
 				</fo:table-row>
@@ -120,7 +120,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="left" font-size="9pt">29-10-2011</fo:block>
+					<fo:block text-align="left" font-size="9pt"><xsl:value-of select="Faktura/SposobPlatnosci"/></fo:block>
 					</fo:table-cell>
 					
 				</fo:table-row>	
@@ -142,7 +142,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" font-size="9pt" font-family="TahomalBD">20009</fo:block>
+					<fo:block text-align="right" font-size="9pt" font-family="TahomalBD"><xsl:value-of select="Faktura/KodKlienta"/></fo:block>
 					</fo:table-cell>
 					
 				</fo:table-row>
@@ -242,10 +242,11 @@
 		
 			
 			<fo:table-body>
+			
 				<fo:table-row>
 				
 					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">1.</fo:block>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"><xsl:value-of select="LP"/>.</fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
@@ -257,35 +258,35 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">100</fo:block>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"><xsl:value-of select="Ilosc"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">szt.</fo:block>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"><xsl:value-of select="JM"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">11 035,06</fo:block>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"><xsl:value-of select="CennaNetto"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">5</fo:block>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"><xsl:value-of select="Rabat"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">123 234,04</fo:block>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"><xsl:value-of select="WartoscNetto"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt">22</fo:block>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"><xsl:value-of select="VAT"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">11 230,06</fo:block>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"><xsl:value-of select="KwotaVAT"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt">123 435,99</fo:block>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"><xsl:value-of select="WartoscBrutto"/></fo:block>
 					</fo:table-cell>	
 					
 				</fo:table-row>
@@ -293,6 +294,77 @@
 </fo:table>	
 </xsl:for-each>
 </xsl:template>
+
+
+<fo:table table-layout="fixed" width="100%">
+
+		<fo:table-column column-width="0.53cm" />
+		<fo:table-column column-width="6.70cm" />
+		<fo:table-column column-width="1.22cm" />
+		<fo:table-column column-width="0.97cm" />
+		<fo:table-column column-width="0.73cm" />
+		<fo:table-column column-width="1.60cm" />
+		<fo:table-column column-width="1.07cm" />
+		<fo:table-column column-width="1.7cm" />
+		<fo:table-column column-width="0.78cm" />
+		<fo:table-column column-width="1.85cm" />
+		<fo:table-column column-width="1.85cm" />
+		
+			
+			<fo:table-body>
+			
+				<fo:table-row>
+				
+					<fo:table-cell>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"><xsl:value-of select="Faktura/Transport/LP"/>.</fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="left" padding-top="5px" font-size="7pt">Transport</fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"><xsl:value-of select="Faktura/Transport/WartoscNetto"/></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"><xsl:value-of select="Faktura/Transport/KwotaVAT"/></fo:block>
+					</fo:table-cell>
+					
+					<fo:table-cell>
+					<fo:block text-align="right" padding-top="5px" font-size="7pt"><xsl:value-of select="Faktura/Transport/WartoscBrutto"/></fo:block>
+					</fo:table-cell>	
+					
+				</fo:table-row>
+			</fo:table-body>
+</fo:table>	
+
+
+
 
 <fo:table table-layout="fixed" width="100%">
 
@@ -320,19 +392,19 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px">10 234,04</fo:block>
+					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px"><xsl:value-of select="Faktura/Lacznie/WartoscNetto"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px">22%</fo:block>
+					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px"></fo:block>
 					</fo:table-cell>
 	
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px">1 234,04</fo:block>
+					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px"><xsl:value-of select="Faktura/Lacznie/KwotaVAT"/></fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px">123 234,04</fo:block>
+					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px"><xsl:value-of select="Faktura/Lacznie/WartoscBrutto"/></fo:block>
 					</fo:table-cell>
 						
 					
@@ -341,8 +413,8 @@
 
 </fo:table>	
 
-<fo:block text-align="left" font-size="11pt" space-before="10pt" font-family="TahomalBD">Do zapłaty: 1 320,95 zł</fo:block>
-<fo:block text-align="left" font-size="11pt">Słownie: sześćdziesiąt jeden złotych trzydzieści dwa grosze</fo:block>
+<fo:block text-align="left" font-size="11pt" space-before="10pt" font-family="TahomalBD">Do zapłaty: <xsl:value-of select="Faktura/DoZaplaty/Kwota"/> zł</fo:block>
+<fo:block text-align="left" font-size="11pt">Słownie: <xsl:value-of select="Faktura/DoZaplaty/KwotaSlownie"/></fo:block>
 
 <fo:table table-layout="fixed" width="100%">
 

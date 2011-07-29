@@ -284,7 +284,7 @@
 		<div id="podsumowanie2">
 			<div id="sekleft">Rabat:</div><div id="sekright">0 %</div>
 			<div id="stopka"></div>
-			<div id="sekleft">Transport:</div><div id="sekright"><s:property value="#session.order.transport"/> zł</div>
+			<div id="sekleft">Transport:</div><div id="sekright"><s:property value="#session.order.transportCostBruttoString"/> zł</div>
 		</div>
 		<div id="stopka"></div>
 			<div id="dozaplaty">

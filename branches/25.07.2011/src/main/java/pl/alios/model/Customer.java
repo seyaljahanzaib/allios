@@ -17,6 +17,8 @@ public class Customer {
 	private String password;
 	@Transient 
 	private String confirmPassword;
+	//TODO
+	private Integer code = 1001;
 	private String nip;
 	private String companyName;
 	private String street;
@@ -53,6 +55,12 @@ public class Customer {
 	}
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
+	}
+	public Integer getCode() {
+		return code;
+	}
+	public void setCode(Integer code) {
+		this.code = code;
 	}
 	public String getNip() {
 		return nip;
@@ -142,4 +150,11 @@ public class Customer {
 		if(getOrders() == null) orders = new ArrayList<Order>();
 		orders.add(order);
 	}
+	public String getFullAdres(){
+		if(flatNumber == null || flatNumber.length() == 0)
+			return zipCode + " " + city + ", ul. " + street + " " + houseNumber;
+		else
+			return zipCode + " " + city + ", ul. " + street + " " + houseNumber + "/" + flatNumber;
+	}
+	
 }

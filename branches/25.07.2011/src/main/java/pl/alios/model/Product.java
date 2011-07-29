@@ -16,7 +16,7 @@ public class Product {
 	private String shortDescription;
 	private Double priceNetto;
 	private Double priceBrutto;
-//	private String unit;
+	private String unit;
 //	private Double minCount;
 //	private Double maxCount;
 //	private Double weight;
@@ -46,8 +46,8 @@ public class Product {
 	public void setPriceNetto(Double priceNetto) {this.priceNetto = priceNetto;}
 	public Double getPriceBrutto() {return priceBrutto;}
 	public void setPriceBrutto(Double priceBrutto) {this.priceBrutto = priceBrutto;}
-//	public String getUnit() {return unit;}
-//	public void setUnit(String unit) {this.unit = unit;}
+	public String getUnit() {return unit;}
+	public void setUnit(String unit) {this.unit = unit;}
 //	public Double getMinCount() {return minCount;}
 //	public void setMinCount(Double minCount) {this.minCount = minCount;}
 //	public Double getMaxCount() {return maxCount;}
@@ -56,6 +56,9 @@ public class Product {
 //	public void setWeight(Double weight) {this.weight = weight;}
 	public String getProducer() {return producer;}
 	public void setProducer(String producer) {this.producer = producer;}
+	
+	
+	
 //	public Boolean getPrmotion() {return prmotion;}
 //	public void setPrmotion(Boolean prmotion) {this.prmotion = prmotion;}
 //	public Double getPrmotionPriceNetto() {return prmotionPriceNetto;}

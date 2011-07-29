@@ -48,5 +48,6 @@
 	<classpathentry kind="lib" path="library/servlet-api.jar"/>
 	<classpathentry kind="lib" path="library/jaxen-1.1.3.jar"/>
 	<classpathentry kind="lib" path="library/batik-all-1.7.jar"/>
+	<classpathentry kind="lib" path="library/xml-apis-ext-1.3.04.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -160,7 +160,7 @@
 		<s:if test="%{#session.order != null}">
 		<div id="liczba_prod"><s:property value="#session.order.numberOfItems"/></div>
 		<div id="wartoscb"><s:property value="#session.order.totalPriceBrutto"/> zł</div>
-		<div id="transport"><s:property value="#session.order.Transport"/> zł</div>
+		<div id="transport"><s:property value="#session.order.transportCostBruttoString"/> zł</div>
 		</s:if>
 		<s:else>
 			<div id="kosz_pusty">Koszyk jest pusty</div>

@@ -132,7 +132,7 @@
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
-			<div id="formLabel">MiejscowoÅÄ</div>
+			<div id="formLabel">Miejscowość</div>
 			<s:if test='getFieldErrors().containsKey("city")'>
 				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.city" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
@@ -149,7 +149,7 @@
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
-			<div id="formLabel">WojewÃ³dztwo</div>
+			<div id="formLabel">Województwo</div>
 			<s:if test='getFieldErrors().containsKey("province")'>
 				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.province" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
@@ -176,7 +176,7 @@
 	</div>
 	<div id="fieldsBorder" style="height: 160px;"><div style="height: 1px;"></div>
 		<div id="formRow">
-			<div id="formLabel">ImiÄ</div>
+			<div id="formLabel">Imię</div>
 			<s:if test='getFieldErrors().containsKey("person_name")'>
 				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_name" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
@@ -234,7 +234,7 @@
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
-			<div id="formLabel">HasÅo</div>
+			<div id="formLabel">Hasło</div>
 			<s:if test='getFieldErrors().containsKey("password")'>
 				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:password name="customer.password" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div><s:if test="%{#request.messagePassword != null}"><div style="float:left; margin-left: 20px;  color: red; font: bold 12px/25px Arial, sans-serif;"><s:property value="messagePassword"/></div></s:if>
 			</s:if>
@@ -261,7 +261,7 @@
 		<s:else>
 				<div style="float: left;"><s:checkbox cssStyle="float: left;" name="acceptance"/></div>
 				</s:else>
-		<div id="statute">Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb rekrutacji, zgodnie z ustawÄ z dnia 29.08.1997 r.  o ochronie danych osobowych. (Dz. U. z 2002 r. nr 101, poz.926 ze zm.)</div>
+		<div id="statute">Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb rekrutacji, zgodnie z ustawą z dnia 29.08.1997 r.  o ochronie danych osobowych. (Dz. U. z 2002 r. nr 101, poz.926 ze zm.)</div>
 	</div>
 	
 	<s:submit id="register_button" value=""/>

@@ -22,6 +22,9 @@ public class OrderItem {
 	private Double priceNetto;
 	private Double priceBrutto;
 	private Integer numberOfItem;
+	//TODO
+	private Double VAT = (double) 22;
+	
 	
 	@ManyToOne
 	@JoinColumn(name="order_id_order_zam")
@@ -39,7 +42,11 @@ public class OrderItem {
 	public void setOrderItemId(Long orderItemId) {this.orderItemId = orderItemId;}
 	public Order getOrder() {return order_zam;}
 	public void setOrder(Order order) {this.order_zam = order;}
+	public Double getVAT() {return VAT;}
+	public void setVAT(Double VAT) {this.VAT = VAT;}
+	public Double getAmountVat() {return priceBrutto * numberOfItem  - priceNetto * numberOfItem;}
 	
+	public String getAmountVatString() {return format(getAmountVat());}
 	
 	public String getPriceBruttoString(){
 		return format(priceBrutto);

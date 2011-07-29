@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import pl.alios.model.Order;
+import pl.alios.utils.Commons;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -29,9 +30,9 @@ public class ConfirmDetailsAction extends ActionSupport {
 		Order order = (Order) sessionAttr.get("order");
 		
 		if(payment.equals("1")){
-			order.setPaymentMethod("przy odbiorze");
+			order.setPaymentMethod(Commons.PAYMENT_ON_DELIVERY);
 		}else if(payment.equals("2")){
-			order.setPaymentMethod("przedpłata na konto");
+			order.setPaymentMethod(Commons.PAYMENT_ADVANCE);
 		}
 		
 		Calendar calendar = Calendar.getInstance();

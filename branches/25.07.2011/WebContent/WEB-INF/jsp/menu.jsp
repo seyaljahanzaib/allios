@@ -83,16 +83,16 @@
 			background: url(img/k_bck.png); width: 230px; height: 25px; float: left;
 		}
 	#menukatback #zapis {
-			font: 11px/25px Tahoma; color: #160e86; width: 188px; height: 25px; margin-left: 6px; float: left;
+			font: 11px/25px Tahoma; color: #160e86; width: 184px; height: 25px; margin-left: 6px; float: left;
 		}
 	#menukatback #zapis:HOVER {
-			font: bold 11px/25px Tahoma; color: #160e86; width: 188px; height: 25px; margin-left: 6px; float: left; text-decoration: underline;
+			font: bold 11px/25px Tahoma; color: #160e86; width: 184px; height: 25px; margin-left: 6px; float: left; text-decoration: underline;
 		}
 	#menukatback #podkat{
-			font: 11px/25px Tahoma; color: #160e86; width: 188px; height: 25px; margin-left: 50px; float: left;
+			font: 11px/25px Tahoma; color: #160e86; width: 180px; height: 25px; margin-left: 50px; float: left;
 		}
 	#menukatback #podkat:HOVER {
-			font: bold 11px/25px Tahoma; color: #160e86; width: 188px; height: 25px; margin-left: 50px; float: left;
+			font: bold 11px/25px Tahoma; color: #160e86; width: 180px; height: 25px; margin-left: 50px; float: left; text-decoration: underline;
 		}
 	#menukatback #pointer {
 			background: url(img/k_p1.png); background-repeat: no-repeat; background-position:center; width: 6px; height: 25px; margin-left: 30px; float: left;
@@ -110,7 +110,9 @@
 		#menucenback #tekst:HOVER {
 			background: url(img/menu_cennik.png); width: 230px; height: 70px; float: left; font: bold 12px/70px Tahoma; color: #160e86; text-align: center; cursor: pointer; text-decoration:underline; letter-spacing: 1px;
 		}
-		
+#tmenu_p { 
+	float: left;
+}
 
 
 #stopka {
@@ -119,18 +121,19 @@
 	
 </style>
 
+<div id="menudiv">
 <s:if test="%{#session.customer != null}">
 
 <div id="twojemenu"></div>
-	<div id="stopka"></div>
 	
-	<div id="tmenuback">
-	<div id="pointer"></div>
+	
 	<s:form action="ChangeDataAction" name="chps">
 		<s:hidden name="init"/>
 	</s:form>
-	<div id="zapis" onclick='javascript:void(document.forms["chps"].submit())'>Zmiana danych</div>
-	</div>
+	
+	<div id="tmenuback">
+	<div id="pointer"></div>
+	<div id="zapis" onclick='javascript:void(document.forms["chps"].submit())'>Twoje dane</div></div>
 	<div id="tmenu_linia"></div>
 	<div id="stopka"></div>
 	
@@ -143,16 +146,14 @@
 	
 	<div id="tmenuback">
 	<div id="pointer"></div>
-	<div id="zapis" onclick="location.href='OrderReviewAction.action'">Przegląd zamówień</div>
-	</div>
-	<div id="tmenu_linia"></div>
+	<div id="zapis" onclick="location.href='OrderReviewAction.action'">Przegląd zamówień</div></div>
 	<div id="stopka"></div>
 
 <!-- 	<div id="tmenuback"> -->
 <!-- 	<div id="pointer"></div> -->
 <!-- 	<div id="zapis">Ulubione</div> -->
 <!-- 	</div> -->
-	<div id="stopka"></div>
+	
 
 </s:if>
 <s:else>
@@ -161,7 +162,7 @@
 		<div id="twojemenu" onclick='javascript:void(document.forms["logon_accunt"].submit())'></div>
 	</form>
 </s:else>
-
+</div>
 
 
 <!-- <div id="searcher"> -->
@@ -184,7 +185,9 @@
 
 <div id="menukat"></div>
 
+
 <c:forEach var="item" items="${application.menu}">
+<div id="tmenu_p">
 	<form action="ShowProductsAction" name="${item.dispalyName}">
 	<input type="hidden" name="category" value="${item.category}">
 	
@@ -193,21 +196,19 @@
 <%-- 		<c:if test="${fn:length(item.items) != 0}"><div id="picture_expand"></div></c:if> --%>
 		<div id="pointer"></div>
 		<div id="zapis">${item.dispalyName}</div>
-	</div>
+		</div>
 	
 	<c:forEach var="item2" items="${item.items}">
-	
-		<div id="menukatback">
+	<div id="menukatback">
 			<div id="podkat">${item.dispalyName}</div>
 		</div>
 	</c:forEach>
-	
 	<div id="tmenu_linia"></div>
-	<div id="stopka"></div>
-
-
 </form>
+</div>
 </c:forEach>	
+
+
 <!-- <div id="menucennik"></div> -->
 <!-- <div id="menucenback"> -->
 <!-- 	<div id="tekst">cennik.pdf</div> -->

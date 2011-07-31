@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Product {
@@ -31,7 +33,10 @@ public class Product {
 	private String image120;
 	
 //	private Integer avaiblable;
-	private String category;
+	
+	@ManyToOne
+    @JoinColumn(name="category_id")
+	private Category category;
 	
 	
 	public Long getProduct_id() {return product_id;}
@@ -75,6 +80,15 @@ public class Product {
 	public void setImage120(String image120) {this.image120 = image120;}
 //	public Integer getAvaiblable() {return avaiblable;}
 //	public void setAvaiblable(Integer avaiblable) {this.avaiblable = avaiblable;}
-	public String getCategory() {return category;}
-	public void setCategory(String category) {this.category = category;}	
+	
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	
+	
+	
 }

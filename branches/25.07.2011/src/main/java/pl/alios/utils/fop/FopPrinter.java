@@ -55,11 +55,11 @@ public class FopPrinter{
 			fopFactory = FopFactory.newInstance();
 			fopFactory.setBase14KerningEnabled(true);
 			fopFactory.setUserConfig(new File(userConfigFile));
-			fopFactory.setFontBaseURL("file:///" + new File(fontsPath).getAbsolutePath()+ "\\");
+//			fopFactory.setFontBaseURL("file:///" + new File(fontsPath).getAbsolutePath());
 			fopFactory.setSourceResolution(100);
 			
 			foUserAgent = fopFactory.newFOUserAgent();
-			foUserAgent.setBaseURL("file:///" + new File(fontsPath).getAbsolutePath()+ "\\");
+//			foUserAgent.setBaseURL("file:///" + new File(fontsPath).getAbsolutePath());
 			foUserAgent.setAuthor("biuro@allios.pl");
             foUserAgent.setCreator("biuro@allios.pl");
             foUserAgent.setTitle("Faktureczka");

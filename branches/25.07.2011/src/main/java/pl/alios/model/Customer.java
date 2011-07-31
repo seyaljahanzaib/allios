@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
@@ -13,12 +15,12 @@ import javax.persistence.Transient;
 public class Customer {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer code;
 	private String login;
 	private String password;
 	@Transient 
 	private String confirmPassword;
-	//TODO
-	private Integer code = 1001;
 	private String nip;
 	private String companyName;
 	private String street;

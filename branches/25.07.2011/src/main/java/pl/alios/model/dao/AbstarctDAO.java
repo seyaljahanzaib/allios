@@ -6,8 +6,6 @@ import javax.persistence.Persistence;
 
 import org.apache.log4j.Logger;
 
-import pl.alios.action.LoginAction;
-
 public class AbstarctDAO {
 
 	protected Logger logger  = Logger.getLogger(this.getClass());
@@ -28,8 +26,4 @@ public class AbstarctDAO {
         super.finalize();
 
     }
-	
-	
-	
-	
 }

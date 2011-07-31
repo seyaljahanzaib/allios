@@ -200,7 +200,7 @@
 	</td>
 	<td width="65">
 		<div id="k1z">
-		<div id="topc4"><div id="nag1">Ilość</div></div>
+		<div id="topc4"><div id="nag1">Ilość</div></div>
 		<div id="lc"></div>
 		</div>
 	</td>
@@ -212,7 +212,7 @@
 	</td>
 	<td width="94">
 		<div id="k1z">
-		<div id="topc6"><div id="nag1">Wartość</div></div>
+		<div id="topc6"><div id="nag1">Wartość</div></div>
 		<div id="lc"></div>
 		</div>
 	</td>
@@ -240,7 +240,7 @@
 	<td width="94" height="90">
 		<div id="k2z">
 		<div id="cenab"><s:property value="priceBruttoString"/> zł</div>
-		<div id="cenan"><s:property value="priceNettoString"/> zł</div>
+		<div id="cenan"><s:property value="priceNettoString"/> zł</div>
 		</div>
 	</td>
 	<td width="65" height="90">
@@ -254,8 +254,8 @@
 	</td>
 	<td width="94" height="90">
 		<div id="k2z">
-		<div id="wartoscb"><s:property value="totalPriceBruttoString"/> zł</div>
-		<div id="wartoscn"><s:property value="totalPriceNettoString"/> zł</div>
+		<div id="wartoscb"><s:property value="totalPriceBruttoString"/> zł</div>
+		<div id="wartoscn"><s:property value="totalPriceNettoString"/> zł</div>
 		</div>
 	</td>
 	<td width="43" height="90">

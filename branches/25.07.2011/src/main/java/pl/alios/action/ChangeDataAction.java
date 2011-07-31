@@ -22,12 +22,13 @@ public class ChangeDataAction extends ActionSupport{
 	}
 	
 	public String execute(){
-
+		// Myk z initem : zeby juz za pierwszym razem wyswietlil dane w polach
 		if(!init){	
 			System.out.println("customer.getCompanyName() : "+customer.getCompanyName());
 			logger.info("customer.getCompanyName() : "+customer.getCompanyName());
 			
 			DBAdapter.getInstance().getCustomerDao().merge(customer);
+			this.message = "Twoje dane zosta\u0142y zmienione !";
 			return "SUCCESS";
 		}else{
 			return "SHOW";
@@ -36,6 +37,7 @@ public class ChangeDataAction extends ActionSupport{
 	
 	public void validate() {
 		logger.info("Change password validation");
+		// Myk z initem : zeby juz za pierwszym razem wyswietlil dane w polach
 		if(!init){			
 			if (customer.getNip().length() ==0)
 				addFieldError("nip", null);
@@ -76,6 +78,7 @@ public class ChangeDataAction extends ActionSupport{
 
 	private Customer customer;
 	private String acceptance;
+	private String message;
 	private String messageLogin;
 	private String messagePassword;
 	private boolean init;
@@ -88,6 +91,8 @@ public class ChangeDataAction extends ActionSupport{
 	public void setMessageLogin(String messageLogin) {this.messageLogin = messageLogin;}
 	public String getMessagePassword() {return messagePassword;}
 	public void setMessagePassword(String messagePassword) {this.messagePassword = messagePassword;}
+	public String getMessage() {return message;}
+	public void setMessage(String message) {this.message = message;}
 
 	public boolean isInit() {return init;}
 	public void setInit(boolean init) {this.init = true;}

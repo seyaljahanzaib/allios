@@ -22,6 +22,8 @@ public class ChangePassAction extends ActionSupport{
 		customer.setPassword(password);
 		
 		DBAdapter.getInstance().getCustomerDao().merge(customer);
+		
+		this.message = "Twoje hasło zosta\u0142o zmienione !";
 		return "SUCCESS";
 	}
 	
@@ -60,6 +62,7 @@ public class ChangePassAction extends ActionSupport{
 	private String oldPassword;
 	private String password;
 	private String confirmPassword;
+	private String message;
 	private String messageLogin;
 	private String messagePassword;
 	
@@ -73,7 +76,8 @@ public class ChangePassAction extends ActionSupport{
 	public void setPassword(String password) {this.password = password;}
 	public String getConfirmPassword() {return confirmPassword;}
 	public void setConfirmPassword(String confirmPassword) {this.confirmPassword = confirmPassword;}
-	
+	public String getMessage() {return message;}
+	public void setMessage(String message) {this.message = message;}
 	
 	
 }

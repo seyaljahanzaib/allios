@@ -16,6 +16,7 @@ public class RegisterAction extends ActionSupport{
 		System.out.println("customer.getCompanyName() : "+customer.getCompanyName());
 		logger.info("customer.getCompanyName() : "+customer.getCompanyName());
 		DBAdapter.getInstance().getCustomerDao().register(customer);
+		this.message = "Dzi\u0119kujemy za zarejestrowanie si\u0119 w Allios.pl. Zosta\u0142e\u015b automatycznie zalogowany. Zapraszamy do z\u0142o\u017cenia pierwszego zam\u00f3wienia !";
 		return "SUCCESS";
 	}
 	
@@ -88,6 +89,7 @@ public class RegisterAction extends ActionSupport{
 
 	private Customer customer;
 	private String acceptance;
+	private String message;
 	private String messageLogin;
 	private String messagePassword;
 	
@@ -99,4 +101,6 @@ public class RegisterAction extends ActionSupport{
 	public void setMessageLogin(String messageLogin) {this.messageLogin = messageLogin;}
 	public String getMessagePassword() {return messagePassword;}
 	public void setMessagePassword(String messagePassword) {this.messagePassword = messagePassword;}
+	public String getMessage() {return message;}
+	public void setMessage(String message) {this.message = message;}
 }

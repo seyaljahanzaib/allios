@@ -1,4 +1,6 @@
 <%@taglib uri="/struts-tags" prefix="s" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 
 <style>
 #glowna {
@@ -179,7 +181,7 @@
 			</div>
 			<div id="platnosc1">przelew 14 dni</div>
 			<div id="stopka"></div>
-			<div id="platnosc2"><br><br>Dokonując wyboru opcji przedpłata na konto pamiętaj, że towar wysyłamy dopiero po zaksięgowaniu wpłaty na naszym koncie.</div>
+			<div id="platnosc2"><br><br>Dokonując wyboru opcji przedpłata na konto, pamiętaj że towar wysyłamy dopiero po zaksięgowaniu wpłaty na naszym koncie bankowym.</div>
 			</div>
 		
 			<div id="stopka"></div>

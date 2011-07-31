@@ -87,4 +87,8 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/products.jsp" />
 	</definition>
   
+	<definition name="message" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/message.jsp" />
+	</definition>
+  
 </tiles-definitions>

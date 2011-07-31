@@ -174,7 +174,6 @@
 </div>
 
 
-<s:if test="%{#session.order != null}">
 <s:form action="ConfirmOrderAction" theme="simple">
 <table cellpadding="0" cellspacing="0">
 <tr>
@@ -296,7 +295,3 @@
 			<s:submit id="dalej" name="next" value="" ></s:submit>
 		</div>
 </s:form>
-</s:if>
-<s:else>
-	Twoj koszyk jest pusty
-</s:else>

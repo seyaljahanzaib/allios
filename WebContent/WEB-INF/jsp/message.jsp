@@ -1,3 +1,5 @@
+<%@taglib uri="/struts-tags" prefix="s" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 #glowna {
 	width: 760px;
@@ -11,5 +13,5 @@ clear: both;
 } 		
 </style>
 
-<div id="main_message">Koszyk jest pusty !</div>
+<div id="main_message"><s:property value="#request.message"/></div>
 

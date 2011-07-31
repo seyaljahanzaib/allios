@@ -197,14 +197,19 @@
 		<div id="pointer"></div>
 		<div id="zapis">${item.dispalyName}</div>
 		</div>
+	</form>
+	
 	
 	<c:forEach var="item2" items="${item.items}">
-	<div id="menukatback">
-			<div id="podkat">${item.dispalyName}</div>
-		</div>
+		<form action="ShowProductsAction" name="${item2.dispalyName}">
+			<input type="hidden" name="category" value="${item2.category}">
+			<div id="menukatback" onclick='javascript:void(document.forms["${item2.dispalyName}"].submit())'>
+					<div id="podkat">${item2.dispalyName}</div>
+			</div>
+		</form>
 	</c:forEach>
 	<div id="tmenu_linia"></div>
-</form>
+
 </div>
 </c:forEach>	
 

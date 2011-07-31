@@ -1,4 +1,4 @@
-<%@taglib uri="/struts-tags" prefix="s" %>
+﻿<%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 #glowna {
@@ -77,23 +77,21 @@
 			<div id="tekstlog">Logowanie</div>
 			<div id="tekst_u">Użytkownik:</div>
 			<div id="log_areal"></div>
-			<div id="log_areac"><s:textfield id="logon_textfield" name="login_tb"/></div>
+			<div id="log_areac"><s:textfield id="logon_textfield" name="login_tb" cssStyle="border:0px; margin-top:4px; height:19px;"/></div>
 			<div id="log_arear"></div>
 			
 			<div id="stopka"></div>
 			<div id="tekst_h">Hasło:</div>
 			<div id="log1_areal"></div>
-			<div id="log1_areac"><s:password id="logon_textfield" value="login" name="password_tb"/></div>
+			<div id="log1_areac"><s:password id="logon_textfield" value="login" name="password_tb" cssStyle="border:0px; margin-top:4px; height:19px;"/></div>
 			<div id="log1_arear"></div>
 			
 			<div id="stopka"></div>
 			<s:submit id="b_zaloguj" name="inaccount" value=""/>
 		</s:form>
 		
-		<div id="stopka"></div>
-		<div id="tekst_r">Nie zarejestrowałeś się jeszcze w naszym sklepie?</div>
-		
 		<s:form action="registerLink.action" theme="simple">	
+			<div id="tekst_r">Nie zarejestrowałeś się jeszcze w naszym sklepie?</div>
 			<s:submit id="b_rejestr" value=""/>
 		</s:form>
 		

@@ -1,5 +1,10 @@
 package pl.alios.main;
 
+import java.util.Map;
+
+import pl.alios.model.Customer;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LinkAction extends ActionSupport {
@@ -21,6 +26,11 @@ public class LinkAction extends ActionSupport {
 	}
 	public String cart()
 	{
+		Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
+		if(((Customer) sessionAttr.get("order")) == null){
+			this.message = "Koszyk jest pusty !";
+			return "message";
+		}
 		return "cart";		
 	}
 	public String friends()
@@ -44,4 +54,11 @@ public class LinkAction extends ActionSupport {
 		return "changePass";		
 	}
 	
+	
+	
+	
+	
+	private String message;
+	public String getMessage() {return message;}
+	public void setMessage(String message) {this.message = message;}
 }

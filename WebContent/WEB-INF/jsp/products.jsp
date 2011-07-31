@@ -91,9 +91,13 @@
 <%
 List<Product> products = new ArrayList<Product>();
 Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
+System.out.println("Progres-1");
 Map<String, ArrayList<Product>> productMap = (Map<String, ArrayList<Product>>) getServletContext().getAttribute("products");
+System.out.println("Progres-2");
 List<Product> allProducts = productMap.get(sessionAttr.get("cart_category"));
+System.out.println("Progres-3");
 int pageNum = Integer.valueOf((String)sessionAttr.get("cart_page"));
+System.out.println("Progres-4");
 int end = 10*pageNum;
 int start = end - 10;
 

@@ -21,7 +21,7 @@
 	font: 11px/30px Tahoma; color: #ffffff; margin-left: 460px; float: left; cursor: pointer;
  	}
  	#menubar1 #tekst2 {
-	font: bold 11px Tahoma; color: #ffffff; margin-left: 12px; float: left; cursor: pointer; border: none; background-color: transparent; margin-top: 7px;
+	font: bold 11px Tahoma; color: #ffffff; margin-left: 12px; float: left; cursor: pointer; border: none; background-color: transparent; margin-top: 8px;
  	}
  	#menubar1 #tekst3 {
 	font: 11px/30px Tahoma; color: #ffffff; margin-left: 12px; float: left; cursor: pointer;
@@ -47,11 +47,11 @@
 		<div id="menubar1">
 			<div id="tlo1">
 				<div id="tekst1">Zapomniałeś hasła?</div>
-					<a id="tekst2" href="registerLink.action">Zarejestruj się</a>
+					<a id="tekst2" href="registerLink.action">Zarejestruj się!</a>
 				</div>
-			<div id="logarea"><s:textfield name="login_tb" cssStyle="border:none; margin-left: 4px; margin-top: 7px; height: 14px; width: 96px;"/></div>
+			<div id="logarea"><s:textfield name="login_tb" cssStyle="border:0px; height:14px; width:97px; margin-left:3px; margin-top:7px;"/></div>
 			<div id="tlo2"></div>
-			<div id="logarea"><s:password name="password_tb" cssStyle="border:none; margin-left: 4px; margin-top: 7px; height: 14px; width: 96px;"/></div>
+			<div id="logarea"><s:password name="password_tb" cssStyle="border:0px; height:14px; width:97px; margin-left:3px; margin-top:7px; "/></div>
 			<div id="tlo3">
 				<s:submit id="tekst2" value="Zaloguj"/>
 			</div>

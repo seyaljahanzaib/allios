@@ -24,19 +24,19 @@
 	width: 120px; height: 120px; float: left; margin-top: 8px; margin-left: 11px;
 	}
 #productList #prodt {
-	width: 230px; height: 11px; font: bold 13px Tahoma; color: #160e86; margin-left: 10px; margin-top: 4px; float: left;
+	width: 230px; height: 11px; font: bold 13px Tahoma; color: #160e86; margin-left: 6px; margin-top: 4px; float: left;
 	}
 #productList #prodo {
-	width: 230px; height: 20px; font: 11px Tahoma; color: #160e86; margin-left: 10px; margin-top: 11px; float: left;
+	width: 230px; height: 20px; font: 11px Tahoma; color: #160e86; margin-left: 6px; margin-top: 11px; float: left;
 	}
 #productList #cenab {
-	width: 88px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 55px; text-align: right;
+	width: 78px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 55px; text-align: right;
 	}
 #productList #cenan {
-	width: 88px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
+	width:78px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
 	}
 #productList #dostepnosc {
-	width: 77px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 86px; text-align: center;
+	width: 77px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
 	}
 #productList #dostepnoscgraf {
 	width: 77px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
@@ -45,13 +45,13 @@
 	 width: 103px; font: 12px/140px Tahoma; color: #160e86; float: left; text-align: center;
 	}
 #productList_pageLabel{
-	width: 100px; font: bold 12px/20px Tahoma; color: #160e86; padding-left: 5px; float: left; margin-top: 4px;
+	height:27px; width: 142px; font: bold 12px/27px Tahoma; color: #160e86; float: left;
 }
 #productList_podzialka{
-	float:left; background: url(img/pg_ll.png); height: 28px; width: 2px; margin-right: 5px;
+	float:left; background: url(img/pg_ll.png); height: 28px; width: 2px;
 }
 #productList_pageLabel_two{
-	font: 12px/20px Tahoma; color: #160e86; margin-top: 4px;
+	font: 12px/28px Tahoma; color: #160e86; float: left; margin-left: 3px;
 }
 #productList #field #field_left{
 	background: url(img/r_boxl.png); height: 25px; width: 5px; float: left; margin-top: 40px; margin-left: 27px;
@@ -69,6 +69,22 @@
 	text-decoration: underline; cursor: pointer;
 }
 
+
+#title_pagelabel{
+	height:28px; width: 140px; font: bold 12px/28px Tahoma; color: #160e86; float: left; text-align:center;
+}
+#title_podzialka{
+	float:left; background: url(img/pg_ll.png); height: 28px; width: 2px;
+}
+
+#formdiv {
+	float: left; height: 140px; 
+}
+
+
+#stopka {
+	clear: both;
+}
 
 </style>
 
@@ -110,16 +126,22 @@ if (allProducts != null && allProducts.size() >0){
 
 <table cellpadding="0" cellspacing="0">
 
-	<tr><td colspan="6" style="background: url(img/pg_c.png); height: 29px; width: 760px;font: bold 12px/20px Tahoma; color: #160e86;">
-		<div style="margin-left: 5px; float: left;">Liczba produktów : <%=allProducts.size()%></div>
-		<div style="float: right;margin-right: 150px;">Sortowanie : </div>
+	<tr><td colspan="6" style="background:url(img/pg_c.png); height:29px; width:760px; font:bold 12px/29px Tahoma; color:#160e86;">
+		<div style="margin-left:5px; float:left;">Liczba produktów : <%=allProducts.size()%></div>
+		<div style="float:right; margin-right:150px;">Sortowanie : </div>
 	</td></tr>
-	<tr style="background-color: #fbf1d3;" height="20px;">
-		<td id="productList_pageLabel"     style="width: 142px;">
-			<div style="float: left;">Strona : </div>
-			<div style="float: left; margin-left: 5px;">
+</table>
+
+
+
+<table style="border:0px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+	<tr style="background-color:#fbf1d3 ">
+		<td style="width=142px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="title_pagelabel">
+			<div style="float:left; margin-left:3px; text-align:center;">Strona:</div>
+			<div style="float:left; margin-left:5px; text-align:center; padding-top:1px;">
 			<form action="SetPageAction" name="pageChange">
-				<select name="pageNumber" style="width: 50px; text-align: center;" onchange='javascript:void(document.forms["pageChange"].submit())'>
+				<select name="pageNumber" style="width:50px;" onchange='javascript:void(document.forms["pageChange"].submit())'>
 				<c:set var="numerStrony" value="<%=pageNum%>" />
 					<c:forEach items="<%=pageTab%>" var="item">
 						<c:if test="${item == numerStrony}">
@@ -132,45 +154,86 @@ if (allProducts != null && allProducts.size() >0){
 				</select>
 			</form>
 			</div>
-			<div style="float: left; margin-left: 5px;">z <%=number%></div>
+			<div style="float:left; margin-left:5px;">z <%=number%></div>
+			</div>
+		
+		<div id="title_podzialka"></div>
 			
 		</td>
-		<td id="productList_pageLabel_two" style="width: 255px;">Nazwa produktu<div id="productList_podzialka"></div></td>
-		<td id="productList_pageLabel_two" style="width: 84px;" >Cena<div id="productList_podzialka"></div></td>
-		<td id="productList_pageLabel_two" style="width: 103px;">Producent<div id="productList_podzialka"></div></td>
-		<td id="productList_pageLabel_two" style="width: 87px;" >Dostępnosc<div id="productList_podzialka"></div></td>
-		<td id="productList_pageLabel_two" style="width: 89px;" >Ilość<div id="productList_podzialka"></div></td>
+		
+		
+		<td style="width:255px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:250px;">Nazwa produktu</div>
+			<div id="title_podzialka"></div>
+		</td>
+			
+			
+		<td style="width:84px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:79px; text-align:center;">Cena</div>
+			<div id="title_podzialka"></div>
+		</td>
+		
+		<td style="width:103px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:98px; text-align:center;">Producent</div>
+			<div id="title_podzialka"></div>
+		</td>
+		
+		<td style="width:87px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:82px; text-align:center;">Dostępność</div>
+			<div id="title_podzialka"></div>
+		</td>
+		
+		<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:86px; text-align:center;">Ilość</div>
+			<div id="stopka"></div>
+		</td>
+
 	</tr>
+
+	
 	<c:forEach items="<%=products%>" var="item" >
 		<tr>
-			<td><div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px">  </div></div></td>
-			<td>
+			<td style="width=140px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"> </div></div></td>
+			
+			
+			<td style="width:253px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 				<div id="prodt">${item.name}</div>
 				<div id="prodo">${item.shortDescription}</div>
 				</div>
 			</td>
-			<td style="height: 120px;">
+			
+			
+			<td style="width:82px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
-					<div id="cenab">${item.priceBrutto} zł</div>
-					<div id="cenan">${item.priceNetto} zł</div>
+					<div id="cenab">${item.priceBrutto} zł</div>
+					<div id="cenan">${item.priceNetto} zł</div>
 				</div>
 			</td>
-			<td>
+			
+			
+			<td style="width:103px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList"><div id="producer">${item.producer}</div></div>
 			</td>
-			<td>
+			
+			
+			<td style="width:87px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 					<div id="dostepnoscgraf">
 					<div id="dostepnosc">dostępny</div></div>
 				</div>
 			</td>
-			<td>
+			
+			
+			<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+				
+				<div id="formdiv">
 				<form action="AddToCartAction">
 					<div id="productList">
 						<div id="field" >
 							<div id="field_left"></div>
-							<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border: none; width: 30px; margin-top: 2px; text-align: center;" theme="simple"/></div>
+							<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border:0px; width:30px; margin-top:2px; text-align:center;" theme="simple"/></div>
 							<div id="field_right"></div>
 						</div>
 						<div>
@@ -179,32 +242,36 @@ if (allProducts != null && allProducts.size() >0){
 						</div>
 					</div>
 				</form>
+				</div>
 			</td>
 		</tr>
 	</c:forEach>
+	
+	
 </table>
+
 <%if( allProducts.size() != 0){ %>
 <div id="bottom_pages">
-	<div style="float:left; margin-left: 170px;">
+	<div style="float:left; margin-left: 170px; margin-top: 3px;">
 		<form action="SetPageAction" name="first_page">
 			<input type="hidden" name="pageNumber" value="first">
 		</form>
 		<label id="navigate_button"  onclick='javascript:void(document.forms["first_page"].submit())'>Pierwsza</label>
 	</div>
-	<div style="float:left; margin-left: 20px;" >
+	<div style="float:left; margin-left: 20px; margin-top: 3px;" >
 		<form action="SetPageAction" name="prev_page">
 			<input type="hidden" name="pageNumber" value="prev">
 		</form>
 		<label id="navigate_button"  onclick='javascript:void(document.forms["prev_page"].submit())'>Poprzednia</label>
 	</div>
-	<div style="float:left; margin-left: 40px;" >Strona ${numerStrony} z <%=number%></div>
-	<div style="float:left; margin-left: 40px;" >
+	<div style="float:left; margin-left: 40px; margin-top: 3px;" >Strona ${numerStrony} z <%=number%></div>
+	<div style="float:left; margin-left: 40px; margin-top: 3px;" >
 		<form action="SetPageAction" name="next_page">
 			<input type="hidden" name="pageNumber" value="next">
 		</form>
 		<label id="navigate_button"  onclick='javascript:void(document.forms["next_page"].submit())'>Nastepna</label>
 	</div>
-	<div style="float:left; margin-left: 20px;" >
+	<div style="float:left; margin-left: 20px; margin-top: 3px;" >
 		<form action="SetPageAction" name="last_page">
 			<input type="hidden" name="pageNumber" value="last">
 		</form>

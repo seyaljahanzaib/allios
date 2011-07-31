@@ -139,7 +139,7 @@ if (allProducts != null && allProducts.size() >0){
 		<td style="width=142px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 			<div id="title_pagelabel">
 			<div style="float:left; margin-left:3px; text-align:center;">Strona:</div>
-			<div style="float:left; margin-left:5px; text-align:center; padding-top:1px;">
+			<div style="float:left; margin-left:5px; text-align:center;">
 			<form action="SetPageAction" name="pageChange">
 				<select name="pageNumber" style="width:50px;" onchange='javascript:void(document.forms["pageChange"].submit())'>
 				<c:set var="numerStrony" value="<%=pageNum%>" />

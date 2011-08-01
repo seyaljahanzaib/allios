@@ -14,7 +14,7 @@
 			<result name="SUCCESS_CART" type="tiles">choose_customer_data</result>
 			<result name="FAILURE_CART" type="tiles">have_to_log</result>
 			<result name="SUCCESS_ACCOUNT" type="tiles">welcome</result>
-			<result name="FAILURE_ACCOUNT" type="tiles">have_to_log</result>
+			<result name="FAILURE_ACCOUNT" type="tiles">have_to_log_account</result>
 		</action>
 		
 		<action name="LogOutAction"  class="pl.alios.action.LogOutAction">

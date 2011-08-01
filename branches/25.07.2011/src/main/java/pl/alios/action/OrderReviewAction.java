@@ -40,21 +40,24 @@ public class OrderReviewAction extends ActionSupport {
 		if(current || (current != true && history !=true)){
 			
 			
-			//TODO jezeli 
-			for(Order order : customer.getOrders()){
-				System.out.println("Jazda dla ordera : " + order.getOrderId() + " stat : " +order.getState());
-				if ("Oczekuje".equals(order.getState()) ||  
-					"Potwierdzone".equals(order.getState()) || 
-					"W przygotowaniu".equals(order.getState()) ||
-					"Wysłane".equals(order.getState())){
-					System.out.println("Znalaz");
-					orderList.add(order);
+			if(customer != null && customer.getOrders() != null){
+				for(Order order : customer.getOrders()){
+					System.out.println("Jazda dla ordera : " + order.getOrderId() + " stat : " +order.getState());
+					if ("Oczekuje".equals(order.getState()) ||  
+						"Potwierdzone".equals(order.getState()) || 
+						"W przygotowaniu".equals(order.getState()) ||
+						"Wysłane".equals(order.getState())){
+						System.out.println("Znalaz");
+						orderList.add(order);
+					}
 				}
 			}
 		}else{
-			for(Order order : customer.getOrders()){
-				if ("Dostarczone".equals(order.getState()) ||  "Anulowane".equals(order.getState())){
-						orderList.add(order);
+			if(customer != null && customer.getOrders() != null){
+				for(Order order : customer.getOrders()){
+					if ("Dostarczone".equals(order.getState()) ||  "Anulowane".equals(order.getState())){
+							orderList.add(order);
+					}
 				}
 			}
 		}

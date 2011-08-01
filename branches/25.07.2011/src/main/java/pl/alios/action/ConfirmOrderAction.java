@@ -88,8 +88,12 @@ public class ConfirmOrderAction extends ActionSupport {
 			}
 		}
 		order.getListOfProducts().remove(toDelete);
-		if(order.getListOfProducts().size() == 0)
+		if(order.getListOfProducts().size() == 0){
 			sessionAttr.remove("order");
+			this.message = "Koszyk jest pusty !";
+			return "EMPTY_CART";
+		}
+			
 			
 		return "DELETE_SUCCESS";
 	}
@@ -101,7 +105,10 @@ public class ConfirmOrderAction extends ActionSupport {
 	private boolean next;
 	private boolean delete;
 	private String productToDelete;
+	private String message;
 	
+	public String getMessage() {return message;}
+	public void setMessage(String message) {this.message = message;}
 	public List<String>  getNumberOfItem() {return numberOfItem;}
 	public void setNumberOfItem(List<String> numberOfItem) {this.numberOfItem = numberOfItem;}
 	public boolean isCount() {return count;}

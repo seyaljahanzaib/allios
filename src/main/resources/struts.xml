@@ -32,6 +32,7 @@
 			<result name="DELETE_SUCCESS" type="tiles">cart</result>
 			<result name="HAVE_TO_LOG" type="tiles">have_to_log</result>
 			<result name="EMPTY_CART" type="tiles">message</result>
+			<result name="BACK" type="tiles">products</result>
 		</action>
 		
 		<action name="ConfirmDetailsAction"  class="pl.alios.action.ConfirmDetailsAction">

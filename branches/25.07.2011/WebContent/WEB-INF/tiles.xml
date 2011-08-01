@@ -90,5 +90,28 @@
 	<definition name="message" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/message.jsp" />
 	</definition>
+
+
+
+
+	<definition name="aboutUs" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/main_about_us.jsp" />
+	</definition>
+
+	<definition name="contact" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/main_contact.jsp" />
+	</definition>
+
+	<definition name="mainPage" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/main_master_page.jsp" />
+	</definition>
+
+	<definition name="news" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/main_news.jsp" />
+	</definition>
+
+	<definition name="statute" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/main_statute.jsp" />
+	</definition>
   
 </tiles-definitions>

@@ -116,35 +116,35 @@
 <div id=stopka"></div>
 
 <div id="menubar">
-	<div id="sekleft">
-		<div id="glownagraf"></div>
+	<div id="sekleft" onclick="location.href='mainPageLink.action'">
+		<div id="glownagraf" ></div>
 		<div id="glowna">
 			<div id="podpisy">nowości i promocje</div>
 			</div>	
 		</div>
 	<div id="button"></div>
-	<div id="sekcenter">
-		<div id="ofirmiegraf"></div>
+	<div id="sekcenter" onclick="location.href='aboutUsLink.action'">
+		<div id="ofirmiegraf" ></div>
 		<div id="ofirmie">
 		<div id="podpisy">kim jesteśmy</div>
 		</div>	
 		</div>
 	<div id="button"></div>
-	<div  id="sekcenter">
+	<div  id="sekcenter" onclick="location.href='newsLink.action'">
 		<div id="aktualnoscigraf"></div>
 		<div id="aktualnosci">
 		<div id="podpisy">najnowsze wiadomości</div>
 		</div>	
 		</div>
 	<div id="button"></div>
-	<div id="sekcenter">
+	<div id="sekcenter" onclick="location.href='statuteLink.action'">
 		<div id="regulamingraf"></div>
 		<div id="regulamin">
 		<div id="podpisy">nim dokonasz zakupu</div>
 		</div>	
 		</div>
 	<div id="button"></div>
-	<div id="sekleft">
+	<div id="sekleft" onclick="location.href='contactLink.action'">
 		<div id="kontaktgraf"></div>
 		<div id="kontakt">
 		<div id="podpisy">napisz do nas</div>

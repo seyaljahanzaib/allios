@@ -19,7 +19,7 @@
 	background: url(img/bzam.png); width: 114px; height:26px; float:left; margin-left: 20px;
 }
 #zbior #b_back {
-	background: url(img/bback.png); width: 140px; height:26px; float:right; cursor: pointer;
+	background: url(img/bback.png); width: 140px; height:26px; float:right; cursor: pointer; border: none;
 }
 #zbior #b_back:hover {
 	background: url(img/bback1.png);
@@ -170,7 +170,9 @@
 	<div id="b_kosz"></div>
 	<div id="b_dane"></div>
 	<div id="b_zam"></div>
-	<div id="b_back"></div>
+	<s:form action="ConfirmOrderAction" theme="simple">
+		<s:submit id="b_back" name="back" value=""/>
+	</s:form>
 </div>
 
 

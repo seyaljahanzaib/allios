@@ -23,9 +23,11 @@ public class ConfirmOrderAction extends ActionSupport {
 			return next();
 		if(delete)
 			return delete();
+		if(back)
+			return "BACK";
 		return "ERROR";
 	}
-	
+
 	public String next(){
 		logger.info("Akcja next. Zmienna to : " + numberOfItem);
 		Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
@@ -104,6 +106,8 @@ public class ConfirmOrderAction extends ActionSupport {
 	private boolean count;
 	private boolean next;
 	private boolean delete;
+	private boolean back;
+	
 	private String productToDelete;
 	private String message;
 	
@@ -119,6 +123,8 @@ public class ConfirmOrderAction extends ActionSupport {
 	public void setDelete(boolean delete) {this.delete = true;}
 	public String getProductToDelete() {return productToDelete;}
 	public void setProductToDelete(String productToDelete) {this.productToDelete = productToDelete;}
+	public boolean isBack() {return back;}
+	public void setBack(boolean back) {this.back = true;}
 	
 	
 }

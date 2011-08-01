@@ -5,6 +5,8 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import pl.alios.model.Customer;
+import pl.alios.model.Property;
+import pl.alios.model.dao.adapter.DBAdapter;
 
 public class CustomerDAO extends AbstarctDAO{
 	
@@ -53,7 +55,11 @@ public class CustomerDAO extends AbstarctDAO{
 		em.getTransaction();
 		EntityTransaction t = em.getTransaction();
 		t.begin();
+		Property property = DBAdapter.getInstance().getPropertyDAO().getValue("customerLastCode");
+		customer.setCode(Integer.valueOf(property.getValue()));
 		em.persist(customer);
+		property.setValue(String.valueOf(1 + Integer.valueOf(property.getValue())));
+		em.persist(property);
 		t.commit();
 	}
 
@@ -64,4 +70,7 @@ public class CustomerDAO extends AbstarctDAO{
 		em.getTransaction().commit();
 	}
 
+	
+	
+	
 }

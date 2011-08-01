@@ -15,7 +15,6 @@ import javax.persistence.Transient;
 public class Customer {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer code;
 	private String login;
 	private String password;

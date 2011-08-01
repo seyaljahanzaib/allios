@@ -2,7 +2,7 @@ package pl.alios.main;
 
 import java.util.Map;
 
-import pl.alios.model.Customer;
+import pl.alios.model.Order;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -41,7 +41,7 @@ public class LinkAction extends ActionSupport {
 	public String cart()
 	{
 		Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
-		if(((Customer) sessionAttr.get("order")) == null){
+		if(((Order) sessionAttr.get("order")) == null){
 			this.message = "Koszyk jest pusty !";
 			return "message";
 		}

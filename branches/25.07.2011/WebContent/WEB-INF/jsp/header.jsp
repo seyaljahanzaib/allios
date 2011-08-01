@@ -272,8 +272,3 @@
 <!-- 	<div id="basket_middle">Koszyk jest pusty</div> -->
 <!-- 	<div id="basket_right"></div> -->
 <!-- </div> -->
-
-
-
-
-

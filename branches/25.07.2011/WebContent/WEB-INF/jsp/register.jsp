@@ -1,7 +1,9 @@
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <style>
+
 #registartion #header {
 	height: 29px; width: 760px;
 }
@@ -9,7 +11,7 @@
 	height: 29px;  width: 10px; background: url(img/r_etl.png); float: left;
 }
 #registartion #header #middle{
-	height: 29px; background: url(img/r_etc.png) repeat-x;   float: left; width: 740px;
+	height: 29px; background: url(img/r_etc.png) repeat-x; float: left; width: 740px;
 	font: bold 13px/29px Arial, sans-serif; color: white;
 }
 #registartion #header #right{
@@ -74,6 +76,10 @@
 #statute_border{
 	margin-top: 10px;
 }
+
+#tmenu_p{
+	width: 760px;
+}
 </style>
 
 <div id="registartion">
@@ -83,91 +89,94 @@
 		<div id="right"></div>
 	</div>
 	
+
 	<s:form theme="simple" action="RegisterAction" acceptcharset="UTF-8">
 	
 	<div id="fieldsBorder"><div style="height: 1px;"></div>
 		<div id="formRow">
 			<div id="formLabel">Numer NIP</div>
 			<s:if test='getFieldErrors().containsKey("nip")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.nip" id="register_textfield_nip"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.nip" id="register_textfield_nip" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.nip" id="register_textfield_nip"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.nip" id="register_textfield_nip" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">Nazwa Firmy</div>
 			<s:if test='getFieldErrors().containsKey("companyName")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.companyName" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.companyName" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.companyName" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.companyName" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">Ulica</div>
 			<s:if test='getFieldErrors().containsKey("street")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.street" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.street" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.street" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.street" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		
 			<div id="formLabel" style="margin-left: 40px; width: 90px;">Nr. domu</div>
 			<s:if test='getFieldErrors().containsKey("houseNumber")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle" style="width: 50px;"><s:textfield name="customer.houseNumber" cssStyle="margin-top: 1px; border: none; height: 20px; width: 50px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle" style="width: 50px;"><s:textfield name="customer.houseNumber" cssStyle="margin-top:3px; border:0px; height:20px; width:50px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle" style="width: 50px;"><s:textfield name="customer.houseNumber" cssStyle="margin-top: 1px; border: none; height: 20px; width: 50px; text-align:center;"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle" style="width: 50px;"><s:textfield name="customer.houseNumber" cssStyle="margin-top:3px; border:0px; height:18px; width:50px; text-align:center;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 			<div id="formLabel" style="margin-left: 40px; width: 105px;">Nr. mieszkania</div>
 			<s:if test='getFieldErrors().containsKey("flatNumber")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle" style="width: 35px;"><s:textfield name="customer.flatNumber" cssStyle="margin-top: 1px; border: none; height: 20px; width: 35px;"/></div><div id="field_error_right"></div></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle" style="width: 35px;"><s:textfield name="customer.flatNumber" cssStyle="margin-top:3px; border:0px; height:18px; width:35px;"/></div><div id="field_error_right"></div></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle" style="width: 35px;"><s:textfield name="customer.flatNumber" cssStyle="margin-top: 1px; border: none; height: 20px; width: 35px; text-align:center;"/></div><div id="field_right"></div></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle" style="width: 35px;"><s:textfield name="customer.flatNumber" cssStyle="margin-top:3px; border:0px; height:18px; width:35px; text-align:center;"/></div><div id="field_right"></div></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">Miejscowość</div>
 			<s:if test='getFieldErrors().containsKey("city")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.city" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.city" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.city" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.city" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 			<div id="formLabel" style="margin-left: 40px; width: 90px;">Kod pocztowy</div>
 			<s:if test='getFieldErrors().containsKey("zipCode")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle" style="width: 50px;"><s:textfield name="customer.zipCode" id="register_textfield_zipCode" cssStyle="margin-top: 1px; border: none; height: 20px; width: 50px; text-align:center;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle" style="width: 50px;"><s:textfield name="customer.zipCode" id="register_textfield_zipCode" cssStyle="margin-top:3px; border:0px; height:18px; width:50px; text-align:center;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle" style="width: 50px;"><s:textfield name="customer.zipCode" id="register_textfield_zipCode" cssStyle="margin-top: 1px; border: none; height: 20px; width: 50px; text-align:center;"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle" style="width: 50px;"><s:textfield name="customer.zipCode" id="register_textfield_zipCode" cssStyle="margin-top:3px; border:0px; height:18px; width:50px; text-align:center;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">Województwo</div>
 			<s:if test='getFieldErrors().containsKey("province")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.province" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.province" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.province" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.province" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">Telefon</div>
 			<s:if test='getFieldErrors().containsKey("phone")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.phone" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.phone" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.phone" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.phone" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 	</div>	
+	
+	
 	
 	<div id="header" style="margin-top: 10px;">
 		<div id="left"></div>
@@ -178,40 +187,40 @@
 		<div id="formRow">
 			<div id="formLabel">Imię</div>
 			<s:if test='getFieldErrors().containsKey("person_name")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_name" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_name" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_name" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_name" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">Nazwisko</div>
 			<s:if test='getFieldErrors().containsKey("person_surname")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_surname" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_surname" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_surname" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_surname" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">Telefon</div>
 			<s:if test='getFieldErrors().containsKey("person_phone")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_phone" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_phone" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_phone" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_phone" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
 			<div id="formLabel">E-mail</div>
 			<s:if test='getFieldErrors().containsKey("person_email")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_email" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.person_email" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_email" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.person_email" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 	</div>
@@ -226,15 +235,15 @@
 		<div id="formRow">
 			<div id="formLabel">Login lub e-mail</div>
 			<s:if test='getFieldErrors().containsKey("login")'>
-				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.login" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div><s:if test="%{#request.messageLogin != null}"><div style="float:left; margin-left: 20px; color: red; font: bold 12px/25px Arial, sans-serif;"><s:property value="messageLogin"/></div></s:if>
+				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:textfield name="customer.login" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_error_right"></div></div><div id="required_error"></div><s:if test="%{#request.messageLogin != null}"><div style="float:left; margin-left: 20px; color: red; font: bold 12px/25px Arial, sans-serif;"><s:property value="messageLogin"/></div></s:if>
 			</s:if>
 			<s:else>
-				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.login" id="register_textfield"/></div><div id="field_right"></div></div><div id="required"></div>
+				<div id="field"><div id="field_left"></div><div id="field_middle"><s:textfield name="customer.login" id="register_textfield" cssStyle="border:0px; margin-top:3px; height:18px;"/></div><div id="field_right"></div></div><div id="required"></div>
 			</s:else>
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
-			<div id="formLabel">Hasło</div>
+			<div id="formLabel">Hasło</div>
 			<s:if test='getFieldErrors().containsKey("password")'>
 				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:password name="customer.password" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div><s:if test="%{#request.messagePassword != null}"><div style="float:left; margin-left: 20px;  color: red; font: bold 12px/25px Arial, sans-serif;"><s:property value="messagePassword"/></div></s:if>
 			</s:if>
@@ -244,7 +253,7 @@
 		</div>
 		<div style="clear: both;"></div>
 		<div id="formRow">
-			<div id="formLabel">Potwierdź hasło</div>
+			<div id="formLabel">Potwierdź hasło</div>
 			<s:if test='getFieldErrors().containsKey("confirmPassword")'>
 				<div id="field"><div id="field_error_left"></div><div id="field_error_middle"><s:password name="customer.confirmPassword" id="register_textfield"/></div><div id="field_error_right"></div></div><div id="required_error"></div>
 			</s:if>
@@ -267,5 +276,5 @@
 	<s:submit id="register_button" value=""/>
 	
 	</s:form>
-		
+	
 </div>

@@ -1,6 +1,9 @@
 package pl.alios.utils;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,55 +37,44 @@ public class Log4JServlet extends HttpServlet {
 		}
 		initMenu();
 		initProducts();
+		initFirstPage();
 	}
 
 	private void initProducts(){
-//		try{
-		System.out.println("PR-1");
 		List<Product> products = DBAdapter.getInstance().getProductDAO().getAllProducts();
-		
 		Map<String, ArrayList<Product>> productMap = new HashMap<String, ArrayList<Product>>();
-		System.out.println("PR-2");
 		for(Product product: products){
-			System.out.println("PR-3");
 			if(productMap.get(product.getCategory().getId().toString()) != null){
-				System.out.println("PR-3-1");
 				productMap.get(product.getCategory().getId().toString()).add(product);
-				System.out.println("PR-3-2");
 				
 			}else{
-				System.out.println("PR-3-1-1");
 				ArrayList<Product> newList = new ArrayList<Product>();
-				System.out.println("PR-3-1-2");
 				newList.add(product);
-				System.out.println("PR-3-1-3");
 				productMap.put(product.getCategory().getId().toString(), newList);
-				System.out.println("PR-3-1-4");
 			}
-			System.out.println("PR-4");
 			if(product.getCategory() != null && product.getCategory().getMainCategory() != null){
-				System.out.println("PR-4-1");
 				if(productMap.get(product.getCategory().getMainCategory().getId().toString()) != null){
-					System.out.println("PR-4-2");
 					productMap.get(product.getCategory().getMainCategory().getId().toString()).add(product);
-					System.out.println("PR-4-3");
 				}
 			}
 		}
-		
-//		}catch(Exception e){
-//			System.out.println(e);
-//		}
-		
-		System.out.println("PR-5");
-		System.out.println("Produktsy : " + productMap);
-		System.out.println("Produktsy size : " + productMap.size());
-		
 		getServletContext().setAttribute("products", productMap);
 		
-		for(String s : productMap.keySet()){
-			System.out.println("Kat : " + s);
+		ArrayList<Product> firstPageProducts = new ArrayList<Product>();
+		for(Product p : products){
+			if(p.getFirstPagePosition() != null){
+				firstPageProducts.add(p);
+			}
 		}
+		Collections.sort(firstPageProducts, new Comparator<Product>() {
+
+			@Override
+			public int compare(Product p1, Product p2) {
+				return p1.getFirstPagePosition() > p2.getFirstPagePosition() ? 1 : -1;
+			}
+			
+		});
+		getServletContext().setAttribute("firstPage", firstPageProducts);
 	}
 	
 	private void initMenu() {
@@ -109,4 +101,11 @@ public class Log4JServlet extends HttpServlet {
 		}
 		getServletContext().setAttribute("menu", lista);
 	}
+	
+	private void initFirstPage(){
+		
+	}
+	
+	
+	
 }

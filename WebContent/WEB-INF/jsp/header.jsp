@@ -1,4 +1,4 @@
-<%@ taglib prefix="s" uri="/struts-tags" %>  
+<%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
@@ -113,7 +113,7 @@
 </style>
 
 <div id="header_logo"></div>
-<div id=stopka"></div>
+<div id="stopka"></div>
 
 <div id="menubar">
 	<div id="sekleft" onclick="location.href='mainPageLink.action'">

@@ -1,11 +1,14 @@
 package pl.alios.model;
 
+import java.text.NumberFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class Product {
@@ -31,6 +34,7 @@ public class Product {
 //	private String state;
 	private String image;
 	private String image120;
+	private Integer firstPagePosition;
 	
 //	private Integer avaiblable;
 	
@@ -87,8 +91,22 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+	public Integer getFirstPagePosition() {
+		return firstPagePosition;
+	}
+	public void setFirstPagePosition(Integer firstPagePosition) {
+		this.firstPagePosition = firstPagePosition;
+	}
+
 
 	
+	public String getPriceBruttoString(){return nf.format(priceBrutto);}
 	
-	
+	@Transient
+	private NumberFormat nf = NumberFormat.getInstance();
+	public String format(double value) {
+		nf.setMaximumFractionDigits(2);
+		nf.setMinimumFractionDigits(2);
+		return nf.format(value);
+	}
 }

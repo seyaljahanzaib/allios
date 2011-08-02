@@ -42,8 +42,10 @@ public class AddToCartAction extends ActionSupport {
 		orderItem.setPriceNetto(orderItem.getProduct().getPriceNetto());
 		
 		order.addToCart(orderItem);
-		
-		return "SUCCESS";
+		if(mainPage)
+			return "MAINPAGE";
+		else
+			return "SUCCESS";
 	}
 	
 	private String product_id;
@@ -54,4 +56,7 @@ public class AddToCartAction extends ActionSupport {
 	public String getQuantity() {return quantity;}
 	public void setQuantity(String quantity) {this.quantity = quantity;}
 	
+	
+	private boolean mainPage;
+	public void setMainPage(boolean mainPage) {this.mainPage = true;}
 }

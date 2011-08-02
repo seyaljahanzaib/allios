@@ -1,4 +1,6 @@
 <%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
@@ -52,7 +54,7 @@
 				background: url(img/gl_koszl.png); width: 5px; height: 36px; margin-top: 6px; float: left; margin-left: 2px;
 				}
 			#nowosci #koszyktekst {
-				width: 227px; height: 36px; font: bold 12px/36px Tahoma; color: #ffffff; text-align: right; float: left; cursor: pointer;
+				width: 227px; height: 36px; font: bold 12px/36px Tahoma; color: #ffffff; text-align: right; float: left; cursor: pointer; background: none; border: none;
 				}
 			#nowosci #koszyktekst:HOVER{
 				width: 227px; height: 36px; font: bold 12px/36px Tahoma; color: #ffffff; text-align: right; float: left; text-decoration: underline; 
@@ -65,15 +67,16 @@ clear: both;
 } 		
 </style>
 
+<c:forEach var="item" items="${application.firstPage}">
 <div id="nowosci">
-		<div id="sekleft"></div>
-		<div id="sekcenter">
-				<div id="title">Admira strzykawka 4g</div>
+	<div id="sekleft"></div>
+	<div id="sekcenter">
+		<div id="title">${item.name}</div>
 				<div id="photo"></div>
 				<div id="stopka"></div>
 				<div id="cenacenter">
 					<div id="infocena1">Nasza cena brutto:</div>
-					<div id="infocena2">234 zł</div>
+					<div id="infocena2">${item.priceBruttoString} zł</div>
 					</div>
 				<div id="wiecejcenter">
 					<div id="wiecejtekst">więcej...</div>
@@ -81,57 +84,15 @@ clear: both;
 				<div id="wiecejright"></div>
 				<div id="koszykleft"></div>
 				<div id="koszykcenter">
-					<div id="koszyktekst">Dodaj do koszyka</div>
-					</div>
-		</div>
-		<div id="sekright"></div>
-		</div>
-
-<div id="nowosci">
-		<div id="sekleft"></div>
-		<div id="sekcenter">
-				<div id="title">Admira strzykawka 4g</div>
-				<div id="photo"></div>
-				<div id="stopka"></div>
-				<div id="cenacenter">
-					<div id="infocena1">Nasza cena brutto:</div>
-					<div id="infocena2">234 zł</div>
-					</div>
-				<div id="wiecejcenter">
-					<div id="wiecejtekst">więcej...</div>
-					</div>
-				<div id="wiecejright"></div>
-				<div id="koszykleft"></div>
-				<div id="koszykcenter">
-					<div id="koszyktekst">Dodaj do koszyka</div>
-					</div>
-		</div>
-		<div id="sekright"></div>
-		</div>
-
-<div id="nowosci">
-		<div id="sekleft"></div>
-		<div id="sekcenter">
-				<div id="title">Admira strzykawka 4g</div>
-				<div id="photo"></div>
-				<div id="stopka"></div>
-				<div id="cenacenter">
-					<div id="infocena1">Nasza cena brutto:</div>
-					<div id="infocena2">234 zł</div>
-					</div>
-				<div id="wiecejcenter">
-					<div id="wiecejtekst">więcej...</div>
-					</div>
-				<div id="wiecejright"></div>
-				<div id="koszykleft"></div>
-				<div id="koszykcenter">
-					<div id="koszyktekst">Dodaj do koszyka</div>
-					</div>
-		</div>
-		<div id="sekright"></div>
-		</div>
-
-		
-
+					<form action="AddToCartAction">
+						<input type="hidden" name="product_id" value="${item.product_id}"/>
+						<input type="hidden" name="mainPage" value="true"/>
+						<input type="submit" id="koszyktekst" value="Dodaj do koszyka"/>
+					</form>
+				</div>
+	</div>
+	<div id="sekright"></div>
+</div>
+</c:forEach>
 
 

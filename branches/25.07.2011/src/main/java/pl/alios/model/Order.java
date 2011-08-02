@@ -101,6 +101,9 @@ public class Order {
 	public String getTotalCostNetto(){return format(totalCostNetto);}
 	public String getAmountVatString() {return format(totalCostBrutto - totalCostNetto);}
 	public String getTransportVatString() {return format(transportCostBrutto - transportCostNetto);}
+	public String gettransportCostBruttoString () {return format(transportCostBrutto);}
+	
+	
 	
 	/* GETERS AND SETTERS */
 	public Double getTransportCostBrutto() {return transportCostBrutto;}

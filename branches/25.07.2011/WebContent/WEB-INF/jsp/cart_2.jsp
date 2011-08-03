@@ -64,7 +64,7 @@
 		text-align: left ;font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 20px; margin-left: 6px;
 	}
 	#dane #radio {
-		width: 90px; height:150px; font: 12px/150px Tahoma; color: #160e86; float: left; text-align: right;
+		width: 90px; float: left; text-align: right;
 		}
 	#dane #radio_adres {
 		width: 200px; text-align: left; font: bold 12px Tahoma; color: #160e86; float: left; margin-left: 16px; margin-top: 40px;
@@ -104,8 +104,13 @@
 	background: url(img/b_wroc2.png)
 }
 
-</style>
+#tmenu_p1 {
+	width: 760px;
+}
 
+</style>
+	<div id="tmenu_p1">
+	<s:form theme="simple" action="ConfirmDetailsAction">
 <div id="zbior">
 	<div id="b_kosz"></div>
 	<div id="b_dane1"></div>
@@ -137,25 +142,25 @@
 	<div id="kontakt">E-mail:</div>
 	<div id="kontakt1"><s:property value="#session.customer.person_email"/></div>
 	</div><div id="stopka"></div>
-	
+		
+
 		<div id="title_kosz">
 		<div id="topl"></div>
 		<div id="topc">Adres dostawy</div>
 		<div id="topr"></div>
 		</div>
-		
-		<s:form theme="simple" action="ConfirmDetailsAction">
+	
+	
 			<div id="dane">
-			
 			<div id="radio">
-				<s:radio cssStyle="margin-top: 70px;" name="adressChosse" list="#{'1':''}" value="1" />
+				<s:radio cssStyle="margin-top: 65px;" name="adressChosse" list="#{'1':''}" value="1" />
 			</div>
 			<div id="radio_adres"><s:property value="#session.customer.companyName"/>
 				<br><br>ul. <s:property value="#session.customer.street"/> <s:property value="#session.customer.houseNumber"/><s:if test="%{#session.customer.flatNumber != null}"> m. <s:property value="#session.customer.flatNumber"/></s:if>
 			<br><s:property value="#session.customer.zipCode"/> <s:property value="#session.customer.city"/>,woj. <s:property value="#session.customer.province"/>
 				<br>Polska</div>
 			<div id="radio">
-				<s:radio cssStyle="margin-top: 70px;" name="adressChosse" list="#{'2':''}" value="0" disabled="true"/>
+				<s:radio cssStyle="margin-top: 65px;" name="adressChosse" list="#{'2':''}" value="0" disabled="true"/>
 			</div>
 			<div id="radio_adres">[Brak drugiego adresu]</div>
 			
@@ -191,6 +196,6 @@
 				<s:submit id="wroc"  name="back" value=""/>
 			</div>
 		</s:form>
-
+</div>
 
 

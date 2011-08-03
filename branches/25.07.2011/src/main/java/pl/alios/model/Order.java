@@ -104,7 +104,6 @@ public class Order {
 	public String gettransportCostBruttoString () {return format(transportCostBrutto);}
 	
 	
-	
 	/* GETERS AND SETTERS */
 	public Double getTransportCostBrutto() {return transportCostBrutto;}
 	public void setTransportCostBrutto(Double transportCostBrutto) {this.transportCostBrutto = transportCostBrutto;}

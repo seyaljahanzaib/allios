@@ -72,7 +72,7 @@ clear: both;
 	<div id="sekleft"></div>
 	<div id="sekcenter">
 		<div id="title">${item.name}</div>
-				<div id="photo"></div>
+				<div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"></div>
 				<div id="stopka"></div>
 				<div id="cenacenter">
 					<div id="infocena1">Nasza cena brutto:</div>

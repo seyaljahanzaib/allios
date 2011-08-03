@@ -261,10 +261,10 @@
 	</td>
 	<td width="43" height="90">
 		<div id="k2z">
-				<s:form action="ConfirmOrderAction">
-					<s:hidden name="productToDelete" value="%{product.product_id}"/>
-					<s:submit id="usun" name="delete" value=""/>
-				</s:form>
+<%-- 				<s:form action="ConfirmOrderAction"> --%>
+<%-- 					<s:hidden name="productToDelete" value="%{product.product_id}"/> --%>
+<%-- 					<s:submit id="usun" name="delete" value=""/> --%>
+<%-- 				</s:form> --%>
 		</div>
 	</td>
 </tr>

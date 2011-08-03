@@ -35,12 +35,15 @@ public class Log4JServlet extends HttpServlet {
 			System.out.println("Log4J Is not configured for your Application: "
 					+ prefix + file);
 		}
-		initMenu();
-		initProducts();
-		initFirstPage();
+		
+		
+		Map<String, ArrayList<Product>> productMap = initProducts();
+		initMenu(productMap);
+		
+		
 	}
 
-	private void initProducts(){
+	private Map<String, ArrayList<Product>> initProducts(){
 		List<Product> products = DBAdapter.getInstance().getProductDAO().getAllProducts();
 		Map<String, ArrayList<Product>> productMap = new HashMap<String, ArrayList<Product>>();
 		for(Product product: products){
@@ -75,9 +78,11 @@ public class Log4JServlet extends HttpServlet {
 			
 		});
 		getServletContext().setAttribute("firstPage", firstPageProducts);
+		
+		return productMap;
 	}
 	
-	private void initMenu() {
+	private void initMenu(Map<String, ArrayList<Product>> productMap) {
 		
 		ArrayList<MenuItem> lista = new ArrayList<MenuItem>();
 		
@@ -87,25 +92,36 @@ public class Log4JServlet extends HttpServlet {
 			MenuItem item = new MenuItem();
 			item.setDispalyName(category.getName());
 			item.setCategory(String.valueOf(category.getId()));
+			int numberOfProducts = 0;
+			try{
+				numberOfProducts = productMap.get(category.getId().toString()).size();
+			}
+			catch(NullPointerException e){}
+			
 			
 			if (category.getSubCategories() != null && category.getSubCategories().size() != 0) {
 				for(Category subcategory :  category.getSubCategories()){
 					MenuItem internalItem = new MenuItem();
-					System.out.println("Subcategory : " + subcategory.getName());
-					internalItem.setDispalyName(subcategory.getName());
+					
+					int numberOfProducts2 = 0;
+					try{
+						numberOfProducts2 = productMap.get(subcategory.getId().toString()).size();
+					}
+					catch(NullPointerException e){}
+					
+					
+					numberOfProducts += numberOfProducts2;
+					internalItem.setDispalyName(subcategory.getName() + " (" + numberOfProducts2 + ")");
 					internalItem.setCategory(String.valueOf(subcategory.getId()));
 					item.getItems().add(internalItem);
 				}
 			}
+			item.setDispalyName(category.getName() + " (" + numberOfProducts + ")" );
+			
 			lista.add(item);
 		}
 		getServletContext().setAttribute("menu", lista);
 	}
-	
-	private void initFirstPage(){
-		
-	}
-	
 	
 	
 }

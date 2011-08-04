@@ -166,6 +166,24 @@
 
 </style>
 
+<script type='text/javascript'>
+function deleteProduct(productId) {
+	   var form = document.forms['mainForm'];
+	   var el = document.createElement("input");
+	   el.type = "hidden";
+	   el.name = "productToDelete";
+	   el.value = productId;
+	   var el2 = document.createElement("input");
+	   el2.type = "hidden";
+	   el2.name = "deleteBt";
+	   el2.value = true;
+	   form.appendChild(el);
+	   form.appendChild(el2);
+	   form.submit();
+}
+	
+</script>
+
 <div id="zbior">
 	<div id="b_kosz"></div>
 	<div id="b_dane"></div>
@@ -176,7 +194,7 @@
 </div>
 
 
-<s:form action="ConfirmOrderAction" theme="simple">
+<s:form action="ConfirmOrderAction" theme="simple" name="mainForm">
 <table cellpadding="0" cellspacing="0">
 <tr>
 
@@ -259,20 +277,19 @@
 		<div id="wartoscn"><s:property value="totalPriceNettoString"/> zł</div>
 		</div>
 	</td>
+
 	<td width="43" height="90">
 		<div id="k2z">
-<%-- 				<s:form action="ConfirmOrderAction"> --%>
-<%-- 					<s:hidden name="productToDelete" value="%{product.product_id}"/> --%>
-<%-- 					<s:submit id="usun" name="delete" value=""/> --%>
-<%-- 				</s:form> --%>
+			<div id="usun" onclick='deleteProduct(${product.product_id})'></div>
 		</div>
 	</td>
+
 </tr>
 </s:iterator>
 </table>
 
 
-<s:submit id="przelicz_graf" name="count" value=""></s:submit>
+<s:submit id="przelicz_graf" name="count" value="" />
 <div id="stopka"></div>
 <div id="podsumowanie">
 	<div id="stopka"></div>

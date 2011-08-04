@@ -9,8 +9,8 @@
 		</result-types>
 		
 		<action name="LoginAction" class="pl.alios.action.LoginAction">
-			<result name="SUCCESS" type="tiles">baseLayout</result>
-			<result name="FAILURE" type="tiles">baseLayout</result>
+			<result name="SUCCESS" type="tiles">welcome</result>
+			<result name="FAILURE" type="tiles">welcome</result>
 			<result name="SUCCESS_CART" type="tiles">choose_customer_data</result>
 			<result name="FAILURE_CART" type="tiles">have_to_log</result>
 			<result name="SUCCESS_ACCOUNT" type="tiles">welcome</result>

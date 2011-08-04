@@ -17,11 +17,14 @@ public class ConfirmOrderAction extends ActionSupport {
 	private Logger logger  = Logger.getLogger(ConfirmOrderAction.class);
 
 	public String execute(){
+		System.out.println("Count : " + count);
+		System.out.println("deleteBt : " + deleteBt);
+		
 		if(count)
 			return count();
 		if(next)
 			return next();
-		if(delete)
+		if(deleteBt)
 			return delete();
 		if(back)
 			return "BACK";
@@ -105,7 +108,7 @@ public class ConfirmOrderAction extends ActionSupport {
 	private List<String> numberOfItem;
 	private boolean count;
 	private boolean next;
-	private boolean delete;
+	private boolean deleteBt;
 	private boolean back;
 	
 	private String productToDelete;
@@ -119,8 +122,18 @@ public class ConfirmOrderAction extends ActionSupport {
 	public void setCount(boolean count) {this.count = true;}
 	public boolean isNext() {return next;}
 	public void setNext(boolean next) {this.next = true;}
-	public boolean isDelete() {return delete;}
-	public void setDelete(boolean delete) {this.delete = true;}
+
+	
+public boolean isDeleteBt() {
+		return deleteBt;
+	}
+
+	public void setDeleteBt(boolean deleteBt) {
+		this.deleteBt = true;
+	}
+
+	//	public boolean isDelete() {return delete;}
+//	public void setDelete(boolean delete) {this.delete = true;}
 	public String getProductToDelete() {return productToDelete;}
 	public void setProductToDelete(String productToDelete) {this.productToDelete = productToDelete;}
 	public boolean isBack() {return back;}

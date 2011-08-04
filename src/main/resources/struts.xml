@@ -43,7 +43,7 @@
 		</action>
 		
 		<action name="ConfirmAllAction"  class="pl.alios.action.ConfirmAllAction">
-			<result name="BACK" type="tiles">confirm_order</result>
+			<result name="BACK" type="tiles">choose_customer_data</result>
 			<result name="SUCCESS" type="tiles">summary</result>
 			<result name="ERROR" type="tiles">baseLayout</result>
 		</action>

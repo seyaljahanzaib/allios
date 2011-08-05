@@ -18,7 +18,7 @@
 		</action>
 		
 		<action name="LogOutAction"  class="pl.alios.action.LogOutAction">
-			<result name="SUCCESS" type="tiles">baseLayout</result>
+			<result name="SUCCESS" type="tiles">welcome</result>
 		</action>
 		
 		<action name="AddToCartAction"  class="pl.alios.action.AddToCartAction">

@@ -2,11 +2,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
+#info_unia1{
+	background: url(img/kapital.jpg); width: 206px; height: 70px; margin-top: 8px; margin-left: 30px; margin-bottom: 8px; background-repeat: no-repeat; float: left;
+	}
+#info_unia2{
+	background: url(img/ue.jpg); width: 245px; height: 70px; margin-top: 10px; margin-left: 140px; background-repeat: no-repeat; float: left;
+	}
 #header_logo {
-		background: url(img/logo.png); width: 195px; height: 62px; margin-bottom: 20px; margin-top: 20px; margin-left: 40px; background-repeat: no-repeat;
+		background: url(img/logo.png); width: 195px; height: 70px; margin-top: 20px; margin-left: 140px; background-repeat: no-repeat; background-position: center; float: left;
 		}
 #menubar {
-	float: left; height: 56px;
+	height: 56px;
 	}
 	#menubar #button {
 		background: url(img/mn2button.png); width: 3px; height: 56px; float: left;
@@ -112,7 +118,9 @@
 
 </style>
 
+<div id="info_unia1"></div>
 <div id="header_logo"></div>
+<div id="info_unia2"></div>
 <div id="stopka"></div>
 
 <div id="menubar">

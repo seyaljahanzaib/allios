@@ -2,6 +2,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
+
+
 #menubar1 {
 	height: 30px; 
 	} 
@@ -42,9 +44,11 @@
  	
 </style>
 
+
 <s:if test="%{#session.customer == null}">
-	<s:form action="LoginAction" theme="simple">
+	
 		<div id="menubar1">
+			<s:form action="LoginAction" theme="simple">
 			<div id="tlo1">
 				<div id="tekst1">Zapomniałeś hasła?</div>
 					<a id="tekst2" href="registerLink.action">Zarejestruj się!</a>
@@ -55,20 +59,22 @@
 			<div id="tlo3">
 				<s:submit id="tekst2" value="Zaloguj"/>
 			</div>
+			</s:form>
 		</div>
-	</s:form>
+	
 </s:if>
 <s:else>
-	<s:form action="LogOutAction" theme="simple">
+	
 		<div id="menubar2">
+		<s:form action="LogOutAction" theme="simple">
 			<div id="tlo1">
 				<div id="tekst1">Witaj, zalogowałeś się do sklepu allios.pl</div>
 				<s:form action="LogOutAction" theme="simple">
 					<s:submit id="tekst2" value="Wyloguj"/>
 				</s:form>
 			</div>
+			</s:form>
 			</div>
-	</s:form>
 </s:else>
 
 

@@ -78,7 +78,7 @@
 }
 
 #formdiv {
-	float: left; height: 140px; 
+	float: left; height: 140px; border-bottom: 1px solid #f8deac;
 }
 
 
@@ -197,11 +197,11 @@ if (allProducts != null && allProducts.size() >0){
 	
 	<c:forEach items="<%=products%>" var="item" >
 		<tr>
-			<td style="width=140px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width=142px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"> </div></div></td>
 			
 			
-			<td style="width:253px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:255px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 				<div id="prodt">${item.name}</div>
 				<div id="prodo">${item.shortDescription}</div>
@@ -209,7 +209,7 @@ if (allProducts != null && allProducts.size() >0){
 			</td>
 			
 			
-			<td style="width:82px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:84px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 					<div id="cenab">${item.priceBrutto} zł</div>
 					<div id="cenan">${item.priceNetto} zł</div>

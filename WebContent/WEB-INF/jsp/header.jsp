@@ -1,18 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
 #info_unia1{
-	background: url(img/kapital.jpg); width: 206px; height: 70px; margin-top: 8px; margin-left: 30px; margin-bottom: 8px; background-repeat: no-repeat; float: left;
+	background: url(img/kapital.jpg); width: 206px; height: 70px; margin-top: 20px; margin-bottom: 20px; margin-left: 30px; background-repeat: no-repeat; float: left;
 	}
 #info_unia2{
-	background: url(img/ue.jpg); width: 245px; height: 70px; margin-top: 10px; margin-left: 140px; background-repeat: no-repeat; float: left;
+	background: url(img/ue.jpg); width: 245px; height: 70px; margin-top: 20px; margin-bottom: 20px; margin-left: 140px; background-repeat: no-repeat; float: left;
 	}
 #header_logo {
-		background: url(img/logo.png); width: 195px; height: 70px; margin-top: 20px; margin-left: 140px; background-repeat: no-repeat; background-position: center; float: left;
+		background: url(img/logo.png); width: 195px; height: 62px; margin-top: 26px; margin-left: 140px; background-repeat: no-repeat; float: left;
 		}
 #menubar {
-	height: 56px;
+	float:left; height: 56px;
 	}
 	#menubar #button {
 		background: url(img/mn2button.png); width: 3px; height: 56px; float: left;
@@ -121,7 +122,7 @@
 <div id="info_unia1"></div>
 <div id="header_logo"></div>
 <div id="info_unia2"></div>
-<div id="stopka"></div>
+
 
 <div id="menubar">
 	<div id="sekleft" onclick="location.href='mainPageLink.action'">

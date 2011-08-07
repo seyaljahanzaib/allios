@@ -65,50 +65,12 @@
 
 <s:else>
 		<div id="menubar2">
-		<s:form action="LogOutAction" theme="simple">
-			<div id="tlo1">
-				<div id="tekst1">Witaj, zalogowałeś się do sklepu allios.pl</div>
-				<s:form action="LogOutAction" theme="simple">
-					<s:submit id="tekst2" value="Wyloguj"/>
-				</s:form>
-			</div>
+			<s:form action="LogOutAction" theme="simple">
+				<div id="tlo1">
+					<div id="tekst1">Witaj, zalogowałeś się do sklepu allios.pl</div>
+				<s:submit id="tekst2" value="Wyloguj"/>
+				</div>
 			</s:form>
-			</div>
+		</div>
 </s:else>
 
-
-
-
-
-
-
-
-
-
-<%-- <s:if test="%{#session.customer != null}"> --%>
-<!-- 	<div id="loging"> -->
-<%-- 		<s:form action="LogOutAction" theme="simple"> --%>
-<%-- 			<s:submit value="Wyloguj" --%>
-<!-- 				cssStyle="background: none; float: right; margin-right: 10px; margin-top: 2px;" /> -->
-<%-- 			<s:div --%>
-<!-- 				cssStyle="float: right; margin-top: 2px; margin-right: 10px; font: bold 13px/25px Arial, sans-serif; color: white;"> -->
-<%-- 				<s:label value="Witaj " name="password_tb" cssStyle="height: 15px;" /> --%>
-<%-- 				<s:property value="#session.customer.login" /> --%>
-<%-- 			</s:div> --%>
-<%-- 		</s:form> --%>
-<!-- 	</div> -->
-<%-- </s:if> --%>
-<%-- <s:else> --%>
-<!-- 	<div id="loging"> -->
-<%-- 		<s:form action="LoginAction" theme="simple"> --%>
-<%-- 			<s:submit value="Zaloguj" --%>
-<!-- 				cssStyle="background: none; float: right; margin-right: 10px; margin-top: 2px;" /> -->
-<%-- 			<s:password value="login" name="password_tb" --%>
-<!-- 				cssStyle="height: 15px; float: right; margin-top: 2px; margin-right: 10px;" /> -->
-<%-- 			<s:textfield name="login_tb" --%>
-<!-- 				cssStyle="height: 15px; float: right; margin-top: 2px; margin-right: 10px;" /> -->
-<%-- 		</s:form> --%>
-<!-- 		<a id="login_bt" href="">Zapomialem hasla</a> -->
-<!-- 		<a id="login_bt" href="registerLink.action">Zarejestruj</a> -->
-<!-- 	</div> -->
-<%-- </s:else> --%>

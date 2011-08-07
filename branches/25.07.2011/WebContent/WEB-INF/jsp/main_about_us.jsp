@@ -8,23 +8,43 @@
 
 #naglowek{
 	font-family: Tahoma;
-	font-size: 13px;
+	font-size: 12px;
 	color: #16117c;
+	margin-top: 10px;
 }
 #tekst{
 	font-family: Tahoma;
-	font-size: 12px;
+	font-size: 11px;
 	color: #16117c;
 	text-align: justify;
 }
+
+#title_l {
+	background: url(img/k_topl.png); width: 7px; height: 29px; float: left; 
+}
+#title_c {
+	background: url(img/k_topc.png); width: 746px; height: 29px; font: bold 11px/29px Tahoma; color: #ffffff; float: left;
+}
+#title_r {
+	background: url(img/k_topr.png); width: 7px; height: 29px; float: left; 
+}
+
 ul{
 	margin: 10px 0 0 0px;
 }
+#stopka {
+clear: both;
+}
+
 </style>
 
 
 <div id="glowna">
 
+<div id="title_l"></div>
+<div id="title_c">O firmie</div>
+<div id="title_r"></div>
+<div id="stopka"></div>
 
 
 <div id="naglowek"><b>Przedmiot działalności</b></div>

@@ -30,7 +30,7 @@
  	}
  	
  #menubar2 {
-	height: 30px; width: 1000px; 
+	height: 30px; 
 	} 
 	#menubar2 #tlo1 {
 	background: url(img/menubar1.png); height: 30px; width: 1000px; float: left;
@@ -61,10 +61,9 @@
 			</div>
 			</s:form>
 		</div>
-	
 </s:if>
+
 <s:else>
-	
 		<div id="menubar2">
 		<s:form action="LogOutAction" theme="simple">
 			<div id="tlo1">

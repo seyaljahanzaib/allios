@@ -68,7 +68,7 @@
 }
 
 #register_button{
-	background: url(img/r_button1.png); height: 34px; width: 120px; margin-left: 320px; margin-top: 20px; border: none;
+	background: url(img/r_button1.png); height: 34px; width: 120px; margin-left: 320px; margin-top: 20px; border: none; margin-bottom: 50px;
 }
 #register_button:hover{
 	background: url(img/r_button2.png);
@@ -268,14 +268,24 @@ clear: both;;
 		</div>
 	</div>
 	
-	<div id="statute_border">
+	<div style="margin-top: 10px;">
 		<s:if test="%{#request.acceptance == 'false'}">
 		<div style="float: left; background: url(img/check.png); height: 22px; width: 24px;"><s:checkbox cssStyle="float: left; height: 16px; width :17px;" name="acceptance"/></div>
 		</s:if>
 		<s:else>
 				<div style="float: left;"><s:checkbox cssStyle="float: left;" name="acceptance"/></div>
 				</s:else>
-		<div id="statute">Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb rekrutacji, zgodnie z ustawą z dnia 29.08.1997 r.  o ochronie danych osobowych. (Dz. U. z 2002 r. nr 101, poz.926 ze zm.)</div>
+		<div id="statute">Wyrażam zgodę na przetwarzanie swoich danych osobowych przez firmę ALLIOS Jolanta Matacz zgodnie z art. 23 ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. Nr 133 z 1997 r. poz 883 z późn. zm.)  Dane te będą wykorzystywane w celu realizacji złożonych zamówień. </div>
+	</div>
+	
+	<div style="margin-top: 80px;">
+		<s:if test="%{#request.acceptanceTwo == 'false'}">
+		<div style="float: left; background: url(img/check.png); height: 22px; width: 24px;"><s:checkbox cssStyle="float: left; height: 16px; width :17px;" name="acceptanceTwo"/></div>
+		</s:if>
+		<s:else>
+				<div style="float: left;"><s:checkbox cssStyle="float: left;" name="acceptanceTwo"/></div>
+				</s:else>
+		<div id="statute">Zapoznałem się z regulaminem sklepu allios.pl i akceptuję jego warunki. Treść regulaminu znajdziesz <a href="statuteLink.action">tutaj</a>.</div>
 	</div>
 	
 	<s:submit id="register_button" value=""/>

@@ -208,7 +208,7 @@
 			
 		<td width="120" height="40">
 			<div id="poz_tab1">
-			<div id="area1">123/S/2011</div>
+			<div id="area1"><s:property value="number" /></div>
 			</div>
 			</td>
 	

@@ -85,10 +85,16 @@ public class RegisterAction extends ActionSupport{
 		if (acceptance == null || acceptance.equals("false")){
 			addFieldError("acceptance", null);
 		}
+		
+		if (acceptanceTwo == null || acceptanceTwo.equals("false")){
+			addFieldError("acceptanceTwo", null);
+		}
+		
 	}
 
 	private Customer customer;
 	private String acceptance;
+	private String acceptanceTwo;
 	private String message;
 	private String messageLogin;
 	private String messagePassword;
@@ -103,4 +109,7 @@ public class RegisterAction extends ActionSupport{
 	public void setMessagePassword(String messagePassword) {this.messagePassword = messagePassword;}
 	public String getMessage() {return message;}
 	public void setMessage(String message) {this.message = message;}
+	public String getAcceptanceTwo() {return acceptanceTwo;}
+	public void setAcceptanceTwo(String acceptanceTwo) {this.acceptanceTwo = acceptanceTwo;}
+	
 }

@@ -23,8 +23,7 @@ public class Order {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long orderId;
-	//TODO
-	private String number = "0001/11/2011";
+	private String number;
 	private Double transportCostBrutto = new Double(Commons.TRANSPORT_COST_BRUTTO);
 	private Double transportCostNetto = new Double(Commons.TRANSPORT_COST_NETTO);
 	private Double totalPriceBrutto;

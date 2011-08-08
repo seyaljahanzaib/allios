@@ -1,5 +1,7 @@
 package pl.alios.model.dao;
 
+import javax.persistence.Query;
+
 import pl.alios.model.Order;
 
 public class OrderDAO extends AbstarctDAO{
@@ -7,6 +9,8 @@ public class OrderDAO extends AbstarctDAO{
 	public void addOrder(Order order) {
 		logger.info("Dodawanie nowego zamowienia : " + order);
 		em.getTransaction().begin();
+		Query q = em.createNativeQuery("select getInoviceNumber()");
+		order.setNumber((String) q.getSingleResult());
 		em.persist(order);
 		em.getTransaction().commit();
 	}

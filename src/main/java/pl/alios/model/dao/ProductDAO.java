@@ -48,6 +48,15 @@ public class ProductDAO extends AbstarctDAO{
 		Query query = em.createQuery("SELECT p FROM Product p");
 		return query.getResultList();
 	}
+
+	public ArrayList<Product> searchByName(String searchString) {
+		logger.info("SELECT p FROM Product p WHERE p.name LIKE %" + searchString +"%");
+		ArrayList<Product> products = new ArrayList<Product>();
+		Query query = em.createQuery("SELECT p FROM Product p WHERE p.name LIKE :name");
+		query.setParameter("name", "%"+ searchString +"%");
+		products = (ArrayList<Product>) query.getResultList();
+		return products;
+	}
 	
 	
 	

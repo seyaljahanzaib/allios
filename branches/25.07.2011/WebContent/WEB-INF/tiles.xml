@@ -114,4 +114,8 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/main_statute.jsp" />
 	</definition>
   
+  	<definition name="products_searcher" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/products_searcher.jsp" />
+	</definition>
+  
 </tiles-definitions>

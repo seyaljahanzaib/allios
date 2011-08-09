@@ -80,11 +80,12 @@
 		</action>
 		
 		<action name="SetPageAction"  class="pl.alios.action.SetPageAction">
-			<result name="SUCCESS" type="tiles">products_searcher</result>
+			<result name="SUCCESS" type="tiles">products</result>
 		</action>
 
 		<action name="SearcherAction"  class="pl.alios.action.SearcherAction">
-			<result name="SUCCESS" type="tiles">products</result>
+			<result name="SUCCESS" type="tiles">products_searcher</result>
+			<result name="MESSAGE" type="tiles">message</result>
 		</action>
 		
 		<action name="*Link" method="{1}" class="pl.alios.main.LinkAction">

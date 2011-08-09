@@ -13,4 +13,8 @@ public class Commons {
 	
 	public final static String INOVICE_ISSUER = "Jolanta Matcz";
 	
+	public final static String ADMIN_PAWEL = "ADMIN_PAWEL";
+	public final static String ADMIN_JOLA =  "ADMIN_JOLA";
+	
+	
 }

@@ -88,46 +88,6 @@
 
 </style>
 
-<%
-List<Product> products = new ArrayList<Product>();
-Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
-System.out.println("Progres-1");
-Map<String, ArrayList<Product>> productMap = (Map<String, ArrayList<Product>>) getServletContext().getAttribute("products");
-System.out.println("Progres-2");
-List<Product> allProducts = productMap.get(sessionAttr.get("cart_category"));
-System.out.println("Progres-3");
-int pageNum = Integer.valueOf((String)sessionAttr.get("cart_page"));
-System.out.println("Progres-4");
-int end = 10*pageNum;
-int start = end - 10;
-
-for(int i=start;i<end;i++){
-	try{
-	products.add(allProducts.get(i));
-	}catch(IndexOutOfBoundsException e1){
-	}catch(NullPointerException e2){}
-}
-int number=0;
-int[] pageTab;
-if (allProducts != null && allProducts.size() >0){
-	if (allProducts.size() % 10 > 0)
-		number= allProducts.size() / 10 + 1;
-	else
-		number= allProducts.size() / 10;
-	int i=1;
-	pageTab = new int[number];
-	while(i<=number){
-		pageTab[i-1] = i;
-		i++;
-	}
-	int item;
-}else{
-	allProducts = new ArrayList<Product>();
-	number = 1;
-	pageTab = new int[]{1};
-}
-%>
-
 <!-- <table cellpadding="0" cellspacing="0"> -->
 
 <!-- 	<tr><td colspan="6" style="background:url(img/pg_c.png); height:29px; width:760px; font:bold 12px/29px Tahoma; color:#160e86;"> -->
@@ -195,7 +155,7 @@ if (allProducts != null && allProducts.size() >0){
 <!-- 	</tr> -->
 
 	
-	<c:forEach items="<%=products%>" var="item" >
+	<c:forEach items="${products}" var="item" >
 		<tr>
 			<td style="width=142px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"> </div></div></td>

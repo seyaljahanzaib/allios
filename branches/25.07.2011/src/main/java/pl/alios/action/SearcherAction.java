@@ -12,7 +12,13 @@ public class SearcherAction extends ActionSupport {
 	private Logger logger  = Logger.getLogger(SearcherAction.class);
 	
 	public String execute(){
-			logger.info("Wyszukiwanie produktów");
+			logger.info("Wyszukiwanie produktu: " + searchString);
 		return "SUCCESS";
 }
+	private String searchString;
+
+	public String getSearchString() {return searchString;}
+	public void setSearchString(String searchString) {this.searchString = searchString;}
+
+	
 }

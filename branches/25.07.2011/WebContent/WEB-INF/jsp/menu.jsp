@@ -166,7 +166,7 @@
 
 
 <div id="searcher">
-	<s:form action="SearcherAction">
+	<s:form action="SearcherAction" theme="simple">
 	<div id="sekleft"></div>
 	<div id="sekcenter">
 		<div id="arealeft"></div>

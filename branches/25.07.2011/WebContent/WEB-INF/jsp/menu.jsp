@@ -38,7 +38,7 @@
 		width: 210px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 8px; text-align: center; text-decoration: underline; 
 		}
 	#searcher #button {
-		background: url(img/s_button1.png); width: 86px; height: 22px; float: left; margin-top: 7px; margin-left: 29px; cursor: pointer;
+		background: url(img/s_button1.png); width: 86px; height: 22px; float: left; margin-top: 7px; margin-left: 29px; border: none; cursor: pointer;
 		}
 	#searcher #button:HOVER {
 		background: url(img/s_button2.png); 
@@ -165,23 +165,25 @@
 </div>
 
 
-<!-- <div id="searcher"> -->
-<!-- 	<div id="sekleft"></div> -->
-<!-- 	<div id="sekcenter"> -->
-<!-- 		<div id="arealeft"></div> -->
-<!-- 		<div id="areacenter"></div> -->
-<!-- 		<div id="arearight"></div> -->
-<!-- 		<div id="stopka"></div> -->
-<!-- 		<div id="box">o</div> -->
-<!-- 		<div id="wopisach">w opisach</div> -->
-<!-- 		<div id="button"></div> -->
-<!-- 		<div id="stopka"></div> -->
-<!-- 		<div id="linia"></div> -->
-<!-- 		<div id="stopka"></div> -->
-<!-- 		<div id="zaawansowane">Wyszukiwanie zaawansowane</div> -->
-<!-- 	</div> -->
-<!-- 	<div id="sekright"></div> -->
-<!-- </div> -->
+<div id="searcher">
+	<s:form action="SearcherAction">
+	<div id="sekleft"></div>
+	<div id="sekcenter">
+		<div id="arealeft"></div>
+		<div id="areacenter"><s:textfield name="searchString"/></div>
+		<div id="arearight"></div>
+		<div id="stopka"></div>
+		<div id="box">o</div>
+		<div id="wopisach">w opisach</div>
+		<s:submit id="button" value=""></s:submit>
+		<div id="stopka"></div>
+		<div id="linia"></div>
+		<div id="stopka"></div>
+		<div id="zaawansowane">Wyszukiwanie zaawansowane</div>
+	</div>
+	<div id="sekright"></div>
+	</s:form>
+</div>
 
 <div id="menukat"></div>
 

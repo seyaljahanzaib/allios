@@ -7,7 +7,7 @@
 <tiles-definitions>
 
   <definition name="baseLayout" template="baseLayout.jsp">
-      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="title"  value="allios.pl"/>
       <put-attribute name="logOFF" value="/WEB-INF/jsp/log_off.jsp"/>
       <put-attribute name="logIN" value="/WEB-INF/jsp/log_in.jsp"/>
       <put-attribute name="header" value="/WEB-INF/jsp/header.jsp"/>
@@ -91,9 +91,6 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/message.jsp" />
 	</definition>
 
-
-
-
 	<definition name="aboutUs" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/main_about_us.jsp" />
 	</definition>
@@ -118,4 +115,19 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/products_searcher.jsp" />
 	</definition>
   
+  	<definition name="adminLogin" template="/admin/logonadmin.jsp">
+	</definition>
+  
+	<definition name="adminLayout" template="/admin/adminLayout.jsp">
+		<put-attribute name="title"  value="Allios.pl - panel admnistartora"/>
+		<put-attribute name="secondHeader"  value="/admin/menubar.jsp"/>
+		<put-attribute name="body"   value="/admin/menu_block.jsp"/>
+	</definition>
+
+
+
+
+
+
+
 </tiles-definitions>

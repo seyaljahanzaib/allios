@@ -80,7 +80,7 @@
 		</action>
 		
 		<action name="SetPageAction"  class="pl.alios.action.SetPageAction">
-			<result name="SUCCESS" type="tiles">products</result>
+			<result name="SUCCESS" type="tiles">products_searcher</result>
 		</action>
 
 		<action name="SearcherAction"  class="pl.alios.action.SearcherAction">

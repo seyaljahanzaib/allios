@@ -82,7 +82,11 @@
 		<action name="SetPageAction"  class="pl.alios.action.SetPageAction">
 			<result name="SUCCESS" type="tiles">products</result>
 		</action>
-						
+
+		<action name="SearcherAction"  class="pl.alios.action.SearcherAction">
+			<result name="SUCCESS" type="tiles">products</result>
+		</action>
+		
 		<action name="*Link" method="{1}" class="pl.alios.main.LinkAction">
 			<result name="welcome" type="tiles">welcome</result>
 			<result name="register" type="tiles">registration</result>

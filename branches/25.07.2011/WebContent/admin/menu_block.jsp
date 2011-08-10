@@ -71,7 +71,7 @@
 	</div>
 	
 	<div id="tlocenter">
-		<div id="button">Nowy klient</div>
+		<div id="button" onclick="location.href='newCategoryLink.action'">Nowy klient</div>
 	</div>
 	
 	<div id="tlocenter">

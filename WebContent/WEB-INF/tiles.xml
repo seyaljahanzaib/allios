@@ -115,6 +115,21 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/products_searcher.jsp" />
 	</definition>
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   	<definition name="adminLogin" template="/admin/logonadmin.jsp">
 	</definition>
   
@@ -124,6 +139,9 @@
 		<put-attribute name="body"   value="/admin/menu_block.jsp"/>
 	</definition>
 
+  	<definition name="newCategory" extends="adminLayout">
+		<put-attribute name="body" value="/admin/categories.jsp" />
+	</definition>
 
 
 

@@ -98,14 +98,30 @@
 			<result name="have_to_log_account" type="tiles">have_to_log_account</result>
 			<result name="changeData" type="tiles">changeData</result>
 			<result name="changePass" type="tiles">changePass</result>
-			
 			<result name="aboutUs" type="tiles">aboutUs</result>
 			<result name="contact" type="tiles">contact</result>
 			<result name="mainPage" type="tiles">welcome</result>
 			<result name="news" type="tiles">news</result>
 			<result name="statute" type="tiles">statute</result>
 			
+			<result name="adminLayout" type="tiles">adminLayout</result>
+			<result name="adminLogin" type="tiles">adminLogin</result>
+			<result name="newCategory" type="tiles">newCategory</result>
+			
 		</action>
+		
+		
+		
+		
+		
+		
+		
+		<action name="LoginAdminAction"  class="pl.alios.action.admin.LoginAdminAction">
+			<result name="SUCCESS" type="tiles">adminLayout</result>
+			<result name="FAILED" type="tiles">adminLogin</result>
+		</action>
+		
+		
 		
 	</package>
 </struts>

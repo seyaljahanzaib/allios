@@ -19,12 +19,13 @@ public class LoginAdminAction extends ActionSupport {
 		logger.info("Logowanie admina");
 		Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
 		
-		if("jmallios_jola".equals(login) && "adminjola".equals(login)){
+		if("jmallios_jola".equals(login) && "adminjola".equals(password)){
 			logger.info("Zalogowany admin JOLA");
 			sessionAttr.put("Admin", Commons.ADMIN_JOLA);
+			
 			return "SUCCESS";
 			
-		}else if("jmallios_pawel".equals(login) && "adminpawel".equals(login)){
+		}else if("ddd".equals(login) && "ddd".equals(password)){
 			logger.info("Zalogowany admin PAWEL");
 			sessionAttr.put("Admin", Commons.ADMIN_PAWEL);
 			return "SUCCESS";

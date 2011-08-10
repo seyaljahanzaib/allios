@@ -52,6 +52,20 @@ public class LinkAction extends ActionSupport {
 	
 	
 	
+	// --------------------       ADMIN     -------------------------------------
+	
+	public String admin(){
+		Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
+		if(sessionAttr.get("Admin") != null)
+			return "adminLayout";
+		else
+			return "adminLogin";
+	}
+	public String newCategory(){return "newCategory";}
+	
+	
+	
+
 	
 	private String message;
 	public String getMessage() {return message;}

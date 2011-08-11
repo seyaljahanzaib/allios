@@ -4,59 +4,59 @@
 
 <style>
 
-#order {
+#user_view {
 	width: 1150px;
 }
 	
-	#order #maintekst {
+	#user_view #maintekst {
 		font: bold 12px/30px Tahoma; color: #ffffff; text-align: left; margin-left: 3px;
 		}
-	#order #mainleft {
+	#user_view #mainleft {
 		background: url(../img/pa_titlel.png); width: 6px; height: 30px; float: left;
 		}
-	#order #maincenter {
+	#user_view #maincenter {
 		background: url(../img/pa_titlec.png); width: 1138px; height: 30px; float: left;
 		}
-	#order #mainright {
+	#user_view #mainright {
 		background: url(../img/pa_titler.png); width: 6px; height: 30px; float: left;
 		}
-	#order #mainback {
+	#user_view #mainback {
 		width: 1150px; height: 200px; background-color: #f3f2fc; margin-top:2px; float: left;
 	}
-	#order #maintekst1 {
+	#user_view #maintekst1 {
 		width: 150px; font: bold 11px/25px Tahoma; color: #101192; text-align: right; margin-left: 20px; margin-top: 40px; float: left;
 		}
-	#order #main_graf {
+	#user_view #main_graf {
 		background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
 		}
-	#order #main_combo {
+	#user_view #main_combo {
 		background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
 		}
-	#order #main_add {
+	#user_view #main_add {
 		background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; 
 		}
-	#order #main_addtekst {
+	#user_view #main_addtekst {
 		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; float: left;
 		}
- 	#order #main_addtekst:HOVER {
+ 	#user_view #main_addtekst:HOVER {
  		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; float: left; */
  		}
- 	#order #mn_table {
+ 	#user_view #mn_table {
  		background: url(../img/pa_mnprodc.png); height: 39px; float: left;
  		}
- 	 #order #mn_table1 {
+ 	 #user_view #mn_table1 {
  		height: 60px; float: left; border-bottom: 1px; border-bottom-color: #d9d5fe; border-bottom-style: solid;
  		}
- 	 #order #mnl_table {
+ 	 #user_view #mnl_table {
  		background: url(../img/pa_mnprodlc.png); height: 39px; float: left;
  		}
- 	 #order #mn_tekst {
+ 	 #user_view #mn_tekst {
  		font: bold 12px/39px Tahoma; color: #5a598d; float: left;
  		}
- 	 #order #mn_tekst1 {
+ 	 #user_view #mn_tekst1 {
  		font: 11px/60px Tahoma; color: #101192; float: left;
  		}
- 	 #order #mn_tekst2 {
+ 	 #user_view #mn_tekst2 {
  		font: 11px Tahoma; color: #101192; float: left;
  		}
 
@@ -66,7 +66,7 @@ clear: both;
 
 </style>
 
-<div id="order">
+<div id="user_view">
 	
 	<div id="mainleft"></div>
 	<div id="maincenter">
@@ -181,7 +181,7 @@ clear: both;
 	
 	<td width="140px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table" style="width: 139px;">
-			<div id="mn_tekst" style="width: 139px; text-align: center;">Ostatnie zam.</div>
+			<div id="mn_tekst" style="width: 139px; text-align: center;">Rejestracja/ost. zam.</div>
 			</div>
 			<div id="mnl_table" style="width: 1px;"></div>
 	</td>
@@ -253,7 +253,8 @@ clear: both;
 	
 	<td width="140px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 140px;">
-			<div id="mn_tekst1" style="width: 140px; text-align: center;">27-07-2010, 12.34</div>
+			<div id="mn_tekst2" style="width: 140px; text-align: center; margin-top: 20px;"><b>27.10.2011, 10.30</b></div>
+			<div id="mn_tekst2" style="width: 140px; text-align: center; margin-top: 3px;">02.11.2011, 12.30</div>
 			</div>
 	</td>
 	

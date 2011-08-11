@@ -47,25 +47,25 @@
 	height: 40px;
 	}
 	#tabkat1 #sek1 {
-		background: url(../img/pa_katec.png); width: 498px; height: 40px; float: left; text-align: center;
+		background: url(../img/pa_mnprodc.png); width: 499px; height: 39px; float: left; text-align: center;
 		}
 	#tabkat1 #sek2 {
-		background: url(../img/pa_katec.png); width: 303px; height: 40px; float: left;
+		background: url(../img/pa_mnprodc.png); width: 304px; height: 39px; float: left;
 		}
 	#tabkat1 #sek3 {
-		background: url(../img/pa_katec.png); width: 113px; height: 40px; float: left;
+		background: url(../img/pa_mnprodc.png); width: 114px; height: 39px; float: left;
 		}
 	#tabkat1 #sek4 {
-		background: url(../img/pa_katec.png); width: 113px; height: 40px; float: left;
+		background: url(../img/pa_mnprodc.png); width: 114px; height: 39px; float: left;
 		}
 	#tabkat1 #sek5 {
-		background: url(../img/pa_katec.png); width: 115px; height: 40px; float: left;
+		background: url(../img/pa_mnprodc.png); width: 115px; height: 39px; float: left;
 		}
 	#tabkat1 #sekpoint {
-		background: url(../img/pa_katep.png); width: 2px; height: 40px; float: left; 
+		background: url(../img/pa_mnprodlc.png); height: 39px; float: left; 
 		}
 	#tabkat1 #tekst {
-		text-align: center; font: bold 12px/40px Tahoma; color: #101192;
+		text-align: center; font: bold 12px/40px Tahoma; color: #5a598d;
 		}
 
 
@@ -73,16 +73,16 @@
 	height: 40px;
 	}
 	#tabkat2 #sek1 {
-		width: 498px; height: 40px; float: left; text-align: center;
+		width: 499px; height: 40px; float: left; text-align: center;
 		}
 	#tabkat2 #sek2 {
-		width: 303px; height: 40px; float: left;
+		width: 304px; height: 40px; float: left;
 		}
 	#tabkat2 #sek3 {
-		width: 113px; height: 40px; float: left;
+		width: 114px; height: 40px; float: left;
 		}
 	#tabkat2 #sek4 {
-		width: 113px; height: 40px; float: left;
+		width: 114px; height: 40px; float: left;
 		}
 	#tabkat2 #sek5 {
 		width: 115px; height: 40px; float: left; 
@@ -153,36 +153,36 @@ clear: both;
 <table style="padding: 0px; border-collapse: collapse; border:0px; border-spacing:0px;">
 <tr>
 
-	<td width="500px" height="40px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+	<td width="500px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="tabkat1">
 		<div id="sek1">
 			<div id="tekst">Kategorie / podkategorie</div></div>
-			<div id="sekpoint"></div>
+			<div id="sekpoint" style="width: 1px;"></div>
 		</div>
 		</td>
 		
-	<td width="305px" height="40px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+	<td width="305px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="tabkat1">
 		<div id="sek2"><div id="tekst">Liczba przypisanych produktów</div></div>
-		<div id="sekpoint"></div>
+		<div id="sekpoint" style="width: 1px;"></div>
 		</div>
 		</td>
 		
-	<td width="115px" height="40px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+	<td width="115px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="tabkat1">
 		<div id="sek3"><div id="tekst">Aktywny</div></div>
-		<div id="sekpoint"></div>
+		<div id="sekpoint" style="width: 1px;"></div>
 		</div>
 		</td>
 		
-	<td width="115px" height="40px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+	<td width="115px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="tabkat1">
 		<div id="sek4"><div id="tekst">Ukryty</div></div>
-		<div id="sekpoint"></div>
+		<div id="sekpoint" style="width: 1px;"></div>
 		</div>
 		</td>
 		
-	<td width="115px" height="40px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+	<td width="115px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="tabkat1">
 		<div id="sek5"><div id="tekst">Usuń</div></div>
 		</div>

@@ -91,7 +91,7 @@
 		background: url(img/mn2kosz_b.png); background-position: center; width: 3px; height: 56px; float: left;
 		}
 	#menubar #podpisy {
-		font: bold 8px Tahoma; color: #ffffff; margin-top: 35px; float: left;
+		font: 6.4pt Tahoma; color: #ffffff; margin-top: 35px; float: left; letter-spacing: 0.3pt;
 		}
 	#menubar #kosz_t1 {
 		background: url(img/t_kosz.png); background-repeat: no-repeat; background-position: left; width: 58px; height: 56px; margin-left: 7px; float: left;
@@ -142,7 +142,7 @@
 	<div  id="sekcenter" onclick="location.href='newsLink.action'">
 		<div id="aktualnoscigraf"></div>
 		<div id="aktualnosci">
-		<div id="podpisy">najnowsze wiadomości</div>
+		<div id="podpisy">nowe informacje</div>
 		</div>	
 		</div>
 	<div id="button"></div>

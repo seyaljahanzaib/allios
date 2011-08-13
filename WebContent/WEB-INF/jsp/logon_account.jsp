@@ -51,7 +51,7 @@
 		background: url(img/logbutl1.png); 
 		}
 	#log #tekst_r {
-		width: 350px; height: 30px; text-align: right; font: bold 12px/30px Tahoma; color: #ffffff; margin-top: 22px; float: left; letter-spacing: 1px;
+		width: 356px; height: 30px; text-align: left; font: bold 12px/30px Tahoma; color: #ffffff; margin-top: 22px; float: left; letter-spacing: 1px;
 		}
 	#log #b_rejestr {
 		background: url(img/logbutz.png); width: 126px; height: 30px; float: left;  margin-top: 24px; margin-left: 10px; cursor: pointer; border: none;
@@ -90,6 +90,7 @@
 			<s:submit id="b_zaloguj" name="inaccount" value=""/>
 		</s:form>
 		
+		<div id="stopka"></div>
 		<s:form action="registerLink.action" theme="simple">	
 			<div id="tekst_r">Nie zarejestrowałeś się jeszcze w naszym sklepie?</div>
 			<s:submit id="b_rejestr" value=""/>

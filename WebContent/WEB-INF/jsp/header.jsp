@@ -91,7 +91,7 @@
 		background: url(img/mn2kosz_b.png); background-position: center; width: 3px; height: 56px; float: left;
 		}
 	#menubar #podpisy {
-		font: 6.4pt Tahoma; color: #ffffff; margin-top: 35px; float: left; letter-spacing: 0.3pt;
+		font: 6.4pt Tahoma; color: #ffffff; margin-top: 35px; float: left;
 		}
 	#menubar #kosz_t1 {
 		background: url(img/t_kosz.png); background-repeat: no-repeat; background-position: left; width: 58px; height: 56px; margin-left: 7px; float: left;

@@ -10,7 +10,7 @@
 	background: url(img/ue.jpg); width: 245px; height: 70px; margin-top: 20px; margin-bottom: 20px; margin-left: 140px; background-repeat: no-repeat; float: left;
 	}
 #header_logo {
-		background: url(img/logo.png); width: 195px; height: 62px; margin-top: 26px; margin-left: 140px; background-repeat: no-repeat; float: left;
+		background: url(img/logo_final.png); width: 210px; height: 42px; margin-top: 36px; margin-left: 140px; background-repeat: no-repeat; float: left;
 		}
 #menubar {
 	float:left; height: 56px;

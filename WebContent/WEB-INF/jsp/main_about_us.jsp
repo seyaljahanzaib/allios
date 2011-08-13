@@ -23,7 +23,7 @@
 	background: url(img/k_topl.png); width: 7px; height: 29px; float: left; 
 }
 #title_c {
-	background: url(img/k_topc.png); width: 746px; height: 29px; font: bold 11px/29px Tahoma; color: #ffffff; float: left;
+	background: url(img/k_topc.png); width: 746px; height: 29px; font: bold 12px/29px Tahoma; color: #ffffff; letter-spacing: 1px; float: left;
 }
 #title_r {
 	background: url(img/k_topr.png); width: 7px; height: 29px; float: left; 

@@ -47,11 +47,32 @@
 		background: url(img/sline.png); width: 190px; height: 2px; float: left; margin-top: 8px; margin-left: 10px;
 		}
 #twojemenu {
-	background: url(img/b_tkonto.png); width: 230px; height: 29px; cursor: pointer; margin-bottom: 1px; margin-top: 6px; float: left; 
+	width: 230px; height: 29px; cursor: pointer; margin-bottom: 1px; margin-top: 6px; float: left; 
 	}
-#twojemenu:HOVER {
-	background: url(img/b_tkonto1.png);
-	}
+		#twojemenu #sekleft {
+			background: url(img/k_but_l.png); width: 7px; height: 29px; float: left;
+			}
+		#twojemenu #sekcenter {
+			background: url(img/k_but_c.png); width: 216px; height: 29px; font: 13px/29px Tahoma; color: #ffffff; text-align: center; float: left;
+			}
+		#twojemenu #point {
+			background: url(img/tm_k2.png); background-position: center; background-repeat: no-repeat; width: 10px; height: 29px; margin-left: 5px; float: left;
+			}
+		#twojemenu #point:HOVER {
+			background: url(img/tm_k1.png); background-position: center; background-repeat: no-repeat; width: 10px; height: 29px; margin-left: 5px; float: left;
+			}	
+		#twojemenu #point1 {
+			background: url(img/tm_k1.png); background-position: center; background-repeat: no-repeat; width: 10px; height: 29px; margin-left: 5px; float: left;
+			}
+		#twojemenu #point1:HOVER {
+			background: url(img/tm_k2.png); background-position: center; background-repeat: no-repeat; width: 10px; height: 29px; margin-left: 5px; float: left;
+			}
+		#twojemenu #tekst {
+			font: 13px/29px Tahoma; color: #ffffff; width: 176px; margin-left: 20px; text-align: center; float: left;
+			}
+		#twojemenu #sekright {
+			background: url(img/k_but_r.png); width: 7px; height: 29px; float: left;
+			}
 
 #tmenuback {
 			background: url(img/k_bc.png); width: 230px; height: 25px; float: left; cursor: pointer;
@@ -73,8 +94,30 @@
 		}
 	
 #menukat {
-			background: url(img/kk_button.png); width: 230px; height: 29px; float: left; margin-bottom: 1px; margin-top: 6px;
-		}
+			width: 230px; height: 29px; float: left; margin-bottom: 1px; margin-top: 6px;
+			}
+		#menukat #sekleft {
+			background: url(img/k_but_l.png); width: 7px; height: 29px; float: left;
+			}
+		#menukat #sekcenter {
+			background: url(img/k_but_c.png); width: 216px; height: 29px; font: 13px/29px Tahoma; color: #ffffff; text-align: center; float: left;
+			}
+		#menukat #sekright {
+			background: url(img/k_but_r.png); width: 7px; height: 29px; float: left;
+			}
+
+#menucennik {
+			width: 230px; height: 29px; float: left; margin-bottom: 1px; margin-top: 6px;
+			}
+		#menucennik #sekleft {
+			background: url(img/k_but_l.png); width: 7px; height: 29px; float: left;
+			}
+		#menucennik #sekcenter {
+			background: url(img/k_but_c.png); width: 216px; height: 29px; font: 13px/29px Tahoma; color: #ffffff; text-align: center; float: left;
+			}
+		#menucennik #sekright {
+			background: url(img/k_but_r.png); width: 7px; height: 29px; float: left;
+			}
 
 #menukatback {
 			background: url(img/k_bc.png); width: 230px; height: 25px; float: left; cursor: pointer;
@@ -98,18 +141,7 @@
 			background: url(img/k_p1.png); background-repeat: no-repeat; background-position:center; width: 6px; height: 25px; margin-left: 30px; float: left;
 		}
 
-#menucennik {
-			background: url(img/k_cennik.png); width: 230px; height: 29px; float: left; margin-top: 6px; margin-bottom: 1px;
-		}
-#menucenback {
-			background: url(img/menu_cennik.png); width: 230px; height: 70px; float: left; font: bold 12px/70px Tahoma; color: #160e86; text-align: center;
-		}
-		#menucenback #tekst {
-			background: url(img/menu_cennik.png); width: 230px; height: 70px; float: left; font: 12px/70px Tahoma; color: #160e86; text-align: center; cursor: pointer; letter-spacing: 1px;
-		}
-		#menucenback #tekst:HOVER {
-			background: url(img/menu_cennik.png); width: 230px; height: 70px; float: left; font: bold 12px/70px Tahoma; color: #160e86; text-align: center; cursor: pointer; text-decoration:underline; letter-spacing: 1px;
-		}
+
 #tmenu_p { 
 	float: left;
 }
@@ -143,10 +175,17 @@
 
 
 
-<div id="menudiv">
+<!-- <div id="menudiv"> -->
 <s:if test="%{#session.customer != null}">
 
-<div id="twojemenu"></div>
+<div id="twojemenu">
+	<div id="sekleft"></div>
+	<div id="sekcenter">
+		<div id="tekst">TWOJE KONTO</div>
+		<div id="point1"></div>
+	</div>
+	<div id="sekright"></div>
+</div>
 	
 	
 	<s:form action="ChangeDataAction" name="chps">
@@ -169,6 +208,12 @@
 	<div id="tmenuback">
 	<div id="pointer"></div>
 	<div id="zapis" onclick="location.href='OrderReviewAction.action'">Przegląd zamówień</div></div>
+	<div id="tmenu_linia"></div>
+	<div id="stopka"></div>
+	
+	<div id="tmenuback">
+	<div id="pointer"></div>
+	<div id="zapis">Ulubione</div></div>
 	<div id="stopka"></div>
 
 <!-- 	<div id="tmenuback"> -->
@@ -181,13 +226,25 @@
 <s:else>
 	<form action="logonLink.action" name="logon_accunt">
 		<input type="hidden" name="inaccount">
-		<div id="twojemenu" onclick='javascript:void(document.forms["logon_accunt"].submit())'></div>
+		<div id="twojemenu">
+			<div id="sekleft"></div>
+			<div id="sekcenter" onclick='javascript:void(document.forms["logon_accunt"].submit())'>
+				<div id="tekst">TWOJE KONTO</div>
+				<div id="point"></div>
+			</div>
+			<div id="sekright"></div>
+		</div>
 	</form>
 </s:else>
+<!-- </div> -->
+
+
+<div id="menukat">
+	<div id="sekleft"></div>
+	<div id="sekcenter">KATEGORIE PRODUKTÓW</div>
+	<div id="sekright"></div>
+	
 </div>
-
-
-<div id="menukat"></div>
 
 
 <c:forEach var="item" items="${application.menu}">
@@ -216,6 +273,21 @@
 
 </div>
 </c:forEach>	
+
+<div id="menucennik">
+	<div id="sekleft"></div>
+	<div id="sekcenter">POBIERZ CENNIK</div>
+	<div id="sekright"></div>
+</div>
+	
+	<div id="tmenuback">
+	<div id="zapis" style="margin-left: 40px;">cennik.pdf</div></div>
+	<div id="stopka"></div>
+	
+	<div id="tmenuback">
+	<div id="zapis" style="margin-left: 40px;">cennik.xls</div></div>
+	<div id="stopka"></div>
+	
 
 
 <!-- <div id="menucennik"></div> -->

@@ -71,7 +71,7 @@
 
 
 #title_pagelabel{
-	height:28px; width: 140px; font: bold 12px/28px Tahoma; color: #160e86; float: left; text-align:center;
+	height: 28px; width: 140px; font: bold 12px/28px Tahoma; color: #160e86; float: left; text-align:center;
 }
 #title_podzialka{
 	float:left; background: url(img/pg_ll.png); height: 28px; width: 2px;
@@ -142,8 +142,8 @@ if (allProducts != null && allProducts.size() >0){
 	<tr style="background-color:#fbf1d3 ">
 		<td style="width=142px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 			<div id="title_pagelabel">
-			<div style="float:left; margin-left:3px; text-align:center;">Strona:</div>
-			<div style="float:left; margin-left:5px; text-align:center;">
+			<div style="float:left; margin-left:5px; text-align:center;">Strona:</div>
+			<div style="float:left; margin-left:5px; text-align:center; padding-top: 4px;">
 			<form action="SetPageAction" name="pageChange">
 				<select name="pageNumber" style="width:50px;" onchange='javascript:void(document.forms["pageChange"].submit())'>
 				<c:set var="numerStrony" value="<%=pageNum%>" />
@@ -237,7 +237,7 @@ if (allProducts != null && allProducts.size() >0){
 					<div id="productList">
 						<div id="field" >
 							<div id="field_left"></div>
-							<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border:0px; width:30px; margin-top:2px; text-align:center;" theme="simple"/></div>
+							<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border:0px; width:30px; margin-top:4px; text-align:center;" theme="simple"/></div>
 							<div id="field_right"></div>
 						</div>
 						<div>

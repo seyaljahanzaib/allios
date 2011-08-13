@@ -36,10 +36,10 @@
 	background: url(img/menubar1.png); height: 30px; width: 1000px; float: left;
 	}
 	#menubar2 #tekst1 {
-	font: 11px/30px Tahoma; color: #ffffff; margin-left: 710px; float: left;
+	font: 11px/30px Tahoma; color: #ffffff; margin-left: 680px; float: left;
  	}
  	#menubar2 #tekst2 {
-	font: bold 11px Tahoma; color: #ffffff; margin-left: 20px; float: left; cursor: pointer; border: none; background-color: transparent; margin-top: 7px;
+	font: bold 11px Tahoma; color: #ffffff; margin-left: 20px; float: left; cursor: pointer; border: none; background-color: transparent; margin-top: 8px;
  	}
  	
 </style>

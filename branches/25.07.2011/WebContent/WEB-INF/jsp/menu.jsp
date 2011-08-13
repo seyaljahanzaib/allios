@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>			
 #searcher {
-	height: 110px; margin-top: 6px;
+	height: 110px; margin-top: 10px;
 	}
 	#searcher #sekleft {
 		background: url(img/s_l.png); width: 10px; height: 110px; float: left; 
@@ -47,7 +47,7 @@
 		background: url(img/sline.png); width: 190px; height: 2px; float: left; margin-top: 8px; margin-left: 10px;
 		}
 #twojemenu {
-	background: url(img/b_tkonto.png); width: 230px; height: 29px; cursor: pointer; margin-bottom: 1px; margin-top: 10px; float: left; 
+	background: url(img/b_tkonto.png); width: 230px; height: 29px; cursor: pointer; margin-bottom: 1px; margin-top: 6px; float: left; 
 	}
 #twojemenu:HOVER {
 	background: url(img/b_tkonto1.png);
@@ -121,6 +121,28 @@
 	
 </style>
 
+<div id="searcher">
+	<s:form action="SearcherAction" theme="simple">
+	<div id="sekleft"></div>
+	<div id="sekcenter">
+		<div id="arealeft"></div>
+		<div id="areacenter"><s:textfield name="searchString" cssStyle="border:0px; margin-top:3px; height:18px; width:180px;"/></div>
+		<div id="arearight"></div>
+		<div id="stopka"></div>
+		<div id="box">o</div>
+		<div id="wopisach">w opisach</div>
+		<s:submit id="button" value=""></s:submit>
+		<div id="stopka"></div>
+		<div id="linia"></div>
+		<div id="stopka"></div>
+		<div id="zaawansowane">Wyszukiwanie zaawansowane</div>
+	</div>
+	<div id="sekright"></div>
+	</s:form>
+</div>
+
+
+
 <div id="menudiv">
 <s:if test="%{#session.customer != null}">
 
@@ -164,26 +186,6 @@
 </s:else>
 </div>
 
-
-<div id="searcher">
-	<s:form action="SearcherAction" theme="simple">
-	<div id="sekleft"></div>
-	<div id="sekcenter">
-		<div id="arealeft"></div>
-		<div id="areacenter"><s:textfield name="searchString"/></div>
-		<div id="arearight"></div>
-		<div id="stopka"></div>
-		<div id="box">o</div>
-		<div id="wopisach">w opisach</div>
-		<s:submit id="button" value=""></s:submit>
-		<div id="stopka"></div>
-		<div id="linia"></div>
-		<div id="stopka"></div>
-		<div id="zaawansowane">Wyszukiwanie zaawansowane</div>
-	</div>
-	<div id="sekright"></div>
-	</s:form>
-</div>
 
 <div id="menukat"></div>
 

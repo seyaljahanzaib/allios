@@ -540,12 +540,10 @@
 			<td width="168" height="40">
 				<div id="k3z">
 					<div id="wartoscb">
-						<s:property value="totalPriceBruttoString" />
-						zł
+						<s:property value="totalPriceBruttoString" /> zł
 					</div>
 					<div id="wartoscn">
-						<s:property value="totalPriceNettoString" />
-						zł
+						<s:property value="totalPriceNettoString" /> zł
 					</div>
 				</div>
 			</td>

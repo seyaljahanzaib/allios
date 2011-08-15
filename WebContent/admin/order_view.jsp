@@ -72,8 +72,8 @@
 		#orders_view #bedit {
 		background: url(../img/pz_bedit.png); background-position: center; background-repeat:no-repeat; width: 16px; height: 60px; float: left; margin-left: 27px; cursor: pointer; border: none;
 		}
-		#orders_view #bmodify {
-		background: url(../img/pz_bmodify.png); background-position: center; background-repeat:no-repeat; width: 18px; height: 60px; float: left; margin-left: 12px; cursor: pointer; border: none;
+		#orders_view #bsave {
+		background: url(../img/save_button.png); background-position: center; background-repeat:no-repeat; width: 20px; height: 60px; float: left; margin-left: 12px; cursor: pointer; border: none;
 		}
 		#orders_view #bcancel {
 		background: url(../img/pz_bdelete.png); background-position: center; background-repeat:no-repeat; width: 19px; height: 60px; float: left; margin-left: 12px; cursor: pointer; border: none;
@@ -279,7 +279,7 @@ clear: both;
 	<td width="140px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 140px;">
 			<div id="bedit"></div>
-			<div id="bmodify"></div>
+			<div id="bsave"></div>
 			<div id="bcancel"></div>
 			</div>
 	</td>
@@ -343,7 +343,7 @@ clear: both;
 	<td width="140px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 140px; background-color: #f5f4ff;">
 			<div id="bedit"></div>
-			<div id="bmodify"></div>
+			<div id="bsave"></div>
 			<div id="bcancel"></div>
 			</div>
 	</td>

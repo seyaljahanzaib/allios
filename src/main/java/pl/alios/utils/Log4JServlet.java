@@ -1,7 +1,6 @@
 package pl.alios.utils;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -10,6 +9,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServlet;
 
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import pl.alios.model.Category;
@@ -44,7 +44,17 @@ public class Log4JServlet extends HttpServlet {
 	}
 
 	private Map<String, ArrayList<Product>> initProducts(){
-		List<Product> products = DBAdapter.getInstance().getProductDAO().getAllProducts();
+		List<Product> products = null;
+		try {
+			products = DBAdapter.getInstance().getProductDAO().getAllProducts();
+		} catch (Exception e) {
+			Logger logger  = Logger.getLogger(this.getClass());
+			logger.error("Moja wina : " + e);
+			logger.error("Moja wina 2: " + e.getMessage());
+			logger.error("Moja wina 3: " + e.getCause());
+			logger.error("Moja wina 4: " + e.getStackTrace());
+		}
+		
 		Map<String, ArrayList<Product>> productMap = new HashMap<String, ArrayList<Product>>();
 		for(Product product: products){
 			if(productMap.get(product.getCategory().getId().toString()) != null){
@@ -86,11 +96,22 @@ public class Log4JServlet extends HttpServlet {
 		
 		ArrayList<MenuItem> lista = new ArrayList<MenuItem>();
 		
-		List<Category> categories = DBAdapter.getInstance().getCategoryDAO().getMainCategories();
+		List<Category> categories = null;
+		try {
+			categories = DBAdapter.getInstance().getCategoryDAO().getMainCategories();
+		} catch (Exception e1) {
+			Logger logger  = Logger.getLogger(this.getClass());
+			e1.printStackTrace();
+			logger.error("Moja wina : " + e1);
+			logger.error("Moja wina 2: " + e1.getMessage());
+			logger.error("Moja wina 3: " + e1.getCause());
+			logger.error("Moja wina 4: " + e1.getStackTrace());
+			
+		}
 
 		for(Category category :  categories){
 			MenuItem item = new MenuItem();
-			item.setDispalyName(category.getName());
+			item.setDispalyName(category.getDisplayableName());
 			item.setCategory(String.valueOf(category.getId()));
 			int numberOfProducts = 0;
 			try{
@@ -111,12 +132,12 @@ public class Log4JServlet extends HttpServlet {
 					
 					
 					numberOfProducts += numberOfProducts2;
-					internalItem.setDispalyName(subcategory.getName() + " (" + numberOfProducts2 + ")");
+					internalItem.setDispalyName(subcategory.getDisplayableName() + " (" + numberOfProducts2 + ")");
 					internalItem.setCategory(String.valueOf(subcategory.getId()));
 					item.getItems().add(internalItem);
 				}
 			}
-			item.setDispalyName(category.getName() + " (" + numberOfProducts + ")" );
+			item.setDispalyName(category.getDisplayableName() + " (" + numberOfProducts + ")" );
 			
 			lista.add(item);
 		}

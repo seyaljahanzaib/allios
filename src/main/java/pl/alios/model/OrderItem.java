@@ -26,6 +26,7 @@ public class OrderItem {
 	private Double VAT = (double) 22;
 	
 	
+	
 	@ManyToOne
 	@JoinColumn(name="order_id_order_zam")
 	private Order order_zam;

@@ -15,7 +15,11 @@ public class RegisterAction extends ActionSupport{
 	public String execute(){
 		System.out.println("customer.getCompanyName() : "+customer.getCompanyName());
 		logger.info("customer.getCompanyName() : "+customer.getCompanyName());
-		DBAdapter.getInstance().getCustomerDao().register(customer);
+		try {
+			DBAdapter.getInstance().getCustomerDao().register(customer);
+		} catch (Exception e) {
+			return "ERROR";
+		}
 		this.message = "Dzi\u0119kujemy za zarejestrowanie si\u0119 w Allios.pl. Zosta\u0142e\u015b automatycznie zalogowany. Zapraszamy do z\u0142o\u017cenia pierwszego zam\u00f3wienia !";
 		return "SUCCESS";
 	}
@@ -61,10 +65,12 @@ public class RegisterAction extends ActionSupport{
 		if (customer.getLogin().length() == 0) 
 			addFieldError("login", null);
 		else{
-			if(DBAdapter.getInstance().getCustomerDao().checklogin(customer.getLogin())){
-				addFieldError("login", null);
-				setMessageLogin("Wprowadzanoy login jest ju\u017C zarezerwowany");
-			}
+			try {
+				if(DBAdapter.getInstance().getCustomerDao().checklogin(customer.getLogin())){
+					addFieldError("login", null);
+					setMessageLogin("Wprowadzanoy login jest ju\u017C zarezerwowany");
+				}
+			} catch (Exception e) {}
 		}
 		if (customer.getPassword().length() == 0 || customer.getConfirmPassword().length() == 0){
 			addFieldError("password", null);

@@ -1,7 +1,5 @@
 package pl.alios.action;
 
-import java.util.Map;
-
 import org.apache.struts2.dispatcher.SessionMap;
 
 import com.opensymphony.xwork2.ActionContext;

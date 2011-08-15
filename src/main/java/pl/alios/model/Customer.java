@@ -5,8 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
@@ -35,7 +34,7 @@ public class Customer {
 	private String person_phone;
 	private String person_email;
 	
-    @OneToMany(mappedBy="customer")
+    @OneToMany(fetch=FetchType.EAGER, mappedBy="customer")
     private List<Order> orders;
 	
 	

@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -34,7 +35,10 @@
 				background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
 				}
 			#kategorie #main_add {
-				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; 
+				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px/30px Tahoma; color: #101192; text-align: center; border: none;
+				}
+			#kategorie #main_add:HOVER {
+				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration:underline; border: none;
 				}
 			#kategorie #main_addtekst {
 				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; float: left;
@@ -133,19 +137,19 @@ function deleteCategory(categoryId) {
 			<div id="maintekst1">Nazwa kategorii:</div>
 			<s:form action="CategoryAdminAction" id="newCategory" theme="simple">
 				<s:hidden name="addCategory" value="true"/>
-				<s:textfield id="main_graf" name="newCategory" cssStyle="width: 240px;"/>
+				<s:textfield id="main_graf" name="newCategory" cssStyle="width:240px; height:20px;"/>
 			</s:form>
 			<div id="maintekst1" style="margin-left: 70px;">Nazwa podkategorii:</div>
 			<s:form action="CategoryAdminAction" id="newSubCategory" theme="simple">
 				<s:hidden name="addSubCategory" value="true"/>
-				<s:textfield  id="main_graf" name="newSubCategory" cssStyle="width: 240px;"/>
+				<s:textfield  id="main_graf" name="newSubCategory" cssStyle="width: 240px; height:20px;"/>
 				
 				<div id="stopka"></div>
 				<div id="main_add" style="margin-top: 20px; margin-left: 340px;">
 				<div id="main_addtekst" onclick='javascript:void(document.forms["newCategory"].submit())'>Dodaj</div></div>
 				<div id="maintekst1" style="margin-top: 20px; margin-left: 100px;">umiesc w:</div>
 				
-				<select name="selectedCategory" id="main_combo" style="width: 240px; margin-top: 20px;">
+				<select name="selectedCategory" id="main_combo" style="width: 240px; margin-top:20px;">
 				<c:set var="selectedCategoryBLA"/>   
 					<c:forEach items="${categories}" var="item" varStatus="loop">
 						<c:if test="${loop.index == 0}">
@@ -168,16 +172,15 @@ function deleteCategory(categoryId) {
 			<div id="stopka"></div>
 		</div>
 </div>
-<s:form name="f1" action="CategoryAdminAction" theme="simple">
+
 
 <div id="stopka"></div>
+<s:form name="f1" action="CategoryAdminAction" theme="simple">
 
 
 		<div id="kategorie">
-			<div id="main_add" style="float:right; margin-top: 10px; margin-right: 40px; margin-right: 10px;">
-			<s:submit name="saveChanges" value=""/>
-			<div id="main_addtekst">Zapisz</div>
-			</div>
+			
+			<s:submit id="main_add" name="saveChanges" value="Zapisz" cssStyle="float:right; margin-top:10px; margin-right:40px; margin-right:10px;"/>
 			<div id="main_add" style="float:right; margin-top: 10px; margin-right: 40px; margin-right: 10px;">
 			<div id="main_addtekst">Cofnij</div>
 			</div>

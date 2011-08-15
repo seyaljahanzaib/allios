@@ -198,7 +198,7 @@ clear: both;
 			<div id="mn_tekst" style="width: 130px; text-align: center;">Operacje</div>
 			</div>
 	</td>
-
+</tr>
 
 <!-- 										wiersz pierwszy tabeli							 -->
 	

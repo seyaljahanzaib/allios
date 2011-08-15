@@ -90,6 +90,10 @@
 	<definition name="message" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/message.jsp" />
 	</definition>
+	
+	<definition name="errorMessage" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/errorMessage.jsp" />
+	</definition>
 
 	<definition name="aboutUs" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/main_about_us.jsp" />
@@ -135,7 +139,9 @@
   
 	<definition name="adminLayout" template="/admin/adminLayout.jsp">
 		<put-attribute name="title"  value="Allios.pl - panel admnistartora"/>
+		
 		<put-attribute name="secondHeader"  value="/admin/menubar.jsp"/>
+		<put-attribute name="message"  value="/admin/empty.jsp"/>
 		<put-attribute name="body"   value="/admin/menu_block.jsp"/>
 	</definition>
 
@@ -143,6 +149,11 @@
 		<put-attribute name="body" value="/admin/categories.jsp" />
 	</definition>
 
+  	<definition name="categoryMessage" extends="adminLayout">
+		<put-attribute name="message" value="/admin/message.jsp" />
+		<put-attribute name="body" value="/admin/categories.jsp" />
+	</definition>
+	
 
 
 

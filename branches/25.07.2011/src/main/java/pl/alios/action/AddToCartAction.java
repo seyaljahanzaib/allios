@@ -26,7 +26,11 @@ public class AddToCartAction extends ActionSupport {
 			sessionAttr.put("order", order);
 		}
 		OrderItem orderItem = new OrderItem();
-		orderItem.setProduct(DBAdapter.getInstance().getProductDAO().getProduct(product_id));
+		try {
+			orderItem.setProduct(DBAdapter.getInstance().getProductDAO().getProduct(product_id));
+		} catch (Exception e1) {
+			return "ERROR";
+		}
 		System.out.println("Quantity : "+quantity);
 		try{
 			Integer.valueOf(quantity);

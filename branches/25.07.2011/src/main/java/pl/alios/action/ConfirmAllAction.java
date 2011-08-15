@@ -37,7 +37,11 @@ public class ConfirmAllAction extends ActionSupport {
 		order.setCustomer(customer);
 		order.setOrderDate(new java.sql.Date(new Date().getTime()));
 		order.setState("Oczekuje");
-		DBAdapter.getInstance().getOrderDAO().addOrder(order);
+		try {
+			DBAdapter.getInstance().getOrderDAO().addOrder(order);
+		} catch (Exception e) {
+			return "ERROR";
+		}
 		
 		sessionAttr.remove("order");
 		

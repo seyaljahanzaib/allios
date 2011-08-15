@@ -5,57 +5,84 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import pl.alios.model.Product;
+import pl.alios.model.Property;
+import pl.alios.utils.HibernateUtil;
 
 public class ProductDAO extends AbstarctDAO{
 	
-	public List<Product> getProducts(String category){
-		
-		ArrayList<Product> products = new ArrayList<Product>();
+	public List<Product> getProducts(String category) throws Exception{
 		logger.info("SELECT p FROM Product p WHERE p.category LIKE '%:category%'");
-		Query query = em.createQuery("SELECT p FROM Product p WHERE p.category LIKE :category");
-		query.setParameter("category", "%"+category+"%");
-		  try{
-			  products = (ArrayList<Product>) query.getResultList();
-			  logger.info("Pobrano produktów :"+ products.size());
-		  } catch (NoResultException e) { 
-			  logger.error(e);
-			  return null;
-		  }
-		
-		return products;
+		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
+		EntityManager em = emf.createEntityManager();
+		try{
+			Query query = em.createQuery("SELECT p FROM Product p WHERE p.category LIKE :category");
+			query.setParameter("category", "%"+category+"%");
+			ArrayList<Product> products = (ArrayList<Product>) query.getResultList();
+			return products;
+		} catch(Exception e){
+			logger.error("MYERROR : " + e);
+			throw e;
+		}finally {
+			  em.close();
+		}
 	}
 	
-	public Product getProduct(String product_id){
+	public Product getProduct(String product_id) throws Exception{
 		logger.info("SELECT p FROM Product p WHERE p.product_id = " + product_id);
-		Query query = em.createQuery("SELECT p FROM Product p WHERE p.product_id = :product_id");
-		query.setParameter("product_id", Long.valueOf(product_id));
-		Product product;
-		try {
-			product = (Product) query.getSingleResult();
-		} catch (NoResultException e) {
-			logger.error(e);
-			return null;
+		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
+		EntityManager em = emf.createEntityManager();
+		try{
+			Query query = em.createQuery("SELECT p FROM Product p WHERE p.product_id = :product_id");
+			query.setParameter("product_id", Long.valueOf(product_id));
+			Product product = (Product) query.getSingleResult();
+			return product;
+		} catch(Exception e){
+			logger.error("MYERROR : " + e);
+			throw e;
+		}finally {
+			  em.close();
 		}
-		return product;
 	}
 
-	public List<Product> getAllProducts() {
+	public List<Product> getAllProducts() throws Exception {
 		logger.info("SELECT p FROM Product p   -   GET ALL PRODUCTS");
-		Query query = em.createQuery("SELECT p FROM Product p");
-		return query.getResultList();
+		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
+		EntityManager em = emf.createEntityManager();
+		List<Product> products = null;
+		try{
+			Query query = em.createQuery("SELECT p FROM Product p");
+			products = query.getResultList();
+		}catch(Exception e){
+			logger.error("MYERROR : " + e);
+			throw e;
+		}finally {
+			  em.close();
+		}
+		return products;
 	}
 
-	public ArrayList<Product> searchByName(String searchString) {
+	public ArrayList<Product> searchByName(String searchString) throws Exception {
 		logger.info("SELECT p FROM Product p WHERE p.name LIKE %" + searchString +"%");
-		ArrayList<Product> products = new ArrayList<Product>();
-		Query query = em.createQuery("SELECT p FROM Product p WHERE p.name LIKE :name");
-		query.setParameter("name", "%"+ searchString +"%");
-		products = (ArrayList<Product>) query.getResultList();
-		return products;
+		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
+		EntityManager em = emf.createEntityManager();
+		try{
+			ArrayList<Product> products = new ArrayList<Product>();
+			Query query = em.createQuery("SELECT p FROM Product p WHERE p.name LIKE :name");
+			query.setParameter("name", "%"+ searchString +"%");
+			products = (ArrayList<Product>) query.getResultList();
+			return products;
+		}catch(Exception e){
+			logger.error("MYERROR : " + e);
+			throw e;
+		}finally {
+			  em.close();
+		}
 	}
 	
 	

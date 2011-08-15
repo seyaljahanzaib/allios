@@ -13,6 +13,13 @@
   <listener>
     <listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
   </listener>
+
+  <listener>
+    <listener-class>pl.alios.utils.HibernateListener</listener-class>
+  </listener>
+  
+  
+  
   <filter>
     <filter-name>struts2</filter-name>
     <filter-class>

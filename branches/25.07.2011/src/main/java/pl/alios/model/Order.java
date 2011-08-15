@@ -8,12 +8,16 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
+
+import org.hibernate.annotations.IndexColumn;
+
 
 import pl.alios.utils.Commons;
 
@@ -31,6 +35,8 @@ public class Order {
 	private Double totalCostBrutto;
 	private Double totalCostNetto;
 	private String state;
+	
+	
 	
 	@Column(name="metoda_platnosci")
 	private String paymentMethod;

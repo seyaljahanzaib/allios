@@ -68,24 +68,45 @@
 	<div id="tlocenter">
 		<div id="button">Nowy produkt</div>
 	</div>
-	
+	<div id="tlocenter">
+		<div id="button">Przegląd produktów</div>
+	</div>
+	<div id="tlobottom"></div>
+</div>
+
+<div id="pduklad">
+	<div id="ukladleft"></div>
+	<div id="ukladcenter">Sklep</div>
+	<div id="ukladright"></div>
+	<div id="tlocenter">
+		<div id="button">Klienci</div>
+	</div>
+	<div id="tlocenter">
+		<div id="button">Zamówienia</div>
+	</div>
+	<div id="tlobottom"></div>
+</div>
+
+<div id="pduklad">
+	<div id="ukladleft"></div>
+	<div id="ukladcenter">Magazyn</div>
+	<div id="ukladright"></div>
+	<div id="tlocenter">
+		<div id="button">Przyjęcie zewnętrzne</div>
+	</div>
+	<div id="tlocenter">
+		<div id="button">Wydanie zewnętrzne</div>
+	</div>
+	<div id="tlobottom"></div>
+</div>
+
+<div id="pduklad">
+	<div id="ukladleft"></div>
+	<div id="ukladcenter">Konfiguracja</div>
+	<div id="ukladright"></div>
 	<div id="tlocenter">
 		<s:form action="CategoryAdminAction" name="chps"><s:hidden name="init"/></s:form>
-		<div id="button" onclick='javascript:void(document.forms["chps"].submit())'>Nowy klient</div>
+		<div id="button" onclick='javascript:void(document.forms["chps"].submit())'>Kategorie</div>
 	</div>
-	
-	<div id="tlocenter">
-		<div id="button">Nowy dostawca</div>
-	</div>
-	
-	
 	<div id="tlobottom"></div>
-	
-	
-	
-	</div>
-	
-	
-	
-	
-	
+</div>

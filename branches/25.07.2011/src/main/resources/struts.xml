@@ -15,6 +15,7 @@
 			<result name="FAILURE_CART" type="tiles">have_to_log</result>
 			<result name="SUCCESS_ACCOUNT" type="tiles">welcome</result>
 			<result name="FAILURE_ACCOUNT" type="tiles">have_to_log_account</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="LogOutAction"  class="pl.alios.action.LogOutAction">
@@ -24,12 +25,13 @@
 		<action name="AddToCartAction"  class="pl.alios.action.AddToCartAction">
 			<result name="SUCCESS" type="tiles">add_to_cart</result>
 			<result name="MAINPAGE" type="tiles">welcome</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="ConfirmOrderAction"  class="pl.alios.action.ConfirmOrderAction">
 			<result name="NEXT" type="tiles">choose_customer_data</result>
 			<result name="COUNT_SUCCESS" type="tiles">cart</result>
-			<result name="ERROR" type="tiles">baseLayout</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 			<result name="DELETE_SUCCESS" type="tiles">cart</result>
 			<result name="HAVE_TO_LOG" type="tiles">have_to_log</result>
 			<result name="EMPTY_CART" type="tiles">message</result>
@@ -39,29 +41,32 @@
 		<action name="ConfirmDetailsAction"  class="pl.alios.action.ConfirmDetailsAction">
 			<result name="BACK" type="tiles">cart</result>
 			<result name="SUCCESS" type="tiles">confirm_order</result>
-			<result name="ERROR" type="tiles">baseLayout</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="ConfirmAllAction"  class="pl.alios.action.ConfirmAllAction">
 			<result name="BACK" type="tiles">choose_customer_data</result>
 			<result name="SUCCESS" type="tiles">summary</result>
-			<result name="ERROR" type="tiles">baseLayout</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="ChangePassAction"  class="pl.alios.action.ChangePassAction">
 			<result name="input" type="tiles">changePass</result>
 			<result name="SUCCESS" type="tiles">message</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="ChangeDataAction"  class="pl.alios.action.ChangeDataAction">
 			<result name="input" type="tiles">changeData</result>
 			<result name="SUCCESS" type="tiles">message</result>
 			<result name="SHOW" type="tiles">changeData</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="RegisterAction"  class="pl.alios.action.RegisterAction">
 		    <result name="input" type="tiles">registration</result>
 			<result name="SUCCESS" type="tiles">message</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 						
 		<action name="ShowProductsAction"  class="pl.alios.action.ShowProductsAction">
@@ -77,6 +82,7 @@
 				<param name="contentDisposition">attachment;filename="document.pdf"</param>
 				<param name="bufferSize">1024</param>
 			</result> 
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="SetPageAction"  class="pl.alios.action.SetPageAction">
@@ -86,6 +92,7 @@
 		<action name="SearcherAction"  class="pl.alios.action.SearcherAction">
 			<result name="SUCCESS" type="tiles">products_searcher</result>
 			<result name="MESSAGE" type="tiles">message</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
 		
 		<action name="*Link" method="{1}" class="pl.alios.main.LinkAction">
@@ -120,6 +127,15 @@
 			<result name="SUCCESS" type="tiles">adminLayout</result>
 			<result name="FAILED" type="tiles">adminLogin</result>
 		</action>
+		
+		<action name="CategoryAdminAction"  class="pl.alios.action.admin.CategoryAdminAction">
+			<result name="SHOW" type="tiles">newCategory</result>
+			<result name="SUCCESS" type="tiles">newCategory</result>
+			<result name="ERROR" type="tiles">newCategory</result>
+			<result name="MESSAGE" type="tiles">categoryMessage</result>
+		</action>
+		
+		
 		
 		
 		

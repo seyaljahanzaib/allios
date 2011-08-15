@@ -27,7 +27,11 @@ public class ChangeDataAction extends ActionSupport{
 			System.out.println("customer.getCompanyName() : "+customer.getCompanyName());
 			logger.info("customer.getCompanyName() : "+customer.getCompanyName());
 			
-			DBAdapter.getInstance().getCustomerDao().merge(customer);
+			try {
+				DBAdapter.getInstance().getCustomerDao().merge(customer);
+			} catch (Exception e) {
+				return "ERROR";
+			}
 			this.message = "Twoje dane zosta\u0142y zmienione !";
 			return "SUCCESS";
 		}else{

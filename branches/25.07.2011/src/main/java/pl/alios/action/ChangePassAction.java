@@ -21,7 +21,11 @@ public class ChangePassAction extends ActionSupport{
 		
 		customer.setPassword(password);
 		
-		DBAdapter.getInstance().getCustomerDao().merge(customer);
+		try {
+			DBAdapter.getInstance().getCustomerDao().merge(customer);
+		} catch (Exception e) {
+			return "ERROR";
+		}
 		
 		this.message = "Twoje hasło zosta\u0142o zmienione !";
 		return "SUCCESS";

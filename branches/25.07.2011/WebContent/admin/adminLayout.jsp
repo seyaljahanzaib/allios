@@ -17,6 +17,9 @@
 			<tiles:insertAttribute name="secondHeader"/>
 		</div>
 		<div>
+			<tiles:insertAttribute name="message"/>
+		</div>
+		<div>
 			<tiles:insertAttribute name="body"/>
 		</div>
 	</body>

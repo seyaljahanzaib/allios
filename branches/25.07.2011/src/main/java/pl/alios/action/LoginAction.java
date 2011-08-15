@@ -24,7 +24,12 @@ public class LoginAction extends ActionSupport {
 		if(login_tb == null || login_tb.equals("") || password_tb == null || password_tb.equals(""))
 			return "FAILURE";
 		
-		Customer customer = DBAdapter.getInstance().getCustomerDao().login(login_tb, password_tb);
+		Customer customer;
+		try {
+			customer = DBAdapter.getInstance().getCustomerDao().login(login_tb, password_tb);
+		} catch (Exception e) {
+			return "ERROR";
+		}
 		
 		if (customer == null){
 			if (isInBasket()){

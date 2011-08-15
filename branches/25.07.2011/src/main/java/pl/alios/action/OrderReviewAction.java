@@ -104,7 +104,11 @@ public class OrderReviewAction extends ActionSupport {
 		for(Order order : customer.getOrders()){
 			if(order.getOrderId().equals(orderId)){
 				order.setState("Anulowane");
-				DBAdapter.getInstance().getOrderDAO().merge(order);
+				try {
+					DBAdapter.getInstance().getOrderDAO().merge(order);
+				} catch (Exception e) {
+					return "ERROR";
+				}
 				return "SUCCESS";
 			}
 		}

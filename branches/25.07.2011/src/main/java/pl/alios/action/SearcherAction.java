@@ -3,12 +3,10 @@ package pl.alios.action;
 import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
-import org.apache.struts2.dispatcher.SessionMap;
 
 import pl.alios.model.Product;
 import pl.alios.model.dao.adapter.DBAdapter;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class SearcherAction extends ActionSupport {
@@ -23,7 +21,11 @@ public class SearcherAction extends ActionSupport {
 			message="Brak danych do wy\u015Bwietlenia";
 			return "MESSAGE";	
 		}
-		setProducts(DBAdapter.getInstance().getProductDAO().searchByName(searchString));
+		try {
+			setProducts(DBAdapter.getInstance().getProductDAO().searchByName(searchString));
+		} catch (Exception e) {
+			return "ERROR";
+		}
 		
 		return "SUCCESS";
 }

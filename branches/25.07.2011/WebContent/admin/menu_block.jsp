@@ -1,6 +1,5 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 
@@ -71,7 +70,8 @@
 	</div>
 	
 	<div id="tlocenter">
-		<div id="button" onclick="location.href='newCategoryLink.action'">Nowy klient</div>
+		<s:form action="CategoryAdminAction" name="chps"><s:hidden name="init"/></s:form>
+		<div id="button" onclick='javascript:void(document.forms["chps"].submit())'>Nowy klient</div>
 	</div>
 	
 	<div id="tlocenter">

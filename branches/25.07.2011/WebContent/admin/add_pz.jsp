@@ -44,10 +44,44 @@
  	#add_pz #main_addtekst:HOVER {
  		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; float: left; */
  		}
+ 	#add_pz #mn_table {
+ 		background: url(../img/pa_mnprodc.png); height: 39px; float: left;
+ 		}
+ 	#add_pz #mn_table1 {
+ 		height: 34px; float: left; border-bottom: 1px; border-bottom-color: #d9d5fe; border-bottom-style: solid;
+ 		}
+ 	#add_pz #mnl_table {
+ 		background: url(../img/pa_mnprodlc.png); height: 39px; float: left;
+ 		}
+ 	#add_pz #mn_tekst {
+ 		font: bold 11px/39px Tahoma; color: #5a598d; float: left;
+ 		}
+ 	#add_pz #mn_tekst1 {
+ 		font: 11px/34px Tahoma; color: #101192; float: left;
+ 		}
+ 	#add_pz #mn_tekst2 {
+ 		font: 11px Tahoma; color: #101192; float: left;
+ 		}
+ 	#add_pz #mn_tekst3 {
+ 		font: 10px Tahoma; color: #101192; float: left;
+ 		}
+ 	#add_pz #bcancel {
+		background: url(../img/pz_bdelete.png); background-position: center; background-repeat:no-repeat; width: 19px; height: 30px; float: left; margin-left: 12px; cursor: pointer; border: none;
+		}
+ 		
+	#add_pz #results {
+ 		width: 1150px; height: 39px; float: left;
+		}
+		#add_pz #results #tekst1{
+			font: 12px/39px Tahoma; color: black; float: left;
+		}
+		#add_pz #results #tekst2{
+			font: 12px Tahoma; color: black; float: left;
+		}
 
 #stopka {
-clear: both;
-}
+	clear: both;
+	}
 
 </style>
 
@@ -91,9 +125,146 @@ clear: both;
 		<div id="stopka"></div>
 		
 		<div id="main_add" style="float: right; margin-right: 80px;">
-			<div id="main_addtekst">Wprowadź</div>
+			<div id="main_addtekst">Utwórz PZ</div>
 		</div>
+		<div id="main_add" style="float: right; margin-right: 20px;">
+			<div id="main_addtekst">Dodaj</div>
+		</div>
+		<div id="stopka"></div>
 	</div>
+		
+		
+		<div id="results">
+			<div id="tekst1" style="margin-left: 40px;"><b>Liczba dodanych pozycji:	56</b></div>
+			<div id="tekst2" style="width: 573px; text-align: right; margin-top: 4px;"><b>Wartość brutto:</b></div>
+			<div id="tekst2" style="width: 112px; text-align: right; margin-top: 4px;"><b>22 460,00 zł</b></div>			
+			<div id="tekst2" style="width: 573px; text-align: right; margin-top: 3px;">netto:</div>
+			<div id="tekst2" style="width: 112px; text-align: right; margin-top: 3px;">20 460,00 zł</div>
+		</div>
+
+<div id="stopka"></div>
+
+<!-- 						wiersz tytułowy tabeli							 -->
+
+<table style="padding: 0px; border-collapse: collapse; border:0px; border-spacing:0px;">
+<tr>
+
+	<td width="30px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 29px;">
+			<div id="mn_tekst" style="width: 30px; text-align: center;">L.p</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
+		
+	<td width="390px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 389px;">
+			<div id="mn_tekst" style="margin-left: 4px; text-align: left;">Nazwa produktu</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
 	
+	<td width="120px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 119px;">
+			<div id="mn_tekst" style="width: 119px; text-align: center;">Producent</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
+	
+	
+	<td width="120px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 119px;">
+			<div id="mn_tekst" style="width: 119px; text-align: center;">Cena</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
+	
+	
+	<td width="120px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 119px;">
+			<div id="mn_tekst" style="width: 119px; text-align: center;">Ilość</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
+	
+	<td width="120px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 119px;">
+			<div id="mn_tekst" style="width: 119px; text-align: center;">Wartość</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
+	
+	<td width="120px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 119px;">
+			<div id="mn_tekst" style="width: 119px; text-align: center;">Skład</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
+	
+	<td width="130px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 130px;">
+			<div id="mn_tekst" style="width: 130px; text-align: center;">Operacje</div>
+			</div>
+	</td>
+</tr>
+
+<!-- 										wiersz pierwszy tabeli							 -->
+	
+<tr>
+
+	<td width="30px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 30px;">
+			<div id="mn_tekst1" style="width: 30px; text-align: center;">1</div>
+			</div>
+	</td>
+		
+	<td width="390px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 390px;">
+			<div id="mn_tekst1" style="margin-left: 4px; text-align: left;">Cwiek papierowy ręczny stalowy, rozmiar 21mm</div>
+			</div>
+	</td>
+	
+	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 120px;">
+			<div id="mn_tekst1" style="width: 120px; text-align: center;">Poldent</div>
+			</div>
+	</td>
+	
+	
+	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 120px;">
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>1 320,00 zł</b></div>
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;">920,00 zł</div>
+			</div>
+	</td>
+	
+	
+	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 120px;">
+			<div id="mn_tekst1" style="width: 120px; text-align: center;">25 szt.</div>
+			</div>
+	</td>
+	
+	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 119px;">
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>1 320,00 zł</b></div>
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;">920,00 zł</div>
+			</div>
+	</td>
+	
+	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 119px;">
+			<div id="mn_tekst1" style="width: 119px; text-align: center;">23PS1</div>
+			</div>
+	</td>
+	
+	<td width="130px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 130px;">
+			<div id="bcancel"></div>
+			</div>
+	</td>
+
+
+</tr>
+</table>
 
 </div>

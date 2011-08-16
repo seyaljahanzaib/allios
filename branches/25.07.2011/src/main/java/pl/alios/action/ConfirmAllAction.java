@@ -40,6 +40,7 @@ public class ConfirmAllAction extends ActionSupport {
 		order.setState(Commons.ORDER_STATE_OCZEKUJE);
 		try {
 			DBAdapter.getInstance().getOrderDAO().addOrder(order);
+			orderNumber = DBAdapter.getInstance().getOrderDAO().getOrder(order.getOrderId().toString()).getNumber();
 		} catch (Exception e) {
 			return "ERROR";
 		}
@@ -52,10 +53,15 @@ public class ConfirmAllAction extends ActionSupport {
 	
 	private boolean next;
 	private boolean back;
+	
+	private String orderNumber;
 
 	public boolean isNext() {return next;}
 	public void setNext(boolean next) {this.next = true;}
 	public boolean isBack() {return back;}
 	public void setBack(boolean back) {this.back = true;}
+
+	public String getOrderNumber() {return orderNumber;}
+	public void setOrderNumber(String orderNumber) {this.orderNumber = orderNumber;}
 
 }

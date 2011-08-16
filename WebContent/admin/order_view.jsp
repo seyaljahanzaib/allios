@@ -1,5 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
@@ -224,134 +226,99 @@ clear: both;
 									
 									
 <!-- 									wiersz pierwszy tabeli  -->
-
-<tr>
-
-	<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 150px;">
-			<div id="mn_tekst1" style="width: 149px; text-align: center;"><b>1234/05/2011</b></div>
-			</div>
-	</td>
+<s:iterator value="orders" status="stat" var="item">
+<s:form action="OrderAdminAction" theme="simple">
+<s:hidden name="orderId" value="%{#item.orderId}"/>
+	<tr>
+	
+		<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 150px;">
+				<div id="mn_tekst1" style="width: 149px; text-align: center;"><b><s:property value="number"/></b></div>
+				</div>
+		</td>
+			
+		<td width="230px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 230px;">
+				<div id="mn_tekst2" style="margin-left: 8px; margin-top: 5px;"><b><s:property value="customer.companyName"/></b></div>
+				<div id="stopka"></div>
+				<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="customer.formatCityAndCode"/></div>
+				<div id="stopka"></div>
+				<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="customer.formatStreet"/></div>
+				</div>
+		</td>
 		
-	<td width="230px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 230px;">
-			<div id="mn_tekst2" style="margin-left: 8px; margin-top: 5px;"><b>Comhar Paweł Kłosiński</b></div>
-			<div id="stopka"></div>
-			<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;">09-409 Warszawa</div>
-			<div id="stopka"></div>
-			<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;">ul. gen. Bronisława Okulickiego</div>
-			</div>
-	</td>
-	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;">24.03.2011</div>
-			</div>
-	</td>
-	
-	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;">25.03.2011</div>
-			</div>
-	</td>
-	
-	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 20px; margin-right: 4px;"><b>11 230 zł</b></div>
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 3px; margin-right: 4px;">10 230 zł</div>
-			</div>
-	</td>
-	
-	<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 150px;">
-			<div id="mn_tekst1" style="width: 150px; text-align: center;"><b>oczekuje</b></div>
-			</div>
-	</td>
-	
-	<td width="1200px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width:120px;">
-			<div id="binvoice"></div>
-			</div>
-	</td>
-	
-	<td width="140px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 140px;">
-			<div id="bedit"></div>
-			<div id="bsave"></div>
-			<div id="bcancel"></div>
-			</div>
-	</td>
-	
-</tr>
-
-
-<!-- 									wiersz drugi tabeli  -->
-
-<tr>
-
-	<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 150px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 149px; text-align: center;"><b>1234/05/2011</b></div>
-			</div>
-	</td>
+		<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 120px;">
+				<div id="mn_tekst1" style="width: 120px; text-align: center;"><fmt:formatDate pattern="dd-MM-yyyy" value="${item.orderDate}"/></div>
+				</div>
+		</td>
 		
-	<td width="230px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 230px; background-color: #f5f4ff;">
-			<div id="mn_tekst2" style="margin-left: 8px; margin-top: 5px;"><b>Comhar Paweł Kłosiński</b></div>
-			<div id="stopka"></div>
-			<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;">09-409 Warszawa</div>
-			<div id="stopka"></div>
-			<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;">ul. gen. Bronisława Okulickiego</div>
-			</div>
-	</td>
-	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;">24.03.2011</div>
-			</div>
-	</td>
-	
-	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;">25.03.2011</div>
-			</div>
-	</td>
-	
-	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px; background-color: #f5f4ff;">
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 20px; margin-right: 4px;"><b>11 230 zł</b></div>
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 3px; margin-right: 4px;">10 230 zł</div>
-			</div>
-	</td>
-	
-	<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 150px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 150px; text-align: center;"><b>oczekuje</b></div>
-			</div>
-	</td>
-	
-	<td width="1200px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width:120px; background-color: #f5f4ff;">
-			<div id="binvoice"></div>
-			</div>
-	</td>
-	
-	<td width="140px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 140px; background-color: #f5f4ff;">
-			<div id="bedit"></div>
-			<div id="bsave"></div>
-			<div id="bcancel"></div>
-			</div>
-	</td>
-	
-</tr>
+		
+		<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 120px;">
+				<div id="mn_tekst1" style="width: 120px; text-align: center;"><fmt:formatDate pattern="dd-MM-yyyy" value="${item.deliveryDate}"/></div>
+				</div>
+		</td>
+		
+		
+		<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 120px;">
+				<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 20px; margin-right: 4px;"><b><s:property value="totalCostBrutto"/> zł</b></div>   
+				<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 3px; margin-right: 4px;"><s:property value="totalCostNetto"/> zł</div>
+				</div>
+		</td>
+		
+		<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 150px;">
+				<div id="mn_tekst1" style="width: 150px; text-align: center;"><b>
+					<c:if test="${item.state != 'Anulowane' and item.state != 'Dostarczone'}">
+						<select name="newStatus" style="width:120px;" >
+							<c:if test="${item.state eq 'Oczekuje'}">
+								<option value="Oczekuje" selected="selected" >Oczekuje</option>
+								<option value="Potwierdzone" >Potwierdzone</option>
+							</c:if>
+							<c:if test="${item.state eq 'Potwierdzone'}">
+								<option value="Potwierdzone" selected="selected" >Potwierdzone</option>
+								<option value="W przygotowaniu" >W przygotowaniu</option>
+							</c:if>
+							<c:if test="${item.state eq 'W przygotowaniu'}">
+								<option value="W przygotowaniu" selected="selected" >W przygotowaniu</option>
+								<option value="Wysłane" >Wysłane</option>
+							</c:if>
+							<c:if test="${item.state eq 'Wysłane'}">
+								<option value="Wysłane" selected="selected" >Wysłane</option>
+								<option value="Dostarczone" >Dostarczone</option>
+							</c:if>
+						</select>
+					</c:if>
+					
+					<c:if test="${item.state eq 'Anulowane'}">Anulowane</c:if>
+					<c:if test="${item.state eq 'Dostarczone'}">Dostarczone</c:if>
+
+				</b></div>
+				</div>
+		</td>
+		
+		<td width="1200px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width:120px;">
+				<div id="binvoice"></div>
+				</div>
+		</td>
+		
+		<td width="140px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 140px;">
+				<s:submit id="bedit" name="edit" value="" />
+				<c:if test="${item.state != 'Anulowane' and item.state != 'Dostarczone'}">
+					<s:submit id="bsave" name="save" value="" />
+				</c:if>
+				<s:submit id="bcancel" name="cancel" value="" />
+				</div>
+		</td>
+		
+	</tr>
+</s:form>
+</s:iterator>
 
 </table>
-
-
 
 </div>

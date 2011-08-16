@@ -135,6 +135,13 @@ clear: both;
 			<div id="mnl_table" style="width: 1px;"></div>
 	</td>
 	
+	<td width="120px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table" style="width: 119px;">
+			<div id="mn_tekst" style="width: 119px; text-align: center;">Kod klienta</div>
+			</div>
+			<div id="mnl_table" style="width: 1px;"></div>
+	</td>
+	
 	<td width="100px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table" style="width: 99px;">
 			<div id="mn_tekst" style="width: 99px; text-align: center;">Telefon firm.</div>
@@ -158,13 +165,7 @@ clear: both;
 			<div id="mnl_table" style="width: 1px;"></div>
 	</td>
 	
-	<td width="120px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table" style="width: 119px;">
-			<div id="mn_tekst" style="width: 119px; text-align: center;">Telefon</div>
-			</div>
-			<div id="mnl_table" style="width: 1px;"></div>
-	</td>
-	
+
 	<td width="90px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table" style="width: 89px;">
 			<div id="mn_tekst" style="width: 89px; text-align: center;">Liczba zam.</div>
@@ -180,10 +181,9 @@ clear: both;
 	</td>
 	
 	<td width="140px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table" style="width: 139px;">
-			<div id="mn_tekst" style="width: 139px; text-align: center;">Rejestracja/ost. zam.</div>
+		<div id="mn_table" style="width: 140px;">
+			<div id="mn_tekst" style="width: 140px; text-align: center;">Rejestracja/ost. zam.</div>
 			</div>
-			<div id="mnl_table" style="width: 1px;"></div>
 	</td>
 	
 
@@ -212,6 +212,12 @@ clear: both;
 			</div>
 	</td>
 	
+	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 119px;">
+			<div id="mn_tekst1" style="width: 119px; text-align: center;">20009</div>
+			</div>
+	</td>
+	
 	<td width="100px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 100px;">
 			<div id="mn_tekst1" style="width: 100px; text-align: center;">22 2643232</div>
@@ -228,15 +234,11 @@ clear: both;
 	
 	<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 150px;">
-			<div id="mn_tekst1" style="width: 150px; text-align: center;"><b>Albert Sosnowski</b></div>
+			<div id="mn_tekst2" style="width: 150px; margin-top: 20px; text-align: center;"><b>Albert Sosnowski</b></div>
+			<div id="mn_tekst2" style="width: 150px; margin-top: 4px; text-align: center;"><b>888 330 330</b></div>
 			</div>
 	</td>
 	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;"><b>888 450 540</b></div>
-			</div>
-	</td>
 	
 	<td width="90px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width:90px;">
@@ -267,63 +269,66 @@ clear: both;
 <tr>
 
 	<td width="30px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 30px; background-color: #f5f4ff;">
+		<div id="mn_table1" style="width: 30px;">
 			<div id="mn_tekst1" style="text-align: center;">o</div>
 			</div>
 	</td>
 		
 	<td width="250px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 250px; background-color: #f5f4ff;">
-			<div id="mn_tekst2" style="margin-left: 4px; margin-top: 5px;"><b>Predental Aneta Szymańska</b></div>
+		<div id="mn_table1" style="width: 250px;">
+			<div id="mn_tekst2" style="margin-left: 4px; margin-top: 5px;"><b>Comhar Paweł Kłosiński</b></div>
 			<div id="stopka"></div>
-			<div id="mn_tekst2" style="margin-left: 4px; margin-top: 3px;">09-409 Łódź</div>
+			<div id="mn_tekst2" style="margin-left: 4px; margin-top: 3px;">09-409 Warszawa</div>
 			<div id="stopka"></div>
-			<div id="mn_tekst2" style="margin-left: 4px; margin-top: 3px;">ul. Łukasiewicza 82/16</div>
+			<div id="mn_tekst2" style="margin-left: 4px; margin-top: 3px;">ul. gen. Bronisława Okulickiego</div>
+			</div>
+	</td>
+	
+	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<div id="mn_table1" style="width: 119px;">
+			<div id="mn_tekst1" style="width: 119px; text-align: center;">20009</div>
 			</div>
 	</td>
 	
 	<td width="100px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 100px; background-color: #f5f4ff;">
+		<div id="mn_table1" style="width: 100px;">
 			<div id="mn_tekst1" style="width: 100px; text-align: center;">22 2643232</div>
 			</div>
 	</td>
 	
 	
 	<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 150px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 150px; text-align: center;">łódzkie</div>
+		<div id="mn_table1" style="width: 150px;">
+			<div id="mn_tekst1" style="width: 150px; text-align: center;">warmińsko-mazurskie</div>
 			</div>
 	</td>
 	
 	
 	<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 150px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 150px; text-align: center;"><b>Beata Marczyńska</b></div>
+		<div id="mn_table1" style="width: 150px;">
+			<div id="mn_tekst2" style="width: 150px; margin-top: 20px; text-align: center;"><b>Albert Sosnowski</b></div>
+			<div id="mn_tekst2" style="width: 150px; margin-top: 4px; text-align: center;"><b>888 330 330</b></div>
 			</div>
 	</td>
 	
-	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;"><b>600 450 540</b></div>
-			</div>
-	</td>
 	
 	<td width="90px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width:90px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 90px; text-align: center;"><b>2</b></div>
+		<div id="mn_table1" style="width:90px;">
+			<div id="mn_tekst1" style="width: 90px; text-align: center;"><b>21</b></div>
 			</div>
 	</td>
 	
 	<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px; background-color: #f5f4ff;">
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 20px; margin-right: 4px;"><b>1 230 zł</b></div>
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 3px; margin-right: 4px;">1 130 zł</div>
+		<div id="mn_table1" style="width: 120px;">
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 20px; margin-right: 4px;"><b>11 230 zł</b></div>
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-top: 3px; margin-right: 4px;">10 230 zł</div>
 			</div>
 	</td>
 	
 	<td width="140px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 140px; background-color: #f5f4ff;">
-			<div id="mn_tekst1" style="width: 140px; text-align: center;">27-02-2010, 10.34</div>
+		<div id="mn_table1" style="width: 140px;">
+			<div id="mn_tekst2" style="width: 140px; text-align: center; margin-top: 20px;"><b>27.10.2011, 10.30</b></div>
+			<div id="mn_tekst2" style="width: 140px; text-align: center; margin-top: 3px;">02.11.2011, 12.30</div>
 			</div>
 	</td>
 	

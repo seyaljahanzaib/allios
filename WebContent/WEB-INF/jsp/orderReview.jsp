@@ -99,11 +99,11 @@
 	#poz_tab1 #bcancel {
 		background: url(img/pz_bdelete.png); background-position: center; background-repeat:no-repeat; width: 19px; height: 40px; float: left; margin-left: 12px; cursor: pointer; border: none;
 		}
-	#poz_tab1 #binvoice {
-		background: url(img/pz_binvoice.png); background-position: center; background-repeat:no-repeat; width: 20px; height: 40px; margin-left:28px; float: left; cursor: pointer; border: none;
+	#poz_tab1 #binvoiceno {
+		background: url(img/pz_binvoice.png); background-position: center; background-repeat:no-repeat; width: 20px; height: 40px; margin-left:28px; float: left; border: none;
 		}
-	#poz_tab1 #binvoice:HOVER {
-		background: url(img/pz_binvoice1.png); background-position: center; background-repeat:no-repeat; width: 20px; height: 40px; margin-left:28px; float: left; cursor: pointer;
+	#poz_tab1 #binvoiceyes {
+		background: url(img/pz_binvoice1.png); background-position: center; background-repeat:no-repeat; width: 20px; height: 40px; margin-left:28px; float: left; cursor: pointer; border: none;
 		}
 
 #table_background {
@@ -252,10 +252,12 @@
 			<td width="76">
 				<div id="poz_tab1">
 				
-				<s:if test="state == 'Oczekuje'">
-					<s:submit id="binvoice" name="inovice" value="" />
+				<s:if test="state == 'Oczekuje' or state == 'Anulowane'">
+				<div id="binvoiceno"></div>
 				</s:if>
-<!-- 				<div id="binvoice"></div> -->
+				<s:else>
+					<s:submit id="binvoiceyes" name="inovice" value="" />
+				</s:else>
 				</div>
 			</td>
 		</s:form>

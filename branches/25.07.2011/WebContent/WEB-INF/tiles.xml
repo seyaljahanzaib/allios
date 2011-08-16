@@ -118,44 +118,61 @@
   	<definition name="products_searcher" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/products_searcher.jsp" />
 	</definition>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  	<definition name="adminLogin" template="/admin/logonadmin.jsp">
-	</definition>
-  
-	<definition name="adminLayout" template="/admin/adminLayout.jsp">
-		<put-attribute name="title"  value="Allios.pl - panel admnistartora"/>
-		
-		<put-attribute name="secondHeader"  value="/admin/menubar.jsp"/>
-		<put-attribute name="message"  value="/admin/empty.jsp"/>
-		<put-attribute name="body"   value="/admin/menu_block.jsp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<definition name="adminLogin" template="/admin/logonadmin.jsp">
 	</definition>
 
-  	<definition name="newCategory" extends="adminLayout">
+	<definition name="adminLayout" template="/admin/adminLayout.jsp">
+		<put-attribute name="title" value="Allios.pl - panel admnistartora" />
+		<put-attribute name="secondHeader" value="/admin/menubar.jsp" />
+		<put-attribute name="message" value="/admin/empty.jsp" />
+		<put-attribute name="body" value="/admin/menu_block.jsp" />
+	</definition>
+
+	<definition name="newCategory" extends="adminLayout">
 		<put-attribute name="body" value="/admin/categories.jsp" />
 	</definition>
 
-  	<definition name="categoryMessage" extends="adminLayout">
+	<definition name="categoryMessage" extends="adminLayout">
 		<put-attribute name="message" value="/admin/message.jsp" />
 		<put-attribute name="body" value="/admin/categories.jsp" />
 	</definition>
+
+	<definition name="orderView" extends="adminLayout">
+		<put-attribute name="body" value="/admin/order_view.jsp" />
+	</definition>
+	<definition name="orderViewMessage" extends="adminLayout">
+		<put-attribute name="message" value="/admin/message.jsp" />
+		<put-attribute name="body" value="/admin/order_view.jsp" />
+	</definition>
+	
+	<definition name="orderEdit" extends="adminLayout">
+		<put-attribute name="body" value="/admin/order_details.jsp" />
+	</definition>
 	
 
-
+	<definition name="newProduct" extends="adminLayout">
+		<put-attribute name="body" value="/admin/add_product.jsp" />
+	</definition>
+	<definition name="newProductMessage" extends="adminLayout">
+		<put-attribute name="message" value="/admin/message.jsp" />
+		<put-attribute name="body" value="/admin/add_product.jsp" />
+	</definition>
 
 
 

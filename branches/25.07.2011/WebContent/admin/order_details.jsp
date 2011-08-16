@@ -1,5 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
@@ -66,7 +67,7 @@
 			font: bold 16px/39px Tahoma; color: black; float: left;
 		}
 		#orders_view #bcancel {
-		background: url(../img/pz_bdelete.png); background-position: center; background-repeat:no-repeat; width: 19px; height: 34px; float: left; cursor: pointer; border: none;
+		background: url(../img/pz_bdelete.png); background-position: center; background-repeat:no-repeat; width: 19px; height: 34px; float: left; cursor: pointer; border: none; margin-left: 67px;
 		}
 	#orders_view #summary {
  		width: 370px; height: 150px; background-color:#eae8e8; margin-top:16px; float: left;
@@ -102,11 +103,13 @@ clear: both;
 
 
 	<div id="results">
-			<div id="tekst1" style="margin-left: 40px;"><b>Zamówienie nr: 1234/05/2011</b></div>
+			<div id="tekst1" style="margin-left: 40px;"><b>Zamówienie nr: <s:property value="order.number"/></b></div>
 	</div>
 	
 	<div id="main_add" style="float: right; margin-right: 80px; margin-top: 6px; margin-bottom: 6px;">
-		<div id="main_addtekst">Wróć</div>
+	<s:form action="OrderAdminAction" theme="simple">
+		<s:submit id="main_addtekst" name="back" value="Wróć"/>
+	</s:form>
 	</div>
 
 
@@ -172,55 +175,64 @@ clear: both;
 
 <!-- 										wiersz pierwszy tabeli							 -->
 	
+
+<s:iterator value="order.listOfProducts" status="stat" var="item">
+<s:form action="OrderAdminAction" theme="simple">
+<s:hidden name="orderItemId" value="%{#item.orderItemId}"/>	
+	
 <tr>
 
 	<td width="30px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 30px;">
-			<div id="mn_tekst1" style="width: 30px; text-align: center;">1</div>
+			<div id="mn_tekst1" style="width: 30px; text-align: center;"><s:property value="#item.count" /></div>
 			</div>
 	</td>
 		
 	<td width="490px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 490px;">
-			<div id="mn_tekst1" style="margin-left: 4px; text-align: left;">Cwiek papierowy ręczny stalowy, rozmiar 21mm</div>
+			<div id="mn_tekst1" style="margin-left: 4px; text-align: left;"><s:property value="product.name"/></div>
 			</div>
 	</td>
 	
 	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>1 320,00 zł</b></div>
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;">920,00 zł</div>
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b><s:property value="priceBrutto"/> zł</b></div>
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;"><s:property value="priceNetto"/> zł</div>
 		</div>
 	</td>
 	
 	
 	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;">25 szt.</div>
+			<div id="mn_tekst1" style="width: 120px; text-align: center;"><s:property value="numberOfItem"/> szt.</div>
 			</div>
 	</td>
 	
 	
 	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;">10 %</div>
+			<div id="mn_tekst1" style="width: 120px; text-align: center;">0 %</div>
 			</div>
 	</td>
 	
 	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 119px;">
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>1 320,00 zł</b></div>
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;">920,00 zł</div>
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b><s:property value="totalPriceBruttoString"/> zł</b></div>
+			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;"><s:property value="totalPriceNettoString"/> zł</div>
 			</div>
 	</td>
 	
 	<td width="150px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table1" style="width: 150px;">
-			<div id="bcancel" style="margin-left: 67px;"></div>
+<%-- 				<s:submit id="bcancel" name="delete" value=""/> --%>
 		</div>
 	</td>
 
 </tr>
+
+</s:form>
+</s:iterator>
+
 </table>
 
 <div id="stopka"></div>
@@ -229,29 +241,29 @@ clear: both;
 	<div id="tekst1" style="margin-left:10px; margin-top:6px;">Warunki płatności:</div>
 	<div id="stopka"></div>
 	<div id="tekst2" style="margin-left:60px; margin-top:36px;"><b>Sposób zapłaty:</b></div>
-	<div id="tekst4" style="margin-left:10px; margin-top:36px;"><b>przelew</b></div>
+	<div id="tekst4" style="margin-left:10px; margin-top:36px;"><b> <s:property value="order.paymentMethod"/> </b></div>
 	<div id="stopka"></div>
 	<div id="tekst2" style="margin-left:60px; margin-top:16px;"><b>Termin płatności: </b></div>
-	<div id="tekst4" style="margin-left:10px; margin-top:16px;"><b>7dni</b></div>
+	<div id="tekst4" style="margin-left:10px; margin-top:16px;"><b></b></div>
 </div>
 
 <div id="summary" style="margin-left: 20px;">
 	<div id="tekst1" style="margin-left:10px; margin-top:6px;"><b>Dostawa:</b></div>
 	<div id="tekst2" style="margin-left:30px; margin-top:16px;"><b>Adres dostawy:</b></div>
 	<div id="stopka"></div>
-	<div id="tekst4" style="margin-left:80px; margin-top:8px;"><b>Comhar Paweł Kłosiński</b></div>
+	<div id="tekst4" style="margin-left:80px; margin-top:8px;"><b><s:property value="order.customer.companyName"/></b></div>
 	<div id="stopka"></div>
-	<div id="tekst4" style="margin-left:80px; margin-top:4px;"><b>09-409 Łódź</b></div>
+	<div id="tekst4" style="margin-left:80px; margin-top:4px;"><b><s:property value="order.customer.formatCityAndCode"/></b></div>
 	<div id="stopka"></div>
-	<div id="tekst4" style="margin-left:80px; margin-top:4px;"><b>ul. gen. bronisława Okulickiego 23</b></div>
+	<div id="tekst4" style="margin-left:80px; margin-top:4px;"><b><s:property value="order.customer.formatStreet"/></b></div>
 	<div id="stopka"></div>
 	<div id="tekst2" style="margin-left:30px; margin-top:16px;"><b>Data dostawy:</b></div>
-	<div id="tekst4" style="margin-left:10px; margin-top:16px;"><b>29.06.2011</b></div>
+	<div id="tekst4" style="margin-left:10px; margin-top:16px;"><b><fmt:formatDate pattern="dd-MM-yyyy" value="${order.deliveryDate}"/></b></div>
 </div>
 
 <div id="summary" style="margin-left: 20px;">
 	<div id="tekst1" style="margin-left:10px; margin-top:6px;"><b>Do zapłaty:</b></div>
-	<div id="tekst3" style="width:370px; text-align: center; margin-top:42px;"><b>11 230,00 zł</b></div>
+	<div id="tekst3" style="width:370px; text-align: center; margin-top:42px;"><b><s:property value="order.totalCostBrutto"/> zł</b></div>
 
 </div>
 

@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
@@ -83,6 +84,28 @@ public class ProductDAO extends AbstarctDAO{
 		}finally {
 			  em.close();
 		}
+	}
+
+	public void saveProduct(Product product) throws Exception {
+		logger.info("Dodawanie nowey produkt");
+		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
+		EntityManager em = emf.createEntityManager();
+		try {
+			EntityTransaction t = em.getTransaction();
+			try {
+				t.begin();
+				em.persist(product);
+				t.commit();
+			} catch(Exception e){
+				logger.error("Nie powiodlo sie dodanie nowego produktu : " + e);
+				throw e;
+			} finally {
+				if (t.isActive()) t.rollback();
+			}
+		} finally {
+			em.close();
+		}
+		
 	}
 	
 	

@@ -157,4 +157,19 @@ public class Customer {
 			return zipCode + " " + city + ", ul. " + street + " " + houseNumber + "/" + flatNumber;
 	}
 	
+	public String getFormatStreet(){
+		if(flatNumber == null || flatNumber.length() == 0)
+			return "ul. " + street + " " + houseNumber;
+		else
+			return "ul. " + street + " " + houseNumber + "/" + flatNumber;
+	}
+	public String getFormatCityAndCode(){
+		return zipCode + " " + city;
+		
+	}
+	
+	
+	
+	
+	
 }

@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import pl.alios.model.Customer;
 import pl.alios.model.Order;
 import pl.alios.model.dao.adapter.DBAdapter;
+import pl.alios.utils.Commons;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -36,7 +37,7 @@ public class ConfirmAllAction extends ActionSupport {
 		customer.addOrder(order);
 		order.setCustomer(customer);
 		order.setOrderDate(new java.sql.Date(new Date().getTime()));
-		order.setState("Oczekuje");
+		order.setState(Commons.ORDER_STATE_OCZEKUJE);
 		try {
 			DBAdapter.getInstance().getOrderDAO().addOrder(order);
 		} catch (Exception e) {

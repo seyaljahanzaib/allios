@@ -135,7 +135,21 @@
 			<result name="MESSAGE" type="tiles">categoryMessage</result>
 		</action>
 		
+		<action name="OrderAdminAction"  class="pl.alios.action.admin.OrderAdminAction">
+			<result name="SHOW" type="tiles">orderView</result>
+			<result name="SUCCESS" type="tiles">orderView</result>
+			<result name="ERROR" type="tiles">orderViewMessage</result>
+			<result name="MESSAGE" type="tiles">orderViewMessage</result>
+			<result name="VIEW" type="tiles">orderEdit</result>
+		</action>
 		
+		
+		<action name="AddProductAdminAction"  class="pl.alios.action.admin.AddProductAdminAction">
+			<result name="SHOW" type="tiles">newProduct</result>
+			<result name="SUCCESS" type="tiles">newProduct</result>
+			<result name="ERROR" type="tiles">newProductMessage</result>
+			<result name="MESSAGE" type="tiles">newProductMessage</result>
+		</action>
 		
 		
 		

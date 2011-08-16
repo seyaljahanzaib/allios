@@ -548,21 +548,69 @@
 				</div>
 			</td>
 		</tr>
-
 	</s:iterator>
+	
+	
+<tr>
+			<td width="29" height="40">
+				<div id="k3z">
+					<div id="lp">
+						<s:property value="#item.index + 1" />
+					</div>
+				</div>
+			</td>
+			<td width="352" height="40">
+				<div id="k3z">
+					<div id="produkt">
+						Usługa transportu
+					</div>
+				</div>
+			</td>
+			<td width="94" height="40">
+				<div id="k3z">
+					<div id="cenab">
+						25,00 zł
+					<div id="cenan">
+						19,25 zł
+				</div>
+			</td>
+			<td width="65" height="40">
+				<div id="k3z">
+					<div id="ilosc">
+						1 szt.
+					</div>
+				</div>
+			</td>
+			<td width="52" height="40">
+				<div id="k3z">
+				</div>
+			</td>
+			<td width="168" height="40">
+				<div id="k3z">
+					<div id="wartoscb">
+						25,00 zł
+					</div>
+					<div id="wartoscn">
+						19,25 zł
+					</div>
+				</div>
+			</td>
+		</tr>
+
+
 
 </table>
 
 <div id="sumowanie_zam">
 	<div id="sekleft">Razem brutto:</div>
 	<div id="sekright">
-		<s:property value="#session.order.totalPriceBruttoString" />
+		<s:property value="#session.order.totalCostBrutto" />
 		zł
 	</div>
 	<div id="stopka"></div>
 	<div id="sekleftn">netto:</div>
 	<div id="sekrightn">
-		<s:property value="#session.order.totalPriceNettoString" />
+		<s:property value="#session.order.totalCostNetto" />
 		zł
 	</div>
 	<div id="stopka"></div>

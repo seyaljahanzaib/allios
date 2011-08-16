@@ -13,6 +13,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import pl.alios.model.Customer;
 import pl.alios.model.Order;
 import pl.alios.model.dao.adapter.DBAdapter;
+import pl.alios.utils.Commons;
 import pl.alios.utils.Helper;
 import pl.alios.utils.fop.FopPrinter;
 
@@ -43,7 +44,7 @@ public class OrderReviewAction extends ActionSupport {
 			if(customer != null && customer.getOrders() != null){
 				for(Order order : customer.getOrders()){
 					System.out.println("Jazda dla ordera : " + order.getOrderId() + " stat : " +order.getState());
-					if ("Oczekuje".equals(order.getState()) ||  
+					if (Commons.ORDER_STATE_OCZEKUJE.equals(order.getState()) ||  
 						"Potwierdzone".equals(order.getState()) || 
 						"W przygotowaniu".equals(order.getState()) ||
 						"Wysłane".equals(order.getState())){
@@ -103,7 +104,7 @@ public class OrderReviewAction extends ActionSupport {
 		logger.info("Anulowanie zamowienia o order_id : " + orderId + " przez klienta : " + customer.getLogin());
 		for(Order order : customer.getOrders()){
 			if(order.getOrderId().equals(orderId)){
-				order.setState("Anulowane");
+				order.setState(Commons.ORDER_STATE_ANULOWANE);
 				try {
 					DBAdapter.getInstance().getOrderDAO().merge(order);
 				} catch (Exception e) {

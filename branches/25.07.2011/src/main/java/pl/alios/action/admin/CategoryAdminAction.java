@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import pl.alios.action.AddToCartAction;
 import pl.alios.model.Category;
 import pl.alios.model.dao.adapter.DBAdapter;
 
@@ -13,11 +12,10 @@ import com.opensymphony.xwork2.ActionSupport;
 public class CategoryAdminAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
-	private Logger logger  = Logger.getLogger(AddToCartAction.class);
+	private Logger logger  = Logger.getLogger(CategoryAdminAction.class);
 	
 	public CategoryAdminAction() throws Exception {
 		categories = DBAdapter.getInstance().getCategoryDAO().getMainCategories();
-		logger.info("categories.size() : "+categories.size());
 	}
 	
 	public String execute(){
@@ -81,17 +79,6 @@ public class CategoryAdminAction extends ActionSupport {
 		return "SUCCESS";
 	}
 	
-	private List<Category> categories;
-	
-	private List<String> activities;
-
-	public List<String> getActivities() {
-		return activities;
-	}
-
-	public void setActivities(List<String> activities) {
-		this.activities = activities;
-	}
 
 
 	private boolean init;
@@ -100,12 +87,24 @@ public class CategoryAdminAction extends ActionSupport {
 	private boolean saveChanges;
 	private boolean delete;
 	
-	
+	private List<Category> categories;
 	private String newCategory;
 	private String newSubCategory;
 	private String selectedCategory;
 	private String categoryId;
 	private String message;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public boolean isInit() {
 		return init;

@@ -36,8 +36,6 @@ public class Order {
 	private Double totalCostNetto;
 	private String state;
 	
-	
-	
 	@Column(name="metoda_platnosci")
 	private String paymentMethod;
 	

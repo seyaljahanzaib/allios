@@ -16,5 +16,17 @@ public class Commons {
 	public final static String ADMIN_PAWEL = "ADMIN_PAWEL";
 	public final static String ADMIN_JOLA =  "ADMIN_JOLA";
 	
+	public final static String ORDER_STATE_OCZEKUJE =  "Oczekuje";
+	public final static String ORDER_STATE_POTWIERDZONE =  "Potwierdzone";
+	public final static String ORDER_STATE_W_PRZYGOTOWANIU =  "W przygotowaniu";
+	public final static String ORDER_STATE_WYSŁANE =  "Wysłane";
+	public final static String ORDER_STATE_DOSTARCZONE =  "Dostarczone";
+	public final static String ORDER_STATE_ANULOWANE =  "Anulowane";
+	public final static String ORDER_STATE_ALL =  "Wszystkie";
+	
+	
+	
+	
+	
 	
 }

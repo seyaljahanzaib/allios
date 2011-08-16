@@ -2,8 +2,6 @@ package pl.alios.action.admin;
 
 import java.util.List;
 
-import javax.persistence.Basic;
-
 import org.apache.log4j.Logger;
 
 import pl.alios.model.Order;

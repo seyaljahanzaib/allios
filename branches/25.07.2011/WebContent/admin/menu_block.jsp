@@ -66,7 +66,8 @@
 	<div id="ukladcenter">Asortyment</div>
 	<div id="ukladright"></div>
 	<div id="tlocenter">
-		<div id="button">Nowy produkt</div>
+		<s:form action="AddProductAdminAction" name="nowyProdukt"><s:hidden name="init"/></s:form>
+		<div id="button" onclick='javascript:void(document.forms["nowyProdukt"].submit())'>Nowy produkt</div>
 	</div>
 	<div id="tlocenter">
 		<div id="button">Przegląd produktów</div>
@@ -82,7 +83,8 @@
 		<div id="button">Klienci</div>
 	</div>
 	<div id="tlocenter">
-		<div id="button">Zamówienia</div>
+		<s:form action="OrderAdminAction" name="zamowienia"><s:hidden name="init"/></s:form>
+		<div id="button" onclick='javascript:void(document.forms["zamowienia"].submit())'>Zamówienia</div>
 	</div>
 	<div id="tlobottom"></div>
 </div>

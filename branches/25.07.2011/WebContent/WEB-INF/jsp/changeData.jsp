@@ -199,7 +199,7 @@
 	<br><br><b>Bank BPH o/Płock
 	<br> PL 80 1234 1234 1233 1222 4329</b>
 	<br><br>* w tytule przelewu prosimy umieścić indywidualny kod klienta widoczny poniżej
-	<div id="kod_klienta"><b>Kod klienta: DODAJ</b></div>
+	<div id="kod_klienta"><b>Kod klienta: <s:property value="customer.code"/></b></div>
 	</div>
 </div>
 

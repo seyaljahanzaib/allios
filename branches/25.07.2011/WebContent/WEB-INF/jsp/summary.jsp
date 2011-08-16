@@ -1,3 +1,4 @@
+<%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 #glowna {
@@ -45,7 +46,7 @@
 		<div id="tekst1"><b>Dziękujemy za dokonanie zakupu w allios.pl!</b>
 		<br><br>Twoje zamówienie zostało wysłane do systemu i otrzymało numer:
 		</div>
-		<div id="tekst2">1233/07/2011</div>
+		<div id="tekst2"><s:property value="#request.orderNumber"/></div>
 		<div id="linia"></div>
 		<div id="tekst1">Aby uzyskać informacje na temat aktualnego statusu zamówienia oraz faktury VAT przjedź do sekcji przegląd zamówień w menu użytkownika.</div>
 		<a id="tekst3" href="OrderReviewAction.action">Przejdź do przeglądu zamówień</a>

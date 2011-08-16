@@ -66,17 +66,17 @@
 			<div id="tekstlog">Logowanie</div>
 			<div id="tekst_u">Użytkownik:</div>
 			<div id="log_areal"></div>
-			<div id="log_areac"><s:textfield name="login"/></div>
+			<div id="log_areac"><s:textfield name="login" cssStyle="width:220px; height:24px; margin-top:3px; border:0px;"/></div>
 			<div id="log_arear"></div>
 			
 			<div id="stopka"></div>
-			<div id="tekst_h">Hasło:</div>
+			<div id="tekst_h">Hasło:</div>
 			<div id="log1_areal"></div>
-			<div id="log1_areac"><s:textfield name="password"/></div>
+			<div id="log1_areac"><s:textfield name="password" cssStyle="width:220px; height:24px; margin-top:3px; border:0px;"/></div>
 			<div id="log1_arear"></div>
 			
 			<div id="stopka"></div>
-			<s:submit id="b_zaloguj" />
+			<s:submit id="b_zaloguj" value=""/>
 			<div id="stopka"></div>
 			
 			<div id="podpis">www.allios.pl</div>

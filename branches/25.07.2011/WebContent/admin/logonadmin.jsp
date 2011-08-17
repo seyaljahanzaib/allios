@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
@@ -43,10 +44,10 @@
 		background: url(../img/pa_arear.png); width: 6px; height: 28px; float: left;  margin-top: 20px;
 		}
 	#logadmin #b_zaloguj {
-		background: url(../img/pa_buttonlog.png); width: 102px; height: 30px; float: left;  margin-top: 15px; margin-left: 290px; border: none; cursor: pointer;
+		background: url(../img/pa_buttonlog.png); width: 102px; height: 30px; margin-top: 15px; margin-left: 290px; border: none; cursor: pointer; float: left;
 		}
 	#logadmin #b_zaloguj:HOVER {
-		background: url(../img/pa_buttonlog1.png); 
+		background: url(../img/pa_buttonlog1.png); width: 102px; height: 30px; margin-top: 15px; margin-left: 290px; border: none; float: left;
 		}
 	
 	#logadmin #podpis {
@@ -61,26 +62,26 @@
 
 <div id="logadmin">
 	<div id="sekleft"></div>
-	<s:form action="LoginAdminAction" theme="simple">
 		<div id="sekcenter">
+			<s:form action="LoginAdminAction" theme="simple">
 			<div id="tekstlog">Logowanie</div>
 			<div id="tekst_u">Użytkownik:</div>
 			<div id="log_areal"></div>
-			<div id="log_areac"><s:textfield name="login" cssStyle="width:220px; height:24px; margin-top:3px; border:0px;"/></div>
+			<div id="log_areac"><s:textfield name="login" cssStyle="width:220px; height:22px; margin-top:3px; border:0px;"/></div>
 			<div id="log_arear"></div>
 			
 			<div id="stopka"></div>
 			<div id="tekst_h">Hasło:</div>
 			<div id="log1_areal"></div>
-			<div id="log1_areac"><s:textfield name="password" cssStyle="width:220px; height:24px; margin-top:3px; border:0px;"/></div>
+			<div id="log1_areac"><s:textfield name="password" cssStyle="width:220px; height:22px; margin-top:3px; border:0px;"/></div>
 			<div id="log1_arear"></div>
 			
-			<div id="stopka"></div>
+			
 			<s:submit id="b_zaloguj" value=""/>
 			<div id="stopka"></div>
 			
 			<div id="podpis">www.allios.pl</div>
+			</s:form>
 		</div>
-	</s:form>
 	<div id="sekright"></div>
-	</div>
+</div>

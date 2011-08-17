@@ -1,7 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 
 #adminbar {
-	width: 1150px; margin-top: 10px; float: left;
+	width: 1150px; height: 56px; margin-top: 10px; margin-bottom:10px; float: left;
 }
 	
 	#adminbar #panelgraf {
@@ -29,11 +33,13 @@
 		background: url(../img/pa_buttonwylog1.png); width: 80px; height: 16px;  float: left;
 		}
 
+#stopka{
+clear: both;
+}
 
 </style>
 
 <div id="adminbar">
-	
 	<div id="panelgraf">
 		<div id="opis1">Panel administracyjny</div>
 		<div id="opis2">Witaj, Paweł Kłosiński, ostatnie logowanie: 27-07-2011, godz: 15.00</div>
@@ -41,5 +47,5 @@
 		<div id="menu"></div>
 		<div id="wylog"></div>
 	</div>
-
 </div>
+<div id="stopka"></div>

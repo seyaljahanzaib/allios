@@ -86,6 +86,9 @@
 		<s:form action="OrderAdminAction" name="zamowienia"><s:hidden name="init"/></s:form>
 		<div id="button" onclick='javascript:void(document.forms["zamowienia"].submit())'>Zamówienia</div>
 	</div>
+	<div id="tlocenter">
+		<div id="button">Faktury VAT</div>
+	</div>
 	<div id="tlobottom"></div>
 </div>
 

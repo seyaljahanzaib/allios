@@ -35,16 +35,16 @@
 				background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
 				}
 			#kategorie #main_add {
-				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px/30px Tahoma; color: #101192; text-align: center; border: none;
+				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px Tahoma; color: #101192; vertical-align:top; text-align: center; border: none;
 				}
 			#kategorie #main_add:HOVER {
-				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration:underline; border: none;
+				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px Tahoma; color: #101192; text-align: center; text-decoration:underline; border: none;
 				}
 			#kategorie #main_addtekst {
 				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; float: left;
 				}
  			#kategorie #main_addtekst:HOVER {
- 				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; float: left; */
+ 				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; float: left;
  				}
 			
 #tabkat1 {

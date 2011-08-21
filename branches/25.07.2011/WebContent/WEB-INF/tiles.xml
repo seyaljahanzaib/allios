@@ -12,6 +12,7 @@
       <put-attribute name="logIN" value="/WEB-INF/jsp/log_in.jsp"/>
       <put-attribute name="header" value="/WEB-INF/jsp/header.jsp"/>
       <put-attribute name="menu"   value="/WEB-INF/jsp/menu.jsp"/>
+      <put-attribute name="infoMessage"   value="/WEB-INF/jsp/empty.jsp"/>
       <put-attribute name="body"   value="/WEB-INF/jsp/body.jsp"/>
       <put-attribute name="footer"   value="/WEB-INF/jsp/footer.jsp"/>
   </definition>
@@ -22,6 +23,14 @@
 
 	<definition name="add_to_cart" extends="products">
 		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+	</definition>
+	
+	<definition name="add_to_cart_message" extends="add_to_cart">
+		<put-attribute name="infoMessage" value="/WEB-INF/jsp/message.jsp" />
+	</definition>
+	
+	<definition name="welcome_message" extends="welcome">
+		<put-attribute name="infoMessage" value="/WEB-INF/jsp/message.jsp" />
 	</definition>
 	
 	<definition name="have_to_log" extends="baseLayout">
@@ -54,6 +63,9 @@
 
 	<definition name="cart" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/cart.jsp" />
+	</definition>
+	<definition name="cart_message" extends="cart">
+		<put-attribute name="infoMessage" value="/WEB-INF/jsp/message.jsp" />
 	</definition>
 	
 	<definition name="changeData" extends="baseLayout">

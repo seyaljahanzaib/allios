@@ -1,0 +1,17 @@
+  <Context path="/Allios">
+  <Resource name="jdbc/my_app" 
+            global="jdbc/my_app"
+            auth="Container"
+            type="javax.sql.DataSource" 
+            username="jmallios_sklep"
+            password="aba2c0"
+            driverClassName="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://localhost:3306/jmallios_db?autoReconnect=true"
+            maxActive="20"
+            maxIdle="2"
+            maxWait="10000"
+            validationQuery="/* ping */"
+            testWhileIdle="true"
+            timeBetweenEvictionRunsMillis="1800000"
+            minEvictableIdleTimeMillis="21600000" />
+</Context>

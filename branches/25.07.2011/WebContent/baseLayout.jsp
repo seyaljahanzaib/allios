@@ -23,7 +23,10 @@
 			<tiles:insertAttribute name="header" />
 			<div style="margin-top: 10px;">
 				<div style="float: left; width: 240px;"><tiles:insertAttribute name="menu"/></div>
-				<div style="float: left; width: 760px; margin-top: 10px;"><tiles:insertAttribute name="body"/></div>
+				<div style="float: left; width: 760px; margin-top: 10px;">
+				<tiles:insertAttribute name="infoMessage"/>
+				<tiles:insertAttribute name="body"/>
+				</div>
 			</div>
 		</div>
 	</body>

@@ -88,23 +88,23 @@
 
 </style>
 
-<!-- <table cellpadding="0" cellspacing="0"> -->
+<table cellpadding="0" cellspacing="0">
 
-<!-- 	<tr><td colspan="6" style="background:url(img/pg_c.png); height:29px; width:760px; font:bold 12px/29px Tahoma; color:#160e86;"> -->
-<%-- 		<div style="margin-left:5px; float:left;">Liczba produktów : <%=allProducts.size()%></div> --%>
-<!-- 		<div style="float:right; margin-right:150px;">Sortowanie : </div> -->
-<!-- 	</td></tr> -->
-<!-- </table> -->
+	<tr><td colspan="6" style="background:url(img/pg_c.png); height:29px; width:760px; font:bold 12px/29px Tahoma; color:#160e86;">
+		<div style="margin-left:5px; float:left;"></div>
+		<div style="float:right; margin-right:150px;"></div>
+	</td></tr>
+</table>
 
 
 
 <table style="border:0px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-<!-- 	<tr style="background-color:#fbf1d3 "> -->
-<!-- 		<td style="width=142px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;"> -->
-<!-- 			<div id="title_pagelabel"> -->
-<!-- 			<div style="float:left; margin-left:3px; text-align:center;">Strona:</div> -->
-<!-- 			<div style="float:left; margin-left:5px; text-align:center;"> -->
-<!-- 			<form action="SetPageAction" name="pageChange"> -->
+	<tr style="background-color:#fbf1d3 ">
+		<td style="width=142px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="title_pagelabel">
+			<div style="float:left; margin-left:3px; text-align:center;"></div>
+			<div style="float:left; margin-left:5px; text-align:center;">
+			<form action="SetPageAction" name="pageChange">
 <%-- 				<select name="pageNumber" style="width:50px;" onchange='javascript:void(document.forms["pageChange"].submit())'> --%>
 <%-- 				<c:set var="numerStrony" value="<%=pageNum%>" /> --%>
 <%-- 					<c:forEach items="<%=pageTab%>" var="item"> --%>
@@ -116,43 +116,43 @@
 <%-- 						</c:if> --%>
 <%-- 					</c:forEach> --%>
 <%-- 				</select> --%>
-<!-- 			</form> -->
-<!-- 			</div> -->
-<%-- 			<div style="float:left; margin-left:5px;">z <%=number%></div> --%>
-<!-- 			</div> -->
+			</form>
+			</div>
+			<div style="float:left; margin-left:5px;"></div>
+			</div>
 		
-<!-- 		<div id="title_podzialka"></div> -->
+		<div id="title_podzialka"></div>
 			
-<!-- 		</td> -->
+		</td>
 		
 		
-<!-- 		<td style="width:255px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;"> -->
-<!-- 			<div id="productList_pageLabel_two" style="width:250px;">Nazwa produktu</div> -->
-<!-- 			<div id="title_podzialka"></div> -->
-<!-- 		</td> -->
+		<td style="width:255px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:250px;">Nazwa produktu</div>
+			<div id="title_podzialka"></div>
+		</td>
 			
 			
-<!-- 		<td style="width:84px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;"> -->
-<!-- 			<div id="productList_pageLabel_two" style="width:79px; text-align:center;">Cena</div> -->
-<!-- 			<div id="title_podzialka"></div> -->
-<!-- 		</td> -->
+		<td style="width:84px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:79px; text-align:center;">Cena</div>
+			<div id="title_podzialka"></div>
+		</td>
 		
-<!-- 		<td style="width:103px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;"> -->
-<!-- 			<div id="productList_pageLabel_two" style="width:98px; text-align:center;">Producent</div> -->
-<!-- 			<div id="title_podzialka"></div> -->
-<!-- 		</td> -->
+		<td style="width:103px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:98px; text-align:center;">Producent</div>
+			<div id="title_podzialka"></div>
+		</td>
 		
-<!-- 		<td style="width:87px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;"> -->
-<!-- 			<div id="productList_pageLabel_two" style="width:82px; text-align:center;">Dostępność</div> -->
-<!-- 			<div id="title_podzialka"></div> -->
-<!-- 		</td> -->
+		<td style="width:87px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:82px; text-align:center;">Dostępność</div>
+			<div id="title_podzialka"></div>
+		</td>
 		
-<!-- 		<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;"> -->
-<!-- 			<div id="productList_pageLabel_two" style="width:86px; text-align:center;">Ilość</div> -->
-<!-- 			<div id="stopka"></div> -->
-<!-- 		</td> -->
+		<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:86px; text-align:center;">Ilość</div>
+			<div id="stopka"></div>
+		</td>
 
-<!-- 	</tr> -->
+	</tr>
 
 	
 	<c:forEach items="${products}" var="item" >

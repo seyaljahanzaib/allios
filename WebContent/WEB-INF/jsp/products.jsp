@@ -38,9 +38,24 @@
 #productList #dostepnosc {
 	width: 77px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
 	}
-#productList #dostepnoscgraf {
+#productList #dostepnoscgraf0 {
+	width: 77px; height:140px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf1 {
+	width: 77px; height:140px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf2 {
 	width: 77px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
+#productList #dostepnoscgraf3 {
+	width: 77px; height:140px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf4 {
+	width: 77px; height:140px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf5 {
+	width: 77px; height:140px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
+	}	
 #productList #producer {
 	 width: 103px; font: 12px/140px Tahoma; color: #160e86; float: left; text-align: center;
 	}
@@ -220,8 +235,30 @@ if (allProducts != null && allProducts.size() >0){
 			
 			<td style="width:87px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
-					<div id="dostepnoscgraf">
-					<div id="dostepnosc">dostępny</div></div>
+					<c:if test="${item.numberOfItems == 0}">
+						<div id="dostepnoscgraf0">
+						<div id="dostepnosc">brak</div></div>
+					</c:if>
+					<c:if test="${item.numberOfItems > 0 and item.numberOfItems < 5}">
+						<div id="dostepnoscgraf1">
+						<div id="dostepnosc">&lt; 5szt./op</div></div>					
+					</c:if>
+					<c:if test="${item.numberOfItems >= 5 and item.numberOfItems < 10}">
+						<div id="dostepnoscgraf2">
+						<div id="dostepnosc">dostępny</div></div>						
+					</c:if>
+					<c:if test="${item.numberOfItems >= 10 and item.numberOfItems < 50}">
+						<div id="dostepnoscgraf3">
+						<div id="dostepnosc">dostępny</div></div>			
+					</c:if>
+					<c:if test="${item.numberOfItems >= 50 and item.numberOfItems < 100}">
+						<div id="dostepnoscgraf4">
+						<div id="dostepnosc">dostępny</div></div>		
+					</c:if>
+					<c:if test="${item.numberOfItems >= 100}">
+						<div id="dostepnoscgraf5">
+						<div id="dostepnosc">dostępny</div></div>					
+					</c:if>
 				</div>
 			</td>
 			
@@ -231,15 +268,20 @@ if (allProducts != null && allProducts.size() >0){
 				<div id="formdiv">
 				<form action="AddToCartAction">
 					<div id="productList">
-						<div id="field" >
-							<div id="field_left"></div>
-							<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border:0px; width:30px; margin-top:4px; text-align:center;" theme="simple"/></div>
-							<div id="field_right"></div>
-						</div>
-						<div>
-							<input type="hidden" name="product_id" value="${item.product_id}"/>
-							<input type="submit" id="toCart" value="" style="margin-left: 6px; margin-top: 10px;"/>
-						</div>
+						<c:if test="${item.numberOfItems > 0}">
+							<div id="field" >
+								<div id="field_left"></div>
+								<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border:0px; width:30px; margin-top:4px; text-align:center;" theme="simple"/></div>
+								<div id="field_right"></div>
+							</div>
+							<div>
+								<input type="hidden" name="product_id" value="${item.product_id}"/>
+								<input type="submit" id="toCart" value="" style="margin-left: 6px; margin-top: 10px;"/>
+							</div>
+						</c:if>
+						<c:if test="${item.numberOfItems == 0}">
+							<div style="width: 88px;"></div>
+						</c:if>
 					</div>
 				</form>
 				</div>

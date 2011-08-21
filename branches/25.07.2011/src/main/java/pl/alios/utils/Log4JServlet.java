@@ -57,6 +57,8 @@ public class Log4JServlet extends HttpServlet {
 		
 		Map<String, ArrayList<Product>> productMap = new HashMap<String, ArrayList<Product>>();
 		for(Product product: products){
+			if(product.getCategory().getActive().equals(Boolean.FALSE)) continue;
+			
 			if(productMap.get(product.getCategory().getId().toString()) != null){
 				productMap.get(product.getCategory().getId().toString()).add(product);
 				
@@ -110,20 +112,32 @@ public class Log4JServlet extends HttpServlet {
 		}
 
 		for(Category category :  categories){
-			if (category.getActive() == Boolean.FALSE) break;
+			System.out.println("Kat name : " + category.getName());
+			System.out.println("Kat name : " + category.getSubCategories());
+			System.out.println("Kat name : " + category.getSubCategories().size());
+			if (category.getActive() == Boolean.FALSE) continue;
 			MenuItem item = new MenuItem();
 			item.setDispalyName(category.getDisplayableName());
 			item.setCategory(String.valueOf(category.getId()));
 			int numberOfProducts = 0;
 			try{
 				numberOfProducts = productMap.get(category.getId().toString()).size();
+				for(Product s : productMap.get(category.getId().toString())){
+					System.out.println("Prod. Cat Id : "+ s.getProduct_id());
+				}
+				for(String s : productMap.keySet()){
+					System.out.println(s);
+				}
+				
+				System.out.println("Mam : " + numberOfProducts);
 			}
 			catch(NullPointerException e){}
 			
 			
 			if (category.getSubCategories() != null && category.getSubCategories().size() != 0) {
 				for(Category subcategory :  category.getSubCategories()){
-					if (subcategory.getActive() == Boolean.FALSE) break;
+					System.out.println("ROZ");
+					if (subcategory.getActive() == Boolean.FALSE) continue;
 					MenuItem internalItem = new MenuItem();
 					
 					int numberOfProducts2 = 0;
@@ -133,7 +147,8 @@ public class Log4JServlet extends HttpServlet {
 					catch(NullPointerException e){}
 					
 					
-					numberOfProducts += numberOfProducts2;
+//					numberOfProducts += numberOfProducts2;
+					System.out.println("Dodaje : " + numberOfProducts2 + " i mam : " + numberOfProducts);
 					internalItem.setDispalyName(subcategory.getDisplayableName() + " (" + numberOfProducts2 + ")");
 					internalItem.setCategory(String.valueOf(subcategory.getId()));
 					item.getItems().add(internalItem);

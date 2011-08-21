@@ -49,7 +49,7 @@ public class ConfirmAllAction extends ActionSupport {
 					}
 				}
 				order.getListOfProducts().removeAll(todelete);
-				setMessage("W miedzyczasie ktos kupil i Cie uprzedzil");
+				setMessage("Twoje zam\u00F3wienie nie mo\u017Ce by\u0107 zrealizowane. Liczba wybranych produkt\u00F3w jest wi\u0119ksza od aktualnej dost\u0119pnej w magazynie.");
 				return "INCAPABILITY";
 			}
 		} catch (Exception e1) {

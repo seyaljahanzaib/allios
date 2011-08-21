@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <fop version="1.0">
-  <base>.</base>
+  <base>file:///usr/local/tomcat/aplikacja1/Allios/fop-config/</base>
+  <font-base>file:///usr/local/tomcat/aplikacja1/Allios2/fop-config/</font-base>
   <source-resolution>600</source-resolution>
   <target-resolution>600</target-resolution>
   <default-page-settings height="29.7cm" width="21cm"/>
@@ -10,10 +11,10 @@
         <value>flate</value>
       </filterList>
       	<fonts>
-		<font metrics-url="fonts/Tahomal.xml" kerning="yes" embed-url="fonts/tahoma.TTF">
+		<font metrics-url="fonts/Tahomal.xml" kerning="yes" embed-url="fonts/tahoma.ttf">
 			<font-triplet name="Tahomal" style="normal" weight="normal"/>
 		</font>
-		<font metrics-url="fonts/TahomalBD.xml" kerning="yes" embed-url="fonts/tahomabd.TTF">
+		<font metrics-url="fonts/TahomalBD.xml" kerning="yes" embed-url="fonts/tahomabd.ttf">
 			<font-triplet  name="TahomalBD" style="normal" weight="normal"/>
 		</font>
 	</fonts>

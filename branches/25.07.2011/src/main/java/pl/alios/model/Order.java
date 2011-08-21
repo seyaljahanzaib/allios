@@ -54,22 +54,45 @@ public class Order {
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.REMOVE},mappedBy="order_zam")
 	private List<OrderItem> listOfProducts;
 	
-	public void addToCart(OrderItem item){
-		
+	public boolean addToCart(OrderItem item){
+		item.setOrder(this);
 		if(getListOfProducts() == null) listOfProducts = new ArrayList<OrderItem>();
 		Long id = item.getProduct().getProduct_id();
 		
-		item.setOrder(this);
 		
 		for(OrderItem orderItem : listOfProducts){
+			System.out.println("P-1");
 			if( orderItem.getProduct().getProduct_id().equals(id)){
-				orderItem.setNumberOfItem(orderItem.getNumberOfItem()+item.getNumberOfItem());
-				updateCosts();
-				return;
+				System.out.println("P-2");
+				int allQuantity = orderItem.getNumberOfItem()+item.getNumberOfItem();
+
+				if(allQuantity <= item.getProduct().getNumberOfItems()){
+					System.out.println("P-3");
+					orderItem.setNumberOfItem(allQuantity);
+					updateCosts();
+					return true;
+				}else{
+					System.out.println("P-4");
+					orderItem.setNumberOfItem(item.getProduct().getNumberOfItems());
+					updateCosts();
+					return false;
+				}
 			}
 		}
-		listOfProducts.add(item);
-		updateCosts();
+		
+		if(item.getNumberOfItem() <= item.getProduct().getNumberOfItems()){
+			System.out.println("P-5");
+			listOfProducts.add(item);
+			updateCosts();
+			return true;
+		}else{
+			System.out.println("P-6");
+			item.setNumberOfItem(item.getProduct().getNumberOfItems());
+			listOfProducts.add(item);
+			updateCosts();
+			return false;
+		}
+
 	}
 
 	public Long getOrderId() {

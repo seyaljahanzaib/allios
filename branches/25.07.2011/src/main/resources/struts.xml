@@ -25,7 +25,9 @@
 		<action name="AddToCartAction"  class="pl.alios.action.AddToCartAction">
 			<result name="SUCCESS" type="tiles">add_to_cart</result>
 			<result name="MAINPAGE" type="tiles">welcome</result>
+			<result name="MAINPAGE_MESSAGE" type="tiles">welcome_message</result>
 			<result name="ERROR" type="tiles">errorMessage</result>
+			<result name="MESSAGE" type="tiles">add_to_cart_message</result>
 		</action>
 		
 		<action name="ConfirmOrderAction"  class="pl.alios.action.ConfirmOrderAction">
@@ -36,6 +38,8 @@
 			<result name="HAVE_TO_LOG" type="tiles">have_to_log</result>
 			<result name="EMPTY_CART" type="tiles">message</result>
 			<result name="BACK" type="tiles">products</result>
+			<result name="MESSAGE" type="tiles">cart_message</result>
+			
 		</action>
 		
 		<action name="ConfirmDetailsAction"  class="pl.alios.action.ConfirmDetailsAction">
@@ -48,6 +52,8 @@
 			<result name="BACK" type="tiles">choose_customer_data</result>
 			<result name="SUCCESS" type="tiles">summary</result>
 			<result name="ERROR" type="tiles">errorMessage</result>
+			<result name="INCAPABILITY" type="tiles">cart_message</result>
+			
 		</action>
 		
 		<action name="ChangePassAction"  class="pl.alios.action.ChangePassAction">

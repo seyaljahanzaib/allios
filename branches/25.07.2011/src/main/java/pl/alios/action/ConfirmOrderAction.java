@@ -58,7 +58,7 @@ public class ConfirmOrderAction extends ActionSupport {
 						order.getListOfProducts().get(i).setNumberOfItem(numberOfItems);
 					}else{
 						order.getListOfProducts().get(i).setNumberOfItem(productItemNumber);
-						setMessage("");
+						setMessage("Brak wystarczaj\u0105cej ilo\u015Bci towaru");
 						mess = true;
 					}
 				}
@@ -100,7 +100,7 @@ public class ConfirmOrderAction extends ActionSupport {
 						order.getListOfProducts().get(i).setNumberOfItem(numberOfItems);
 					}else{
 						order.getListOfProducts().get(i).setNumberOfItem(productItemNumber);
-						setMessage("");
+						setMessage("Brak wystarczaj\u0105cej ilo\u015Bci towaru");
 						mess = true;
 					}
 				}

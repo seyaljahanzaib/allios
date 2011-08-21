@@ -348,7 +348,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" font-size="7pt"></fo:block>
+					<fo:block text-align="center" padding-top="5px" font-size="7pt">23</fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell>

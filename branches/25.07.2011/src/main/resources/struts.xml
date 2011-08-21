@@ -46,6 +46,7 @@
 			<result name="BACK" type="tiles">cart</result>
 			<result name="SUCCESS" type="tiles">confirm_order</result>
 			<result name="ERROR" type="tiles">errorMessage</result>
+			<result name="BACKTOSHOP" type="tiles">products</result>
 		</action>
 		
 		<action name="ConfirmAllAction"  class="pl.alios.action.ConfirmAllAction">

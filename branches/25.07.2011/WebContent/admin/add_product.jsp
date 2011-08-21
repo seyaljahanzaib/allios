@@ -39,10 +39,10 @@
 				background: url(../img/pa_button.png); width: 92px; height: 33px; margin-top: 80px; margin-right: 10px; float: right; cursor: pointer;
 				}
 			#newproduct #main_addtekst {
-				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center;
+				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; border: none; background-color: transparent; cursor: pointer;
 				}
 			#newproduct #main_addtekst:HOVER {
-				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline;
+				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; border: none; cursor: pointer; background-color: transparent;
 				}
 
 	
@@ -67,7 +67,7 @@ clear: both;
 <div id="mainback">
 
 	<div id="maintekst1">Nazwa produktu:</div>
-	<s:textfield id="main_graf"  name="product.name" cssStyle="width: 300px;"/>
+	<s:textfield id="main_graf"  name="product.name" cssStyle="width:400px; height:20px;"/>
 	
 	<div id="stopka"></div>
 	
@@ -77,17 +77,20 @@ clear: both;
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Cena netto:</div>
-	<s:textfield id="main_graf"  name="product.priceNetto" cssStyle="width: 66px;"/>
+	<s:textfield id="main_graf"  name="product.priceNetto" cssStyle="width:66px; height:20px;"/>
 	
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">VAT:</div>
-	<s:textfield id="main_combo"  name="product.vat" value="8" cssStyle="width: 70px;"/>
+	<select name="product.unit" id="main_combo" style="width:70px; height:25px;">
+		<option selected="selected" value="8%">8</option>
+		<option  value="23%">23</option>
+	</select>
 	
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">J/M:</div>
-	<select name="product.unit" id="main_combo" style="width: 70px">
+	<select name="product.unit" id="main_combo" style="width:70px; height:25px;">
 		<option selected="selected" value="szt.">szt.</option>
 		<option  value="op.">op.</option>
 	</select>
@@ -95,17 +98,17 @@ clear: both;
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Waga:</div>
-	<s:textfield id="main_graf"  name="product.weight" cssStyle="width: 66px;"/>
+	<s:textfield id="main_graf"  name="product.weight" cssStyle="width: 70px; height:20px;"/>
 	
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Producent:</div>
-	<s:textfield id="main_graf"  name="product.producer" cssStyle="width: 120px;"/>
+	<s:textfield id="main_graf"  name="product.producer" cssStyle="width:120px; height:20px;"/>
 	
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Kategoria:</div>
-			<select name="product.category.id" id="main_combo">
+			<select id="main_combo" name="product.category.id" style="width:210px; height:25px;">
 					<c:forEach items="${categories}" var="item" varStatus="loop">
 						<c:if test="${loop.index == 0}">
 							<option selected="selected" value="${item.id}">${item.displayableName}</option>
@@ -123,12 +126,12 @@ clear: both;
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Status produktu:</div>
-	<s:textfield id="main_combo"  name="product.state" cssStyle="width: 120px;"/>
+	<s:textfield id="main_combo"  name="product.state" cssStyle="width: 120px; height:20px;"/>
 	
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Skład:</div>
-	<s:textfield id="main_combo"  name="product.storage" cssStyle="width: 120px;"/>
+	<s:textfield id="main_combo"  name="product.storage" cssStyle="width:120px; height:20px;"/>
 	
 	<div id="stopka"></div>
 	
@@ -138,21 +141,22 @@ clear: both;
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Pełny opis:</div>
-	<s:textarea id="main_graf"  name="product.description" cssStyle="width: 300px; height: 50px;"/>
+	<s:textarea id="main_graf"  name="product.description" cssStyle="width: 500px; height: 200px;"/>
 	
 	<div id="stopka"></div>
 	
 	<div id="maintekst1">Skrócony opis:</div>
-	<s:textarea id="main_graf"  name="product.shortDescription" cssStyle="width: 300px; height: 50px;"/>
+	<s:textarea id="main_graf"  name="product.shortDescription" cssStyle="width: 500px; height: 200px;"/>
 
 	<div id="stopka"></div>
 	
 	<div id="main_add">
-	<s:submit id="main_addtekst" name="save" value="Dodaj"/>
+	<s:submit id="main_addtekst" name="save" value="Dodaj" cssStyle="width:92px; height:30px;"/>
 	</div>
 	
+	
 	<div id="main_backmenu">
-	<div id="main_addtekst">WrÃ³Ä</div>
+	<div id="main_addtekst">Wróć</div>
 	</div>
 
 </div>

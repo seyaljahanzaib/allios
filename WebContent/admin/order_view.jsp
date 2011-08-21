@@ -81,10 +81,16 @@
 		background: url(../img/pz_bdelete.png); background-position: center; background-repeat:no-repeat; width: 19px; height: 60px; float: left; margin-left: 12px; cursor: pointer; border: none;
 		}
 		#orders_view #binvoice {
-		background: url(../img/pz_binvoice.png); background-position: center; background-repeat:no-repeat; width: 20px; height: 20px; margin-left:50px; margin-top: 20px; float: left; cursor: pointer; border: none;
+		background: url(../img/pz_binvoice.png); background-position: bottom; background-repeat:no-repeat; width: 60px; height: 40px; margin-top: 10px; font: 11px Tahoma; color: #101192; text-align:center; float: left; cursor: pointer; border: none;
 		}
 		#orders_view #binvoice:HOVER {
-		background: url(../img/pz_binvoice1.png); background-position: center; background-repeat:no-repeat; width: 20px; height: 20px; margin-left:50px; margin-top: 20px; float: left; cursor: pointer;
+		background: url(../img/pz_binvoice1.png); background-position: bottom; background-repeat:no-repeat; width: 60px; height: 40px; margin-top: 10px; font: 11px Tahoma; color: #101192; text-align:center; float: left; cursor: pointer;
+		}
+		#orders_view #binvoice_copy {
+		background: url(../img/pz_binvoice.png); background-position: bottom; background-repeat:no-repeat; width: 60px; height: 40px; margin-top: 10px; font: 11px Tahoma; color: #101192; text-align:center; float: left; cursor: pointer; border: none;
+		}
+		#orders_view #binvoice_copy:HOVER {
+		background: url(../img/pz_binvoice1.png); background-position: bottom; background-repeat:no-repeat; width: 60px; height: 40px; margin-top: 10px; font: 11px Tahoma; color: #101192; text-align:center; float: left; cursor: pointer; border: none;
 		}
 			
 #stopka {
@@ -299,9 +305,10 @@ clear: both;
 				</div>
 		</td>
 		
-		<td width="1200px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+		<td width="120px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="mn_table1" style="width:120px;">
-				<div id="binvoice"></div>
+				<div id="binvoice">Oryginał</div>
+				<div id="binvoice_copy">Kopia</div>
 				</div>
 		</td>
 		

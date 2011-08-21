@@ -28,6 +28,8 @@ public class AddToCartAction extends ActionSupport {
 		OrderItem orderItem = new OrderItem();
 		try {
 			orderItem.setProduct(DBAdapter.getInstance().getProductDAO().getProduct(product_id));
+			orderItem.setPriceBrutto(orderItem.getProduct().getPriceBrutto());
+			orderItem.setPriceNetto(orderItem.getProduct().getPriceNetto());
 		} catch (Exception e1) {
 			return "ERROR";
 		}
@@ -42,14 +44,20 @@ public class AddToCartAction extends ActionSupport {
 			orderItem.setNumberOfItem(1);
 		}
 		
-		orderItem.setPriceBrutto(orderItem.getProduct().getPriceBrutto());
-		orderItem.setPriceNetto(orderItem.getProduct().getPriceNetto());
+		if (order.addToCart(orderItem)){
+			if(mainPage)
+				return "MAINPAGE";
+			else
+				return "SUCCESS";
+		}else{
+			setMessage("Nie mo\u017Cesz zam\u00F3wi\u0107 wi\u0119cej ni\u017C "+ orderItem.getProduct().getNumberOfItems().intValue() + " sztuk tego produktu");
+			if(mainPage)
+				return "MAINPAGE_MESSAGE";
+			else
+				return "MESSAGE";
+		}
 		
-		order.addToCart(orderItem);
-		if(mainPage)
-			return "MAINPAGE";
-		else
-			return "SUCCESS";
+
 	}
 	
 	private String product_id;
@@ -60,6 +68,9 @@ public class AddToCartAction extends ActionSupport {
 	public String getQuantity() {return quantity;}
 	public void setQuantity(String quantity) {this.quantity = quantity;}
 	
+	private String message;
+	public String getMessage() {return message;}
+	public void setMessage(String message) {this.message = message;}
 	
 	private boolean mainPage;
 	public void setMainPage(boolean mainPage) {this.mainPage = true;}

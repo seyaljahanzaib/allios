@@ -2,6 +2,7 @@ package pl.alios.model;
 
 import java.text.NumberFormat;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,6 +28,8 @@ public class Product {
 	private Double weight;
 	private String producer;
 	private double vat;
+	@Column(name="dostepnych_sztuk")
+	private Integer numberOfItems;
 	
 //	private Boolean prmotion;
 //	private Double prmotionPriceNetto;
@@ -72,6 +75,8 @@ public class Product {
 	public void setStorage(String storage) {this.storage = storage;}
 	public double getVat() {return vat;}
 	public void setVat(double vat) {this.vat = vat;}
+	public Integer getNumberOfItems() {return numberOfItems;}
+	public void setNumberOfItems(Integer numberOfItems) {this.numberOfItems = numberOfItems;}
 	
 	
 	

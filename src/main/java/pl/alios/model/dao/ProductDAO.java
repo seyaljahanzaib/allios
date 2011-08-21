@@ -107,6 +107,42 @@ public class ProductDAO extends AbstarctDAO{
 		}
 		
 	}
+	public String setProductAbundance(Map<String,String> map) throws Exception{
+		logger.info("Zdjecie ze stanu produktu");
+		
+		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
+		EntityManager em = emf.createEntityManager();
+		String result = null;
+		try {
+			EntityTransaction t = em.getTransaction();
+			try {
+				t.begin();
+				Query q = null;
+				boolean wasRollback = false;
+				for(String s : map.keySet()){
+					q = em.createNativeQuery("select setAvailable(" + s + "," + map.get(s) +")");
+					result  = (String) q.getSingleResult();
+					if (result.equals("BLAD")){
+						logger.info("Niezgodnosc stanow dla produktu o id =  " + s + " , przedmiotow o liczebnosci = " + map.get(s));
+						wasRollback = true;
+						t.rollback();
+						break;
+					}
+				}
+				if ( !wasRollback ) t.commit();
+			} catch(Exception e){
+				logger.error("MYERROR : " + e);
+				throw e;
+			} finally {
+				if (t.isActive()) t.rollback();
+			}
+		} finally {
+			em.close();
+		}
+		return result;
+	}
+	
+	
 	
 	
 	

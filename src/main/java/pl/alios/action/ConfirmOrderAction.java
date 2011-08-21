@@ -37,21 +37,36 @@ public class ConfirmOrderAction extends ActionSupport {
 		Order order = (Order) sessionAttr.get("order");
 		List<OrderItem> list =order.getListOfProducts();
 		
+		boolean mess = false;
+		
 		if(numberOfItem!=null){
 			if(list.size() == numberOfItem.size()){
 				for(int i=0;i < numberOfItem.size();i++){
+					int numberOfItems = 0;
 					try{
-						Integer.valueOf(numberOfItem.get(i));
-						if(Integer.valueOf(numberOfItem.get(i)) == 0)
-							order.getListOfProducts().get(i).setNumberOfItem(1);
-						else
-							order.getListOfProducts().get(i).setNumberOfItem(Integer.valueOf(numberOfItem.get(i)));
+						numberOfItems = Integer.valueOf(numberOfItem.get(i)).intValue();
 					}catch(NumberFormatException e){
-						order.getListOfProducts().get(i).setNumberOfItem(1);
+
+					}
+					if(numberOfItems == 0){
+						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
+						return "MESSAGE";
+					}
+					
+					int productItemNumber  = order.getListOfProducts().get(i).getProduct().getNumberOfItems();
+					if (numberOfItems <= productItemNumber){
+						order.getListOfProducts().get(i).setNumberOfItem(numberOfItems);
+					}else{
+						order.getListOfProducts().get(i).setNumberOfItem(productItemNumber);
+						setMessage("");
+						mess = true;
 					}
 				}
 			}
 		}
+		
+		if(mess) return "MESSAGE";
+		
 		if(sessionAttr.get("customer") == null)
 			return "HAVE_TO_LOG";
 		
@@ -62,23 +77,38 @@ public class ConfirmOrderAction extends ActionSupport {
 		logger.info("Akcja count. Zmienna to : " + numberOfItem);
 		Map<String,Object> sessionAttr = ActionContext.getContext().getSession();
 		Order order = (Order) sessionAttr.get("order");
+		List<OrderItem> list =order.getListOfProducts();
+		
+		boolean mess = false;
 		
 		if(numberOfItem!=null){
-			if(order.getListOfProducts().size() == numberOfItem.size()){
+			if(list.size() == numberOfItem.size()){
 				for(int i=0;i < numberOfItem.size();i++){
+					int numberOfItems = 0;
 					try{
-						Integer.valueOf(numberOfItem.get(i));
-						if(Integer.valueOf(numberOfItem.get(i)) == 0)
-							order.getListOfProducts().get(i).setNumberOfItem(1);
-						else
-							order.getListOfProducts().get(i).setNumberOfItem(Integer.valueOf(numberOfItem.get(i)));
+						numberOfItems = Integer.valueOf(numberOfItem.get(i)).intValue();
 					}catch(NumberFormatException e){
-						order.getListOfProducts().get(i).setNumberOfItem(1);
+
+					}
+					if(numberOfItems == 0){
+						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
+						return "MESSAGE";
+					}
+					
+					int productItemNumber  = order.getListOfProducts().get(i).getProduct().getNumberOfItems();
+					if (numberOfItems <= productItemNumber){
+						order.getListOfProducts().get(i).setNumberOfItem(numberOfItems);
+					}else{
+						order.getListOfProducts().get(i).setNumberOfItem(productItemNumber);
+						setMessage("");
+						mess = true;
 					}
 				}
-				order.updateCosts();
 			}
 		}
+		
+		if(mess) return "MESSAGE";
+		
 		return "COUNT_SUCCESS";
 	}
 	
@@ -138,6 +168,8 @@ public boolean isDeleteBt() {
 	public void setProductToDelete(String productToDelete) {this.productToDelete = productToDelete;}
 	public boolean isBack() {return back;}
 	public void setBack(boolean back) {this.back = true;}
+	
+	
 	
 	
 }

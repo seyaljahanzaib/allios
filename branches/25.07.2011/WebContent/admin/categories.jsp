@@ -29,23 +29,24 @@
 				width: 150px; font: bold 12px/25px Tahoma; color: #101192; text-align: right; margin-left: 20px; margin-top: 40px; float: left;
 				}
 			#kategorie #main_graf {
-				background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
+				height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
 				}
 			#kategorie #main_combo {
-				background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
+				height: 25px; margin-top: 40px; margin-left: 20px; float: left;
 				}
 			#kategorie #main_add {
-				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px Tahoma; color: #101192; vertical-align:top; text-align: center; border: none;
+				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; 
 				}
 			#kategorie #main_add:HOVER {
-				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; font: bold 12px Tahoma; color: #101192; text-align: center; text-decoration:underline; border: none;
+				background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer;
 				}
 			#kategorie #main_addtekst {
-				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; float: left;
+				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; border: none; background-color: transparent; cursor: pointer; float: left;
 				}
  			#kategorie #main_addtekst:HOVER {
- 				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; float: left;
+ 				width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; border: none; background-color: transparent; cursor: pointer; float: left;
  				}
+ 			
 			
 #tabkat1 {
 	height: 40px;
@@ -77,7 +78,7 @@
 	height: 40px;
 	}
 	#tabkat2 #sek1 {
-		width: 499px; height: 40px; float: left; text-align: center;
+		width: 499px; height: 40px; float: left;
 		}
 	#tabkat2 #sek2 {
 		width: 304px; height: 40px; float: left;
@@ -92,9 +93,12 @@
 		width: 115px; height: 40px; float: left; 
 		}
 	#tabkat2 #tekst {
-		text-align: center; font: bold 12px/40px Tahoma; color: #101192;
+		font: bold 12px/40px Tahoma; color: #101192;
 		}
-
+	#tabkat2 #bcancel {
+		background: url(../img/pz_bdelete.png); background-position: center; background-repeat:no-repeat; width: 19px; height: 17px; float: left; margin-left: 48px; margin-top: 12px; cursor: pointer; border: none;
+		}
+	
 #table1{
 	width: 1150px; margin-top: 10px;
 }
@@ -149,7 +153,7 @@ function deleteCategory(categoryId) {
 				<div id="main_addtekst" onclick='javascript:void(document.forms["newCategory"].submit())'>Dodaj</div></div>
 				<div id="maintekst1" style="margin-top: 20px; margin-left: 100px;">umiesc w:</div>
 				
-				<select name="selectedCategory" id="main_combo" style="width: 240px; margin-top:20px;">
+				<select name="selectedCategory" id="main_combo" style="width:240px; margin-top:20px; height:25px;">
 				<c:set var="selectedCategoryBLA"/>   
 					<c:forEach items="${categories}" var="item" varStatus="loop">
 						<c:if test="${loop.index == 0}">
@@ -179,9 +183,11 @@ function deleteCategory(categoryId) {
 
 
 		<div id="kategorie">
+			<div id="main_add" style="float:right; margin-top: 10px; margin-right: 80px;">
+			<s:submit id="main_addtekst" name="saveChanges" value="Zapisz" cssStyle="width:92px; height:30px;"/>
+			</div>
 			
-			<s:submit id="main_add" name="saveChanges" value="Zapisz" cssStyle="float:right; margin-top:10px; margin-right:40px; margin-right:10px;"/>
-			<div id="main_add" style="float:right; margin-top: 10px; margin-right: 40px; margin-right: 10px;">
+			<div id="main_add" style="float:right; margin-top: 10px; margin-right: 10px;">
 			<div id="main_addtekst">Cofnij</div>
 			</div>
 		</div>
@@ -217,7 +223,7 @@ function deleteCategory(categoryId) {
 		
 	<td width="115px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="tabkat1">
-		<div id="sek4"><div id="tekst">Ukryty</div></div>
+		<div id="sek4"><div id="tekst">Kolejność</div></div>
 		<div id="sekpoint" style="width: 1px;"></div>
 		</div>
 		</td>
@@ -235,31 +241,31 @@ function deleteCategory(categoryId) {
 		<td width="500px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
 			<div id="sek1">
-				<div id="tekst"><s:property value="displayableName"/></div></div>
+				<div id="tekst" style="margin-left: 180px;"><s:property value="displayableName"/></div></div>
 			</div>
 			</td>
 			
 		<td width="305px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
-			<div id="sek2"><div id="tekst">18</div></div>
+			<div id="sek2"><div id="tekst" style="text-align: center;">18</div></div>
 			</div>
 			</td>
 			
 		<td width="115px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
-			<div id="sek3"><div id="tekst"><s:checkbox name="categories[%{#item.index}].active"/></div></div>
+			<div id="sek3"><div id="tekst" style="text-align: center;  margin-top: 10px;"><s:checkbox name="categories[%{#item.index}].active"/></div></div>
 			</div>
 			</td>
 			
 		<td width="115px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
-			<div id="sek4"><div id="tekst">o</div></div>
+			<div id="sek4"><div id="tekst" style="text-align: center;">1</div></div>
 			</div>
 			</td>
 			
 		<td width="115px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2" onclick='deleteCategory(${it.id})'>
-			<div id="sek5" ><div id="tekst"><div id="usun" >DEL</div></div></div>
+			<div id="sek5" ><div id="bcancel"></div></div>
 			</div>
 			</td>
 	</tr>
@@ -270,31 +276,31 @@ function deleteCategory(categoryId) {
 		<td width="500px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
 			<div id="sek1">
-				<div id="tekst" style="padding-left: 100px;"><s:property value="displayableName"/></div></div>
+				<div id="tekst" style="margin-left: 240px;"><i><s:property value="displayableName"/></i></div></div>
 			</div>
 			</td>
 			
 		<td width="305px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
-			<div id="sek2"><div id="tekst">10</div></div>
+			<div id="sek2"><div id="tekst" style="text-align: center;">10</div></div>
 			</div>
 			</td>
 			
 		<td width="115px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
-			<div id="sek3"><div id="tekst"><s:checkbox name="categories[%{#item.index}].subCategories[%{#item2.index}].active"/></div></div>
+			<div id="sek3"><div id="tekst" style="text-align: center; margin-top: 10px;"><s:checkbox name="categories[%{#item.index}].subCategories[%{#item2.index}].active"/></div></div>
 			</div>
 			</td>
 			
 		<td width="115px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2">
-			<div id="sek4"><div id="tekst">o</div></div>
+			<div id="sek4"><div id="tekst" style="text-align: center;">1.1</div></div>
 			</div>
 			</td>
 			
 		<td width="115px" height="30px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="tabkat2" onclick='deleteCategory(${it2.id})'>
-			<div id="sek5"><div id="tekst">DEL</div></div>
+			<div id="sek5" ><div id="bcancel"></div></div>
 			</div>
 			</td>
 		</tr>

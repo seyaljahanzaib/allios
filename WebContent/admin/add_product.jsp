@@ -21,7 +21,7 @@
 		}
 	
 	#newproduct #mainback {
-		width: 1150px; height: 800px; background-color: #f3f2fc; margin-top:2px; float: left;
+		width: 1150px; height: 1000px; background-color: #f3f2fc; margin-top:2px; float: left;
 	}
 			#newproduct #maintekst1 {
 				width: 150px; font: bold 12px/25px Tahoma; color: #101192; text-align: right; margin-left: 20px; margin-top: 10px; float: left;

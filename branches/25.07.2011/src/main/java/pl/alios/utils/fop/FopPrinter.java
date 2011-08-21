@@ -55,11 +55,11 @@ public class FopPrinter{
 			fopFactory = FopFactory.newInstance();
 			fopFactory.setBase14KerningEnabled(true);
 			fopFactory.setUserConfig(new File(userConfigFile));
-//			fopFactory.setFontBaseURL("file:///" + new File(fontsPath).getAbsolutePath());
-			fopFactory.setSourceResolution(100);
+//			fopFactory.setFontBaseURL("file:///usr/local/tomcat/aplikacja1/Allios2/fop-config");
+			fopFactory.setSourceResolution(300);
 			
 			foUserAgent = fopFactory.newFOUserAgent();
-//			foUserAgent.setBaseURL("file:///" + new File(fontsPath).getAbsolutePath());
+//			foUserAgent.setBaseURL("file:///usr/local/tomcat/aplikacja1/Allios2/fop-config");
 			foUserAgent.setAuthor("biuro@allios.pl");
             foUserAgent.setCreator("biuro@allios.pl");
             foUserAgent.setTitle("Faktureczka");
@@ -68,6 +68,7 @@ public class FopPrinter{
             transformer = factory.newTransformer(new StreamSource(new File(transformateFile)));
 			
 		}catch(Exception e){
+			System.out.println("Problem z inicjalizacja FOP-a : " + e);
 			logger.error("Problem z inicjalizacja FOP-a : " + e);
 		}
 	}

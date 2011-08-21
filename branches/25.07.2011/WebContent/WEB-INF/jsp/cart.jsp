@@ -1,4 +1,5 @@
 <%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <style>
@@ -94,12 +95,29 @@
 #k2z #dostepnosc {
 	width: 77px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 70px; text-align: center;
 	}
-#k2z #dostepnoscgraf {
-	width: 77px; height:100px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
+#k2z #dostepnoscgraf0 {
+	width: 77px; height:100px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #k2z #dostepnoscgraf1 {
+	width: 77px; height:100px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#k2z #dostepnoscgraf2 {
+	width: 77px; height:100px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#k2z #dostepnoscgraf3 {
 	width: 77px; height:100px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
+#k2z #dostepnoscgraf4 {
+	width: 77px; height:100px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#k2z #dostepnoscgraf5 {
+	width: 77px; height:100px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
+	}	
+	
+	
+	
+	
+	
 #k2z #wartoscb {
 	width: 88px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 20px; text-align: right;
 	}
@@ -267,8 +285,30 @@ function deleteProduct(productId) {
 	</td>
 	<td width="83" height="90">
 		<div id="k2z">
-		<div id="dostepnoscgraf1">
-		<div id="dostepnosc">dostępny</div></div>
+					<c:if test="${product.numberOfItems == 0}">
+						<div id="dostepnoscgraf0">
+						<div id="dostepnosc">brak</div></div>
+					</c:if>
+					<c:if test="${product.numberOfItems > 0 and product.numberOfItems < 5}">
+						<div id="dostepnoscgraf1">
+						<div id="dostepnosc">&lt; 5szt./op</div></div>					
+					</c:if>
+					<c:if test="${product.numberOfItems >= 5 and product.numberOfItems < 10}">
+						<div id="dostepnoscgraf2">
+						<div id="dostepnosc">dostępny</div></div>						
+					</c:if>
+					<c:if test="${product.numberOfItems >= 10 and product.numberOfItems < 50}">
+						<div id="dostepnoscgraf3">
+						<div id="dostepnosc">dostępny</div></div>			
+					</c:if>
+					<c:if test="${product.numberOfItems >= 50 and product.numberOfItems < 100}">
+						<div id="dostepnoscgraf4">
+						<div id="dostepnosc">dostępny</div></div>		
+					</c:if>
+					<c:if test="${product.numberOfItems >= 100}">
+						<div id="dostepnoscgraf5">
+						<div id="dostepnosc">dostępny</div></div>					
+					</c:if>
 		</div>
 	</td>
 	<td width="94" height="90">

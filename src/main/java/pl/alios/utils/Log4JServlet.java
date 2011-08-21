@@ -46,7 +46,7 @@ public class Log4JServlet extends HttpServlet {
 	private Map<String, ArrayList<Product>> initProducts(){
 		List<Product> products = null;
 		try {
-			products = DBAdapter.getInstance().getProductDAO().getAllProducts();
+			products = DBAdapter.getInstance().getProductDAO().getAllProducts(true);
 		} catch (Exception e) {
 			Logger logger  = Logger.getLogger(this.getClass());
 			logger.error("Moja wina : " + e);
@@ -110,6 +110,7 @@ public class Log4JServlet extends HttpServlet {
 		}
 
 		for(Category category :  categories){
+			if (category.getActive() == Boolean.FALSE) break;
 			MenuItem item = new MenuItem();
 			item.setDispalyName(category.getDisplayableName());
 			item.setCategory(String.valueOf(category.getId()));
@@ -122,6 +123,7 @@ public class Log4JServlet extends HttpServlet {
 			
 			if (category.getSubCategories() != null && category.getSubCategories().size() != 0) {
 				for(Category subcategory :  category.getSubCategories()){
+					if (subcategory.getActive() == Boolean.FALSE) break;
 					MenuItem internalItem = new MenuItem();
 					
 					int numberOfProducts2 = 0;

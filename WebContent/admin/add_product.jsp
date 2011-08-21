@@ -135,7 +135,7 @@ clear: both;
 	
 	<div id="stopka"></div>
 	
-	<div id="maintekst1">zdjęcie (file manager)</div>
+	<div id="maintekst1">zdjęcie (file manager)</div>
 	<div id="main_combo" style="width: 120px"></div>
 	
 	<div id="stopka"></div>

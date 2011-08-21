@@ -19,6 +19,8 @@ public class ConfirmDetailsAction extends ActionSupport {
 	public String execute(){
 		if(back)
 			return "BACK";
+		if(backtoshop)
+			return "BACKTOSHOP";
 		if(next)
 			return next();
 		return "ERROR";
@@ -55,6 +57,7 @@ public class ConfirmDetailsAction extends ActionSupport {
 	
 	private boolean next;
 	private boolean back;
+	private boolean backtoshop;
 	private String payment;
 	private String adressChosse;
 
@@ -67,8 +70,8 @@ public class ConfirmDetailsAction extends ActionSupport {
 	public void setPayment(String payment) {this.payment = payment;}
 	public String getAdressChosse() {return adressChosse;}
 	public void setAdressChosse(String adressChosse) {this.adressChosse = adressChosse;}
-	
-	
-	
+
+	public boolean isBacktoshop() {return backtoshop;}
+	public void setBacktoshop(boolean backtoshop) {this.backtoshop = true;}
 	
 }

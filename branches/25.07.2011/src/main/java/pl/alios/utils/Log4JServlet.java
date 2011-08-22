@@ -46,7 +46,7 @@ public class Log4JServlet extends HttpServlet {
 	private Map<String, ArrayList<Product>> initProducts(){
 		List<Product> products = null;
 		try {
-			products = DBAdapter.getInstance().getProductDAO().getAllProducts(true);
+			products = DBAdapter.getInstance().getProductDAO().getAllProducts(true,null);
 		} catch (Exception e) {
 			Logger logger  = Logger.getLogger(this.getClass());
 			logger.error("Moja wina : " + e);

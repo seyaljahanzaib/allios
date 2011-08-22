@@ -158,6 +158,13 @@
 			<result name="MESSAGE" type="tiles">newProductMessage</result>
 		</action>
 		
+		<action name="ExternalOrderAdminAction"  class="pl.alios.action.admin.ExternalOrderAdminAction">
+			<result name="SUCCESS" type="tiles">newWZ</result>
+			<result name="MESSAGE" type="tiles">newWZMessage</result>
+			<result name="ERROR" type="tiles">newWZMessage</result>
+			<result name="END" type="tiles">orderEdit</result>
+		</action>
+		
 		
 		
 	</package>

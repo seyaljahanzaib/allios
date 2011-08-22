@@ -8,7 +8,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,8 +15,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
-import org.hibernate.annotations.IndexColumn;
-
+import org.hibernate.annotations.CollectionId;
 
 import pl.alios.utils.Commons;
 
@@ -50,6 +48,18 @@ public class Order {
 	
 	@ManyToOne
 	private Customer customer;
+	
+	private Boolean external;
+	
+	@Column(nullable=false)
+	private String ordCompanyName;
+	@Column(nullable=false)
+	private String ordStreet;
+	@Column(nullable=false)
+	private String ordCity;
+	@Column(nullable=false)
+	private String ordZipCode;
+	
 	
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.REMOVE},mappedBy="order_zam")
 	private List<OrderItem> listOfProducts;
@@ -156,7 +166,23 @@ public class Order {
 	public void setDeliveryDate(Date deliveryDate) {this.deliveryDate = deliveryDate;}
 	public Date getIssueDate() {return issueDate;}
 	public void setIssueDate(Date issueDate) {this.issueDate = issueDate;}
-	
+	public String getOrdCompanyName() {return ordCompanyName;}
+	public void setOrdCompanyName(String ordCompanyName) {this.ordCompanyName = ordCompanyName;}
+	public String getOrdStreet() {return ordStreet;}
+	public void setOrdStreet(String ordStreet) {this.ordStreet = ordStreet;}
+	public String getOrdCity() {return ordCity;}
+	public void setOrdCity(String ordCity) {this.ordCity = ordCity;}
+	public String getOrdZipCode() {return ordZipCode;}
+	public void setOrdZipCode(String ordZipCode) {this.ordZipCode = ordZipCode;}
+
+	public Boolean getExternal() {
+		return external;
+	}
+
+	public void setExternal(Boolean external) {
+		this.external = external;
+	}
+
 	public List<OrderItem> getListOfProducts() {return listOfProducts;}
 	public void setListOfProducts(List<OrderItem> listOfProducts) {this.listOfProducts = listOfProducts;}
 	

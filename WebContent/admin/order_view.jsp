@@ -108,7 +108,7 @@ clear: both;
 	<div id="mainright"></div>
 	<div id="stopka"></div>
 	
-	
+<s:form action="OrderAdminAction" theme="simple">
 	<div id="mainback">
 		<div id="maintekst1" style="margin-left: 20px; margin-top: 10px; text-align: left;">Filtry</div>
 		<div id="stopka"></div>
@@ -140,14 +140,27 @@ clear: both;
 		<div id="stopka"></div>
 		
 		<div id="maintekst1" style="margin-top: 14px;">Status:</div>
-		<div id="main_combo" style="width:240px; margin-top: 14px;"></div>
-		<div id="stopka"></div>
+		<s:select id="main_combo" name="statusSearch" list="statusList" style="width: 120px;">
+			<option value="Oczekuje" >Wszystkie</option>
+			<option value="Anulowane" >Anulowane</option>
+			<option value="Oczekuje" >Oczekuje</option>
+			<option value="Potwierdzone">Potwierdzone</option>
+			<option value="W przygotowaniu">W przygotowaniu</option>
+			<option value="Wysłane">Wysłane</option>
+			<option value="Dostarczone">Dostarczone</option>
+		</s:select>
+
+
+
+
+			<div id="stopka"></div>
 		
 		
 		<div id="main_add" style="float: right; margin-right: 80px;">
 			<div id="main_addtekst">Szukaj</div>
 		</div>
 	</div>
+</s:form>
 	
 	<div id="results">
 		<div id="tekst1" style="margin-left: 40px;"><b>Liczba zamówień:	56</b></div>
@@ -239,17 +252,33 @@ clear: both;
 	
 		<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="mn_table1" style="width: 150px;">
-				<div id="mn_tekst1" style="width: 149px; text-align: center;"><b><s:property value="number"/></b></div>
+				<s:if test="%{external == true}">
+					<div id="mn_tekst1" style="width: 149px; text-align: center; color : green;"><b><s:property value="number"/></b></div>
+				</s:if>
+				<s:else>
+					<div id="mn_tekst1" style="width: 149px; text-align: center;"><b><s:property value="number"/></b></div>
+				</s:else>
 				</div>
 		</td>
 			
 		<td width="230px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="mn_table1" style="width: 230px;">
-				<div id="mn_tekst2" style="margin-left: 8px; margin-top: 5px;"><b><s:property value="customer.companyName"/></b></div>
-				<div id="stopka"></div>
-				<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="customer.formatCityAndCode"/></div>
-				<div id="stopka"></div>
-				<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="customer.formatStreet"/></div>
+				<s:if test="%{external == true}">
+					<div id="mn_tekst2" style="margin-left: 8px; margin-top: 5px;"><b><s:property value="ordCompanyName"/></b></div>
+					<div id="stopka"></div>
+					<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="ordZipCode"/> <s:property value="ordCity"/></div>
+					<div id="stopka"></div>
+					<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="ordStreet"/></div>
+				</s:if>
+				<s:else>
+					<div id="mn_tekst2" style="margin-left: 8px; margin-top: 5px;"><b><s:property value="customer.companyName"/></b></div>
+					<div id="stopka"></div>
+					<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="customer.formatCityAndCode"/></div>
+					<div id="stopka"></div>
+					<div id="mn_tekst2" style="margin-left: 8px; margin-top: 3px;"><s:property value="customer.formatStreet"/></div>
+				</s:else>
+			
+
 				</div>
 		</td>
 		

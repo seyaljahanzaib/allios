@@ -100,7 +100,8 @@
 		<div id="button">Przyjęcie zewnętrzne</div>
 	</div>
 	<div id="tlocenter">
-		<div id="button">Wydanie zewnętrzne</div>
+		<s:form action="ExternalOrderAdminAction" name="wydanieZewnetrzne"><s:hidden name="init"/></s:form>
+		<div id="button" onclick='javascript:void(document.forms["wydanieZewnetrzne"].submit())'>Wydanie zewnętrzne</div>
 	</div>
 	<div id="tlobottom"></div>
 </div>

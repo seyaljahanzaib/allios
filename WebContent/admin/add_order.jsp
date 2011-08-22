@@ -1,5 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
@@ -93,54 +94,68 @@ clear: both;
 		</div>
 	<div id="mainright"></div>
 	<div id="stopka"></div>
-	<div id="mainback">
-		<div id="maintekst2" style="margin-left: 20px; margin-top: 10px; text-align: left;">Zamówienie specjalne:</div>
-		<div id="stopka"></div>
-		
-		<div id="maintekst1" style="margin-top: 16px;">Producent:</div>
-		<div id="main_combo" style="width:240px; margin-top: 16px;"></div>
-		
-		<div id="maintekst1" style="margin-top: 16px;">Data utworzenia:</div>
-		<div id="main_combo" style="width:100px; margin-top: 16px;"></div>
-		
-		<div id="maintekst1" style="margin-top: 16px;">Aktualny stan:</div>
-		<div id="main_graf" style="width:80px; margin-top: 16px;"></div>
-		<div id="stopka"></div>
-		
-		<div id="maintekst1" style="margin-top: 14px;">Nazwa produktu:</div>
-		<div id="main_combo" style="width:240px; margin-top: 14px;"></div>
-		
-		<div id="maintekst1" style="margin-top: 14px;">Nazwa odbiorcy:</div>
-		<div id="main_graf" style="width:300px; margin-top: 14px;"></div>
-		<div id="stopka"></div>
-		
-		<div id="maintekst1" style="margin-top: 14px;">Ilość:</div>
-		<div id="main_graf" style="width:100px; margin-top: 14px;"></div>
-		
-		<div id="maintekst1" style="margin-top: 16px; margin-left: 160px;">Ulica:</div>
-		<div id="main_graf" style="width:300px; margin-top: 16px;"></div>
-		<div id="stopka"></div>
-		
-		<div id="maintekst1" style="margin-left:450px; margin-top: 16px;">Kod pocztowy:</div>
-		<div id="main_graf" style="width:100px; margin-top: 16px;"></div>
-		
-		<div id="maintekst1" style="margin-top: 16px;">Miejscowość:</div>
-		<div id="main_graf" style="width:150px; margin-top: 16px;"></div>
-		<div id="stopka"></div>
-		
-		<div id="maintekst1" style="margin-top: 16px; margin-left: 450px;">Rabat:</div>
-		<div id="main_graf" style="width:60px; margin-top: 16px;"></div>
-		<div id="stopka"></div>
-		
-		<div id="main_add" style="float: right; margin-right: 80px; margin-top: 10px;">
-			<div id="main_addtekst">Utwórz Zam.</div>
+	
+	<s:form action="ExternalOrderAdminAction" theme="simple"> 
+		<div id="mainback">
+			<div id="maintekst2" style="margin-left: 20px; margin-top: 10px; text-align: left;">Zamówienie specjalne:</div>
+			<div id="stopka"></div>
+			
+			<div id="maintekst1" style="margin-top: 16px;">Producent:</div>
+			<div id="main_combo" style="width:240px; margin-top: 16px;"></div>
+			
+			<div id="maintekst1" style="margin-top: 16px;">Data utworzenia:</div>
+			<div id="main_combo" style="width:100px; margin-top: 16px;"><fmt:formatDate pattern="dd-MM-yyyy" value="${data}"/></div>
+			
+			<div id="maintekst1" style="margin-top: 16px;">Aktualny stan:</div>
+			<div id="main_graf" style="width:80px; margin-top: 16px;"></div>
+			<div id="stopka"></div>
+			
+			<div id="maintekst1" style="margin-top: 14px;">Nazwa produktu:</div>
+				<select name="productID" id="main_combo" style="width:240px; margin-top:20px; height:25px;">
+					<c:forEach items="${products}" var="item" varStatus="loop">
+						<c:if test="${loop.index == 0}">
+							<option selected="selected" value="${item.product_id}">${item.name}</option>
+						</c:if>
+						<c:if test="${loop.index != 0}">
+							<option value="${item.product_id}">${item.name}</option>
+						</c:if>
+					</c:forEach>
+				</select>
+			
+			
+			<div id="maintekst1" style="margin-top: 14px;">Nazwa odbiorcy:</div>
+			<div id="main_graf" style="width:300px; margin-top: 14px;"><s:textfield name="order.ordCompanyName"/></div>
+			<div id="stopka"></div>
+			
+			<div id="maintekst1" style="margin-top: 14px;">Ilość:</div>
+			<div id="main_graf" style="width:100px; margin-top: 14px;"><s:textfield name="quantity"/></div>
+			
+			<div id="maintekst1" style="margin-top: 16px; margin-left: 160px;">Ulica:</div>
+			<div id="main_graf" style="width:300px; margin-top: 16px;"><s:textfield name="order.ordStreet"/></div>
+			<div id="stopka"></div>
+			
+			<div id="maintekst1" style="margin-left:450px; margin-top: 16px;">Kod pocztowy:</div>
+			<div id="main_graf" style="width:100px; margin-top: 16px;"><s:textfield name="order.ordZipCode"/></div>
+			
+			<div id="maintekst1" style="margin-top: 16px;">Miejscowość:</div>
+			<div id="main_graf" style="width:150px; margin-top: 16px;"><s:textfield name="order.ordCity"/></div>
+			<div id="stopka"></div>
+			
+			<div id="maintekst1" style="margin-top: 16px; margin-left: 450px;">Rabat:</div>
+			<div id="main_graf" style="width:60px; margin-top: 16px;"></div>
+			<div id="stopka"></div>
+			
+			<div id="main_add" style="float: right; margin-right: 80px; margin-top: 10px;">
+				<s:submit id="main_addtekst" value="Utwórz Zam." name="create"/>
+			</div>
+			<div id="main_add" style="float: right; margin-right: 20px; margin-top: 10px;">
+					<s:submit id="main_addtekst" value="Dodaj" name="add"/>
+			</div>
+			<div id="stopka"></div>
 		</div>
-		<div id="main_add" style="float: right; margin-right: 20px; margin-top: 10px;">
-				<div id="main_addtekst">Dodaj</div>
-		</div>
-		<div id="stopka"></div>
-	</div>
 		
+	</s:form>	
+	
 		<div id="results">
 			<div id="tekst1" style="margin-left: 40px;"><b>Liczba dodanych pozycji:	56</b></div>
 			<div id="tekst2" style="width: 573px; text-align: right; margin-top: 4px;"><b>Wartość brutto:</b></div>
@@ -154,6 +169,7 @@ clear: both;
 <table style="padding: 0px; border-collapse: collapse; border:0px; border-spacing:0px;">
 
 <!-- 						wiersz tytułowy tabeli							 -->
+
 <tr>
 
 	<td width="30px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
@@ -222,69 +238,71 @@ clear: both;
 </tr>
 
 <!-- 										wiersz pierwszy tabeli							 -->
-	
-<tr>
 
-	<td width="30px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 30px;">
-			<div id="mn_tekst1" style="width: 30px; text-align: center;">1</div>
-			</div>
-	</td>
+<c:forEach items="${order.listOfProducts}" var="item" varStatus="loop">
+	<tr>
+	
+		<td width="30px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 30px;">
+				<div id="mn_tekst1" style="width: 30px; text-align: center;">${loop.index +1}</div>
+				</div>
+		</td>
+			
+		<td width="390px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 390px;">
+				<div id="mn_tekst1" style="margin-left: 4px; text-align: left;">${item.product.name}</div>
+				</div>
+		</td>
 		
-	<td width="390px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 390px;">
-			<div id="mn_tekst1" style="margin-left: 4px; text-align: left;">Cwiek papierowy ręczny stalowy, rozmiar 21mm</div>
-			</div>
-	</td>
+		<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 120px;">
+				<div id="mn_tekst1" style="width: 120px; text-align: center;">${item.product.producer}</div>
+				</div>
+		</td>
+		
+		
+		<td width="100px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 100px;">
+				<div id="mn_tekst2" style="width: 96px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>${item.priceBruttoString} zł</b></div>
+				<div id="mn_tekst2" style="width: 96px; text-align: right; margin-right: 4px; margin-top: 3px;">${item.priceNettoString} zł</div>
+				</div>
+		</td>
+		
+		
+		<td width="70px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 70px;">
+				<div id="mn_tekst1" style="width: 70px; text-align: center;">${item.numberOfItem}</div>
+				</div>
+		</td>
+		
+		<td width="70px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 70px;">
+				<div id="mn_tekst1" style="width: 70px; text-align: center;">0%</div>
+				</div>
+		</td>
+		
+		<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 119px;">
+				<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>${item.totalPriceBruttoString} zł</b></div>
+				<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;">${item.totalPriceNettoString} zł</div>
+				</div>
+		</td>
+		
+		<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 119px;">
+				<div id="mn_tekst1" style="width: 119px; text-align: center;">${item.product.storage}</div>
+				</div>
+		</td>
+		
+		<td width="130px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
+			<div id="mn_table1" style="width: 130px;">
+				<div id="bcancel"></div>
+				</div>
+		</td>
 	
-	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 120px;">
-			<div id="mn_tekst1" style="width: 120px; text-align: center;">Poldent</div>
-			</div>
-	</td>
 	
-	
-	<td width="100px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 100px;">
-			<div id="mn_tekst2" style="width: 96px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>1 320,00 zł</b></div>
-			<div id="mn_tekst2" style="width: 96px; text-align: right; margin-right: 4px; margin-top: 3px;">920,00 zł</div>
-			</div>
-	</td>
-	
-	
-	<td width="70px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 70px;">
-			<div id="mn_tekst1" style="width: 70px; text-align: center;">25 szt.</div>
-			</div>
-	</td>
-	
-	<td width="70px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 70px;">
-			<div id="mn_tekst1" style="width: 70px; text-align: center;">5%</div>
-			</div>
-	</td>
-	
-	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 119px;">
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 2px;"><b>1 320,00 zł</b></div>
-			<div id="mn_tekst2" style="width: 116px; text-align: right; margin-right: 4px; margin-top: 3px;">920,00 zł</div>
-			</div>
-	</td>
-	
-	<td width="120px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 119px;">
-			<div id="mn_tekst1" style="width: 119px; text-align: center;">23PS1</div>
-			</div>
-	</td>
-	
-	<td width="130px" height="34px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
-		<div id="mn_table1" style="width: 130px;">
-			<div id="bcancel"></div>
-			</div>
-	</td>
-
-
-</tr>
+	</tr>
+</c:forEach>	
 </table>
 		
 </div>

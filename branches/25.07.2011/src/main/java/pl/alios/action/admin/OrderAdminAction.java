@@ -1,5 +1,6 @@
 package pl.alios.action.admin;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -94,7 +95,7 @@ public class OrderAdminAction extends ActionSupport {
 	private String newStatus;
 	private String orderId;
 	private String message;
-	
+//	private ArrayList<E> statusList
 	
 	
 	

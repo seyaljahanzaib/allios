@@ -51,20 +51,19 @@ public class ProductDAO extends AbstarctDAO{
 		}
 	}
 
-	public List<Product> getAllProducts(boolean activeOnly) throws Exception {
+	public List<Product> getAllProducts(boolean activeOnly , String sort) throws Exception {
 		logger.info("SELECT p FROM Product p   -   GET ALL PRODUCTS");
 		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
 		EntityManager em = emf.createEntityManager();
 		List<Product> products = null;
 		try{
-			Query query;
-			if(activeOnly){
-				query = em.createQuery("SELECT p FROM Product p WHERE p.active = :active");
-				query.setParameter("active", Boolean.TRUE);
-			}
-			else{
-				query = em.createQuery("SELECT p FROM Product p");
-			}
+			String queryString = "SELECT p FROM Product p";
+			if(activeOnly) queryString += " WHERE p.active = :active";
+			if(sort != null) queryString += " ORDER BY p." + sort + " ASC";
+			
+			Query query = em.createQuery(queryString);
+			if(activeOnly) query.setParameter("active", Boolean.TRUE);
+
 			products = query.getResultList();
 		}catch(Exception e){
 			logger.error("MYERROR : " + e);

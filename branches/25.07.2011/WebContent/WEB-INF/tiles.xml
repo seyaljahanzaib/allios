@@ -186,6 +186,15 @@
 		<put-attribute name="body" value="/admin/add_product.jsp" />
 	</definition>
 
+	<definition name="newWZ" extends="adminLayout">
+		<put-attribute name="body" value="/admin/add_order.jsp" />
+	</definition>
+	<definition name="newWZMessage" extends="newWZ">
+		<put-attribute name="message" value="/admin/message.jsp" />
+	</definition>
+
+
+
 
 
 </tiles-definitions>

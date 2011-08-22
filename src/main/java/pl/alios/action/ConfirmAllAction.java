@@ -67,6 +67,7 @@ public class ConfirmAllAction extends ActionSupport {
 		order.setCustomer(customer);
 		order.setOrderDate(new java.sql.Date(new Date().getTime()));
 		order.setState(Commons.ORDER_STATE_OCZEKUJE);
+		order.setExternal(Boolean.FALSE);
 		try {
 			DBAdapter.getInstance().getOrderDAO().addOrder(order);
 			orderNumber = DBAdapter.getInstance().getOrderDAO().getOrder(order.getOrderId().toString()).getNumber();
@@ -86,7 +87,7 @@ public class ConfirmAllAction extends ActionSupport {
 	private void updateProducts() {
 		List<Product> products = null;
 		try {
-			products = DBAdapter.getInstance().getProductDAO().getAllProducts(true);
+			products = DBAdapter.getInstance().getProductDAO().getAllProducts(true , null);
 		} catch (Exception e) {
 			Logger logger  = Logger.getLogger(this.getClass());
 			logger.error("Moja wina : " + e);

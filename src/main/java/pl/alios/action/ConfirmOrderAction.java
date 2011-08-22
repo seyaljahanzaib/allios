@@ -46,9 +46,10 @@ public class ConfirmOrderAction extends ActionSupport {
 					try{
 						numberOfItems = Integer.valueOf(numberOfItem.get(i)).intValue();
 					}catch(NumberFormatException e){
-
+						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
+						return "MESSAGE";
 					}
-					if(numberOfItems == 0){
+					if(numberOfItems < 1){
 						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
 						return "MESSAGE";
 					}
@@ -88,9 +89,10 @@ public class ConfirmOrderAction extends ActionSupport {
 					try{
 						numberOfItems = Integer.valueOf(numberOfItem.get(i)).intValue();
 					}catch(NumberFormatException e){
-
+						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
+						return "MESSAGE";
 					}
-					if(numberOfItems == 0){
+					if(numberOfItems < 1){
 						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
 						return "MESSAGE";
 					}

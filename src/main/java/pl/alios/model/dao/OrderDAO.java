@@ -7,9 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import pl.alios.model.Category;
 import pl.alios.model.Order;
-import pl.alios.model.OrderItem;
 import pl.alios.utils.Commons;
 import pl.alios.utils.HibernateUtil;
 

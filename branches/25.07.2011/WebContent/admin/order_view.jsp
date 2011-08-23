@@ -140,15 +140,15 @@ clear: both;
 		<div id="stopka"></div>
 		
 		<div id="maintekst1" style="margin-top: 14px;">Status:</div>
-		<s:select id="main_combo" name="statusSearch" list="statusList" style="width: 120px;">
-			<option value="Oczekuje" >Wszystkie</option>
-			<option value="Anulowane" >Anulowane</option>
-			<option value="Oczekuje" >Oczekuje</option>
-			<option value="Potwierdzone">Potwierdzone</option>
-			<option value="W przygotowaniu">W przygotowaniu</option>
-			<option value="Wysłane">Wysłane</option>
-			<option value="Dostarczone">Dostarczone</option>
-		</s:select>
+<%-- 		<s:select id="main_combo" name="statusSearch" list="statusList" style="width: 120px;"> --%>
+<!-- 			<option value="Oczekuje" >Wszystkie</option> -->
+<!-- 			<option value="Anulowane" >Anulowane</option> -->
+<!-- 			<option value="Oczekuje" >Oczekuje</option> -->
+<!-- 			<option value="Potwierdzone">Potwierdzone</option> -->
+<!-- 			<option value="W przygotowaniu">W przygotowaniu</option> -->
+<!-- 			<option value="Wysłane">Wysłane</option> -->
+<!-- 			<option value="Dostarczone">Dostarczone</option> -->
+<%-- 		</s:select> --%>
 
 
 

@@ -51,13 +51,13 @@ public class Order {
 	
 	private Boolean external;
 	
-	@Column(nullable=false)
+
 	private String ordCompanyName;
-	@Column(nullable=false)
+
 	private String ordStreet;
-	@Column(nullable=false)
+
 	private String ordCity;
-	@Column(nullable=false)
+
 	private String ordZipCode;
 	
 	

@@ -19,7 +19,7 @@
 <fo:flow flow-name="xsl-region-body" font-family="Tahomal">
 
 	<fo:block>
-           <fo:external-graphic src="invioce_logo.png"/>
+           <fo:external-graphic src="invoice_logo.png"/>
 	</fo:block>
 	<fo:block text-align="right" margin-right="45mm" letter-spacing="4" font-size="12pt" font-family="TahomalBD">FAKTURA VAT</fo:block>
 	<fo:block text-align="right" margin-right="45mm" letter-spacing="2" font-size="11pt">Nr. <xsl:value-of select="Faktura/Numer"/></fo:block>

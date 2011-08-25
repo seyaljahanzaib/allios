@@ -11,7 +11,7 @@
 <fo:page-sequence master-reference="ZUZ" initial-page-number="1">
 
 <fo:static-content flow-name="xsl-region-after">
-		<fo:block text-align="left" font-size="7pt" font-family="TahomalBD">Dla produktów medycznych obowiązuje 8% podatku VAT</fo:block>
+		<fo:block text-align="left" font-size="7pt" font-family="Tahomal">Wyroby medyczne objęte są 8% stawką VAT na podstawie poz. 105 załącznika 3 ustawy o podaktu od towarów z dnia 11.03.2004 Dz. U. nr 54 poz. 535 z późniejszymi zmianami.</fo:block>
         <fo:block text-align="left" font-size="7pt" font-family="TahomalBD">Dokonując płatności przelewem prosimy o podanie w polu tytułem numeru faktury oraz kodu klienta: 234/06/2011 20009</fo:block>
         <fo:block text-align="right" margin-top="14pt" font-size="7pt" font-family="TahomalBD">Strona 1 z 1</fo:block>
 </fo:static-content>

@@ -248,6 +248,7 @@
 		</div></td>
 </tr>
 
+</s:iterator>
 <tr>
 	<td width="29" height="40">
 		<div id="k3z">
@@ -276,9 +277,6 @@
 		<div id="wartoscn">19,25 zł</div>
 		</div></td>
 </tr>
-
-
-</s:iterator>
 
 </table>
 

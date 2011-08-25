@@ -1,6 +1,7 @@
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <style>
 #glowna {
 	width: 760px;
@@ -252,7 +253,7 @@
 <tr>
 	<td width="29" height="40">
 		<div id="k3z">
-		<div id="lp"><s:property value="#item.index + 1" /></div>
+		<div id="lp">${fn:length(order.listOfProducts) + 1}</div>
 		</div></td>
 	<td width="352" height="40">
 		<div id="k3z">

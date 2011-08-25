@@ -145,12 +145,9 @@
 #tmenu_p { 
 	float: left;
 }
-
-
 #stopka {
 	clear: both;
 	}
-	
 </style>
 
 <div id="searcher">
@@ -258,6 +255,7 @@
 		<div id="pointer"></div>
 		<div id="zapis">${item.dispalyName}</div>
 		</div>
+		<div id="tmenu_linia"></div>
 	</form>
 	
 	
@@ -267,9 +265,9 @@
 			<div id="menukatback" onclick='javascript:void(document.forms["${item2.dispalyName}"].submit())'>
 					<div id="podkat">${item2.dispalyName}</div>
 			</div>
+			<div id="tmenu_linia"></div>
 		</form>
 	</c:forEach>
-	<div id="tmenu_linia"></div>
 
 </div>
 </c:forEach>	
@@ -278,14 +276,16 @@
 	<div id="sekleft"></div>
 	<div id="sekcenter">POBIERZ CENNIK</div>
 	<div id="sekright"></div>
-</div>
+	</div>
 	
 	<div id="tmenuback">
-	<div id="zapis" style="margin-left: 40px;">cennik.pdf</div></div>
+	<div id="zapis" style="margin-left: 40px;">Aktualny cennik.pdf</div></div>
+	<div id="tmenu_linia"></div>
 	<div id="stopka"></div>
 	
 	<div id="tmenuback">
-	<div id="zapis" style="margin-left: 40px;">cennik.xls</div></div>
+	<div id="zapis" style="margin-left: 40px;">Aktualny cennik.xls</div></div>
+	<div id="tmenu_linia"></div>
 	<div id="stopka"></div>
 	
 

@@ -36,25 +36,25 @@
 	width:78px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
 	}
 #productList #dostepnosc {
-	width: 77px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
+	width: 86px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
 	}
 #productList #dostepnoscgraf0 {
-	width: 77px; height:140px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 86px; height:140px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf1 {
-	width: 77px; height:140px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 86px; height:140px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf2 {
-	width: 77px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 86px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf3 {
-	width: 77px; height:140px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 86px; height:140px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf4 {
-	width: 77px; height:140px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 86px; height:140px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf5 {
-	width: 77px; height:140px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 86px; height:140px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
 	}	
 #productList #producer {
 	 width: 103px; font: 12px/140px Tahoma; color: #160e86; float: left; text-align: center;
@@ -72,7 +72,7 @@
 	background: url(img/r_boxl.png); height: 25px; width: 5px; float: left; margin-top: 40px; margin-left: 27px;
 }
 #productList #field #field_middle {
-	background: url(img/r_boxc.png) repeat-x; height: 25px; width: 30px; float: left; margin-top: 40px;
+	background: url(img/r_boxc.png) repeat-x; height: 25px; width: 30px; float: left; margin-top: 40px; background-color: red;
 }
 #productList #field #field_right {
 	background: url(img/r_boxr.png); height: 25px; width: 5px; float: left; margin-top: 40px;
@@ -208,7 +208,7 @@ if (allProducts != null && allProducts.size() >0){
 	
 	<c:forEach items="<%=products%>" var="item" >
 		<tr>
-			<td style="width=142px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:142px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"> </div></div></td>
 			
 			
@@ -241,7 +241,7 @@ if (allProducts != null && allProducts.size() >0){
 					</c:if>
 					<c:if test="${item.numberOfItems > 0 and item.numberOfItems < 5}">
 						<div id="dostepnoscgraf1">
-						<div id="dostepnosc">&lt; 5szt./op</div></div>					
+						<div id="dostepnosc">&lt; 5szt./op.</div></div>					
 					</c:if>
 					<c:if test="${item.numberOfItems >= 5 and item.numberOfItems < 10}">
 						<div id="dostepnoscgraf2">
@@ -263,7 +263,7 @@ if (allProducts != null && allProducts.size() >0){
 			</td>
 			
 			
-			<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:89px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				
 				<div id="formdiv">
 				<form action="AddToCartAction">

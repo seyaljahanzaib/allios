@@ -39,10 +39,10 @@
 	background: url(img/k_topc.png); repeat-x; width: 20px; height: 29px; float: left;  text-align: left ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 #k1z #topc2 {
-	background: url(img/k_topc.png); repeat-x; width: 350px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
+	background: url(img/k_topc.png); repeat-x; width: 364px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 #k1z #topc3 {
-	background: url(img/k_topc.png); repeat-x; width: 92px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
+	background: url(img/k_topc.png); repeat-x; width: 78px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 #k1z #topc4 {
 	background: url(img/k_topc.png); repeat-x; width: 63px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
@@ -79,46 +79,46 @@
 	width: 80px; height: 80px; float: left; margin-top: 8px;
 	}
 #k2z #prodt {
-	width: 230px; height: 11px; font: bold 11px Tahoma; color: #160e86; margin-left: 10px; margin-top: 4px; float: left;
+	width: 270px; height: 10px; font: bold 11px Tahoma; color: #160e86; margin-left: 10px; margin-top: 4px; float: left;
 	}
 #k2z #prodo {
-	width: 230px; height: 20px; font: 11px Tahoma; color: #160e86; margin-left: 10px; margin-top: 11px; float: left;
+	width: 270px; height: 20px; font: 9px Tahoma; color: #160e86; margin-left: 10px; margin-top: 18px; float: left;
 	}
 #k2z #cenab {
-	width: 88px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 20px; text-align: right;
+	width: 78px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 36px; text-align: right;
 	}
 #k2z #cenan {
-	width: 88px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
+	width: 78px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
 	}
 #k2z #ilosc {
-	width: 59px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 25px; text-align: right;
+	width: 59px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 40px; text-align: right;
 	}
 #k2z #dostepnosc {
-	width: 77px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 70px; text-align: center;
+	width: 83px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 70px; text-align: center;
 	}
 #k2z #dostepnoscgraf0 {
-	width: 77px; height:100px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 83px; height:100px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #k2z #dostepnoscgraf1 {
-	width: 77px; height:100px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 83px; height:100px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #k2z #dostepnoscgraf2 {
-	width: 77px; height:100px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 83px; height:100px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #k2z #dostepnoscgraf3 {
-	width: 77px; height:100px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 83px; height:100px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #k2z #dostepnoscgraf4 {
-	width: 77px; height:100px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 83px; height:100px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #k2z #dostepnoscgraf5 {
-	width: 77px; height:100px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 83px; height:100px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
 	}	
 #k2z #wartoscb {
-	width: 88px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 20px; text-align: right;
+	width: 88px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 36px; text-align: right;
 	}
 #k2z #wartoscn {
-	width: 88px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
+	width: 88px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
 	}
 #k2z #usun {
 	width: 23px; height: 23px; background: url(img/kb_del1.png); background-repeat: no-repeat; background-position: center; float: left; margin-top: 38px; margin-left: 10px; cursor: pointer; border: none;
@@ -219,13 +219,13 @@ function deleteProduct(productId) {
 		<div id="lc"></div>
 		</div>
 	</td>
-	<td width="352">
+	<td width="366">
 		<div id="k1z">
 		<div id="topc2"><div id="nag">Produkty</div></div>
 		<div id="lc"></div>
 		</div>
 	</td>
-	<td width="94">
+	<td width="80">
 		<div id="k1z">
 		<div id="topc3"><div id="nag1">Cena</div></div>
 		<div id="lc"></div>
@@ -264,13 +264,13 @@ function deleteProduct(productId) {
 		<div id="k2z">
 		<div id="lp"><s:property value="#item.index + 1" /></div>
 		</div></td>
-	<td width="352" height="90">
+	<td width="366" height="90">
 		<div id="k2z">
 		<div id="photo"><img alt="" src="${product.image120}" height="80px" width="80px"></div>
 		<div id="prodt"><s:property value="product.name"/></div>
 		<div id="prodo"><s:property value="product.shortDescription"/></div>
 		</div></td>
-	<td width="94" height="90">
+	<td width="80" height="90">
 		<div id="k2z">
 		<div id="cenab"><s:property value="priceBruttoString"/> zł</div>
 		<div id="cenan"><s:property value="priceNettoString"/> zł</div>

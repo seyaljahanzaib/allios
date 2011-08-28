@@ -21,7 +21,7 @@
 				background: url(img/gl_framer.png); width: 12px; height: 259px; float: left;
 				}
 			#nowosci #title {
-				font: bold 14px/30px Tahoma; color: #160e86; text-align: center; width: 356px; height: 30px; float: left;
+				font: bold 12px/30px Tahoma; color: #160e86; text-align: center; width: 356px; height: 30px; float: left;
 				}
 			#nowosci #photo {
 				border: 1px solid; width: 140px; height: 140px; float: left; margin-left: 108px;
@@ -79,7 +79,9 @@ clear: both;
 					<div id="infocena2">${item.priceBruttoString} zł</div>
 					</div>
 				<div id="wiecejcenter">
+				<s:form action="ProductInfoAction" theme="simple">
 					<div id="wiecejtekst">więcej...</div>
+				</s:form>
 					</div>
 				<div id="wiecejright"></div>
 				<div id="koszykleft"></div>

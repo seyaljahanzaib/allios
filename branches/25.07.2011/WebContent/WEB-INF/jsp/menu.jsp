@@ -129,13 +129,13 @@
 			font: 11px/25px Tahoma; color: #160e86; width: 184px; height: 25px; margin-left: 6px; float: left;
 		}
 	#menukatback #zapis:HOVER {
-			font: bold 11px/25px Tahoma; color: #160e86; width: 184px; height: 25px; margin-left: 6px; float: left; text-decoration: underline;
+			font: 11px/25px Tahoma; color: #160e86; width: 184px; height: 25px; margin-left: 6px; float: left; text-decoration: underline;
 		}
 	#menukatback #podkat{
 			font: 11px/25px Tahoma; color: #160e86; width: 180px; height: 25px; margin-left: 50px; float: left;
 		}
 	#menukatback #podkat:HOVER {
-			font: bold 11px/25px Tahoma; color: #160e86; width: 180px; height: 25px; margin-left: 50px; float: left; text-decoration: underline;
+			font: 11px/25px Tahoma; color: #160e86; width: 180px; height: 25px; margin-left: 50px; float: left; text-decoration: underline;
 		}
 	#menukatback #pointer {
 			background: url(img/k_p1.png); background-repeat: no-repeat; background-position:center; width: 6px; height: 25px; margin-left: 30px; float: left;
@@ -208,10 +208,10 @@
 	<div id="tmenu_linia"></div>
 	<div id="stopka"></div>
 	
-	<div id="tmenuback">
-	<div id="pointer"></div>
-	<div id="zapis">Ulubione</div></div>
-	<div id="stopka"></div>
+<!-- 	<div id="tmenuback"> -->
+<!-- 	<div id="pointer"></div> -->
+<!-- 	<div id="zapis">Ulubione</div></div> -->
+<!-- 	<div id="stopka"></div> -->
 
 <!-- 	<div id="tmenuback"> -->
 <!-- 	<div id="pointer"></div> -->

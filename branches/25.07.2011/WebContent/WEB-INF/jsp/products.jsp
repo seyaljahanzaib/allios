@@ -21,43 +21,43 @@
 	width: 27px; height: 1px; text-align: center ;font: 12px/90px Tahoma; color: #160e86; float: left;
 	}
 #productList #photo {
-	width: 120px; height: 120px; float: left; margin-top: 8px; margin-left: 11px;
+	width: 120px; height: 120px; float: left; margin-top: 10px; margin-left: 11px;
 	}
 #productList #prodt {
-	width: 230px; height: 11px; font: bold 13px Tahoma; color: #160e86; margin-left: 6px; margin-top: 4px; float: left;
+	width: 301px; height: 11px; font: bold 11px Tahoma; color: #160e86; margin-left: 3px; margin-top: 4px; float: left;
 	}
 #productList #prodo {
-	width: 230px; height: 20px; font: 11px Tahoma; color: #160e86; margin-left: 6px; margin-top: 11px; float: left;
+	width: 301px; height: 40px; font: 10px Tahoma; color: #160e86; margin-left: 3px; margin-top: 18px; float: left;
 	}
 #productList #cenab {
-	width: 78px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 55px; text-align: right;
+	width:70px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 55px; text-align: right; margin-right: 2px;
 	}
 #productList #cenan {
-	width:78px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
+	width:70px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right; margin-right: 2px;
 	}
 #productList #dostepnosc {
-	width: 86px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
+	width: 76px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
 	}
 #productList #dostepnoscgraf0 {
-	width: 86px; height:140px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 76px; height:140px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf1 {
-	width: 86px; height:140px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 76px; height:140px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf2 {
-	width: 86px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 76px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf3 {
-	width: 86px; height:140px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 76px; height:140px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf4 {
-	width: 86px; height:140px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 76px; height:140px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
 #productList #dostepnoscgraf5 {
-	width: 86px; height:140px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
+	width: 76px; height:140px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
 	}	
 #productList #producer {
-	 width: 103px; font: 12px/140px Tahoma; color: #160e86; float: left; text-align: center;
+	 width: 76px; font: 11px/140px Tahoma; color: #160e86; float: left; text-align: center;
 	}
 #productList_pageLabel{
 	height:27px; width: 142px; font: bold 12px/27px Tahoma; color: #160e86; float: left;
@@ -66,7 +66,7 @@
 	float:left; background: url(img/pg_ll.png); height: 28px; width: 2px;
 }
 #productList_pageLabel_two{
-	font: 12px/28px Tahoma; color: #160e86; float: left; margin-left: 3px;
+	font: 12px/28px Tahoma; color: #160e86; float: left;
 }
 #productList #field #field_left{
 	background: url(img/r_boxl.png); height: 25px; width: 5px; float: left; margin-top: 40px; margin-left: 27px;
@@ -177,29 +177,29 @@ if (allProducts != null && allProducts.size() >0){
 		</td>
 		
 		
-		<td style="width:255px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:250px;">Nazwa produktu</div>
+		<td style="width:304px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:299px; margin-left:3px;">Nazwa produktu</div>
 			<div id="title_podzialka"></div>
 		</td>
 			
 			
-		<td style="width:84px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:79px; text-align:center;">Cena</div>
+		<td style="width:72px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:70px; text-align:center;">Cena</div>
 			<div id="title_podzialka"></div>
 		</td>
 		
-		<td style="width:103px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:98px; text-align:center;">Producent</div>
+		<td style="width:76px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:74px; text-align:center;">Producent</div>
 			<div id="title_podzialka"></div>
 		</td>
 		
-		<td style="width:87px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:82px; text-align:center;">Dostępność</div>
+		<td style="width:76px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:74px; text-align:center;">Dostępność</div>
 			<div id="title_podzialka"></div>
 		</td>
 		
-		<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:86px; text-align:center;">Ilość</div>
+		<td style="width:90px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:90px; text-align:center;">Ilość</div>
 			<div id="stopka"></div>
 		</td>
 
@@ -212,7 +212,7 @@ if (allProducts != null && allProducts.size() >0){
 				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"> </div></div></td>
 			
 			
-			<td style="width:255px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:304px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 				<div id="prodt">${item.name}</div>
 				<div id="prodo">${item.shortDescription}</div>
@@ -220,7 +220,7 @@ if (allProducts != null && allProducts.size() >0){
 			</td>
 			
 			
-			<td style="width:84px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:72px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 					<div id="cenab">${item.priceBrutto} zł</div>
 					<div id="cenan">${item.priceNetto} zł</div>
@@ -228,12 +228,12 @@ if (allProducts != null && allProducts.size() >0){
 			</td>
 			
 			
-			<td style="width:103px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:76px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList"><div id="producer">${item.producer}</div></div>
 			</td>
 			
 			
-			<td style="width:87px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:76px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 					<c:if test="${item.numberOfItems == 0}">
 						<div id="dostepnoscgraf0">
@@ -263,7 +263,7 @@ if (allProducts != null && allProducts.size() >0){
 			</td>
 			
 			
-			<td style="width:89px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:90px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				
 				<div id="formdiv">
 				<form action="AddToCartAction">
@@ -280,7 +280,7 @@ if (allProducts != null && allProducts.size() >0){
 							</div>
 						</c:if>
 						<c:if test="${item.numberOfItems == 0}">
-							<div style="width: 88px;"></div>
+							<div style="width: 90px;"></div>
 						</c:if>
 					</div>
 				</form>

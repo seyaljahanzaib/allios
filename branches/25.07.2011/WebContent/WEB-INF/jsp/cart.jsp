@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -113,11 +114,6 @@
 #k2z #dostepnoscgraf5 {
 	width: 77px; height:100px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
 	}	
-	
-	
-	
-	
-	
 #k2z #wartoscb {
 	width: 88px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 20px; text-align: right;
 	}

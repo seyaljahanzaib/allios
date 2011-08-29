@@ -11,6 +11,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
+import pl.alios.model.OrderItem;
 import pl.alios.model.Product;
 import pl.alios.model.Property;
 import pl.alios.utils.HibernateUtil;
@@ -146,6 +147,43 @@ public class ProductDAO extends AbstarctDAO{
 			em.close();
 		}
 		return result;
+	}
+
+	public void setProductCount(List<OrderItem> listOfProducts) throws Exception {
+		logger.info("Przywracam na satn po anulowaniu zamowienia ordID : " + listOfProducts.get(0).getOrder().getOrderId());
+		
+		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
+		EntityManager em = emf.createEntityManager();
+		int result;
+		try {
+			EntityTransaction t = em.getTransaction();
+			try {
+				t.begin();
+				
+				Query q = null;
+				boolean wasRollback = false;
+				for(OrderItem item : listOfProducts){
+					q = em.createNativeQuery("Update product p SET p.dostepnych_sztuk = p.dostepnych_sztuk + " + item.getNumberOfItem() + " WHERE p.product_id = " + item.getProduct().getProduct_id());
+					result  = q.executeUpdate();
+					System.out.println("result : " + result);
+//					if (result.equals("BLAD")){
+//						logger.info("Niezgodnosc stanow dla produktu o id =  " + s + " , przedmiotow o liczebnosci = " + map.get(s));
+//						wasRollback = true;
+//						t.rollback();
+//						break;
+//					}
+				}
+				if ( !wasRollback ) t.commit();
+			} catch(Exception e){
+				logger.error("MYERROR : " + e);
+				throw e;
+			} finally {
+				if (t.isActive()) t.rollback();
+			}
+		} finally {
+			em.close();
+		}
+		
 	}
 	
 	

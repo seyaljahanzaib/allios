@@ -35,7 +35,6 @@ public class Product {
 //	private Double prmotionPriceNetto;
 //	private Double prmotionPriceBrutto;
 //	private Boolean news;
-	private String state;
 	private String image;
 	private String image120;
 	private Integer firstPagePosition;
@@ -88,8 +87,6 @@ public class Product {
 //	public void setPrmotionPriceBrutto(Double prmotionPriceBrutto) {this.prmotionPriceBrutto = prmotionPriceBrutto;}
 //	public Boolean getNews() {return news;}
 //	public void setNews(Boolean news) {this.news = news;}
-	public String getState() {return state;}
-	public void setState(String state) {this.state = state;}
 	public String getImage() {return image;}
 	public void setImage(String image) {this.image = image;}
 	public String getImage120() {return image120;}

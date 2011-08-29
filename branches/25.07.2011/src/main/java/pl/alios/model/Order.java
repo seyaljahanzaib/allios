@@ -15,8 +15,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
-import org.hibernate.annotations.CollectionId;
-
 import pl.alios.utils.Commons;
 
 @Entity(name="zamowienie")

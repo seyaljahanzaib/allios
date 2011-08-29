@@ -1,19 +1,16 @@
 package pl.alios.model.dao;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import pl.alios.model.OrderItem;
 import pl.alios.model.Product;
-import pl.alios.model.Property;
 import pl.alios.utils.HibernateUtil;
 
 public class ProductDAO extends AbstarctDAO{

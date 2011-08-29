@@ -15,6 +15,7 @@ import pl.alios.model.Order;
 import pl.alios.model.dao.adapter.DBAdapter;
 import pl.alios.utils.Commons;
 import pl.alios.utils.Helper;
+import pl.alios.utils.Util;
 import pl.alios.utils.fop.FopPrinter;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -107,6 +108,8 @@ public class OrderReviewAction extends ActionSupport {
 				order.setState(Commons.ORDER_STATE_ANULOWANE);
 				try {
 					DBAdapter.getInstance().getOrderDAO().merge(order);
+					DBAdapter.getInstance().getProductDAO().setProductCount(order.getListOfProducts());
+					Util.refreshProducts();
 				} catch (Exception e) {
 					return "ERROR";
 				}

@@ -24,7 +24,7 @@
 				font: bold 12px/30px Tahoma; color: #160e86; text-align: center; width: 356px; height: 30px; float: left;
 				}
 			#nowosci #photo {
-				width: 140px; height: 140px; float: left; margin-left: 108px;
+				width: 140px; height: 140px; float: left; margin-left: 108px; margin-bottom: 2px;
 				}
 			#nowosci #cenacenter {
 				background: url(img/gl_cenac.png); width: 346px; height: 40px; margin-top: 2px; float: left; 

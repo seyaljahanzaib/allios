@@ -17,8 +17,11 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long product_id;
+	@Column(length=1000)
 	private String name;
+	@Column(length=3000)
 	private String description;
+	@Column(length=2000)
 	private String shortDescription;
 	private Double priceNetto;
 	private Double priceBrutto;
@@ -37,6 +40,8 @@ public class Product {
 //	private Boolean news;
 	private String image;
 	private String image120;
+	private String image140;
+	private String image250;
 	private Integer firstPagePosition;
 	private Boolean active;
 	private String storage;
@@ -95,6 +100,12 @@ public class Product {
 //	public void setAvaiblable(Integer avaiblable) {this.avaiblable = avaiblable;}
 	public Boolean getActive() {return active;}
 	public void setActive(boolean active) {this.active = active;}
+	public String getImage140() {return image140;}
+	public void setImage140(String image140) {this.image140 = image140;}
+	public String getImage250() {return image250;}
+	public void setImage250(String image250) {this.image250 = image250;}
+	
+	
 	
 	
 	public Category getCategory() {

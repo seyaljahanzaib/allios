@@ -160,7 +160,7 @@ public class ProductDAO extends AbstarctDAO{
 				Query q = null;
 				boolean wasRollback = false;
 				for(OrderItem item : listOfProducts){
-					q = em.createNativeQuery("Update product p SET p.dostepnych_sztuk = p.dostepnych_sztuk + " + item.getNumberOfItem() + " WHERE p.product_id = " + item.getProduct().getProduct_id());
+					q = em.createNativeQuery("Update Product p SET p.dostepnych_sztuk = p.dostepnych_sztuk + " + item.getNumberOfItem() + " WHERE p.product_id = " + item.getProduct().getProduct_id());
 					result  = q.executeUpdate();
 					System.out.println("result : " + result);
 //					if (result.equals("BLAD")){

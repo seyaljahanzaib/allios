@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <style>
 #glowna {
 	width: 760px;
@@ -554,11 +555,10 @@
 <tr>
 			<td width="29" height="40">
 				<div id="k3z">
-					<div id="lp">
-						<s:property value="#item.index + 1" />
-					</div>
+					<div id="lp">${fn:length(order.listOfProducts) + 1}</div>
 				</div>
 			</td>
+			
 			<td width="392" height="40">
 				<div id="k3z">
 					<div id="produkt">
@@ -572,7 +572,7 @@
 						25,00 zł
 					<div id="cenan">
 						19,25 zł
-				</div>
+				</div></div></div>
 			</td>
 			<td width="65" height="40">
 				<div id="k3z">
@@ -663,7 +663,7 @@
 	<b>PL BPH o/Płock <br>80 1234 1234 12331 12313 12332</b><br>
 	<br>
 	<br>* indywidualny kod klietna znajdą Państwo w sekcji "Twoje
-	konto / Dane użytkownika"
+	konto / Twoje dane"
 </div>
 
 

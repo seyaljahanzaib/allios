@@ -21,13 +21,13 @@
 	width: 27px; height: 1px; text-align: center ;font: 12px/90px Tahoma; color: #160e86; float: left;
 	}
 #productList #photo {
-	width: 120px; height: 120px; float: left; margin-top: 10px; margin-left: 11px;
+	width: 120px; height: 120px; float: left; margin-top: 10px; margin-left: 11px; cursor: pointer;
 	}
 #productList #prodt {
-	width: 301px; height: 11px; font: bold 11px Tahoma; color: #160e86; margin-left: 3px; margin-top: 4px; float: left;
+	width: 301px; height: 11px; font: bold 11px Tahoma; color: #160e86; margin-left: 3px; margin-top: 4px; float: left; cursor: pointer;
 	}
 #productList #prodo {
-	width: 301px; height: 40px; font: 10px Tahoma; color: #160e86; margin-left: 3px; margin-top: 18px; float: left;
+	width: 301px; height: 40px; font: 10px Tahoma; color: #160e86; margin-left: 3px; margin-top: 18px; float: left; cursor: pointer;
 	}
 #productList #cenab {
 	width:70px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 55px; text-align: right; margin-right: 2px;
@@ -206,16 +206,21 @@ if (allProducts != null && allProducts.size() >0){
 	</tr>
 
 	
-	<c:forEach items="<%=products%>" var="item" >
+	<c:forEach items="<%=products%>" var="item" varStatus="stat">
 		<tr>
 			<td style="width:142px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"> </div></div></td>
+				<form action="FullDescriptionAction" name="form${stat.index}">
+					<input type="hidden" name="productID" value="${item.product_id}"/>
+				</form>
+			
+				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px" 
+														   onclick='javascript:void(document.forms["form${stat.index}"].submit())'></div></div></td>
 			
 			
 			<td style="width:304px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
-				<div id="prodt">${item.name}</div>
-				<div id="prodo">${item.shortDescription}</div>
+				<div id="prodt" onclick='javascript:void(document.forms["form${stat.index}"].submit())'>${item.name}</div>
+				<div id="prodo" onclick='javascript:void(document.forms["form${stat.index}"].submit())'>${item.shortDescription}</div>
 				</div>
 			</td>
 			

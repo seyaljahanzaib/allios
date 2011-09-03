@@ -37,10 +37,10 @@
 		background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; 
 		}
 	#orders_view #main_addtekst {
-		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; float: left;
+		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; border: none; background-color: transparent; cursor: pointer; float: left;
 		}
  	#orders_view #main_addtekst:HOVER {
- 		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; float: left; */
+ 		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; border: none; background-color: transparent; cursor: pointer; float: left;
  		}
  	#orders_view #mn_table {
  		background: url(../img/pa_mnprodc.png); height: 39px; float: left;
@@ -108,7 +108,7 @@ clear: both;
 	
 	<div id="main_add" style="float: right; margin-right: 80px; margin-top: 6px; margin-bottom: 6px;">
 	<s:form action="OrderAdminAction" theme="simple">
-		<s:submit id="main_addtekst" name="back" value="Wróć"/>
+		<s:submit id="main_addtekst" value="Wróć" name="back" cssStyle="width:92px; height:30px;"/>
 	</s:form>
 	</div>
 

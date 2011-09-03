@@ -157,8 +157,13 @@ clear: both;
 		
 		
 		<div id="main_add" style="float: right; margin-right: 80px;">
+			<div id="main_addtekst">Nowe zam.</div>
+		</div>
+		
+		<div id="main_add" style="float: right; margin-right: 10px;">
 			<div id="main_addtekst">Szukaj</div>
 		</div>
+		
 	</div>
 </s:form>
 	

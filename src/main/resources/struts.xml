@@ -26,6 +26,8 @@
 			<result name="SUCCESS" type="tiles">add_to_cart</result>
 			<result name="MAINPAGE" type="tiles">welcome</result>
 			<result name="MAINPAGE_MESSAGE" type="tiles">welcome_message</result>
+			<result name="PRODUCT_DESCRIPTION" type="tiles">product_details</result>
+			<result name="PRODUCT_DESCRIPTION_MESSAGE" type="tiles">product_details_message</result>
 			<result name="ERROR" type="tiles">errorMessage</result>
 			<result name="MESSAGE" type="tiles">add_to_cart_message</result>
 		</action>
@@ -101,6 +103,12 @@
 			<result name="MESSAGE" type="tiles">message</result>
 			<result name="ERROR" type="tiles">errorMessage</result>
 		</action>
+		
+		<action name="FullDescriptionAction"  class="pl.alios.action.FullDescriptionAction">
+			<result name="SUCCESS" type="tiles">product_details</result>
+			<result name="ERROR" type="tiles">errorMessage</result>
+		</action>
+		
 		
 		<action name="*Link" method="{1}" class="pl.alios.main.LinkAction">
 			<result name="welcome" type="tiles">welcome</result>

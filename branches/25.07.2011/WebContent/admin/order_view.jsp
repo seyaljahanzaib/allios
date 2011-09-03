@@ -258,7 +258,7 @@ clear: both;
 		<td width="150px" height="60px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 			<div id="mn_table1" style="width: 150px;">
 				<s:if test="%{external == true}">
-					<div id="mn_tekst1" style="width: 149px; text-align: center; color : green;"><b><s:property value="number"/></b></div>
+					<div id="mn_tekst1" style="width: 149px; text-align: center; color : red;"><b><s:property value="number"/></b></div>
 				</s:if>
 				<s:else>
 					<div id="mn_tekst1" style="width: 149px; text-align: center;"><b><s:property value="number"/></b></div>

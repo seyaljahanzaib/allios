@@ -130,9 +130,14 @@
   	<definition name="products_searcher" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/products_searcher.jsp" />
 	</definition>
-
-
-
+	
+	<definition name="product_details" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/jsp/product_info.jsp" />
+	</definition>
+	
+	<definition name="product_details_message" extends="product_details">
+				<put-attribute name="infoMessage" value="/WEB-INF/jsp/message.jsp" />
+	</definition>
 
 
 

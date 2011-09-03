@@ -31,19 +31,19 @@
 		width: 150px; font: bold 12px/25px Tahoma; color: #101192; text-align: right; margin-left: 20px; margin-top: 40px; float: left;
 		}
 	#add_order #main_graf {
-		background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
+		height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
 		}
 	#add_order #main_combo {
-		background: url(../img/pd_areac.png); height: 25px; margin-top: 40px; margin-left: 20px; float: left; 
+		height: 25px; margin-top: 40px; margin-left: 20px; float: left; font: 12px/25px Tahoma; color: #160e86;
 		}
 	#add_order #main_add {
 		background: url(../img/pa_button.png); width: 92px; height: 33px; float: left; cursor: pointer; 
 		}
 	#add_order #main_addtekst {
-		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; float: left;
+		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; border: none; background-color: transparent; cursor: pointer; float: left;
 		}
  	#add_order #main_addtekst:HOVER {
- 		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; float: left; */
+ 		width: 92px; font: bold 12px/30px Tahoma; color: #101192; text-align: center; text-decoration: underline; border: none; background-color: transparent; cursor: pointer; float: left;
  		}
 	#add_order #mn_table {
  		background: url(../img/pa_mnprodc.png); height: 39px; float: left;
@@ -111,7 +111,7 @@ clear: both;
 			<div id="stopka"></div>
 			
 			<div id="maintekst1" style="margin-top: 14px;">Nazwa produktu:</div>
-				<select name="productID" id="main_combo" style="width:240px; margin-top:20px; height:25px;">
+				<select name="productID" id="main_combo" style="width:240px; margin-top:16px; height:25px;">
 					<c:forEach items="${products}" var="item" varStatus="loop">
 						<c:if test="${loop.index == 0}">
 							<option selected="selected" value="${item.product_id}">${item.name}</option>
@@ -124,32 +124,35 @@ clear: both;
 			
 			
 			<div id="maintekst1" style="margin-top: 14px;">Nazwa odbiorcy:</div>
-			<div id="main_graf" style="width:300px; margin-top: 14px;"><s:textfield name="order.ordCompanyName"/></div>
+			<div id="main_graf" style="width:300px; margin-top: 14px;"><s:textfield name="order.ordCompanyName" style="width:300px; height:20px;"/></div>
 			<div id="stopka"></div>
 			
 			<div id="maintekst1" style="margin-top: 14px;">Ilość:</div>
-			<div id="main_graf" style="width:100px; margin-top: 14px;"><s:textfield name="quantity"/></div>
+			<div id="main_graf" style="width:100px; margin-top: 14px;"><s:textfield name="quantity" style="width:100px; height:20px;"/></div>
 			
 			<div id="maintekst1" style="margin-top: 16px; margin-left: 160px;">Ulica:</div>
-			<div id="main_graf" style="width:300px; margin-top: 16px;"><s:textfield name="order.ordStreet"/></div>
+			<div id="main_graf" style="width:300px; margin-top: 16px;"><s:textfield name="order.ordStreet" style="width:300px; height:20px;"/></div>
 			<div id="stopka"></div>
 			
-			<div id="maintekst1" style="margin-left:450px; margin-top: 16px;">Kod pocztowy:</div>
-			<div id="main_graf" style="width:100px; margin-top: 16px;"><s:textfield name="order.ordZipCode"/></div>
+			<div id="maintekst1" style="margin-top: 14px;">Rabat:</div>
+			<div id="main_graf" style="width:100px; margin-top: 16px;"><s:textfield name="order.ordDiscount" style="width:100px; height:20px;"/></div>
+			
+			<div id="maintekst1" style="margin-left:160px; margin-top: 16px;">Kod pocztowy:</div>
+			<div id="main_graf" style="width:100px; margin-top: 16px;"><s:textfield name="order.ordZipCode" style="width:100px; height:20px;"/></div>
 			
 			<div id="maintekst1" style="margin-top: 16px;">Miejscowość:</div>
-			<div id="main_graf" style="width:150px; margin-top: 16px;"><s:textfield name="order.ordCity"/></div>
+			<div id="main_graf" style="width:150px; margin-top: 16px;"><s:textfield name="order.ordCity" style="width:150px; height:20px;"/></div>
 			<div id="stopka"></div>
 			
-			<div id="maintekst1" style="margin-top: 16px; margin-left: 450px;">Rabat:</div>
-			<div id="main_graf" style="width:60px; margin-top: 16px;"></div>
+			<div id="maintekst1" style="margin-top: 16px; margin-left: 450px;">NIP:</div>
+			<div id="main_graf" style="width:60px; margin-top: 16px;"><s:textfield name="order.ordNip" style="width:150px; height:20px;"/></div>
 			<div id="stopka"></div>
 			
 			<div id="main_add" style="float: right; margin-right: 80px; margin-top: 10px;">
-				<s:submit id="main_addtekst" value="Utwórz Zam." name="create"/>
+				<s:submit id="main_addtekst" value="Utwórz Zam." name="create" cssStyle="width:92px; height:30px;"/>
 			</div>
 			<div id="main_add" style="float: right; margin-right: 20px; margin-top: 10px;">
-					<s:submit id="main_addtekst" value="Dodaj" name="add"/>
+					<s:submit id="main_addtekst" value="Dodaj" name="add" cssStyle="width:92px; height:30px;"/>
 			</div>
 			<div id="stopka"></div>
 		</div>

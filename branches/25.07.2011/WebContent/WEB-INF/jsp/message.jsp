@@ -5,7 +5,7 @@
 	width: 760px;
 }
 #main_message {
-	background-color: #ccccff; width: 760px; height: 50px; border-top: 1px dotted #9999cc; border-bottom: 1px dotted #9999cc; font: bold 12px/50px Tahoma; color: #160e86; text-align: center; 
+	background-color: #ccccff; width: 760px; height: 50px; border-top: 1px dotted #9999cc; border-bottom: 1px dotted #9999cc; font: bold 12px/50px Tahoma; color: #160e86; text-align: center; margin-bottom: 6px; 
 	}
 
 #stopka {

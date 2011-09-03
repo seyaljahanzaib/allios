@@ -253,9 +253,7 @@
 <tr>
 	<td width="29" height="40">
 				<div id="k3z">
-					<div id="lp">
-						<s:property value="#item.index + 1" />
-					</div>
+					<div id="lp">${fn:length(order.listOfProducts) + 1}</div>
 				</div>
 			</td>
 			<td width="392" height="40">

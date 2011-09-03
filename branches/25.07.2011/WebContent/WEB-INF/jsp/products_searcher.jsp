@@ -21,28 +21,43 @@
 	width: 27px; height: 1px; text-align: center ;font: 12px/90px Tahoma; color: #160e86; float: left;
 	}
 #productList #photo {
-	width: 120px; height: 120px; float: left; margin-top: 8px; margin-left: 11px;
+	width: 120px; height: 120px; float: left; margin-top: 10px; margin-left: 11px;
 	}
 #productList #prodt {
-	width: 230px; height: 11px; font: bold 13px Tahoma; color: #160e86; margin-left: 6px; margin-top: 4px; float: left;
+	width: 301px; height: 11px; font: bold 11px Tahoma; color: #160e86; margin-left: 3px; margin-top: 4px; float: left;
 	}
 #productList #prodo {
-	width: 230px; height: 20px; font: 11px Tahoma; color: #160e86; margin-left: 6px; margin-top: 11px; float: left;
+	width: 301px; height: 40px; font: 10px Tahoma; color: #160e86; margin-left: 3px; margin-top: 18px; float: left;
 	}
 #productList #cenab {
-	width: 78px; font: bold 12px Tahoma; color: #160e86; float: left; margin-top: 55px; text-align: right;
+	width:70px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 55px; text-align: right; margin-right: 2px;
 	}
 #productList #cenan {
-	width:78px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
+	width:70px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right; margin-right: 2px;
 	}
 #productList #dostepnosc {
-	width: 77px; font: 12px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
+	width: 76px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 92px; text-align: center;
 	}
-#productList #dostepnoscgraf {
-	width: 77px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
+#productList #dostepnoscgraf0 {
+	width: 76px; height:140px; background: url(img/bat_0.png); background-repeat: no-repeat; background-position: center; float: left;
 	}
+#productList #dostepnoscgraf1 {
+	width: 76px; height:140px; background: url(img/bat_1.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf2 {
+	width: 76px; height:140px; background: url(img/bat_2.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf3 {
+	width: 76px; height:140px; background: url(img/bat_3.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf4 {
+	width: 76px; height:140px; background: url(img/bat_4.png); background-repeat: no-repeat; background-position: center; float: left;
+	}
+#productList #dostepnoscgraf5 {
+	width: 76px; height:140px; background: url(img/bat_5.png); background-repeat: no-repeat; background-position: center; float: left;
+	}	
 #productList #producer {
-	 width: 103px; font: 12px/140px Tahoma; color: #160e86; float: left; text-align: center;
+	 width: 76px; font: 11px/140px Tahoma; color: #160e86; float: left; text-align: center;
 	}
 #productList_pageLabel{
 	height:27px; width: 142px; font: bold 12px/27px Tahoma; color: #160e86; float: left;
@@ -51,13 +66,13 @@
 	float:left; background: url(img/pg_ll.png); height: 28px; width: 2px;
 }
 #productList_pageLabel_two{
-	font: 12px/28px Tahoma; color: #160e86; float: left; margin-left: 3px;
+	font: 12px/28px Tahoma; color: #160e86; float: left;
 }
 #productList #field #field_left{
 	background: url(img/r_boxl.png); height: 25px; width: 5px; float: left; margin-top: 40px; margin-left: 27px;
 }
 #productList #field #field_middle {
-	background: url(img/r_boxc.png) repeat-x; height: 25px; width: 30px; float: left; margin-top: 40px;
+	background: url(img/r_boxc.png) repeat-x; height: 25px; width: 30px; float: left; margin-top: 40px; background-color: red;
 }
 #productList #field #field_right {
 	background: url(img/r_boxr.png); height: 25px; width: 5px; float: left; margin-top: 40px;
@@ -88,11 +103,47 @@
 
 </style>
 
+<%-- <% --%>
+<!-- List<Product> products = new ArrayList<Product>(); -->
+<!-- Map<String,Object> sessionAttr = ActionContext.getContext().getSession(); -->
+<!-- Map<String, ArrayList<Product>> productMap = (Map<String, ArrayList<Product>>) getServletContext().getAttribute("products"); -->
+<!-- List<Product> allProducts = productMap.get(sessionAttr.get("cart_category")); -->
+<!-- int pageNum = Integer.valueOf((String)sessionAttr.get("cart_page")); -->
+<!-- int end = 10*pageNum; -->
+<!-- int start = end - 10; -->
+
+<!-- for(int i=start;i<end;i++){ -->
+<!-- 	try{ -->
+<!-- 	products.add(allProducts.get(i)); -->
+<!-- 	}catch(IndexOutOfBoundsException e1){ -->
+<!-- 	}catch(NullPointerException e2){} -->
+<!-- } -->
+<!-- int number=0; -->
+<!-- int[] pageTab; -->
+<!-- if (allProducts != null && allProducts.size() >0){ -->
+<!-- 	if (allProducts.size() % 10 > 0) -->
+<!-- 		number= allProducts.size() / 10 + 1; -->
+<!-- 	else -->
+<!-- 		number= allProducts.size() / 10; -->
+<!-- 	int i=1; -->
+<!-- 	pageTab = new int[number]; -->
+<!-- 	while(i<=number){ -->
+<!-- 		pageTab[i-1] = i; -->
+<!-- 		i++; -->
+<!-- 	} -->
+<!-- 	int item; -->
+<!-- }else{ -->
+<!-- 	allProducts = new ArrayList<Product>(); -->
+<!-- 	number = 1; -->
+<!-- 	pageTab = new int[]{1}; -->
+<!-- } -->
+<!-- %> -->
+
 <table cellpadding="0" cellspacing="0">
 
 	<tr><td colspan="6" style="background:url(img/pg_c.png); height:29px; width:760px; font:bold 12px/29px Tahoma; color:#160e86;">
-		<div style="margin-left:5px; float:left;"></div>
-		<div style="float:right; margin-right:150px;"></div>
+		<div style="margin-left:5px; float:left;">Liczba produktów :</div>
+		<div style="float:right; margin-right:150px;">Sortowanie : </div>
 	</td></tr>
 </table>
 
@@ -104,7 +155,7 @@
 			<div id="title_pagelabel">
 			<div style="float:left; margin-left:3px; text-align:center;"></div>
 			<div style="float:left; margin-left:5px; text-align:center;">
-			<form action="SetPageAction" name="pageChange">
+<!-- 			<form action="SetPageAction" name="pageChange"> -->
 <%-- 				<select name="pageNumber" style="width:50px;" onchange='javascript:void(document.forms["pageChange"].submit())'> --%>
 <%-- 				<c:set var="numerStrony" value="<%=pageNum%>" /> --%>
 <%-- 					<c:forEach items="<%=pageTab%>" var="item"> --%>
@@ -116,7 +167,7 @@
 <%-- 						</c:if> --%>
 <%-- 					</c:forEach> --%>
 <%-- 				</select> --%>
-			</form>
+<!-- 			</form> -->
 			</div>
 			<div style="float:left; margin-left:5px;"></div>
 			</div>
@@ -126,29 +177,29 @@
 		</td>
 		
 		
-		<td style="width:255px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:250px;">Nazwa produktu</div>
+		<td style="width:304px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:299px; margin-left:3px;">Nazwa produktu</div>
 			<div id="title_podzialka"></div>
 		</td>
 			
 			
-		<td style="width:84px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:79px; text-align:center;">Cena</div>
+		<td style="width:72px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:70px; text-align:center;">Cena</div>
 			<div id="title_podzialka"></div>
 		</td>
 		
-		<td style="width:103px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:98px; text-align:center;">Producent</div>
+		<td style="width:76px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:74px; text-align:center;">Producent</div>
 			<div id="title_podzialka"></div>
 		</td>
 		
-		<td style="width:87px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:82px; text-align:center;">Dostępność</div>
+		<td style="width:76px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:74px; text-align:center;">Dostępność</div>
 			<div id="title_podzialka"></div>
 		</td>
 		
-		<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
-			<div id="productList_pageLabel_two" style="width:86px; text-align:center;">Ilość</div>
+		<td style="width:90px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<div id="productList_pageLabel_two" style="width:90px; text-align:center;">Ilość</div>
 			<div id="stopka"></div>
 		</td>
 
@@ -161,7 +212,7 @@
 				<div id="productList"><div id="photo"><img alt="" src="${item.image120}" height="120px" width="120px"> </div></div></td>
 			
 			
-			<td style="width:255px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:304px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 				<div id="prodt">${item.name}</div>
 				<div id="prodo">${item.shortDescription}</div>
@@ -169,7 +220,7 @@
 			</td>
 			
 			
-			<td style="width:84px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:72px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
 					<div id="cenab">${item.priceBrutto} zł</div>
 					<div id="cenan">${item.priceNetto} zł</div>
@@ -177,33 +228,60 @@
 			</td>
 			
 			
-			<td style="width:103px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:76px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList"><div id="producer">${item.producer}</div></div>
 			</td>
 			
 			
-			<td style="width:87px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:76px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
-					<div id="dostepnoscgraf">
-					<div id="dostepnosc">dostępny</div></div>
+					<c:if test="${item.numberOfItems == 0}">
+						<div id="dostepnoscgraf0">
+						<div id="dostepnosc">brak</div></div>
+					</c:if>
+					<c:if test="${item.numberOfItems > 0 and item.numberOfItems < 5}">
+						<div id="dostepnoscgraf1">
+						<div id="dostepnosc">&lt; 5szt./op.</div></div>					
+					</c:if>
+					<c:if test="${item.numberOfItems >= 5 and item.numberOfItems < 10}">
+						<div id="dostepnoscgraf2">
+						<div id="dostepnosc">dostępny</div></div>						
+					</c:if>
+					<c:if test="${item.numberOfItems >= 10 and item.numberOfItems < 50}">
+						<div id="dostepnoscgraf3">
+						<div id="dostepnosc">dostępny</div></div>			
+					</c:if>
+					<c:if test="${item.numberOfItems >= 50 and item.numberOfItems < 100}">
+						<div id="dostepnoscgraf4">
+						<div id="dostepnosc">dostępny</div></div>		
+					</c:if>
+					<c:if test="${item.numberOfItems >= 100}">
+						<div id="dostepnoscgraf5">
+						<div id="dostepnosc">dostępny</div></div>					
+					</c:if>
 				</div>
 			</td>
 			
 			
-			<td style="width:89px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
+			<td style="width:90px; height:28px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				
 				<div id="formdiv">
-				<form action="AddToCartAction">
+					<form action="AddToCartAction">
 					<div id="productList">
-						<div id="field" >
-							<div id="field_left"></div>
-							<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border:0px; width:30px; margin-top:2px; text-align:center;" theme="simple"/></div>
-							<div id="field_right"></div>
-						</div>
-						<div>
-							<input type="hidden" name="product_id" value="${item.product_id}"/>
-							<input type="submit" id="toCart" value="" style="margin-left: 6px; margin-top: 10px;"/>
-						</div>
+						<c:if test="${item.numberOfItems > 0}">
+							<div id="field" >
+								<div id="field_left"></div>
+								<div id="field_middle"><s:textfield name="quantity" value="1" cssStyle="border:0px; width:30px; margin-top:4px; text-align:center;" theme="simple"/></div>
+								<div id="field_right"></div>
+							</div>
+							<div>
+								<input type="hidden" name="product_id" value="${item.product_id}"/>
+								<input type="submit" id="toCart" value="" style="margin-left: 6px; margin-top: 10px;"/>
+							</div>
+						</c:if>
+						<c:if test="${item.numberOfItems == 0}">
+							<div style="width: 90px;"></div>
+						</c:if>
 					</div>
 				</form>
 				</div>

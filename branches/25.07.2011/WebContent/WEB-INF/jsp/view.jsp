@@ -45,10 +45,10 @@
 	background: url(img/k_topc.png); repeat-x; width: 20px; height: 29px; float: left;  text-align: left ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 #k1z #topc2 {
-	background: url(img/k_topc.png); repeat-x; width: 350px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
+	background: url(img/k_topc.png); repeat-x; width: 390px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 #k1z #topc3 {
-	background: url(img/k_topc.png); repeat-x; width: 92px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
+	background: url(img/k_topc.png); repeat-x; width: 72px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 #k1z #topc4 {
 	background: url(img/k_topc.png); repeat-x; width: 63px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
@@ -78,7 +78,7 @@
 	background: url(img/k_topc.png); repeat-x; width: 50px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 #k1z #wart {
-	background: url(img/k_topc.png); repeat-x; width: 161px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
+	background: url(img/k_topc.png); repeat-x; width: 141px; height: 29px; float: left;  text-align: center ;font: bold 11px/29px Tahoma; color: #ffffff;
 	}
 	
 	
@@ -89,13 +89,13 @@
 	width: 27px; text-align: center ;font: bold 11px/40px Tahoma; color: #160e86; float: left;
 	}
 #k3z #produkt {
-	width: 340px; font: bold 11px/40px Tahoma; color: #160e86; float: left;
+	width: 390px; font: bold 11px/40px Tahoma; color: #160e86; float: left;
 	}	
 #k3z #cenab {
-	width: 92px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 6px; text-align: right;
+	width: 72px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 6px; text-align: right;
 	}
 #k3z #cenan {
-	width: 92px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
+	width: 72px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
 	}		
 #k3z #ilosc {
 	width: 63px; font: 11px/40px Tahoma; color: #160e86; float: left; text-align: center;
@@ -104,10 +104,10 @@
 	width: 50px; font: 11px/40px Tahoma; color: #160e86; float: left; text-align: center;
 	}
 #k3z #wartoscb {
-	width: 166px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 6px; text-align: right;
+	width: 146px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 6px; text-align: right;
 	}
 #k3z #wartoscn {
-	width: 166px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
+	width: 146px; font: 11px Tahoma; color: #160e86; float: left; margin-top: 2px; text-align: right;
 	}
 		
 #stopka {
@@ -196,11 +196,11 @@
 		<div id="topl"></div>
 		<div id="topc1">L.p</div>
 		<div id="lc"></div></div></td>
-	<td width="352">
+	<td width="392">
 		<div id="k1z">
 		<div id="topc2"><div id="nag">Nazwa produktu/usługi</div></div>
 		<div id="lc"></div></div></td>
-	<td width="94">
+	<td width="74">
 		<div id="k1z">
 		<div id="topc3"><div id="nag1">Cena</div></div>
 		<div id="lc"></div></div></td>
@@ -212,7 +212,7 @@
 		<div id="k1z">
 		<div id="rabat"><div id="nag1">Rabat</div></div>
 		<div id="lc"></div></div></td>
-	<td width="168">
+	<td width="148">
 		<div id="k1z">
 		<div id="wart"><div id="nag1">Wartość</div></div>
 		<div id="topr"></div></div></td>
@@ -225,11 +225,11 @@
 		<div id="k3z">
 		<div id="lp"><s:property value="#item.index + 1" /></div>
 		</div></td>
-	<td width="352" height="40">
+	<td width="392" height="40">
 		<div id="k3z">
 		<div id="produkt"><s:property value="product.name"/></div>
 		</div></td>
-	<td width="94" height="40">
+	<td width="74" height="40">
 		<div id="k3z">
 		<div id="cenab"><s:property value="priceBruttoString"/> zł</div>
 		<div id="cenan"><s:property value="priceNettoString"/> zł</div>
@@ -242,7 +242,7 @@
 		<div id="k3z">
 		<div id="rabat">0%</div>
 		</div></td>
-	<td width="168" height="40">
+	<td width="148" height="40">
 		<div id="k3z">
 		<div id="wartoscb"><s:property value="totalPriceBruttoString"/> zł</div>
 		<div id="wartoscn"><s:property value="totalPriceNettoString"/> zł</div>
@@ -252,31 +252,48 @@
 </s:iterator>
 <tr>
 	<td width="29" height="40">
-		<div id="k3z">
-		<div id="lp">${fn:length(order.listOfProducts) + 1}</div>
-		</div></td>
-	<td width="352" height="40">
-		<div id="k3z">
-		<div id="produkt">Usługa transportu</div>
-		</div></td>
-	<td width="94" height="40">
-		<div id="k3z">
-		<div id="cenab">25,00 zł</div>
-		<div id="cenan">19,25 zł</div>
-		</div></td>
-	<td width="65" height="40">
-		<div id="k3z">
-		<div id="ilosc">1 szt.</div>
-		</div></td>
-	<td width="52" height="40">
-		<div id="k3z">
-		<div id="rabat"></div>
-		</div></td>
-	<td width="168" height="40">
-		<div id="k3z">
-		<div id="wartoscb">25,00 zł</div>
-		<div id="wartoscn">19,25 zł</div>
-		</div></td>
+				<div id="k3z">
+					<div id="lp">
+						<s:property value="#item.index + 1" />
+					</div>
+				</div>
+			</td>
+			<td width="392" height="40">
+				<div id="k3z">
+					<div id="produkt">
+						Usługa transportu
+					</div>
+				</div>
+			</td>
+			<td width="74" height="40">
+				<div id="k3z">
+					<div id="cenab">
+						25,00 zł
+					<div id="cenan">
+						19,25 zł
+				</div>
+			</td>
+			<td width="65" height="40">
+				<div id="k3z">
+					<div id="ilosc">
+						1 szt.
+					</div>
+				</div>
+			</td>
+			<td width="52" height="40">
+				<div id="k3z">
+				</div>
+			</td>
+			<td width="148" height="40">
+				<div id="k3z">
+					<div id="wartoscb">
+						25,00 zł
+					</div>
+					<div id="wartoscn">
+						19,25 zł
+					</div>
+				</div>
+			</td>
 </tr>
 
 </table>

@@ -94,7 +94,7 @@
 
 #k1z #topc2 {
 	background: url(img/k_topc.png); repeat-x;
-	width: 350px;
+	width: 390px;
 	height: 29px;
 	float: left;
 	text-align: center;
@@ -104,7 +104,7 @@
 
 #k1z #topc3 {
 	background: url(img/k_topc.png); repeat-x;
-	width: 92px;
+	width: 72px;
 	height: 29px;
 	float: left;
 	text-align: center;
@@ -192,7 +192,7 @@
 
 #k1z #wart {
 	background: url(img/k_topc.png); repeat-x;
-	width: 161px;
+	width: 141px;
 	height: 29px;
 	float: left;
 	text-align: center;
@@ -215,14 +215,14 @@
 }
 
 #k3z #produkt {
-	width: 340px;
+	width: 390px;
 	font: bold 11px/40px Tahoma;
 	color: #160e86;
 	float: left;
 }
 
 #k3z #cenab {
-	width: 92px;
+	width: 72px;
 	font: bold 11px Tahoma;
 	color: #160e86;
 	float: left;
@@ -231,7 +231,7 @@
 }
 
 #k3z #cenan {
-	width: 92px;
+	width: 72px;
 	font: 11px Tahoma;
 	color: #160e86;
 	float: left;
@@ -256,7 +256,7 @@
 }
 
 #k3z #wartoscb {
-	width: 166px;
+	width: 146px;
 	font: bold 11px Tahoma;
 	color: #160e86;
 	float: left;
@@ -265,7 +265,7 @@
 }
 
 #k3z #wartoscn {
-	width: 166px;
+	width: 146px;
 	font: 11px Tahoma;
 	color: #160e86;
 	float: left;
@@ -457,7 +457,7 @@
 				<div id="lc"></div>
 			</div>
 		</td>
-		<td width="352">
+		<td width="392">
 			<div id="k1z">
 				<div id="topc2">
 					<div id="nag">Nazwa produktu/usługi</div>
@@ -465,7 +465,7 @@
 				<div id="lc"></div>
 			</div>
 		</td>
-		<td width="94">
+		<td width="74">
 			<div id="k1z">
 				<div id="topc3">
 					<div id="nag1">Cena</div>
@@ -489,7 +489,7 @@
 				<div id="lc"></div>
 			</div>
 		</td>
-		<td width="168">
+		<td width="148">
 			<div id="k1z">
 				<div id="wart">
 					<div id="nag1">Wartość</div>
@@ -509,14 +509,14 @@
 					</div>
 				</div>
 			</td>
-			<td width="352" height="40">
+			<td width="392" height="40">
 				<div id="k3z">
 					<div id="produkt">
 						<s:property value="product.name" />
 					</div>
 				</div>
 			</td>
-			<td width="94" height="40">
+			<td width="74" height="40">
 				<div id="k3z">
 					<div id="cenab">
 						<s:property value="priceBruttoString" /> zł</div>
@@ -537,7 +537,7 @@
 					<div id="rabat">0%</div>
 				</div>
 			</td>
-			<td width="168" height="40">
+			<td width="148" height="40">
 				<div id="k3z">
 					<div id="wartoscb">
 						<s:property value="totalPriceBruttoString" /> zł
@@ -559,14 +559,14 @@
 					</div>
 				</div>
 			</td>
-			<td width="352" height="40">
+			<td width="392" height="40">
 				<div id="k3z">
 					<div id="produkt">
 						Usługa transportu
 					</div>
 				</div>
 			</td>
-			<td width="94" height="40">
+			<td width="74" height="40">
 				<div id="k3z">
 					<div id="cenab">
 						25,00 zł
@@ -585,7 +585,7 @@
 				<div id="k3z">
 				</div>
 			</td>
-			<td width="168" height="40">
+			<td width="148" height="40">
 				<div id="k3z">
 					<div id="wartoscb">
 						25,00 zł

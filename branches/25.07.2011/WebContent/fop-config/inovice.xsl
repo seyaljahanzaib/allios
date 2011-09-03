@@ -21,9 +21,9 @@
 	<fo:block>
            <fo:external-graphic src="invoice_logo.png"/>
 	</fo:block>
-	<fo:block text-align="right" margin-right="45mm" letter-spacing="4" font-size="12pt" font-family="TahomalBD">FAKTURA VAT</fo:block>
-	<fo:block text-align="right" margin-right="45mm" letter-spacing="2" font-size="11pt">Nr. <xsl:value-of select="Faktura/Numer"/></fo:block>
-	<fo:block text-align="right" margin-right="45mm" letter-spacing="2" font-size="10pt" font-family="TahomalBD">ORYGINAŁ</fo:block>
+	<fo:block text-align="right" margin-right="50mm" letter-spacing="4" font-size="12pt" font-family="TahomalBD">FAKTURA VAT</fo:block>
+	<fo:block text-align="right" margin-right="50mm" letter-spacing="2" font-size="11pt">Nr. <xsl:value-of select="Faktura/Numer"/></fo:block>
+<!-- 	<fo:block text-align="right" margin-right="50mm" letter-spacing="2" font-size="10pt" font-family="TahomalBD">ORYGINAŁ</fo:block> -->
 
 
 	<fo:table table-layout="fixed" width="100%" space-before="10pt">
@@ -58,8 +58,8 @@
 		</fo:table>
 	
 	<fo:table table-layout="fixed" width="100%" space-before="10pt">
-		<fo:table-column column-width="9,5cm" />
-		<fo:table-column column-width="9,5cm" />
+		<fo:table-column column-width="8,5cm" />
+		<fo:table-column column-width="11cm" />
 		<fo:table-body>
 		
 		

@@ -20,20 +20,20 @@
 }
 	
 	#sectionup #photo {
-		width: 250px; height: 250px; border: 1px; border-color: black; border-style: solid; float: left;
+		width: 250px; height: 250px; float: left;
 	}
 	
 	#sectionup #cenabt {
 		width: 430px; font: bold 16px Tahoma; color: #160e86; text-align: right; float: left;
 	}
 	#sectionup #cenab {
-		font: bold 16px Tahoma; color: #160e86; text-align: left; margin-left:3px; float: left;
+		width: 70px; font: bold 16px Tahoma; color: #160e86; text-align: right; float: left;
 	}
 	#sectionup #cenant {
 		width: 430px; font: 14px Tahoma; color: #160e86; text-align: right; float: left;
 	}
 	#sectionup #cenan {
-		font: 14px Tahoma; color: #160e86; text-align: left; margin-left:15px; float: left;
+		width: 70px; font: 14px Tahoma; color: #160e86; text-align: right; float: left;
 	}		
 	#sectionup #koszyk {
 		width:480px; font: bold 11px Tahoma; color: #160e86; text-align: left; margin-left: 25px; margin-top: 8px; border-bottom:1px; border-bottom-style: solid; border-bottom-color: #ff9900; float: left;
@@ -42,7 +42,7 @@
 		width:250px; font: bold 11px Tahoma; color: #160e86; text-align: right; margin-left: 25px; margin-top:20px; float: left;
 	}
 	#sectionup #text_area {
-		width:40px; height: 20px; font: bold 12px/20px Tahoma; color: #160e86; text-align: center; margin-left: 16px; margin-top:15px; border: 1px; border-color: black; border-style: solid; float: left;
+		width:40px; height: 20px; font: bold 12px/20px Tahoma; color: #160e86; text-align: center; margin-left: 16px; margin-top:15px; border: 1px; border-color: #ff9900; border-style: solid; float: left;
 	}
 	#sectionup #koszt2 {
 		width: 40px; font: bold 11px Tahoma; color: #160e86; text-align: left; margin-left: 16px; margin-top:20px; float: left;
@@ -111,6 +111,10 @@
 	width: 760px; height: 4px; background-color: #fdab0c; float: left;
 	}
 
+#info_text {
+	width: 760px; margin-top: 6px; margin-left: 2px; font: 11px Tahoma; color: #160e86; float: left;
+	}
+
 #stopka {
 	clear: both;
 	} 		
@@ -128,7 +132,7 @@
 		<div id="photo"><img alt="" src="${product.image250}" height="250px" width="250px"></div>
 		<div id="cenabt">Cena brutto: </div><div id="cenab"> ${product.priceBrutto} zł</div>
 		<div id="cenant">netto:</div><div id="cenan"> ${product.priceNetto} zł</div>
-		<div id="koszyk">Dodaj do koszyka / ulubionych</div>
+		<div id="koszyk">Dodaj do koszyka</div>
 		<div id="koszt1">Ilość</div>
 		<div id="text_area"><s:textfield name="quantity" value="1" cssStyle="border: none; width : 38px; text-align: center;"/></div>
 		<div id="koszt2">szt.</div>
@@ -183,5 +187,5 @@
 <!-- 	<div id="info_button">Karta</div> -->
 <!-- 	<div id="info_button">Zamienniki</div> -->
 	<div id="stopka"></div>
-	<div id="info_line">${product.description}</div>
+	<div id="info_line"><div id="info_text">${product.description}</div></div>
 </s:form>

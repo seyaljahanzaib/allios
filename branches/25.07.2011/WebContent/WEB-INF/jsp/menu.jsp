@@ -279,12 +279,12 @@
 	</div>
 	
 	<div id="tmenuback">
-	<div id="zapis" style="margin-left: 40px;">Aktualny cennik.pdf</div></div>
+	<div id="zapis" style="margin-left: 40px;"><a href="img/offer/Cennik_allios.pdf">Aktualny cennik.pdf</a></div></div>
 	<div id="tmenu_linia"></div>
 	<div id="stopka"></div>
 	
 	<div id="tmenuback">
-	<div id="zapis" style="margin-left: 40px;">Aktualny cennik.xls</div></div>
+	<div id="zapis" style="margin-left: 40px;"><a href="img/offer/Cennik_allios.xls">Aktualny cennik.xls</a></div></div>
 	<div id="tmenu_linia"></div>
 	<div id="stopka"></div>
 	

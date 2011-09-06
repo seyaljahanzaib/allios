@@ -106,6 +106,10 @@ public class ConfirmAllAction extends ActionSupport {
 			if(product.getCategory() != null && product.getCategory().getMainCategory() != null){
 				if(productMap.get(product.getCategory().getMainCategory().getId().toString()) != null){
 					productMap.get(product.getCategory().getMainCategory().getId().toString()).add(product);
+				}else{
+					ArrayList<Product> newList2 = new ArrayList<Product>();
+					newList2.add(product);
+					productMap.put(product.getCategory().getMainCategory().getId().toString(), newList2);
 				}
 			}
 		}

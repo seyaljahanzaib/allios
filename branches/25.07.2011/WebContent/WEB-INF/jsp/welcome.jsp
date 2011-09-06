@@ -79,9 +79,11 @@ clear: both;
 					<div id="infocena2">${item.priceBruttoString} zł</div>
 					</div>
 				<div id="wiecejcenter">
-				<s:form action="ProductInfoAction" theme="simple">
-					<div id="wiecejtekst">więcej...</div>
-				</s:form>
+				<form action="FullDescriptionAction" name="fullform">
+					<input type="hidden" name="productID" value="${item.product_id}"/>
+				</form>
+				<div id="wiecejtekst" onclick='javascript:void(document.forms["fullform"].submit())'>więcej...</div>
+				
 					</div>
 				<div id="wiecejright"></div>
 				<div id="koszykleft"></div>

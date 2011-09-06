@@ -4,6 +4,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
+	<title>ALLIOS</title>
+	<link rel="SHORTCUT ICON" href="img/icon/favicon.ico"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><tiles:insertAttribute name="title" ignore="true" /></title>
 	<link href="css.css" rel="stylesheet" type="text/css">

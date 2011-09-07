@@ -7,11 +7,11 @@
 <style>	
 
 #main_line{
-width: 760px; height: 1px; background-color: #feb706; margin-top: 12px; margin-bottom: 2px; float: left;
+width: 1000px; height: 1px; background-color: #feb706; margin-top: 12px; margin-bottom: 2px; float: left;
 }
 
 #text{
-width: 760px; text-align: right; margin-bottom: 12px; font: 10px Tahoma; color: #9ea7fa; float: left;
+width: 1000px; text-align: right; margin-bottom: 12px; font: 10px Tahoma; color: #939dfb; float: left;
 }
 
 </style>

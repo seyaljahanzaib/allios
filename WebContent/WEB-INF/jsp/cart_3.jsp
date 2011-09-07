@@ -660,7 +660,7 @@
 <div id="sumowanie_info1">
 	Przelewów bankowych prosimy dokonywać na poniższe konto bankowe w
 	tytule podając swój indywidualny kod klienta:<br> <br>
-	<b>PL BPH o/Płock <br>80 1234 1234 12331 12313 12332</b><br>
+	<b>PL BPH o/Płock <br>62 1060 0076 0000 3260 0192 9491</b><br>
 	<br>
 	<br>* indywidualny kod klietna znajdą Państwo w sekcji "Twoje
 	konto / Twoje dane"

@@ -197,7 +197,7 @@
 <div id="tmenu_area1">
 	<div id="info">Wszystkich płatności za zakupiony u nas towar prosimy dokonywać na poniższe konto bankowe:
 	<br><br><b>Bank BPH o/Płock
-	<br> PL 80 1234 1234 1233 1222 4329</b>
+	<br> PL 62 1060 0076 0000 3260 0192 9491</b>
 	<br><br>* w tytule przelewu prosimy umieścić indywidualny kod klienta widoczny poniżej
 	<div id="kod_klienta"><b>Kod klienta: <s:property value="customer.code"/></b></div>
 	</div>

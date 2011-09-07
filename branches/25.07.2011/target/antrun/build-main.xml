@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/Allios" overwrite="true">
+    <fileset dir="D:\Eclipse\Workspace\Allios/WebContent/"/>
+  </copy>
+  <copy file="D:\Eclipse\Workspace\Allios/src/main/resources/persistence.xml" tofile="C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/Allios/WEB-INF/classes/META-INF/persistence.xml"/>
+  <copy todir="C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/Allios/WEB-INF/lib/" overwrite="false">
+    <fileset dir="D:\Eclipse\Workspace\Allios/library/" includes="*.jar"/>
+  </copy>
+</target>
+</project>

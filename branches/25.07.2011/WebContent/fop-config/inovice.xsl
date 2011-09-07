@@ -137,7 +137,7 @@
 
 <fo:block margin-left="5mm" text-align="left" font-size="9pt" space-before="10pt" font-family="TahomalBD">Konto bank.:</fo:block>
 <fo:block margin-left="5mm" text-align="left" font-size="9pt">Bank BPH SA O/Płock</fo:block>
-<fo:block margin-left="5mm" text-align="left" font-size="9pt">PL 80 1020 2345 2223 2323 3043</fo:block>
+<fo:block margin-left="5mm" text-align="left" font-size="9pt">PL 62 1060 0076 0000 3260 0192 9491</fo:block>
 
 <fo:table table-layout="fixed" width="100%">
 		<fo:table-column column-width="18.5cm" />
@@ -197,7 +197,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell height="0.71cm" border-left-style="dashed" border-top-style="dashed" border-bottom-style="dashed" border-width="0.8px">
-					<fo:block text-align="center" padding-top="2px" font-size="7pt" font-family="TahomalBD">Cena netto</fo:block>
+					<fo:block text-align="center" padding-top="2px" font-size="7pt" font-family="TahomalBD">Cena brutto</fo:block>
 					<fo:block text-align="center" font-size="7pt" font-family="TahomalBD">(zł)</fo:block>
 					</fo:table-cell>
 					
@@ -387,36 +387,102 @@
 			<fo:table-body>
 				<fo:table-row>
 				
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" font-size="7pt"></fo:block>
+					<fo:table-cell height="0.6cm">
+					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt"></fo:block>
 					</fo:table-cell>
 					
-					<fo:table-cell>
-					<fo:block text-align="left" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px" font-family="TahomalBD">Łącznie:</fo:block>
+					<fo:table-cell height="0.6cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="left" padding-top="3px" padding-bottom="2px" margin-top="3px" border-top-style="dashed" border-width="0.8px" font-size="7pt" font-family="TahomalBD">Łącznie:</fo:block>
 					</fo:table-cell>
 					
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px"></fo:block>
+					<fo:table-cell height="0.6cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="3px" padding-bottom="2px" margin-top="3px" border-top-style="dashed" border-width="0.8px" font-size="7pt"></fo:block>
 					</fo:table-cell>
 					
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" margin-right="1px" font-size="7pt" border-top-style="dashed" border-width="0.8px"><xsl:value-of select="Faktura/Lacznie/WartoscNetto"/></fo:block>
+					<fo:table-cell height="0.6cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="3px" padding-bottom="2px" margin-top="3px" margin-right="1px" border-top-style="dashed" border-width="0.8px" font-size="7pt" font-family="TahomalBD"><xsl:value-of select="Faktura/Lacznie/WartoscNetto"/></fo:block>
 					</fo:table-cell>
 					
-					<fo:table-cell>
-					<fo:block text-align="center" padding-top="5px" margin-top="5px" font-size="7pt" border-top-style="dashed" border-width="0.8px"></fo:block>
+					<fo:table-cell height="0.6cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="center"  padding-top="3px" padding-bottom="2px" margin-top="3px" border-top-style="dashed" border-width="0.8px" font-size="7pt"></fo:block>
 					</fo:table-cell>
 	
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" margin-right="1px" font-size="7pt" border-top-style="dashed" border-width="0.8px"><xsl:value-of select="Faktura/Lacznie/KwotaVAT"/></fo:block>
+					<fo:table-cell height="0.6cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="3px" padding-bottom="2px" margin-top="3px" margin-right="1px" border-top-style="dashed" border-width="0.8px" font-size="7pt" font-family="TahomalBD"><xsl:value-of select="Faktura/Lacznie/KwotaVAT"/></fo:block>
 					</fo:table-cell>
 					
-					<fo:table-cell>
-					<fo:block text-align="right" padding-top="5px" margin-top="5px" margin-right="1px" font-size="7pt" border-top-style="dashed" border-width="0.8px"><xsl:value-of select="Faktura/Lacznie/WartoscBrutto"/></fo:block>
+					<fo:table-cell height="0.6cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="3px" padding-bottom="2px" margin-top="3px" margin-right="1px" border-top-style="dashed" border-width="0.8px" font-size="7pt" font-family="TahomalBD"><xsl:value-of select="Faktura/Lacznie/WartoscBrutto"/></fo:block>
 					</fo:table-cell>
 						
-					
 				</fo:table-row>
+				
+<!-- 				<fo:table-row> -->
+				
+<!-- 					<fo:table-cell height="0.4cm"> -->
+<!-- 					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt"></fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm"> -->
+<!-- 					<fo:block text-align="left" padding-top="1px" padding-bottom="1px" margin-top="1px" font-size="7pt" font-family="TahomalBD"></fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm"> -->
+<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">w tym:</fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">10 234,04</fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">23</fo:block> -->
+<!-- 					</fo:table-cell> -->
+	
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">1 234,04</fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">123 234,04</fo:block> -->
+<!-- 					</fo:table-cell> -->
+						
+					
+<!-- 				</fo:table-row> -->
+				
+<!-- 				<fo:table-row> -->
+				
+<!-- 					<fo:table-cell height="0.4cm"> -->
+<!-- 					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt"></fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm"> -->
+<!-- 					<fo:block text-align="left" padding-top="1px" padding-bottom="1px" margin-top="1px" font-size="7pt" font-family="TahomalBD"></fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm"> -->
+<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt"></fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">10 234,04</fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">8</fo:block> -->
+<!-- 					</fo:table-cell> -->
+	
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">1 234,04</fo:block> -->
+<!-- 					</fo:table-cell> -->
+					
+<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
+<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">123 234,04</fo:block> -->
+<!-- 					</fo:table-cell> -->
+						
+					
+<!-- 				</fo:table-row> -->
+				
 			</fo:table-body>
 
 </fo:table>	
@@ -439,7 +505,7 @@
 					</fo:table-cell>
 					
 					<fo:table-cell border-bottom-style="solid" border-width="0.5pt" >
-					<fo:block text-align="center" padding-top="40px" font-size="9pt" font-family="TahomalBD">Wystawił:</fo:block>
+					<fo:block text-align="center" padding-top="40px" font-size="9pt" font-family="TahomalBD">Wystawiła:</fo:block>
 					</fo:table-cell>
 					
 					<fo:table-cell >

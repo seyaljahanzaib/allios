@@ -158,7 +158,7 @@
 		<div id="areacenter"><s:textfield name="searchString" cssStyle="border:0px; margin-top:3px; height:18px; width:180px;"/></div>
 		<div id="arearight"></div>
 		<div id="stopka"></div>
-		<div id="box">o</div>
+		<s:checkbox id="box" name="inDescription" theme="simple"/>
 		<div id="wopisach">w opisach</div>
 		<s:submit id="button" value=""></s:submit>
 		<div id="stopka"></div>

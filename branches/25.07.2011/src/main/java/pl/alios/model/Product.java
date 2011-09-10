@@ -30,6 +30,7 @@ public class Product {
 //	private Double maxCount;
 	private Double weight;
 	private String producer;
+	private String producerCode;
 	private double vat;
 	@Column(name="dostepnych_sztuk")
 	private Integer numberOfItems;
@@ -81,7 +82,8 @@ public class Product {
 	public void setVat(double vat) {this.vat = vat;}
 	public Integer getNumberOfItems() {return numberOfItems;}
 	public void setNumberOfItems(Integer numberOfItems) {this.numberOfItems = numberOfItems;}
-	
+	public String getProducerCode() {return producerCode;}
+	public void setProducerCode(String producerCode) {this.producerCode = producerCode;}
 	
 	
 	//	public Boolean getPrmotion() {return prmotion;}
@@ -125,6 +127,7 @@ public class Product {
 
 	
 	public String getPriceBruttoString(){return nf.format(priceBrutto);}
+	public String getPriceNettoString(){return nf.format(priceNetto);}
 	
 	@Transient
 	private NumberFormat nf = NumberFormat.getInstance();

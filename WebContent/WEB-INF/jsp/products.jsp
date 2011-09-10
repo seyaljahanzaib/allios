@@ -227,8 +227,8 @@ if (allProducts != null && allProducts.size() >0){
 			
 			<td style="width:72px; height:140px; padding:0px; border-spacing:0px; border-collapse:collapse;">
 				<div id="productList">
-					<div id="cenab">${item.priceBrutto} zł</div>
-					<div id="cenan">${item.priceNetto} zł</div>
+					<div id="cenab">${item.priceBruttoString} zł</div>
+					<div id="cenan">${item.priceNettoString} zł</div>
 				</div>
 			</td>
 			

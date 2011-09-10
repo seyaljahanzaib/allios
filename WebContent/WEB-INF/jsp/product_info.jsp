@@ -124,18 +124,18 @@
 <s:form action="AddToCartAction" theme="simple">
 	<div id="title">${product.name}</div>
 	<div id="title1" style="margin-left:4px;">Producent: <b>${product.producer}</b></div>
-	<!-- <div id="title1" style="margin-left:10px;">Kod producenta: <b>XT34020</b></div> -->
+	<div id="title1" style="margin-left:10px;">Kod producenta: <b>${product.producerCode}</b></div>
 	
 	<div id="stopka"></div>
 	
 	<div id="sectionup">
 		<div id="photo"><img alt="" src="${product.image250}" height="250px" width="250px"></div>
-		<div id="cenabt">Cena brutto: </div><div id="cenab"> ${product.priceBrutto} zł</div>
-		<div id="cenant">netto:</div><div id="cenan"> ${product.priceNetto} zł</div>
+		<div id="cenabt">Cena brutto: </div><div id="cenab"> ${product.priceBruttoString} zł</div>
+		<div id="cenant">netto:</div><div id="cenan"> ${product.priceNettoString} zł</div>
 		<div id="koszyk">Dodaj do koszyka</div>
 		<div id="koszt1">Ilość</div>
 		<div id="text_area"><s:textfield name="quantity" value="1" cssStyle="border: none; width : 38px; text-align: center;"/></div>
-		<div id="koszt2">szt.</div>
+		<div id="koszt2">${product.unit}</div>
 		
 		<input type="hidden" name="product_id" value="${product.product_id}"/>
 		<s:submit id="graf_kosz" name="productDescription" value="" />

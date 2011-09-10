@@ -189,3 +189,4 @@
 	<div id="stopka"></div>
 	<div id="info_line"><div id="info_text">${product.description}</div></div>
 </s:form>
+<div id="stopka"></div>

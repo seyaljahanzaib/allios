@@ -26,7 +26,7 @@
 		background: url(img/sp_r.png); width: 6px; height: 24px; float: left; margin-top: 19px;
 		}
 	#searcher #box {
-		width: 17px; height: 22px; float: left; margin-top: 7px; text-align: right; margin-left: 15px;
+		float: left; margin-top: 7px; text-align: right; margin-left: 15px;
 		}
 	#searcher #wopisach {
 		font: 11px/22px Tahoma; color: #160e86; float: left; margin-top: 7px; text-align: left; margin-left: 6px;

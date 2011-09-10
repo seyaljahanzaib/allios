@@ -67,7 +67,7 @@ clear: both;
 } 		
 </style>
 
-<c:forEach var="item" items="${application.firstPage}">
+<c:forEach var="item" items="${application.firstPage}" varStatus="stat">
 <div id="nowosci">
 	<div id="sekleft"></div>
 	<div id="sekcenter">
@@ -79,10 +79,10 @@ clear: both;
 					<div id="infocena2">${item.priceBruttoString} zł</div>
 					</div>
 				<div id="wiecejcenter">
-				<form action="FullDescriptionAction" name="fullform">
+				<form action="FullDescriptionAction" name="fullform${stat.index}">
 					<input type="hidden" name="productID" value="${item.product_id}"/>
 				</form>
-				<div id="wiecejtekst" onclick='javascript:void(document.forms["fullform"].submit())'>więcej...</div>
+				<div id="wiecejtekst" onclick='javascript:void(document.forms["fullform${stat.index}"].submit())'>więcej...</div>
 				
 					</div>
 				<div id="wiecejright"></div>

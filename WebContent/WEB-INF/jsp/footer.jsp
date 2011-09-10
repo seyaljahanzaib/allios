@@ -13,8 +13,11 @@ width: 1000px; height: 1px; background-color: #feb706; margin-top: 12px; margin-
 #text{
 width: 1000px; text-align: right; margin-bottom: 12px; font: 10px Tahoma; color: #939dfb; float: left;
 }
+#stopka{
+clear: both;
+}
 
 </style>
-
+<div id="stopka"></div>
 <div id="main_line"></div>
 <div id="text">Copyright © 2011 Allios Jolanta Matacz. Wszelkie prawa zastrzeżone.</div>

@@ -408,7 +408,8 @@
 }
 
 #nawigacja1 {
-	height: 24px;
+	height: 34px;
+	margin-top: 20px;
 	float: right;
 }
 
@@ -417,7 +418,6 @@
 	height: 34px;
 	background: url(img/b_zam1.png);
 	float: right;
-	margin-top: 20px;
 	margin-right: 60px;
 	cursor: pointer;
 	border: none;
@@ -432,7 +432,6 @@
 	height: 34px;
 	background: url(img/b_wroc1.png);
 	float: right;
-	margin-top: 20px;
 	margin-right: 20px;
 	cursor: pointer;
 	border: none;

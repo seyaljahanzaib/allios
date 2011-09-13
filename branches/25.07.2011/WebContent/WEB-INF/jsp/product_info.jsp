@@ -1,7 +1,7 @@
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
 #glowna {
@@ -187,6 +187,6 @@
 <!-- 	<div id="info_button">Karta</div> -->
 <!-- 	<div id="info_button">Zamienniki</div> -->
 	<div id="stopka"></div>
-	<div id="info_line"><div id="info_text">${product.description}</div></div>
+<div id="info_line"></div>
+<div id="info_text">${product.description}</div>
 </s:form>
-<div id="stopka"></div>

@@ -163,16 +163,16 @@
 	width: 95px; font: bold 13px Tahoma; color: #160e86; margin-top: 4px; text-align: right; float: left;
 	}
 #nawigacja {
-	height: 24px; float: right;
+	height: 34px; float: right; margin-top: 50px;
 	}
 #nawigacja #dalej { 
-	width: 102px; height: 34px; background: url(img/b_dalej1.png); float: right; margin-top: 50px; margin-right: 200px; cursor: pointer; border: none;
+	width: 102px; height: 34px; background: url(img/b_dalej1.png); float: right; margin-right: 200px; cursor: pointer; border: none;
 	}
 #nawigacja #dalej:HOVER {
 	background: url(img/b_dalej2.png)
 }
 #nawigacja #wroc { 
-	width: 102px; height: 34px; background: url(img/b_wroc1.png); float: right; margin-top: 50px; margin-right:20px; cursor: pointer;
+	width: 102px; height: 34px; background: url(img/b_wroc1.png); float: right; margin-right:20px; cursor: pointer;
 	}
 #nawigacja #wroc:HOVER {
 	background: url(img/b_wroc2.png)

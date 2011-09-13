@@ -26,7 +26,7 @@
 		background: url(img/sp_r.png); width: 6px; height: 24px; float: left; margin-top: 19px;
 		}
 	#searcher #box {
-		float: left; margin-top: 7px; text-align: right; margin-left: 15px;
+		float: left; text-align: right; margin-left: 15px; margin-top: 9px;
 		}
 	#searcher #wopisach {
 		font: 11px/22px Tahoma; color: #160e86; float: left; margin-top: 7px; text-align: left; margin-left: 6px;
@@ -158,18 +158,19 @@
 		<div id="areacenter"><s:textfield name="searchString" cssStyle="border:0px; margin-top:3px; height:18px; width:180px;"/></div>
 		<div id="arearight"></div>
 		<div id="stopka"></div>
-		<s:checkbox id="box" name="inDescription" theme="simple"/>
+		<div id="box">
+		<s:checkbox name="inDescription" theme="simple"/>
+		</div>
 		<div id="wopisach">w opisach</div>
 		<s:submit id="button" value=""></s:submit>
 		<div id="stopka"></div>
 		<div id="linia"></div>
 		<div id="stopka"></div>
-		<div id="zaawansowane">Wyszukiwanie zaawansowane</div>
+		<div id="zaawansowane">Wyszukaj produkty</div>
 	</div>
 	<div id="sekright"></div>
 	</s:form>
 </div>
-
 
 
 <!-- <div id="menudiv"> -->

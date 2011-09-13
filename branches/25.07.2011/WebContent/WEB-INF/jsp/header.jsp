@@ -10,7 +10,13 @@
 	background: url(img/ue.jpg); width: 245px; height: 70px; margin-top: 20px; margin-bottom: 20px; margin-left: 140px; background-repeat: no-repeat; float: left;
 	}
 #header_logo {
-		background: url(img/logo_final.png); width: 210px; height: 42px; margin-top: 36px; margin-left: 140px; background-repeat: no-repeat; float: left;
+		background: url(img/logo_ver3.png); width: 197px; height: 81px; margin-top: 10px; margin-left: 20px; background-repeat: no-repeat; float: left;
+		}
+#header_text {
+		width: 400px; text-align: right; font: bold 13px Tahoma; color: #fdbf2c; float: left;
+		}
+#header_text1 {
+		width: 400px; text-align: right; font: bold 15px Tahoma; color: #160e86; float: left;
 		}
 #menubar {
 	float:left; height: 56px;
@@ -119,9 +125,10 @@
 
 </style>
 
-<div id="info_unia1"></div>
 <div id="header_logo"></div>
-<div id="info_unia2"></div>
+<div id="header_text" style="margin-top: 10px; margin-left: 350px;">Nie znalazłeś potrzebnego produktu w naszej ofercie?</div>
+<div id="header_text"style="margin-top: 6px; margin-left: 350px;">Nie zwlekaj! Napisz do nas</div>
+<div id="header_text1"style="margin-top: 6px; margin-left: 350px;">Kompleksowo zaopatrzymy Twój gabinet</div>
 
 
 <div id="menubar">

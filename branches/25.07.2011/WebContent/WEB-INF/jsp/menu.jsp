@@ -34,9 +34,9 @@
 	#searcher #zaawansowane {
 		width: 210px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 8px; text-align: center; cursor: pointer;
 		}
-	#searcher #zaawansowane:HOVER {
-		width: 210px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 8px; text-align: center; text-decoration: underline; 
-		}
+/* 	#searcher #zaawansowane:HOVER { */
+/* 		width: 210px; font: bold 11px Tahoma; color: #160e86; float: left; margin-top: 8px; text-align: center; text-decoration: underline;  */
+/* 		} */
 	#searcher #button {
 		background: url(img/s_button1.png); width: 86px; height: 22px; float: left; margin-top: 7px; margin-left: 29px; border: none; cursor: pointer;
 		}
@@ -166,7 +166,7 @@
 		<div id="stopka"></div>
 		<div id="linia"></div>
 		<div id="stopka"></div>
-		<div id="zaawansowane">Wyszukaj produkty</div>
+		<div id="zaawansowane">Wyszukiwanie produktów</div>
 	</div>
 	<div id="sekright"></div>
 	</s:form>

@@ -58,6 +58,18 @@
 	font: bold 13px Tahoma; color: #16117c; text-decoration: underline; float: left;
 }
 
+#contact_text{
+font: bold 16px Tahoma; color: #16117c; margin-top: 20px; margin-left: 6px; width: 760px; float: left;
+}
+
+#contact_text1{
+font: 12px Tahoma; color: #16117c; margin-left: 6px; width: 760px; float: left;
+}
+
+#contact_text2{
+font: 11px Tahoma; color: #16117c; margin-left: 6px; margin-top:20px; width: 760px; float: left;
+}
+
 
 #stopka {
 clear: both;
@@ -68,50 +80,57 @@ clear: both;
 <div id="glowna">
 
 <div id="title_l"></div>
-<div id="title_c">Formularz kontaktowy</div>
+<div id="title_c">Kontakt</div>
 <div id="title_r"></div>
 <div id="stopka"></div>
 
-<div id="contact_area">
+<div id="contact_text1" style="margin-top: 10px;"><br/><b>ALLIOS Jolanta Matacz</b></div>
+<div id="contact_text1" style="margin-top: 4px;">09-409 Płock, ul. Szpacza 12</div>
+<div id="contact_text1" style="margin-top: 4px;">woj. mazowieckie</div>
+<div id="contact_text1" style="margin-top: 4px;"><br/><b>tel.:</b> 600 664 190</div>
+<div id="contact_text1" style="margin-top: 4px;"><b>e-mail:</b> biuro@allios.pl</div>
+<div id="contact_text2">Sprzedaż prowadzimy wyłącznie za pośrednictwem strony internetowej www.allios.pl lub telefonicznie przyjmując zamówienia od 8.00 do 18.00.<br/>Nie prowadzimy sklepu stacjonarnego. Nie ma możliwości zakupu towaru w siedzibie firmy.<br/><br/>Zapraszamy na zakupy.</div>
 
-	<div id="tekst">Nazwa firmy *:</div>
-	<div id="sekleft" style="margin-top: 20px;"></div>
-	<div id="sekcenter" style="margin-top: 20px;"></div>
-	<div id="sekright" style="margin-top: 20px;"></div>
+<!-- <div id="contact_area"> -->
+
+<!-- 	<div id="tekst">Nazwa firmy *:</div> -->
+<!-- 	<div id="sekleft" style="margin-top: 20px;"></div> -->
+<!-- 	<div id="sekcenter" style="margin-top: 20px;"></div> -->
+<!-- 	<div id="sekright" style="margin-top: 20px;"></div> -->
 	
 	
-	<div id="stopka"></div>
-	<div id="tekst1">E-mail *:</div>
-	<div id="sekleft" style="margin-top: 16px;"></div>
-	<div id="sekcenter" style="margin-top: 16px;"></div>
-	<div id="sekright" style="margin-top: 16px;"></div>
+<!-- 	<div id="stopka"></div> -->
+<!-- 	<div id="tekst1">E-mail *:</div> -->
+<!-- 	<div id="sekleft" style="margin-top: 16px;"></div> -->
+<!-- 	<div id="sekcenter" style="margin-top: 16px;"></div> -->
+<!-- 	<div id="sekright" style="margin-top: 16px;"></div> -->
 	
-	<div id="stopka"></div>
-	<div id="tekst">Telefon:</div>
-	<div id="sekleft" style="margin-top: 20px;"></div>
-	<div id="sekcenter" style="margin-top: 20px;"></div>
-	<div id="sekright" style="margin-top: 20px;"></div>
-	
-	
-	<div id="stopka"></div>
-	<div id="tekst1">Temat:</div>
-	<div id="sekleft" style="margin-top: 16px;"></div>
-	<div id="sekcenter" style="margin-top: 16px;"></div>
-	<div id="sekright" style="margin-top: 16px;"></div>
+<!-- 	<div id="stopka"></div> -->
+<!-- 	<div id="tekst">Telefon:</div> -->
+<!-- 	<div id="sekleft" style="margin-top: 20px;"></div> -->
+<!-- 	<div id="sekcenter" style="margin-top: 20px;"></div> -->
+<!-- 	<div id="sekright" style="margin-top: 20px;"></div> -->
 	
 	
-	<div id="stopka"></div>
-	<div id="tekst1" style="margin-top: 50px;">Treść:</div>
-	<div id="sekleft1" style="margin-top: 50px;"></div>
-	<div id="sekcenter1" style="margin-top: 50px;"></div>
-	<div id="sekright1" style="margin-top: 50px;"></div>
+<!-- 	<div id="stopka"></div> -->
+<!-- 	<div id="tekst1">Temat:</div> -->
+<!-- 	<div id="sekleft" style="margin-top: 16px;"></div> -->
+<!-- 	<div id="sekcenter" style="margin-top: 16px;"></div> -->
+<!-- 	<div id="sekright" style="margin-top: 16px;"></div> -->
 	
-	<div id="tekst1" style="margin-left: 140px; margin-top: 20px; text-align: left;">* Pola wymagane</div>
 	
-	<div id="stopka"></div>
-	<div id="sent" style="margin-left: 520px; margin-top: 16px;">Wyślij</div>
+<!-- 	<div id="stopka"></div> -->
+<!-- 	<div id="tekst1" style="margin-top: 50px;">Treść:</div> -->
+<!-- 	<div id="sekleft1" style="margin-top: 50px;"></div> -->
+<!-- 	<div id="sekcenter1" style="margin-top: 50px;"></div> -->
+<!-- 	<div id="sekright1" style="margin-top: 50px;"></div> -->
+	
+<!-- 	<div id="tekst1" style="margin-left: 140px; margin-top: 20px; text-align: left;">* Pola wymagane</div> -->
+	
+<!-- 	<div id="stopka"></div> -->
+<!-- 	<div id="sent" style="margin-left: 520px; margin-top: 16px;">Wyślij</div> -->
 
 
-</div>
+<!-- </div> -->
 
 </div>

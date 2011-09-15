@@ -41,7 +41,7 @@ clear: both;
 <div id="stopka"></div>
 
 <div id="nag">Informacje ogólne</div>
-<div id="list" >Sklep internetowy allios.pl prowadzony jest przez ALLIOS Jolanta Matacz, z siedzibą w Płocku, przy ul. Szpaczej 12, 09-409 Płock, NIP: 774-243-58-43, REGON: 123323232, telefon:  (+48) 519 600 104, e-mail: jmatacz@allios.pl.</div>
+<div id="list" >Sklep internetowy allios.pl prowadzony jest przez ALLIOS Jolanta Matacz, z siedzibą w Płocku, przy ul. Szpaczej 12, 09-409 Płock, NIP: 774-243-58-43, REGON: 142922560, telefon:  (+48) 519 600 104, e-mail: jmatacz@allios.pl.</div>
 <div id="nag">Zamówienia</div>
 <div id="list">
 	<ol>

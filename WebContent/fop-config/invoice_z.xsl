@@ -4,7 +4,7 @@
 <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
 <fo:layout-master-set>
 <fo:simple-page-master master-name="ZUZ" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="0.5cm" margin-left="1cm" margin-right="0.5cm">
-<fo:region-body/>
+<fo:region-body margin-bottom="1.5cm"/>
 <fo:region-after extent="1.5cm"/>
 </fo:simple-page-master>
 </fo:layout-master-set>

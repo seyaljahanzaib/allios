@@ -59,8 +59,8 @@ clear: both;
 		<li>Dostawa towaru dostępnego w magazynie zajmuje maksymalnie 3 - 4 dni robocze. W przypadku, gdy zamówiony towar nie jest dostępny w magazynie czas oczekiwania na realizację zamówienia jest ustalany indywidualnie z klientem. Dostawy zamówionych towarów realizowane są w dni powszednie od poniedziałku do piątku w godzinach 8.00 - 18.00.</li>
 		<li>W przypadku przedpłaty na konto towar wysyłany jest po zaksięgowaniu wpłaty na koncie bankowym.</li>
 		<li>Nie ma możliwości odbioru osobistego towaru w siedzibie firmy, prowadzimy wyłącznie sprzedaż wysyłkową.</li>
-		<li>Zamówiony towar dostarczany jest za pośrednictwem Poczty Polskiej na terenie całego kraju.</li>
-		<li>Nie ponosimy odpowiedzialności za opóźnienia w dostawie towaru wynikające z działania Poczty Polskiej.</li>
+		<li>Zamówiony towar dostarczany jest za pośrednictwem firmy kurierskiej STS na terenie całego kraju.</li>
+		<li>Nie ponosimy odpowiedzialności za opóźnienia w dostawie towaru wynikające z działania firmy kurierskiej STS.</li>
 	</ol>
 </div>
 <div id="nag">Płatności</div>

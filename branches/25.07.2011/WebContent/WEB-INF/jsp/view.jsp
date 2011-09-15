@@ -266,9 +266,9 @@
 			<td width="74" height="40">
 				<div id="k3z">
 					<div id="cenab">
-						25,00 zł
+						20,00 zł
 					<div id="cenan">
-						19,25 zł
+						16,26 zł
 				</div>
 			</td>
 			<td width="65" height="40">
@@ -285,10 +285,10 @@
 			<td width="148" height="40">
 				<div id="k3z">
 					<div id="wartoscb">
-						25,00 zł
+						20,00 zł
 					</div>
 					<div id="wartoscn">
-						19,25 zł
+						16,26 zł
 					</div>
 				</div>
 			</td>

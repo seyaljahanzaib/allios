@@ -5,8 +5,8 @@ public class Commons {
 	public final static Integer VAT_8 = 8;
 	public final static Integer VAT_23 = 23;
 	
-	public final static double TRANSPORT_COST_BRUTTO = 25;
-	public final static double TRANSPORT_COST_NETTO = 19.25;
+	public final static double TRANSPORT_COST_BRUTTO = 20;
+	public final static double TRANSPORT_COST_NETTO = 16.26;
 	
 	public final static String PAYMENT_ON_DELIVERY = "przy odbiorze";
 	public final static String PAYMENT_ADVANCE = "przedpłata";

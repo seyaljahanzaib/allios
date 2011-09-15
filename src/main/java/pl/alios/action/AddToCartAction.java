@@ -31,6 +31,7 @@ public class AddToCartAction extends ActionSupport {
 			orderItem.setProduct(DBAdapter.getInstance().getProductDAO().getProduct(product_id));
 			orderItem.setPriceBrutto(orderItem.getProduct().getPriceBrutto());
 			orderItem.setPriceNetto(orderItem.getProduct().getPriceNetto());
+			orderItem.setVAT(orderItem.getProduct().getVat());
 		} catch (Exception e1) {
 			return "ERROR";
 		}

@@ -138,6 +138,19 @@ public class Log4JServlet extends HttpServlet {
 			
 			
 			if (category.getSubCategories() != null && category.getSubCategories().size() != 0) {
+				
+				
+				//TODO
+				Collections.sort(category.getSubCategories(), new Comparator<Category>() {
+
+					@Override
+					public int compare(Category c1, Category c2) {
+						return c1.getId() > c2.getId() ? 1 : -1;
+					}
+					
+				});
+				
+				
 				for(Category subcategory :  category.getSubCategories()){
 					System.out.println("ROZ");
 					if (subcategory.getActive() == Boolean.FALSE) continue;

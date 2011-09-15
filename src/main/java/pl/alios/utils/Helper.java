@@ -44,6 +44,21 @@ public class Helper {
 		Element tarnsportNetto		= transport.addElement("WartoscNetto");
 		Element tarnsportVat		= transport.addElement("KwotaVAT");
 		Element tarnsportBrutto		= transport.addElement("WartoscBrutto");
+		
+		Element netto_8			  = inovice.addElement("WartoscNetto-8");
+		Element kwota_vat_8			  = inovice.addElement("KwotaVat-8");
+		Element brutto_8			  = inovice.addElement("WartoscBrutto-8");
+		Element netto_23			  = inovice.addElement("WartoscNetto-23");
+		Element kwota_vat_23			  = inovice.addElement("KwotaVat-23");
+		Element brutto_23			  = inovice.addElement("WartoscBrutto-23");
+		
+		netto_8.setText(order.getNetto8());
+		kwota_vat_8.setText(order.getVatAmount8());
+		brutto_8.setText(order.getBrutto8());
+		
+		netto_23.setText(order.getNetto23());
+		kwota_vat_23.setText(order.getVatAmount23());
+		brutto_23.setText(order.getBrutto23());
 
 		inoviceNumber.setText(order.getNumber());
 		inoviceIssueDate.setText(formatDate(order.getIssueDate()));
@@ -63,7 +78,6 @@ public class Helper {
 		purchaserNIP.setText(order.getCustomer().getNip());
 		
 		summaryNetto.setText(order.getTotalCostNetto());
-//		summaryVat
 		summaryAmountVat.setText(order.getAmountVatString());
 		summaryBrutto.setText(order.getTotalCostBrutto());
 		
@@ -82,7 +96,7 @@ public class Helper {
 			Element productName			   = product.addElement("Nazwa");
 			Element productCount		   = product.addElement("Ilosc");
 			Element productUnit			   = product.addElement("JM");
-			Element productPriceNetto	   = product.addElement("CennaNetto");
+			Element productPriceBrutto	   = product.addElement("CennaNetto");
 			Element productDiscount		   = product.addElement("Rabat");
 			Element productTotalPriceNetto = product.addElement("WartoscNetto");
 			Element productVat		  	   = product.addElement("VAT");
@@ -95,13 +109,20 @@ public class Helper {
 			productName.setText(item.getProduct().getName());
 			productCount.setText(String.valueOf(item.getNumberOfItem()));
 			productUnit.setText(item.getProduct().getUnit());
-			productPriceNetto.setText(item.getPriceNettoString());
+			productPriceBrutto.setText(item.getPriceBruttoString());
 			productDiscount.setText("0");
-			productTotalPriceNetto.setText(item.getTotalPriceNettoString());
-			productVat.setText(String.valueOf(item.getVAT()));
+			productTotalPriceNetto.setText(item.getTotalNettoString());
+			productVat.setText(item.getVATString());
 			productVatAmount.setText(item.getAmountVatString());
 			productTotalPriceBrutto.setText(item.getTotalPriceBruttoString());
 		}
+		
+		
+		
+		
+		
+		
+		
 		
 		return document.asXML();
 	}

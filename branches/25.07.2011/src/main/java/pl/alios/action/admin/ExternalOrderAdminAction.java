@@ -59,6 +59,7 @@ public class ExternalOrderAdminAction extends ActionSupport {
 			newOrderItem.setProduct(DBAdapter.getInstance().getProductDAO().getProduct(productID));
 			newOrderItem.setPriceBrutto(newOrderItem.getProduct().getPriceBrutto());
 			newOrderItem.setPriceNetto(newOrderItem.getProduct().getPriceNetto());
+			newOrderItem.setVAT(newOrderItem.getProduct().getVat());
 		} catch (Exception e1) {
 			logger.error("Nie udało sie pobrac produktu z bazy" + e1);
 			return "ERROR";

@@ -417,71 +417,71 @@
 						
 				</fo:table-row>
 				
-<!-- 				<fo:table-row> -->
+				<fo:table-row>
 				
-<!-- 					<fo:table-cell height="0.4cm"> -->
-<!-- 					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt"></fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm">
+					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm"> -->
-<!-- 					<fo:block text-align="left" padding-top="1px" padding-bottom="1px" margin-top="1px" font-size="7pt" font-family="TahomalBD"></fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm">
+					<fo:block text-align="left" padding-top="1px" padding-bottom="1px" margin-top="1px" font-size="7pt" font-family="TahomalBD"></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm"> -->
-<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">w tym:</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm">
+					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">w tym:</fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">10 234,04</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt"><xsl:value-of select="Faktura/WartoscNetto-23"/></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">23</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">23</fo:block>
+					</fo:table-cell>
 	
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">1 234,04</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt"><xsl:value-of select="Faktura/KwotaVat-23"/></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">123 234,04</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt"><xsl:value-of select="Faktura/WartoscBrutto-23"/></fo:block>
+					</fo:table-cell>
 						
 					
-<!-- 				</fo:table-row> -->
+				</fo:table-row>
 				
-<!-- 				<fo:table-row> -->
+				<fo:table-row>
 				
-<!-- 					<fo:table-cell height="0.4cm"> -->
-<!-- 					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt"></fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm">
+					<fo:block text-align="right" padding-top="5px" margin-top="5px" font-size="7pt"></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm"> -->
-<!-- 					<fo:block text-align="left" padding-top="1px" padding-bottom="1px" margin-top="1px" font-size="7pt" font-family="TahomalBD"></fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm">
+					<fo:block text-align="left" padding-top="1px" padding-bottom="1px" margin-top="1px" font-size="7pt" font-family="TahomalBD"></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm"> -->
-<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt"></fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm">
+					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt"></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">10 234,04</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt"><xsl:value-of select="Faktura/WartoscNetto-8"/></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">8</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="center"  padding-top="1px" padding-bottom="2px" margin-top="3px" font-size="7pt">8</fo:block>
+					</fo:table-cell>
 	
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">1 234,04</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt"><xsl:value-of select="Faktura/KwotaVat-8"/></fo:block>
+					</fo:table-cell>
 					
-<!-- 					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px"> -->
-<!-- 					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt">123 234,04</fo:block> -->
-<!-- 					</fo:table-cell> -->
+					<fo:table-cell height="0.4cm" border-bottom-style="dashed" border-width="0.8px">
+					<fo:block text-align="right"  padding-top="1px" padding-bottom="2px" margin-top="3px" margin-right="1px" font-size="7pt"><xsl:value-of select="Faktura/WartoscBrutto-8"/></fo:block>
+					</fo:table-cell>
 						
 					
-<!-- 				</fo:table-row> -->
+				</fo:table-row>
 				
 			</fo:table-body>
 

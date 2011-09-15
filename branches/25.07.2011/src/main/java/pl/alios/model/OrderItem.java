@@ -23,7 +23,7 @@ public class OrderItem {
 	private Double priceBrutto;
 	private Integer numberOfItem;
 	//TODO
-	private Double VAT = (double) 22;
+	private Double VAT;
 	
 	
 	
@@ -45,9 +45,12 @@ public class OrderItem {
 	public void setOrder(Order order) {this.order_zam = order;}
 	public Double getVAT() {return VAT;}
 	public void setVAT(Double VAT) {this.VAT = VAT;}
-	public Double getAmountVat() {return priceBrutto * numberOfItem  - priceNetto * numberOfItem;}
+	public Double getAmountVat() {return getTotalPriceBrutto() * ( VAT / (100 + VAT));}
 	
 	public String getAmountVatString() {return format(getAmountVat());}
+	
+	public Double getTotalNetto(){return getTotalPriceBrutto() - getAmountVat();};
+	public String getTotalNettoString(){return format(getTotalPriceBrutto() - getAmountVat());};
 	
 	public String getPriceBruttoString(){
 		return format(priceBrutto);
@@ -79,6 +82,10 @@ public class OrderItem {
 		nf.setMaximumFractionDigits(2);
 		nf.setMinimumFractionDigits(2);
 		return nf.format(value);
+	}
+	public String getVATString() {
+		nf.setMaximumFractionDigits(0);
+		return nf.format(this.VAT);
 	}
 
 }

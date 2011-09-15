@@ -22,7 +22,7 @@
 
 <div id="title">
 	<div id="tekst" style="width:250px; margin-left: 4px; text-align: left;">Uruchomienie sklepu internetowego!</div>
-	<div id="tekst" style="width:502px; margin-right: 4px; text-align: right;">dodany: 15 sierpień 2011,  Jolanta Matacz</div>
+	<div id="tekst" style="width:502px; margin-right: 4px; text-align: right;">dodany: 15 wrzesień 2011,  Jolanta Matacz</div>
 </div>
 
 <div id="text_g" style="width:752px; margin-left:4px;">

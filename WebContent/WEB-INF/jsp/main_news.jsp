@@ -26,9 +26,10 @@
 </div>
 
 <div id="text_g" style="width:752px; margin-left:4px;">
-Pragnę poniformawać Państawa, że z dniem 01.09.2011 została uruchomiona aplikacja sklepu internetowego. 
+Pragnę poniformawać Państawa, że z dniem 15.09.2011 została uruchomiona aplikacja sklepu internetowego. 
 Nasza oferta jest kierowana do gabinetów stomatologicznych. Jeśli w naszej ofercie nie znaleźliście produktów
-których potrzebujecie w swoim gabinecie bardzo prosimy o kontakt, postaramy się kompleksowo zaopatrzyć Twoj gabinet. 
+których potrzebujecie w swoim gabinecie bardzo prosimy o kontakt, postaramy się kompleksowo zaopatrzyć Twoj gabinet.
+<br/>Do prawidłowego działania aplikacji niezbędna jest przeglądarka Firefox ver.6 lub Internet Explorer ver.9 
 
 </div>
 <div id="stopka"></div>

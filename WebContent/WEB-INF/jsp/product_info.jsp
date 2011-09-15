@@ -124,7 +124,7 @@
 <s:form action="AddToCartAction" theme="simple">
 	<div id="title">${product.name}</div>
 	<div id="title1" style="margin-left:4px;">Producent: <b>${product.producer}</b></div>
-	<div id="title1" style="margin-left:10px;">Kod producenta: <b>${product.producerCode}</b></div>
+<%-- 	<div id="title1" style="margin-left:10px;">Kod producenta: <b>${product.producerCode}</b></div> --%>
 	
 	<div id="stopka"></div>
 	
@@ -142,9 +142,9 @@
 	<!-- 	<div id="graf_ulubione"></div> -->
 		<div id="dostepnosc">Dostępność towaru na magazynie</div>
 			<div id="dostepnosc_left">
-				<div id="dostepnosc_tleft" style="line-height: 18px;">Towar dostarczany jest za pośrednictwem Poczty Polskiej.
+				<div id="dostepnosc_tleft" style="line-height: 18px;">Towar dostarczany jest za pośrednictwem firmy kurierskiej STS.
 				<br>Termin dostawy:<b>&nbsp;maksymalnie 3 dni robocze.</b>
-				<br>Koszt transportu:<b>&nbsp;25zł brutto</b>
+				<br>Koszt transportu:<b>&nbsp;20zł brutto</b>
 				<br><br><b>Dokładamy wszelkich starań, aby towar został dostarczony w ciągu 24h od daty złożenia zamówienia.</b>
 				</div>
 			</div>

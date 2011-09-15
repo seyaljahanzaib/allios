@@ -9,7 +9,7 @@
 }
 
 #nowosci {
-	width: 370px; height: 259px; float: left; margin-left: 10px;
+	width: 370px; height: 259px; float: left; margin-left: 10px; margin-bottom: 10px;
 		}
 			#nowosci #sekleft {
 				background: url(img/gl_framel.png); width: 12px; height: 259px; float: left;

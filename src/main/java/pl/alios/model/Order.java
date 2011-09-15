@@ -138,7 +138,7 @@ public class Order {
 	public String gettransportCostBruttoString () {return format(transportCostBrutto);}
 	
 	public String getNetto23(){
-		double razem = 19.25;
+		double razem = 16.26;
 		for(OrderItem item : listOfProducts){
 			if(item.getVAT().equals(Commons.VAT_23.doubleValue())){
 				razem += item.getTotalNetto();
@@ -147,7 +147,7 @@ public class Order {
 		return format(razem);
 	};
 	public String getVatAmount23(){
-		double razem = 5.75;
+		double razem = 3.74;
 		for(OrderItem item : listOfProducts){
 			if(item.getVAT().equals(Commons.VAT_23.doubleValue())){
 				razem += item.getAmountVat();
@@ -156,7 +156,7 @@ public class Order {
 		return format(razem);
 	};
 	public String getBrutto23(){
-		double razem = 25;
+		double razem = 20;
 		for(OrderItem item : listOfProducts){
 			System.out.println("item.getVAT()" + item.getVAT());
 			System.out.println("Commons.VAT_23" + Commons.VAT_23.doubleValue());

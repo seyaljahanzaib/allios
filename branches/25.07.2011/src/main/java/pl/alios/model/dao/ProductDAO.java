@@ -20,7 +20,7 @@ public class ProductDAO extends AbstarctDAO{
 		EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
 		EntityManager em = emf.createEntityManager();
 		try{
-			Query query = em.createQuery("SELECT p FROM Product p WHERE p.category LIKE :category");
+			Query query = em.createQuery("SELECT p FROM Product p WHERE p.category LIKE :category ORDER BY p.name ASC");
 			query.setParameter("category", "%"+category+"%");
 			ArrayList<Product> products = (ArrayList<Product>) query.getResultList();
 			return products;

@@ -137,6 +137,68 @@ public class Order {
 	public String getTransportVatString() {return format(transportCostBrutto - transportCostNetto);}
 	public String gettransportCostBruttoString () {return format(transportCostBrutto);}
 	
+	public String getNetto23(){
+		double razem = 19.25;
+		for(OrderItem item : listOfProducts){
+			if(item.getVAT().equals(Commons.VAT_23.doubleValue())){
+				razem += item.getTotalNetto();
+			}
+		}
+		return format(razem);
+	};
+	public String getVatAmount23(){
+		double razem = 5.75;
+		for(OrderItem item : listOfProducts){
+			if(item.getVAT().equals(Commons.VAT_23.doubleValue())){
+				razem += item.getAmountVat();
+			}
+		}
+		return format(razem);
+	};
+	public String getBrutto23(){
+		double razem = 25;
+		for(OrderItem item : listOfProducts){
+			System.out.println("item.getVAT()" + item.getVAT());
+			System.out.println("Commons.VAT_23" + Commons.VAT_23.doubleValue());
+			if(item.getVAT().equals(Commons.VAT_23)){
+				razem += item.getTotalPriceBrutto();
+			}
+		}
+		return format(razem);
+	};
+	
+	public String getNetto8(){
+		double razem = 0;
+		
+		for(OrderItem item : listOfProducts){
+			System.out.println("item.getVAT()" + item.getVAT());
+			System.out.println("Commons.VAT_8" + Commons.VAT_8);
+			if(item.getVAT().equals(Commons.VAT_8.doubleValue())){
+				razem += item.getTotalNetto();
+			}
+		}
+		return format(razem);
+	};
+	public String getVatAmount8(){
+		double razem = 0;
+		for(OrderItem item : listOfProducts){
+			if(item.getVAT().equals(Commons.VAT_8.doubleValue())){
+				razem += item.getAmountVat();
+			}
+		}
+		return format(razem);
+	};
+	public String getBrutto8(){
+		double razem = 0;
+		for(OrderItem item : listOfProducts){
+			if(item.getVAT().equals(Commons.VAT_8.doubleValue())){
+				razem += item.getTotalPriceBrutto();
+			}
+		}
+		return format(razem);
+	};
+	
+	
 	
 	/* GETERS AND SETTERS */
 	public Double getTransportCostBrutto() {return transportCostBrutto;}

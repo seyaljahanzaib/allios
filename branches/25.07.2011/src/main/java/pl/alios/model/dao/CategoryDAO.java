@@ -24,7 +24,7 @@ public class CategoryDAO extends AbstarctDAO {
 		EntityManager em = emf.createEntityManager();
 		List<Category> categories = null;
 		try{
-			Query q = em.createQuery("SELECT c FROM pl.alios.model.Category c WHERE c.mainCategory IS NULL");
+			Query q = em.createQuery("SELECT c FROM pl.alios.model.Category c WHERE c.mainCategory IS NULL ORDER BY c.name ASC");
 			categories = q.getResultList();
 
 			for(Category c :categories){

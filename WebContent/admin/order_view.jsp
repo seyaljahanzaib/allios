@@ -168,11 +168,11 @@ clear: both;
 </s:form>
 	
 	<div id="results">
-		<div id="tekst1" style="margin-left: 40px;"><b>Liczba zamówień:	56</b></div>
-		<div id="tekst2" style="width: 453px; text-align: right; margin-top: 4px;"><b>Wartość brutto:</b></div>
-		<div id="tekst2" style="width: 116px; text-align: right; margin-top: 4px;"><b>22 460,00 zł</b></div>
-		<div id="tekst2" style="width: 453px; text-align: right; margin-top: 3px;">netto:</div>
-		<div id="tekst2" style="width: 116px; text-align: right; margin-top: 3px;">20 460,00 zł</div>
+<!-- 		<div id="tekst1" style="margin-left: 40px;"><b>Liczba zamówień:	56</b></div> -->
+<!-- 		<div id="tekst2" style="width: 453px; text-align: right; margin-top: 4px;"><b>Wartość brutto:</b></div> -->
+<!-- 		<div id="tekst2" style="width: 116px; text-align: right; margin-top: 4px;"><b>22 460,00 zł</b></div> -->
+<!-- 		<div id="tekst2" style="width: 453px; text-align: right; margin-top: 3px;">netto:</div> -->
+<!-- 		<div id="tekst2" style="width: 116px; text-align: right; margin-top: 3px;">20 460,00 zł</div> -->
 	</div>
 
 

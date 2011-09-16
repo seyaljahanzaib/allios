@@ -42,8 +42,8 @@ clear: both;
 <div id="adminbar">
 	<div id="panelgraf">
 		<div id="opis1">Panel administracyjny</div>
-		<div id="opis2">Witaj, Paweł Kłosiński, ostatnie logowanie: 27-07-2011, godz: 15.00</div>
-		<div id="opis3">Dziś mamy: piątek 27-06-2011 godz. 15.02</div>
+		<div id="opis2">Witaj, Jolanta Matacz, ostatnie logowanie: 20-09-2011, godz: 15.00</div>
+		<div id="opis3">Dziś mamy: wtorek 21-09-2011 godz. 11.02</div>
 		<s:form action="adminLink.action" name="HeadMenu"/>
 		<div id="menu" onclick='javascript:void(document.forms["HeadMenu"].submit())'></div>
 		<div id="wylog"></div>

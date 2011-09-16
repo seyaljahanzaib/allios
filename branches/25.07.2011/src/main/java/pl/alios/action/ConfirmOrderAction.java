@@ -90,10 +90,12 @@ public class ConfirmOrderAction extends ActionSupport {
 						numberOfItems = Integer.valueOf(numberOfItem.get(i)).intValue();
 					}catch(NumberFormatException e){
 						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
+						order.updateCosts();
 						return "MESSAGE";
 					}
 					if(numberOfItems < 1){
 						setMessage("Wprowadzono niepoprawn\u0105 warto\u015B\u0107");
+						order.updateCosts();
 						return "MESSAGE";
 					}
 					
@@ -108,7 +110,7 @@ public class ConfirmOrderAction extends ActionSupport {
 				}
 			}
 		}
-		
+		order.updateCosts();
 		if(mess) return "MESSAGE";
 		
 		return "COUNT_SUCCESS";
@@ -128,10 +130,11 @@ public class ConfirmOrderAction extends ActionSupport {
 		if(order.getListOfProducts().size() == 0){
 			sessionAttr.remove("order");
 			this.message = "Koszyk jest pusty !";
+			order.updateCosts();
 			return "EMPTY_CART";
 		}
 			
-			
+		order.updateCosts();
 		return "DELETE_SUCCESS";
 	}
 	

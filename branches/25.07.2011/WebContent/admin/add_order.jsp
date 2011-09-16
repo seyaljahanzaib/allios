@@ -144,7 +144,11 @@ clear: both;
 			<div id="main_graf" style="width:150px; margin-top: 16px;"><s:textfield name="order.ordCity" style="width:150px; height:20px;"/></div>
 			<div id="stopka"></div>
 			
-			<div id="maintekst1" style="margin-top: 16px; margin-left: 450px;">NIP:</div>
+			<div id="maintekst1" style="margin-top: 16px;">Rodzaj płatności:</div>
+			<select name="productID" id="main_combo" style="width:240px; margin-top:16px; height:25px;">
+			</select>
+			
+			<div id="maintekst1" style="margin-top: 16px;">NIP:</div>
 			<div id="main_graf" style="width:60px; margin-top: 16px;"><s:textfield name="order.ordNip" style="width:150px; height:20px;"/></div>
 			<div id="stopka"></div>
 			
@@ -160,11 +164,11 @@ clear: both;
 	</s:form>	
 	
 		<div id="results">
-			<div id="tekst1" style="margin-left: 40px;"><b>Liczba dodanych pozycji:	56</b></div>
-			<div id="tekst2" style="width: 573px; text-align: right; margin-top: 4px;"><b>Wartość brutto:</b></div>
-			<div id="tekst2" style="width: 112px; text-align: right; margin-top: 4px;"><b>22 460,00 zł</b></div>			
-			<div id="tekst2" style="width: 573px; text-align: right; margin-top: 3px;">netto:</div>
-			<div id="tekst2" style="width: 112px; text-align: right; margin-top: 3px;">20 460,00 zł</div>
+<!-- 			<div id="tekst1" style="margin-left: 40px;"><b>Liczba dodanych pozycji:	56</b></div> -->
+<!-- 			<div id="tekst2" style="width: 573px; text-align: right; margin-top: 4px;"><b>Wartość brutto:</b></div> -->
+<!-- 			<div id="tekst2" style="width: 112px; text-align: right; margin-top: 4px;"><b>22 460,00 zł</b></div>			 -->
+<!-- 			<div id="tekst2" style="width: 573px; text-align: right; margin-top: 3px;">netto:</div> -->
+<!-- 			<div id="tekst2" style="width: 112px; text-align: right; margin-top: 3px;">20 460,00 zł</div> -->
 		</div>
 
 

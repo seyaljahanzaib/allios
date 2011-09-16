@@ -168,7 +168,7 @@ clear: both;
 	
 	<td width="150px" height="39px" style="padding:0px; border-collapse:collapse; border:0px; border-spacing:0px;">
 		<div id="mn_table" style="width: 149px;">
-			<div id="mn_tekst" style="width: 149px; text-align: center;">Usuń pozycję</div>
+			<div id="mn_tekst" style="width: 149px; text-align: center;">Skład</div>
 			</div>
 	</td>
 </tr>

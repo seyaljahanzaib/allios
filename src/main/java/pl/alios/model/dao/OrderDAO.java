@@ -65,9 +65,9 @@ public class OrderDAO extends AbstarctDAO{
 		try{
 			Query q;
 			if(orderState.equals(Commons.ORDER_STATE_ALL))
-				q = em.createQuery("SELECT o FROM pl.alios.model.Order o ORDER BY o.orderDate DESC");
+				q = em.createQuery("SELECT o FROM pl.alios.model.Order o ORDER BY o.orderDate DESC, o.orderId DESC");
 			else{
-				q = em.createQuery("SELECT o FROM pl.alios.model.Order o WHERE o.state = :state ORDER BY o.orderDate DESC");
+				q = em.createQuery("SELECT o FROM pl.alios.model.Order o WHERE o.state = :state ORDER BY o.orderDate DESC, o.orderId DESC");
 				q.setParameter("state", orderState);
 			}
 			orders = q.getResultList();

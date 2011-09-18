@@ -95,7 +95,7 @@
 		
 		<fo:table-row>
 			<fo:table-cell>
-				<fo:block margin-left="5mm" text-align="left" font-size="10pt">NIP: 774-236-23-23</fo:block>
+				<fo:block margin-left="5mm" text-align="left" font-size="10pt">NIP: 774-243-58-43</fo:block>
 			</fo:table-cell>
 			<fo:table-cell>
 				<fo:block margin-left="10mm" text-align="left" font-size="10pt">NIP: <xsl:value-of select="Faktura/Nabywca/NIP"/></fo:block>

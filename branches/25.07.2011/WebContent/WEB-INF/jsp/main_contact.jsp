@@ -63,7 +63,7 @@ font: bold 16px Tahoma; color: #16117c; margin-top: 20px; margin-left: 6px; widt
 }
 
 #contact_text1{
-font: 12px Tahoma; color: #16117c; margin-left: 6px; width: 760px; float: left;
+font: 12px Tahoma; color: #16117c; text-align: center; width: 760px; float: left;
 }
 
 #contact_text2{
@@ -87,8 +87,10 @@ clear: both;
 <div id="contact_text1" style="margin-top: 10px;"><br/><b>ALLIOS Jolanta Matacz</b></div>
 <div id="contact_text1" style="margin-top: 4px;">09-409 Płock, ul. Szpacza 12</div>
 <div id="contact_text1" style="margin-top: 4px;">woj. mazowieckie</div>
-<div id="contact_text1" style="margin-top: 4px;"><br/><b>tel.:</b> 600 664 190</div>
+<div id="contact_text1" style="margin-top: 4px;"><br/><b>tel.:</b>(+48) 600 664 190</div>
 <div id="contact_text1" style="margin-top: 4px;"><b>e-mail:</b> biuro@allios.pl</div>
+<div id="contact_text1" style="margin-top: 4px;"><br/><b>NIP:</b> 774-243-58-43</div>
+
 <div id="contact_text2">Sprzedaż prowadzimy wyłącznie za pośrednictwem strony internetowej www.allios.pl lub telefonicznie przyjmując zamówienia od 8.00 do 18.00.<br/>Nie prowadzimy sklepu stacjonarnego. Nie ma możliwości zakupu towaru w siedzibie firmy.<br/><br/>Zapraszamy na zakupy.</div>
 
 <!-- <div id="contact_area"> -->

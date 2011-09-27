@@ -56,9 +56,10 @@ Przedmiotem działalności firmy jest przede wszystkim sprzedaż detaliczna dobr
 <ul type="square"><li>Urządzeń stomatologicznych</ul>
 <ul type="square"><li>Środków czystości i higieny</ul>
 </ol></div>
-<div id="naglowek"><br><b>Dystrybucja</b></br></div>
+<div id="naglowek"><br><b>Dystrybucja</b></div>
 <div id="tekst"><p>Sprzedaż prowadzimy za pośrednictwem sklepu internetowego, jednak zamówienia przyjmujemy również na adres e-mail oraz telefonicznie.
-Dokładamy wszelkich starań, aby towar był solidnie zapakowany i w możliwie najkrótszym czasie docierał do naszych odbiorców.</p></div>
+Dokładamy wszelkich starań, aby towar był solidnie zapakowany i w możliwie najkrótszym czasie docierał do naszych odbiorców.</p>
+<p><b>Jesteśmy dystrybutorem firmy POLDENT.</b></p></div>
 <div id="naglowek"><br><b>Cele firmy</b></div>
 <div id="tekst"><p>Głównymi celami jakie sobie stawiamy są:</p></div>
 <div id="tekst"><ol>
